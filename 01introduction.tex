@@ -1,14 +1,200 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction and overview}
+\label{chap:intro}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent This chapter introduces the fundamental concepts which will be explored in the subsequent chapters as well as establishes the needed notation.
+\noindent This chapter serves to introduce and motivate the fundamental concepts of spin, magnetic moment and electromagnetism which will be explored in the subsequent chapters. This chapter will also serve to establish notation conventions. The classical and quantum formulations of spin will be defined in \rsec{sec:spin} in both relativistic and non-relativistic contexts. In \rsec{sec:mom} we will introduce magnetic (and electric) dipoles and the concept of anomalous magnetic moments (AMM) which have played a crucial role in physics. A list of relevant publications with author contributions is outlined in \rsec{sec:pubs}.
 
-\section{Notation}
-\section{Spin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The importance of spin}
+\label{sec:spin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Rotation and spin are ubiquitous phenomenon found in nearly every aspect of physics and has played an important role in establishing quantum mechanics in the 20th century due to its quantized nature. In relativistic mechanics, spin angular momentum is one of two Casimir invariants (with the other invariant being mass) of the Poincar{\'e} group of spacetime symmetry transformations (rotations, boosts, and translations). Each particle in relativistic mechanics is characterized by its mass and spin.
+
+All fundamental particles known in physics have a non-zero spin angular momentum with the exception of the Higgs boson which is a scalar with spin-0. All other fundamental particles (such as electrons, quarks, photons, etc...) have values of either spin-1/2 or spin-1. Particles with even values of spin are known as bosons while half-integer particles with spin are called fermions. Composite particles have have even more exotic spin values and fundamental particles which higher spins such as 3/2 are common in beyond-standard-model physics.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Classical spin}
+\label{sec:cspin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The classical 3-spin is given by
+\begin{align}
+    \label{cspin:1}
+    \vec{s}=(s_{x},\ s_{y},\ s_{z})^{\rm T}
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Quantum spin}
-\section{Magnetic and electric dipoles}
-\subsection{Anomalous magnetic moment}
-\section{Cosmology}
-\subsection{FLRW metric}
-\subsection{Conserved quantities under expansion}
+\label{sec:qspin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Quantum magnetic dipoles}
+\label{sec:mom}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In classical theory, when charges rotate or circulate in some manner, a magnetic field is produced characterized by the magnetic dipole moment of the system. This concept can be transplanted into quantum theory. The natural size of the magnetic moment of a particle (in this context a lepton) is given by the magneton value
+\begin{align}
+    \label{mag:1}
+    \mu_{\ell}\equiv\frac{e\hbar}{2m_{\ell}}
+\end{align}
+where the lepton (denoted by $\ell$) has charge $e$ and mass $m_{\ell}$. For electrons, this quantity is referred to as the Bohr magneton. As quantum mechanics is not well described in terms of forces or accelerations (except in the context of Ehrenfest-style equations), there is no simple operator companion for torque. However, the expression for the non-relativistic energy can be written down in terms of a Hamiltonian operator. In quantum mechanics, the 3-spin operator for a spin-1/2 particle is defined as
+\begin{align}
+    \label{qspin:1}
+    \bb{ s}=\frac{\hbar}{2}\bb{\sigma}
+\end{align}
+where $\bb{\sigma}$ are the familiar $2\times2$ Pauli matrices. The magnetic dipole Hamiltonian is given by
+\begin{align}
+	\label{mag:2}
+    {H}_{\mathrm{Mag}}=-\bb{\mu}\cdot\bb{B}\,,\\
+    \bb{\mu}=g\frac{e\hbar}{2m_{\ell}}\frac{\bb{\sigma}}{2}=g\mu_{\ell}\frac{\bb{\sigma}}{2}\,,
+\end{align}
+where $\bb{\mu}$ is the magnetic moment operator defined in terms of the Pauli matrices. The parameter $g$ is the gyromagnetic ratio (or g-factor) of the particle. The \lq natural\rq\ value for $g$ (as predicted by the Dirac equation) is $g=2$. When $g\neq2$, which is true for all physical particles, the anomalous magnetic moment (AMM) can be defined via 
+\begin{align}
+    \label{amm:1}
+    a\equiv\frac{g}{2}-1\,,\\
+    \label{amm:2} a\frac{e\hbar}{2m_{\ell}}\rightarrow\delta\mu\equiv\mu-\mu_{\ell}\,,
+\end{align}
+where $a$ is the anomaly parameter. We also introduce $\delta\mu$ as the anomalous magnetic moment magnitude.
+
+We note that $g\mu_{\ell}$ in \req{mag:2} can be either positive or negative depending on the sign of the charge which is the convention followed by CODATA. \req{mag:2} is the operator equivalent of the single particle magnetization energy described classically as
+\begin{align}
+    \label{mag:3}
+    U=-\bb{\mu}\cdot\bb{B}
+\end{align}
+
+Just like the classical situation, the anomalous magnetic moment coupling $a$ is then responsible for deviations from the \lq natural\rq\ magnetic moment. In non-relativistic quantum mechanics, the charged Schrodinger-Pauli Hamiltonian ${ H}_{\rm SP}$ is then given by
+\begin{align}
+	\label{sp:1}
+    {H}_{\mathrm{SP}}\ \chi=\left(\frac{1}{2m_{\ell}}\bb{\pi}^{2}-\bb{\mu}\cdot\bb{B}+e{ V}\right)\psi=i\hbar\frac{\partial}{\partial t}\chi\,,\\
+    \bb{\pi}\equiv\bb{ p}-e{\bb{A}}\,,
+\end{align}
+where $\chi$ is a two-component spinor. Using SI units, the four-potential is written as $A^{\alpha}=\left(V/c,\bb{A}\right)^{T}$. The relativistic generalization of \req{sp:1} is the Dirac equation. It is well known that \req{sp:1} is obtainable from the Dirac equation in the non-relativistic limit which famously predicts $g=2$ for the magnetic dipoles of fermions. The process can be done economically (Sakurai, 1967) using an ansatz of large and small components. This method however loses usefulness for higher order corrections producing imaginary contributions to the Hamiltonian. This was resolved first by (Foldy, 1950) using what is now known as the Foldy-Wouthuysen (FW) transformation. This procedure will be briefly discussed in \rsec{ajss:quantclass}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ehrenfest theorem for Stern-Gerlach forces}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The relativistic precession of a spin-1/2 particle can be extracted from the Dirac equation. The Dirac equation with electromagnetic interaction is given by
+\begin{alignat}{1}
+  \label{DIRAC01} i\hbar\frac{\partial}{\partial t}\psi=\left(\boldsymbol{\alpha}\cdot\left(\mathbf{p}c-e\mathbf{A}\right)+eA_{0}+\gamma^{0}mc^{2}\right)\psi=\hat{H}_{D}\psi\,,
+\end{alignat}
+where we will use the conventions
+\begin{alignat}{1}
+  \label{DIRAC02} \boldsymbol{\alpha}=\gamma^{0}\boldsymbol{\gamma},\indent\boldsymbol{\Sigma}=\gamma_{5}\boldsymbol{\gamma},\indent\gamma_{5}=i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3},\indent\gamma_{5}^{2}=1\,.
+\end{alignat}
+From the Heisenberg equations of motion
+\begin{alignat}{1}
+  \label{DIRAC03} i\hbar\frac{\mathrm{d}\hat{O}}{\mathrm{d}t}=[\hat{O},\hat{H}]+i\hbar\frac{\partial\hat{O}}{\partial t}\,,
+\end{alignat}
+the operator spin precession is
+\begin{alignat}{1}
+  \label{DIRAC04} \frac{\mathrm{d}\mathbf{S}_{R}}{\mathrm{d}t}=\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\hbar}{2}\boldsymbol{\Sigma}\right)=-\boldsymbol{\alpha}\times\left(\mathbf{p}c-e\mathbf{A}\right)\,,
+\end{alignat}
+where $\mathbf{S}_{R}$ is the relativistic spin operator. While this expression is fully relativistic, it is not easily interpreted due to the off-diagonal nature of the $\boldsymbol{\alpha}$ matrices which mix particle and antiparticle components. A similar situation arises for the \lq\lq velocity operator\rq\rq\, which leads to the phenomenon of \emph{Zitterbewegung}. Eq.~\eqref{DIRAC04} reveals that spin is not a constant of motion of the Dirac equation. The orbital angular momentum $\mathbf{L}$ is also not a constant of motion, but the sum of the two or the total angular momentum $\mathbf{J}$ is.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Foldy-Wouthuysen transformation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+To connect the relativistic quantum notion of spin to our non-relativistic classical intuition we need to disentangle the components of the Dirac equation. To do this we make use of the Foldy-Wouthuysen (FW) transformation which diagonalizes odd operators via a unitary transformation
+\begin{alignat}{1}
+  \label{FW01} \psi\rightarrow\psi'=e^{i\mathcal{S}}\psi,\indent\hat{H}\rightarrow\hat{H}'=e^{i\mathcal{S}}\hat{H}e^{-i\mathcal{S}}-ie^{i\mathcal{S}}\frac{\partial e^{-i\mathcal{S}}}{\partial t}\,,
+\end{alignat}
+where $\mathcal{S}$ is Hermitian. The resulting Hamiltonian $\hat{H}'$ then produces two uncoupled equations of two-component spinors. For free particles the transformed Hamiltonian has an exact closed form, but for charged particles in weak fields the Hamiltonian will be an infinite series in powers of inverse mass $1/m$. Our interest lies in determining the first nonlinear terms in the spin precession of order $|\mathbf{s}|^{2}$ as these are the first terms to be sensitive to field in-homogeneity. Because of the intimate relationship between spin and magnetic moment, the expressions we seek will be up to order $\mu^{2}\sim e^{2}/m^{2}$ and thus we only require the FW transformed Hamiltonian up to $1/m^{2}$.
+
+The generated Hamiltonian is therefore
+\begin{alignat}{1}
+  \notag\hat{H}'&=\gamma^{0}\left\{mc^{2}+\frac{1}{2m}\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)^{2}-eA_{0}-\frac{e\hbar}{2mc}\boldsymbol{\sigma}\cdot\mathbf{B}\right.\\
+  \notag&+\frac{e\hbar}{8m^{2}c^{2}}\boldsymbol{\sigma}\cdot\left(\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)\times\mathbf{E}-\mathbf{E}\times\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)\right)\\
+  \label{FW02}&-\left.\frac{e\hbar^{2}}{8m^{2}c^{2}}\boldsymbol{\nabla}\cdot\mathbf{E}+\ldots\right\}\,.
+\end{alignat}
+The $\boldsymbol{\sigma}$ operators are simply the Pauli matrices. The first four terms represent the rest mass-energy of the particle and the Schr\"{o}dinger-Pauli (SP) Hamiltonian, the fifth term is the spin-orbit coupling, and the last is the Darwin term. In determining the precession, it is the spin Hamiltonian
+\begin{alignat}{1}
+  \notag\hat{H}'_{spin}=&-\frac{e\hbar}{2mc}\boldsymbol{\sigma}\cdot\bigg(\mathbf{B}\\
+  \label{FW03}&-\frac{1}{4mc}\left(\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)\times\mathbf{E}-\mathbf{E}\times\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)\right)\bigg),
+\end{alignat}
+which will be relevant.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Second order spin effects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+By substituting eq.~\eqref{FW03} into eq.~\eqref{DIRAC03}, the non-relativistic spin precession (up to order $1/m^{2}$) is found to be
+\begin{alignat}{1}
+  \notag\frac{\mathrm{d}\mathbf{S}_{NR}}{\mathrm{d}t}=\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\hbar}{2}\boldsymbol{\sigma}\right)&=\frac{e\hbar}{2mc}\boldsymbol{\sigma}\times\mathbf{B}\\
+  \notag&-\frac{e\hbar}{4m^{2}c^{2}}\boldsymbol{\sigma}\times\left(\mathbf{E}\times\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)\right)\\
+  \label{SPIN01}&-\frac{e\hbar^{2}}{16m^{2}c^{2}}\left[\boldsymbol{\sigma},\boldsymbol{\sigma}\cdot\left(\boldsymbol{\nabla}\times\mathbf{E}\right)\right]\,,
+\end{alignat}
+where $\mathbf{S}_{NR}$ is the non-relativistic spin operator. The first term is the expected Larmor precession, and the second is precession generated by spin-orbit coupling. The last term is second order in spin and sensitive to the curl of electric fields. This term cannot be easily categorized as a simple \lq\lq quantum correction\rq\rq\, as both orders of $\hbar$ are consumed by the definition of the spin operator and survive the $\hbar\rightarrow 0$ limit. This term in fact is more analogous to the $p^{4}$ correction to a particle's energy due to relativity.
+
+As spin dynamics in quantum mechanics exhibits more complicated behavior at higher orders, due to special relativity, we expect similar corrections to appear in the classical theory of spin precession in the same manner that energy corrections appear.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The naturalness of $g=2$}
+\label{sec:nat}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+As discussed by Feynman (Feynman, 1961), there is a strong predilection in nature towards $g=2$ gyro-magnetic factors which can be explained by the requirements of kinetic operator in quantum mechanics. We note that because the $2\times2$ Pauli matrices $\bb{\sigma}$ all anti-commute, we can write down the relation
+\begin{alignat}{1}
+	\label{nat:1} (\bb{\sigma}\cdot\bb{a})(\bb{\sigma}\cdot\bb{b})=\bb{a}\cdot\bb{b}+i\bb{\sigma}\cdot(\bb{a}\times\bb{b})\,.
+\end{alignat}
+The non-relativistic kinetic energy Hamiltonian from \req{sp:1} then reads as
+\begin{alignat}{1}
+	\label{nat:2} {H}_{\mathrm{KE}}=\frac{1}{2m}\left(\bb{\sigma}\cdot\bb{\pi}\right)^{2}=\frac{1}{2m}\bb{\pi}^{2}+i\bb{\sigma}\cdot(\bb{\pi}\times\bb{\pi})\,.
+\end{alignat}
+As the kinetic momentum operator $\bb{\pi}$ does not self-commute, its cross-product is non-zero resulting in
+\begin{alignat}{1}
+	\label{nat:3} {H}_{\mathrm{KE}}=\frac{1}{2m}\bb{\pi}^{2}-\frac{e\hbar}{2m}\bb{\sigma}\cdot\bb{B}\,,
+\end{alignat}
+which is the magnetic moment term with size $g=2$. We recognize that $g=2$ appears to arise from the $\mathfrak{su}(2)$ Lie algebra (Schultz, 1980) representation described by the Pauli matrices and electromagnetic minimal coupling. The natural scale of the magnetic moment can be interpreted as originating from group symmetry requirements on charged particles. Rather than taking the non-relativistic limit of the Dirac equation, $g=2$ can also be derived as a consequence of replacing the definition of the inner product for vectors which accounts for spin (Feynman, 1961). The Schrodinger kinetic Hamiltonian and Schrodinger-Pauli kinetic terms are then related via substitution
+\begin{alignat}{1}
+	\label{nat:4} \bb{\pi}\cdot\bb{\pi} \rightarrow (\bb{\pi}\cdot\bb{\sigma})(\bb{\sigma}\cdot\bb{\pi})\,.
+\end{alignat}
+An almost identical argument that g-factor arises from spin-structure and electromagnetic coupling can be made for the relativistic case as well. First we consider the quantum analog to the energy-momentum relation
+\begin{alignat}{1}
+	\label{analog:1} \eta_{\alpha\beta}p^{\alpha}p^{\beta}\Psi=m^{2}c^{2}\Psi\,.
+\end{alignat}
+\req{analog:1} as written evaluates to the Klein-Gordon equation when the four-momentum is written in the position basis $p^{\alpha}\rightarrow i\hbar\partial^{\alpha}$. Much like the non-relativistic example, we can introduce spin by replacing the momentum inner product with one sensitive to a Clifford algebra (Weinberg, 1995). Rather than the Pauli matrices, the relativistic replacement utilizes the gamma matrices $\eta_{\alpha\beta}\rightarrow\gamma_{\alpha}\gamma_{\beta}$ yielding
+\begin{alignat}{1}
+	\label{eq:spin:03} \gamma_{\alpha}\gamma_{\beta}p^{\alpha}p^{\beta}\Psi&=m^{2}c^{2}\Psi\,.
+\end{alignat}
+Here $\Psi$ is understood to be a four-component spinor unlike in \req{analog:1}. The corresponding $4\times4$ matrix contraction identity analog to \req{nat:1} is then
+\begin{alignat}{1}
+	\label{eq:spin:04} \gamma_{\alpha}\gamma_{\beta}a^{\alpha}b^{\beta}=\eta_{\alpha\beta}a^{\alpha}b^{\beta}-i\sigma_{\alpha\beta}a^{\alpha}b^{\beta}\,,\indent \sigma_{\alpha\beta}\equiv\frac{i}{2}\left[\gamma_{\alpha},\gamma_{\beta}\right]\,.
+\end{alignat}
+The anti-symmetric spin tensor $\sigma_{\alpha\beta}$ is defined by the commutator of the gamma matrices. In both the relativistic and non-relativistic cases, the distinction between spin-1/2 and spinless particles is only made kinematically apparent in the presence of electromagnetic fields. For minimal coupling
+\begin{alignat}{1}
+  \label{eq:spin:05} \pi^{\alpha}=p^{\alpha}-eA^{\alpha}\,,
+\end{alignat}
+we take advantage of the fact that any product can be written as a sum of commuting and anti-commuting parts
+\begin{alignat}{1}
+	\label{eq:spin:06} \pi^{\alpha}\pi^{\beta}=\frac{1}{2}\left(\left\{\pi^{\alpha},\pi^{\beta}\right\}+\left[\pi^{\alpha},\pi^{\beta}\right]\right)\,.
+\end{alignat}
+yielding
+\begin{alignat}{1}
+	\label{eq:spin:07a} \left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta}-\frac{i}{2}\sigma_{\alpha\beta}\left[\pi^{\alpha},\pi^{\beta}\right]\right)\Psi&=m^{2}c^{2}\Psi\,,\\
+	\label{eq:spin:07b} \left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta}-\frac{e\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi&=m^{2}c^{2}\Psi\,.
+\end{alignat}
+\req{eq:spin:07b} is the square of the Dirac equation with precisely $g=2$. Furthermore, compelling arguments can be made that all elementary particles (Ferrara et. al. 1992) of any spin have a natural value of $g=2$, though a competing idea is Belinfante's conjecture of $g=1/s$. To paraphrase the argument by Ferrara, Porrati and Telegdi, $g=2$ is likely the natural scale for particles of any spin because:
+\begin{enumerate}
+	\item The W boson, as the only known higher spin charged elementary particle, has at tree level $g=2$ via a Proca-like equation.
+	\item For $g=2$, the relativistic TBMT spin equation is the same simplified form any classical spin value.
+	\item For arbitrary spin, $g=2$ facilitates finite Compton scattering cross sections without additional physical requirements.
+	\item For arbitrary spin, open bosonic and super-symmetric string theory predicts $g=2$.
+\end{enumerate}
+While the above provide a nice justification for why particles should tend to this specific g-factor, the reality is no particle has exactly $g=2$ with all of them displaying some form of anomaly. The charged leptons come the closest to the natural value, but famously have vacuum polarization contributions \cite{Schwinger:1951nm} from QED, non-perturbative hadronic contributions \cite{Jegerlehner:2001wq,Jegerlehner:2017gek}, and potentially BSM interactions \cite{Czarnecki:2001pv,Knecht:2004,Jegerlehner:2009ry} contributing to their anomalous magnetic dipole moment. There are then two major approaches to deal with anomalous moments. The first is to consider the fundamental quantum field theory describing the particle, and then analyzing the resulting tree level diagrams which contribute to the moment in a perturbative fashion. The second is to utilize an effective field theory with the anomalous moment already implemented in the base wave dynamics. While the first approach has proven to be exceedingly successful for the charged leptons (the muon's anomaly notwithstanding), it is not appropriate for particles whose moments are dramatically different from $g=2$ or if the origin of the anomaly comes from internal structure such as the hadrons whose moments are determined by nonpertubative QCD \cite{Eichmann:2016yit,Pacetti:2014jai} and not vacuum structure as is the case for the nucleons and atoms.
+
+\begin{table}
+	\centering
+\begin{tabular}{|r|l|}
+	electron & -2.002\ 319\ 304\ 362\ 56(35)\\
+	muon & -2.002\ 331\ 8418(13)\\
+	tau & \ -2.036(34)\\
+	proton & \ 5.585\ 694\ 6893(16)\\
+	neutron & -3.826\ 085\ 45(90)\\
+	deuterium & \ 0.857\ 438\ 2338(22)\\
+	tritium & \ 5.957\ 924\ 931(12)
+\end{tabular}
+	\caption{The g-factor PDG values of various particles. Of those listed, only the tau is poorly measured and whose anomaly is not well constrained. As a general rule, composite particles deviate from $g=2$ greatly. Comparing the three isotopes of hydrogen shows how magnetic moments can \lq\lq cancel\rq\rq\ out so that while deuterium differs great from the proton, tritium with two neutrons does not and is similar.}
+	\label{ajs:table:01}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Publications and author contributions}
+\label{sec:pubs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
