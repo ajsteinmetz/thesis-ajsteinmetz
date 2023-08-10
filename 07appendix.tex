@@ -1,0 +1,326 @@
+\chapter{Neutrinos and magnetism}
+\noindent In the standard model neutrinos interact through the electroweak interaction via left-handed chiral particles. The chirality of the particle is essential to electroweak theory as a hypothetical right-handed neutrino would be sterile and non-interacting. In electroweak processes, neutrinos can be produced in their appropriate flavor states like in the fusion process in the core of stars or in the decay processes present in nuclear reactors. The flux of outgoing neutrinos should then reflect the flavors produced, however experimental evidence shows this is not the case. Rather, neutrinos produced as a flavor eigenstate are in fact super-positions of the three possible mass eigenstates which then subsequently travel with differing velocities. This results in the \lq\lq oscillation\rq\rq\ of the neutrinos states as measurement is conducted as various distances from the originating source.
+
+The unitary matrix $\bb{V}$ which couples the flavor eigenstates $\nu^{f}$ to the mass eigenstates $\nu^{m}$ for neutrinos is called the Pontecorvo-Maki-Nakagawa-Sakata (PMNS) matrix (while the CKM matrix is used for the strong interaction sector) and is constructed via three possible rotations between the three generations of flavors and three mass eigenstates. The relationship between the two basis states is then given by
+\begin{alignat}{1}
+	\label{pmns:eq:01} \nu^{f} = 
+	\begin{pmatrix}
+		V_{e1} & V_{e2} & V_{e3}\\
+		V_{\mu1} & V_{\mu2} & V_{\mu3}\\
+		V_{\tau1} & V_{\tau2} & V_{\tau3}
+	\end{pmatrix}
+	\nu^{m} = \bb{V}\nu^{m}\,.
+\end{alignat}
+The neutrino states are then sets of all three generations
+\begin{alignat}{1}
+	\label{pmns:eq:01a}\nu^{f} &= (\nu_{e},\nu_{\mu},\nu_{\tau})^{T}\,,\\
+	\label{pmns:eq:01b}\nu^{m} &= (\nu_{1},\nu_{2},\nu_{3})^{T}\,.
+\end{alignat}
+The degrees of freedom of the mixing matrix are the three rotation angles $(\theta_{12}, \theta_{13}, \theta_{23})$ and up to three CP violating phases $(\delta, \rho, \sigma)$. For Dirac-type neutrinos there is only one such phase $\delta$ while there are three phases for Majorana-type neutrinos. This is owed to the fact that Dirac fermions can freely absorb up to two of the three complex phases arises due to the presence of three generations. In the parametrization of $\bb{V}$ used below, only the phase $\delta$ will be relevant for neutrino oscillation while the other phases, which are unconstrained by experiment, make themselves seen in neutrino-less double beta decay. Depending on the type of neutrino the mixing matrix can be broken into
+\begin{alignat}{1}
+	\label{pmns:eq:02a} &\bb{V} = \bb{U}\bb{P}\,,\\
+	\label{pmns:eq:02b} &\bb{P}_{Dirac} = \mathbbm{1}\,,\\
+	\label{pmns:eq:02c} &\bb{P}_{Maj.} = \mathrm{diag}(e^{i\rho},e^{i\sigma},1)\,,
+\end{alignat}
+where we have denoted the definitions for the phase matrix for Dirac and Majorana neutrinos. By standard convention found in the literature we parameterize the rotation matrix $\bb{U}$ as
+	\begin{alignat}{1}
+  	\label{pmns:eq:03} \bb{U} =
+		\begin{pmatrix}
+			c_{12}c_{13} & s_{12}c_{13} & s_{13}e^{-i\delta}\\
+			-s_{12}c_{23} - c_{12}s_{13}s_{23}e^{i\delta} & c_{12}c_{23} - s_{12}s_{13}s_{23}e^{i\delta} & c_{13}s_{23}\\
+			s_{12}s_{23} - c_{12}s_{13}c_{23}e^{i\delta}& -c_{12}s_{23} - s_{12}s_{13}c_{23}e^{i\delta} & c_{13}c_{23}
+		\end{pmatrix}\,,
+	\end{alignat}
+where $c_{ij} = \mathrm{cos}(\theta_{ij})$ and $s_{ij} = \mathrm{sin}(\theta_{ij})$. In this convention, the three mixing angles $(\theta_{12}, \theta_{13}, \theta_{23})$, are understood to be the Euler angles for generalized rotations. There are many possible parametrizations for the mixing matrix and without a working model of underlying physics, they represent generic observables which are otherwise not predicted. Another popular choice is the Wolfenstein parameterization, but as neutrinos mixing angles are rather large and not similar to the identity matrix, we will not use it here. In most phenomenological studies, the mixing matrix's degrees of freedom are determined by the assumption of an underlying model such as the flavor-mass couplings $a_{ij}$ of the charged or neutral leptons in question
+\begin{alignat}{1}
+	\label{pmns:eq:04a} \bb{V}\rightarrow\bb{V}(a_{ij})\,,\indent i,j\in1,2,3\,.
+\end{alignat}
+Our proposal is to include electromagnetic effects tied to magnetic dipole moments which are presumed to exist for neutrinos as an additional source of flavor mixing. This is a companion effect to the mechanism proposed by Mikheev and Smirnov (MS) to explain the flavor abundances seen in solar neutrinos. In MS flavor oscillation, the charged weak-current acts preferentially on $\nu_{e}$ in the matter of the sun converting a large fraction into $\nu_{\mu}$. Therefore we are interested in mixing matrices with the following dependencies 
+\begin{alignat}{1}
+	\label{pmns:eq:04b} \bb{V}\rightarrow\bb{V}(a_{ij},\mu_{ij})\,,\indent i,j\in1,2,3\,,
+\end{alignat}
+where $\mu_{ij}$ are the various direct $(i=j)$ and indirect $(i\neq j)$ transition magnetic moments of the particles. This also allows for the possibility of hypothesized higher-generations of neutrinos to not only influence the masses of the lower three generations, but their magnetic moments as well. In most calculations of neutrino magnetic moment as originated from vacuum terms in quantum field theory, the masses represent a theoretical limitation on the size of the magnetic moments. This limitation is not necessarily present in this formulation where mixing from higher generations may enhance magnetic moments without blowing up the masses of the lower generations.
+
+The mixing matrix can be inserted into the weak charge current as
+\begin{alignat}{1}
+	\label{pmns:eq:05} \mathcal{L}_{cc} = -\frac{g}{\sqrt{2}}\left[\bar{\ell}_{L}\gamma^{\mu}\mathbf{V}\nu^{m}_{L}W^{-}_{\mu}\right]+\mathrm{h.c.}\,,
+\end{alignat}
+where $\ell_{L} = (e_{L}, \mu_{L}, \tau_{L})$ is the set of left-handed charged leptons which are themselves members of the electroweak SU(2) doublet. This is important to note because if the mixing matrix is indeed sensitive to electromagnetic fields, not only would the oscillation behavior be affected, so would  weak interactions in the presence of strong fields which may have consequences for beta decay processes. In the literature there is a persistent experimental discrepancy between the lifetime of the neutron in beam versus bottle experiments. If the neutron lifetime discrepancy could be be resolved via an electromagnetic sensitively to neutrino states, this may also have consequences for muon and Lambda baryon processes in beam versus bottle experiments. Electromagnetic sensitivity to neutrino mixing may also be observable at the DUNE experiment which is expected to produce highly accurate measurements of neutrino oscillations.
+
+\section{Neutrino masses}
+\noindent To establish a model where non-minimal electromagnetic effects may enter and influence the flavor mixing matrix, we are required to look at the mass Lagrangian terms for Dirac and Majorana neutrinos. We consider an effective theory where the mass term contains various couplings between neutrino states determined by some BSM theory. The exact form of such a BSM theory is outside the scope of this work. For our purposes, we will ultimately choose a mass matrix which has a non-minimal electromagnetic coupling. The Dirac mass term is written
+\begin{alignat}{1}
+	\label{mass:eq:01} \mathcal{L}_{m}^{Dirac} = -\bar{\nu}^{f}_{L}\bb{M}\nu^{f}_{R}+\mathrm{h.c.}
+\end{alignat}
+In general, the mass matrix $\bb{M}$ can be complex and contains off diagonal elements which arise from coupling between flavors. The PMNS mixing matrix is then responsible for diagonalizing the mass matrix and reorganizing the neutrinos into a new set of basis states. If $\bb{M}$ is Hermitian then
+\begin{alignat}{1}
+	\label{mass:eq:02} \bb{m} \equiv \mathrm{diag}(m_{1}, m_{2}, m_{3}) = \bb{V}^{\dagger}\bb{M}\bb{V}\,.
+\end{alignat}
+The corresponding Majorana fermion mass term in the flavor basis is then given by
+\begin{alignat}{1}
+	\label{mass:eq:03} \mathcal{L}_{m}^{Maj.} = -\frac{1}{2}\bar{\nu}^{f}_{L}\bb{M}(\nu^{f}_{L})^{c}+\mathrm{h.c.}\,,
+\end{alignat}
+where $\nu^{c} = \hat{C}(\bar{\nu})^{T}$ is the charge conjugate of the neutrino field. The operator $\hat{C} = i\gamma^{2}\gamma^{0}$ is the charge cojugation operator which can be written as a $4\times4$ matrix for a given representation as each flavor is in this formulation a four-component spinor. Here we note that $\nu^{c}$ vanishes when acted upon by the left-handed projection operator $P_{L}$ via
+\begin{alignat}{1}
+	\label{mass:eq:04} P_{R,L} = \frac{1}{2}(1\pm\gamma^{5})\,,\indent P_{L}(\nu_{L})^{c}=0\,.
+\end{alignat}
+The charge conjugated Majorana field does not vanish when acted upon by the right-handed projection operator denoting its right-handed nature even though in the Majorana case, the left handed field $\nu_{L}$ is the only field physically present. Right-handed Majorana fermions can be introduced, but they will behave completely uncoupled to their left-handed cousins. This kind of extension can be useful in the study of heavy-neutrino theories, but otherwise will not be remarked upon again in this paper.
+\begin{figure}
+	\tikzfeynmanset{every blob={/tikz/pattern color={gray!80}}}
+	\feynmandiagram[vertical=d to b]{
+		a [particle=\(\nu_{\ell}\)] -- [fermion] b [blob] -- [fermion] c [particle=\(\nu_{\ell'}\)],
+		d -- [photon, edge label=\(\gamma\)] b,
+	};
+	\feynmandiagram[vertical=d to b]{
+		a [particle=\(\nu_{\ell}\)] -- [majorana] b [blob] -- [majorana] c [particle=\(\nu_{\ell'}\)],
+		d -- [photon, edge label=\(\gamma\)] b,
+	};
+	\caption{Feynman diagram of photon vertex for (left) Dirac neutrinos and (right) Majorana neutrinos. In the presence of transition dipole moments, lepton number is broken due to flavor exchange $\ell\rightarrow\ell'$.}\label{mass:fig:01}
+\end{figure}
+
+We turn our attention to the Pauli Lagrangian which describes the coupling of anomalous magnetic moments (AMM) at the tree level. As our focus is on effective field theories, we will not worry ourselves with the fact that the Pauli Lagrangian is 5-Dimensional and thus fails to be renormalizable. A natural cutoff $\Lambda$ can be implemented at the energy scale responsible for the interaction, BSM or otherwise, which originates the dipole moment. The Pauli Lagrangian for the AMM in the flavor basis is given as
+\begin{alignat}{1}
+	\label{mass:eq:04a} \mathcal{L}_{\mathrm{AMM}}^{Dirac} &= -\frac{i}{2}\bar{\nu}^{f}_{L}\bb{\mu}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\nu^{f}_{R}+\mathrm{h.c.}\\
+	\label{mass:eq:0b} \mathcal{L}_{\mathrm{AMM}}^{Maj.} &= -\frac{i}{4}\bar{\nu}^{f}_{L}\bb{\mu}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}(\nu^{f}_{L})^{c}+\mathrm{h.c.}
+\end{alignat}
+The matrix $\bb{\mu}$ are the AMM couplings while $F^{\alpha\beta}$ is our standard electromagnetic field tensor. The AMM Lagrangian term then serves as a contribution to the photon vertex as depicted in \rf{mass:fig:01}. Here we allow not only direct magnetic moments, but the potential for off-diagonal transition magnetic moments coupling flavors in a manner similar to the mass matrix described in \req{mass:eq:01}. It is important to note that because of CPT considerations, Majorana neutrino are forbidden diagonal magnetic moments and can only have off-diagonal transition moments. Since transition AMM elements serve to break lepton number conservation, it suggests than neutrinos could be \lq\lq remixed\rq\rq\ when exposed to strong electrodynamic fields as matter does in the MS effect. The expression $i\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}/2$ can be evaluated as
+\begin{alignat}{1}
+	\label{mass:eq:04c} \frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta} &= i\vec{\alpha}\cdot\vec{E}-\vec{\Sigma}\cdot\vec{B}\,,\\
+	\label{mass:eq:04d} \vec{\alpha} = \gamma_{0}\vec{\gamma}\,,\ \vec{\Sigma}=\gamma_{5}\vec{\alpha}\,,\ \gamma_{5}&=i\gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3}\,,\ \gamma_{5}^{2}=\mathbbm{1}\,.
+\end{alignat}
+We denote our matrix conventions in \req{mass:eq:04d}. As neutrinos are uncharged, their anomalous magnetic moments act as the entire magnetic moment. In this sense, any neutrino dipole moment is by definition anomalous differing from the charged case where there is a natural magnetic moment determined by a g-factor. Describing the two Lagrangian terms together reads as
+\begin{alignat}{1}
+	\label{mass:eq:05a} \mathcal{L}_{m,\mathrm{AMM}} &= \mathcal{L}_{m} + \mathcal{L}_{\mathrm{AMM}}\,,\\
+	\label{mass:eq:05b} \mathcal{L}_{m,\mathrm{AMM}}^{Dirac} &= -\bar{\nu}^{f}_{L}\left(\bb{M} + \frac{i}{2}\bb{\mu}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\nu^{f}_{R}+\mathrm{h.c.}\\
+	\label{mass:eq:05c} \mathcal{L}_{m,\mathrm{AMM}}^{Maj.} &= -\frac{1}{2}\bar{\nu}^{f}_{L}\left(\bb{M} + \frac{i}{2}\bb{\mu}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)(\nu^{f}_{L})^{c}+\mathrm{h.c.}
+\end{alignat}
+The general mass-dipole matrix present in \req{mass:eq:05b} and \req{mass:eq:05c} can be written in the following manner
+\begin{alignat}{1}
+	\label{mass:eq:06a} {\bb{\mathcal{M}}}(\vec{E},\vec{B}) = \bb{m}^{f} + \bb{I} + \frac{i}{2}\bb{\mu}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\,,\\
+	\label{mass:eq:06b} \bb{m}^{f} = \mathrm{diag}(m_{e},m_{\mu},m_{\tau})\,,\indent\mathrm{Tr}\left[\bb{I}\right] = 0 \,,
+\end{alignat}
+where $\bb{m}^{f}$ is the intrinsic flavor mass and $\bb{I}$ is the off-diagonal coupling between flavors prescribed by BSM physics. Since neutrino oscillation is experimentally verified, the coupling matrix cannot in general be zero, though elements of the intrinsic flavor masses can. In the most general case the trace of $\bb{U}$ does not have to be zero allowing for both intrinsic flavor masses, and modifications to those masses due to a BSM interaction. However for the purposes of this work, we will always re-sum such terms $m'_{\ell}+I_{\ell\ell}\rightarrow m_{\ell}$ leaving $\bb{I}$ overall traceless barring some additional complications with self-adjointness. Depending on what theory generates the AMM elements, there is also the possibility of non-Hermiticity in $\bb{\mu}$ with $\bb{\mu}^{\dagger}\neq\bb{\mu}$. Additionally, the conditions for $\bb{I}$ can be further constrained by group symmetry such as flavor SU(3). While non-Hermitian moments and group structure of the BSM interaction raise interesting possibilities, we will not explore them further here. 
+
+If we require that the mass matrix $\bb{M}$ be invertible, we can reparametrize the magnetic moment as 
+\begin{alignat}{1}
+	\label{mass:eq:07a}  \mathbbm{1} &= \bb{M}^{-1}\bb{M}\,,\\
+	\label{mass:eq:07b} \bb{\mu} &= \bb{M}\bb{K}\,.
+\end{alignat}
+This allows \req{mass:eq:06a} to be rewritten as
+\begin{alignat}{1}
+	\label{mass:eq:08} {\bb{\mathcal{M}}} = \bb{M}\left(\mathbbm{1} + \frac{i}{2}\bb{K}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\,.
+\end{alignat}
+This requires that for each zero-element of the intrinsic flavor mass $\bb{m}^{f}$, the interaction $\bb{I}$ must be such to restore the overall matrix $\bb{M}$ to full rank. This restriction is however already fulfilled for $\bb{M}$ as ultimately the mass matrix must be full rank regardless to retain diagonalizability into three nonzero mass eigenvalues $(m_{1}, m_{2}, m_{3})$ as demonstrated in \req{mass:eq:02}. We note that \req{mass:eq:08} is suggestive that there may by some perturbative connection between particle mass and magnetic moment whereas the magnetic moment signifies the presence of a complex phase. We've pointed out the potential connection between mass and magnetic moment in prior work and note that this relationship may only make itself truly known in the regime of strong fields where non-minimal coupled electromagnetism may arise. To this end we propose the following mass matrix as a possible ansatz
+\begin{alignat}{1}
+	\label{mass:eq:10} {\bb{\mathcal{M}}} = \bb{M}\times\mathrm{exp}\left(\frac{i}{2}\bb{K}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\,,
+\end{alignat}
+which for weak fields $F\rightarrow0$ reduces to the prior form \req{mass:eq:08}. Regardless of whether the perturbative connection exists, as written in \req{mass:eq:10}, the presence of magnetic moment should ultimately modify the flavor mixing matrix thus providing a connection between spin and flavor states
+        \subsection{Mass hierarchy}
+        \subsection{Dirac neutrinos}
+        \subsection{Majorana neutrinos}
+            \subsubsection{See-saw mechanism}
+    \section{Neutrino magnetic moments}
+        \subsection{Direct moments}
+        \subsection{Transition moments}
+
+\section{Flavor rotation}
+\noindent One important aspect of neutrino dipole moments is their relationship to CP-violation in processes sensitive to weak interactions. In general, the presence of a CP-violating phase such as $\delta_{\mathrm{CP}}$ cannot be disentangled from the presence of transition dipole moments and otherwise acts as an unobservable roation of moment elements. Dipole moments in this context can also considered as an \lq\lq effective\rq\rq\ moment which is a mixture of both the intrinsic moment and the CP-phase. If the moment contains an electric dipole, then the resulting Lagrangian term is naturally CP breaking because of the presence of $\gamma_{5}$. For $N$-generations of fermions, there up to
+\begin{alignat}{1}
+	\label{cp:eq:01a} \#\ \mathrm{of}\ \mathrm{Dirac}\ \mathrm{phases} &= \frac{1}{2}(N-1)(N-2)\,,\\
+	\label{cp:eq:01b} \#\ \mathrm{of}\ \mathrm{Majorana}\ \mathrm {phases} &= \frac{1}{2}N(N-1)\,,
+\end{alignat}
+complex phases which cause CP-violation. Therefore, for $N=2$ there should be zero such complex phases. We can demonstrate this principle by first assuming there is such a phase and establishing how it must vanish for a given reasonable mass matrix. If we consider a simplified two-generation neutrino model, the generic Cabbibo-style rotation matrix is given by
+\begin{alignat}{1}
+	\label{cp:eq:02} \bb{V}_{2}(\theta,\delta_{\mathrm{CP}}) &= 
+	\begin{pmatrix}
+		\cos{\theta}& \sin{\theta}e^{i\delta_{\mathrm{CP}}} \\
+		-\sin{\theta}e^{-i\delta_{\mathrm{CP}}} & \cos{\theta}
+	\end{pmatrix}\,,
+\end{alignat}
+The CP breaking phase $\delta_{\mathrm{CP}}$ is generally considered to be nonphysical in the two-generation case for Dirac neutrinos as the phase can be absorbed making it unobservable. The Majorana two-generation case differs slightly in that the CP phase cannot be absorbed, but otherwise is still unobservable. If only neutrino mass is included, then for a fortuitous choice of unitary transformation $\bb{X}_{\mathrm{CP}}$ of the fields
+\begin{alignat}{1}
+	\label{cp:eq:03a} \nu^{m}&\rightarrow\bb{X}_{\mathrm{CP}}\nu^{m}= 
+	\begin{pmatrix}
+		e^{i\delta_{\mathrm{CP}}}& 0 \\
+		0 & 1
+	\end{pmatrix}
+	\begin{pmatrix}
+		\nu_{1}\\
+		\nu_{2}
+	\end{pmatrix}\,,\indent \bb{X}_{\mathrm{CP}}^{\dagger}\bb{X}_{\mathrm{CP}}=1\,,\\
+	\label{cp:eq:03b}\bb{\tilde{V}}_{2}(\theta)&=\bb{X}_{\mathrm{CP}}^{\dagger}\bb{V}_{2}(\theta,\delta_{\mathrm{CP}})\bb{X}_{\mathrm{CP}}\,,\indent \bb{\tilde{V}}_{2}(\theta)=
+	\begin{pmatrix}
+		\cos{\theta}&\sin{\theta}\\
+		-\sin{\theta}&\cos{\theta}
+	\end{pmatrix}\,,
+\end{alignat}
+the CP-violating phase $\delta_{\mathrm{CP}}$ can be completely removed. For a Dirac neutrino with Hermitian mass matrix
+\begin{alignat}{1}
+	\label{cp:eq:04} \bb{M}=
+	\begin{pmatrix}
+		m_{1}&m_{12}\\
+		m_{12}^{*}&m_{2}
+	\end{pmatrix}\,,\indent \bb{M}=\bb{M}^{\dagger}\,,
+\end{alignat}
+the mass Lagrangian transforms via \req{cp:eq:03a} as
+\begin{alignat}{1}
+	\notag \mathcal{L}_{m}^{Dirac}&=-\nu_{L}^{m\, \dagger}\gamma^{0}\bb{X}_{\mathrm{CP}}^{\dagger}\left(\bb{V}^{\dagger}_{2}\bb{M}\bb{V}_{2}\right)\bb{X}_{\mathrm{CP}}\nu_{R}^{m}+\mathrm{h.c}\\
+	\notag &=-\nu_{L}^{m\, \dagger}\gamma^{0}\left(\bb{X}_{\mathrm{CP}}^{\dagger}\bb{V}^{\dagger}_{2}\bb{X}_{\mathrm{CP}}\right)\left(\bb{X}_{\mathrm{CP}}^{\dagger}\bb{M}\bb{X}_{\mathrm{CP}}\right)\left(\bb{X}_{\mathrm{CP}}^{\dagger}\bb{V}_{2}\bb{X}_{\mathrm{CP}}\right)\nu_{R}^{m}+\mathrm{h.c}\\
+	\label{cp:eq:05a} &=-\nu_{L}^{m\, \dagger}\gamma^{0}\bb{\tilde{V}}^{\dagger}_{2}\bb{\tilde{M}}\bb{\tilde{V}}_{2}\nu_{R}^{m}+\mathrm{h.c}\,,
+\end{alignat}
+where
+\begin{alignat}{1}
+	\label{cp:eq:05b} \bb{\tilde{M}}=\bb{X}_{\mathrm{CP}}^{\dagger}\bb{M}\bb{X}_{\mathrm{CP}}\,.
+\end{alignat}
+The unitary transformation of the mass matrix explicitly shows the relationship between the presence of complex phases within the mass matrix and the CP breaking phase which is a parametrization. We should be careful to note that the mass matrix is a model of physics while the mixing matrix is a mathematical parametrization. The explicit unitary transformation
+\begin{alignat}{1}
+	\label{cp:eq:05c} \bb{\tilde{M}} = 
+	\begin{pmatrix}
+		m_{f_{1}}&m_{f_{12}}e^{-i\delta_{\mathrm{CP}}}\\
+		m_{f_{12}}^{*}e^{i\delta_{\mathrm{CP}}}&m_{f_{2}}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		m_{f_{1}}&|m_{f_{12}}|\\
+		|m_{f_{12}}|&m_{f_{2}}
+	\end{pmatrix}\,,\indent \arg{m_{f_{12}}}\equiv\delta_{\mathrm{CP}}
+\end{alignat}
+leaves the mass matrix $\bb{\tilde{M}}$ independent of the complex phase $\delta_{\mathrm{CP}}$ and fully real. This is traditionally the argument used to show that the two-generation neutrino cannot contain a CP breaking phase and that ultimately three generations are required before a phase appears that cannot be absorbed. There are then two mechanisms in which CP breaking phases occur: (a) There are at least three generations of fermion or (b) the Lagrangian includes an explicitly CP breaking term such as the electric dipole moment. The question to raise is then whether or not transition magnetic moments preserve CP as a matter of course or not. The transition moment Lagrangian interaction transforms as
+\begin{alignat}{1}
+	\notag \mathcal{L}_{\mathrm{AMM}}^{Dirac}&=-\nu_{L}^{m\, \dagger}\gamma^{0}\bb{X}_{\mathrm{CP}}^{\dagger}\left(\bb{V}^{\dagger}_{2}\bb{\mu}\bb{V}_{2}\right)\bb{X}_{\mathrm{CP}}\left(\frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\nu_{R}^{m}+\mathrm{h.c}\\
+	\notag &=-\nu_{L}^{m\, \dagger}\gamma^{0}\left(\bb{X}_{\mathrm{CP}}^{\dagger}\bb{V}^{\dagger}_{2}\bb{X}_{\mathrm{CP}}\right)\left(\bb{X}_{\mathrm{CP}}^{\dagger}\bb{\mu}\bb{X}_{\mathrm{CP}}\right)\left(\bb{X}_{\mathrm{CP}}^{\dagger}\bb{V}_{2}\bb{X}_{\mathrm{CP}}\right)\left(\frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\nu_{R}^{m}+\mathrm{h.c}\\
+	\label{cp:eq:06a} &=-\nu_{L}^{m\, \dagger}\gamma^{0}\bb{\tilde{V}}^{\dagger}_{2}\bb{\tilde{\mu}}\bb{\tilde{V}}_{2}\left(\frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\nu_{R}^{m}+\mathrm{h.c}\,,
+\end{alignat}
+where
+\begin{alignat}{1}
+	\label{cp:eq:06b} \bb{\tilde{\mu}}=\bb{X}_{\mathrm{CP}}^{\dagger}\bb{\mu}\bb{X}_{\mathrm{CP}}\,.
+\end{alignat}
+\req{cp:eq:06b} is in general is still a function of the complex phase $\delta_{\mathrm{CP}}$. Explicitly for a Hermitian magnetic dipole moment
+\begin{alignat}{1}
+	\label{cp:eq:07a} \bb{\mu}=
+	\begin{pmatrix}
+		\mu_{f_{1}}&\mu_{f_{12}}\\
+		\mu_{f_{12}}^{*}&\mu_{f_{2}}
+	\end{pmatrix}\,,\indent \bb{\tilde{\mu}}=
+	\begin{pmatrix}
+		\mu_{f_{1}}&\mu_{f_{12}}e^{-i\delta_{\mathrm{CP}}}\\
+		\mu_{f_{12}}^{*}e^{i\delta_{\mathrm{CP}}}&\mu_{f_{2}}
+	\end{pmatrix}\,.
+\end{alignat}
+There is no physical reason that the complex arguement of the transition moments should match or otherwise be related to the CP phase which is determined by the mass model used, therefore the CP breaking phase results in an otherwise invisible rotation of the transition elements. A similar invisible rotation occurs in the Majorana two-generation case.
+
+\subsection{PMNS matrix}
+
+\subsection{Magnetically induced rotation}
+\noindent To demonstrate an example of how spin (and thus magnetic moment) and flavor may mix, let us consider two generations of neutrinos. From the experimental data on neutrino oscillations, is is understood that either the two heavier (normal hierarchy) or the two lighter (inverted hierarchy) neutrino states are close together in mass. If the electromagnetic properties of the neutrino do indeed lead to flavor mixing effects, then it is likely the closer pair of neutrino mass states are most sensitive to the phenomenon. It is still unknown which hierarchy neutrinos follow, therefore probing the EM properties of neutrinos may provide evidence for one model over the other. The behavior of the two generation neutrino model may then be valuable for subtle EM mixing effects especially in regard to the two neutrinos with more similar masses.
+
+To avoid direct magnetic moments, we will consider for now only Majorana neutrinos. Majorana nuetrinos have the following properties
+\begin{alignat}{1}
+	\label{mix:eq:00a}	\bb{M}^{\mathrm{T}}=\bb{M}\,,\\
+	\label{mix:eq:00b}	\bb{\mu}^{\dagger}=\bb{\mu}\,,\indent\bb{\mu}^{\mathrm{T}}=-\bb{\mu}\,,
+\end{alignat}
+such that the mass matrix $\bb{M}$ is fully symmetric while the moment matrix $\bb{\mu}$ is Hermitian and fully anti-symmetric. This then requires that the transitional magnetic moment elements are purely imaginary. Following the notation established in \req{mass:eq:06a} and \req{mass:eq:06b} we write down the two-generation mass and dipole matrices as
+\begin{alignat}{1}
+	\label{mix:eq:01a} \bb{m}^{f} &= 
+	\begin{pmatrix}
+		m_{f_{1}} & 0\\
+		0 & m_{f_{2}}
+	\end{pmatrix}\,,\ 
+	\bb{I} = 
+	\begin{pmatrix}
+		0 & m_{f_{12}}\\
+		m_{f_{12}} & 0
+	\end{pmatrix}\,,\ 
+	\bb{\mu} = 
+	\begin{pmatrix}
+		0 & i\mu_{f_{12}}\\
+		-i\mu_{f_{12}} & 0
+	\end{pmatrix}\,.
+\end{alignat}
+The intrinsic mass $\bb{m}^{f}$ are taken to be fully real, but we will allow the remaining elements to be complex. The overall mass-dipole matrix is then
+\begin{alignat}{1}
+	\label{mix:eq:02} \bb{\mathcal{M}} = 
+	\begin{pmatrix}
+		m_{f_{1}} & m_{f_{12}}-\frac{1}{2}\mu_{f_{12}}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\\
+		m_{f_{12}}+\frac{1}{2}\mu_{f_{12}}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta} & m_{f_{2}}
+	\end{pmatrix}\,,\ 
+\end{alignat}
+Curiously, the presence of the dipole means the mass matrix itself is not Hermitian.
+\begin{alignat}{1}
+	\label{mix:eq:03} \bb{\mathcal{M}}^{\dagger} = \gamma_{0}\bb{\mathcal{M}}\gamma_{0}\,.\ 
+\end{alignat}
+This however does not disturb the Hermiticity of the overall Lagrangian term. In general, a mass-dipole matrix such as \req{mix:eq:02} will always lead to a Hermitian Lagrangian as long as it only contains even powers of gamma matrices $\gamma$. Let us introduce the concept of a \lq\lq mass-dipole eigenstate\rq\rq\ $\widetilde{m}(\vec{E},\vec{B})$ resulting from a rotation $\bb{W}(\theta)$ which completely diagonalizes $\bb{\mathcal{M}}$. This represents a unique basis that is distinct from the normal mass eigenbasis. Since we have only two neutrino flavors, this rotation matrix is merely the Cabbibo-like mixing matrix
+\begin{alignat}{1}
+	\label{mix:eq:04} \bb{W} = 
+	\begin{pmatrix}
+		\cos{\theta} & -\sin{\theta}\\
+		\sin{\theta} & \cos{\theta}
+	\end{pmatrix}
+\end{alignat}
+We can neglect the impact of a CP breaking phase in the two-generation case in the presence of only a magnetic dipole. The mass-dipole diagonalization is then given by
+\begin{alignat}{1}
+	\label{mix:eq:05} \bb{\tilde{m}} = \mathrm{diag}(\tilde{m}_{1},\tilde{m}_{2})=\bb{W}^{T}\bb{\mathcal{M}}\bb{W}
+\end{alignat}
+The resulting rotation angle $\theta$ is then determined by the flavor masses, the interaction coupling strength and the magnetic dipole. 
+\begin{alignat}{1}
+	\label{mix:eq:06a} \tan{2\theta}&=-\frac{2a+i\mu\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}}{m_{f_{2}}-m_{f_{1}}}\,,\\
+	\label{mix:eq:06b} \tilde{m}_{1,2}&=\frac{1}{2}\left(m_{f_{1}}+m_{f_{2}}\mp(m_{f_{2}}-m_{f_{1}})\cos{2\theta}\pm(2a+i\mu\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta})\sin{2\theta}\right)\,.
+\end{alignat}
+\section{CP violation}
+The source of CPV in the neutrino sector is ultimately attributable to the fundamental mismatch between the mass-matrices of the charged leptonic flavors $(e,\mu,\tau)$ and the neutrino flavors $(\nu_{e},\nu_{\mu},\nu_{\tau})$. \cite{schwartz2014quantum} In the quark sector, we would instead be discussing the relation between the upper quarks $(u,c,t)$ and lower quarks $(d,s,b)$. Mathematically, this means the mass matrix for charged leptons does not commute with the mass matrix of the neutral leptons and cannot be simultaneously diagonalized except for special choices of the mixing and phase angles or degeneracy among the mass eignstates. \ar We can characterize CPV by introducing the mixing matrices which diagonalize the individual mass-matrices as follows
+\begin{alignat}{1}
+	\label{diag:1} \bb{V}\bb{M}_{\nu}\bb{M}_{\nu}^{\dagger}\bb{V}^{\dagger} = \bb{D}_{\nu}^{2} = \mathrm{diag}(m_{1}^{2},m_{2}^{2},m_{3}^{2})\,,\\
+    \label{diag:2} \bb{M}_{\ell} \equiv \bb{D}_{\ell} = \mathrm{diag}(m_{e},m_{\mu},m_{\tau})\,,
+\end{alignat}
+where $\nu$ refers to neutrino states while $\ell$ refers to charged lepton states. We have specifically defined the charged leptons flavor states as being simultaneously mass eignstates which can be done without a loss of generality. We will not consider oscillation among the charged leptons, though that may be an avenue of further study. \cite{akhmedov2007charged} We note that $\bb{V}$ can diagonalize the Hermitian square of the mass matrices as well as the mass matrices themselves which is due to the unitarity of the mixing matrices.
+
+\subsection{Jarlskog invariant}
+\noindent CPV is then revealed by the commutator of these matrices
+\begin{alignat}{1}
+	\label{comm:1} [\bb{M}_{\nu}\bb{M}_{\nu}^{\dagger},\bb{D}_{\ell}^{2}] = \bb{C}\,.
+\end{alignat}
+As the degrees of freedom of the neutrino mixing matrix $\bb{V}$ can be experimentally determined, the size of the commutator can be expressed also in terms of the mass eigenstates of the neutrino mass matrix
+\begin{alignat}{1}
+	\label{comm:2} [\bb{V}^{\dagger}\bb{D}_{\nu}^{2}\bb{V},\bb{D}_{\ell}^{2}] = \bb{C}\,.
+\end{alignat}
+The matrix $\bb{C}$ can be unwieldy, so following Jarlskog's procedure \ar we take the determinant of $\bb{C}$ which extracts the invariant quantity associated with the size of the CP violation present within the theory. \ar This yields using \req{comm:2}
+\begin{alignat}{1}
+	\label{det:1} \mathrm{Im}\left[\mathrm{det}(\bb{C})\right]=\mathrm{Im}\left[\mathrm{det}\left[\bb{M_{\nu}}\bb{M_{\nu}^{\dagger}},\bb{D_{\ell}^{2}}\right]\right]=2\left(\Delta_{12}\Delta_{23}\Delta_{13}\right)\left(\Delta_{e\mu}\Delta_{\mu\tau}\Delta_{e\tau}\right)J\,.
+\end{alignat}
+We define $\Delta_{ij}$ via the eigenstates of the mass matrices
+\begin{alignat}{1}
+	\label{delta:1} \Delta_{ij}\equiv m^{2}_{i}-m^{2}_{j}\,.
+\end{alignat}
+The definition of $J$ is then written for any $i, j, k\ \mathrm{and}\ l$ as
+\begin{alignat}{1}
+	\label{j:1} \mathrm{Im}\left[V_{ij}V_{kl}V^{*}_{il}V^{*}_{kj}\right]=J\sum_{m,n}\epsilon_{ikm}\epsilon_{jln}\,.
+\end{alignat}
+The benefit of the J-invariant is this quanity captures the \lq\lq size\rq\rq\ of the CPV in a single quantity and is identically zero for systems which preserve CP. CP violating processes can generally have their amplitudes written in terms of $J$ making it a flexible for a wide variaty of calculations of interest. \ar From \req{det:1} we can see that the CPV of the theory vanishes if the commutator of the mass matrices is purely real, and thus the mixing matrix is also purely real, or if there is degeneracy among the mass eigenstates in the theory which absorbs a degree of freedom.
+
+While generally it is considered that CPV comes exclusively from the presence of three flavor generations in the Standard Model, we would like to expand the usage of the J-invariant to encompass a generalized family of CP violating theories whether that CPV arises from the number of flavor generations or explicitly in CP violating terms in the Lagrangian of the theory (e.g. the presence of electric dipoles).
+
+While the specific change to neutrino mixing and CPV depends on the model of the neutrino dipole moment, a demonstrative model would be to assume that the $\bb{\kappa_{\nu}}$ matrix was simply proportional to the natural mass matrix of the neutrino at low order. If the same mechanism which produced neutrino masses also produced their dipoles through some BSM physics, this would not be an unreasonable assumption. Therefore we substitute
+\begin{alignat}{1}
+	\label{simplek:1} \bb{M_{\nu}}\rightarrow\bb{M_{\nu}}'=\bb{M_{\nu}}+\mu\sigma\cdot F\bb{M_{\nu}}=\bb{M_{\nu}}(1+\mu\sigma\cdot F)\,,
+\end{alignat}
+which reduces to \req{heff:1} when $\mu B$ is small. As the modified mass matrix commutes entirely with the original mass matrix, as well as the original Hamiltonian with only mass, the mathematical structure of the commutator in \req{comm:1} is unchanged. In other words
+\begin{alignat}{1}
+	\label{commutes:1} \left[\bb{M_{\nu}}',\bb{M_{\nu}}\right]=0\, \rightarrow \mathrm{Im}[\mathrm{det}(\bb{C})] = \mathrm{Im}[\mathrm{det}(\bb{C'})]\,.
+\end{alignat}
+The determinant calculation is then identical between the two mass matrices. While the overall determinant is fixed, the individual elements which make up the determinant are motified nonetheless, though in a way that manifestly compensates. This yields
+\begin{alignat}{1}
+	\label{det:0} \mathrm{Im}\left[\mathrm{det}(\bb{C})\right] &= \left(\Delta_{12}\Delta_{23}\Delta_{13}\right)\left(\Delta_{e\mu}\Delta_{\mu\tau}\Delta_{e\tau}\right)J\,,\\
+	\label{det:1} \mathrm{Im}\left[\mathrm{det}(\bb{C'})\right] &= \left(\Delta_{12}'\Delta_{23}'\Delta_{13}'\right)\left(\Delta_{e\mu}\Delta_{\mu\tau}\Delta_{e\tau}\right)J'\,,
+\end{alignat}
+where we've added primes to denote new values due to remixing. The ratio of modified $J'$ to $J$ is the amplification (or supression) of CPV \ar given by
+\begin{alignat}{1}
+	\label{amp:1} \mathcal{R} = \frac{J'}{J} = \frac{\left(\Delta_{12}\Delta_{23}\Delta_{13}\right)}{\left(\Delta_{12}'\Delta_{23}'\Delta_{13}'\right)}\,.
+\end{alignat}
+In our simple proportionality model, this simplifies to
+\begin{alignat}{1}
+	\label{amp:2} \mathcal{R} = \frac{1}{\left(1+\mu\sigma\cdot F\right)^{6}}\,.
+\end{alignat}
+The amplification ratio $\mathcal{R}$ is useful in that it can be applied to a wide range of CPV processes where the J-invariant is involved in calculating the process amplitudes allowing for substition. To first order, and evaluating $\sigma\cdot F$ for homogeneous magnetic fields, \req{amp:2} can be expressed as
+\begin{alignat}{1}
+	\label{amp:3} \mathcal{R} = 1\pm12\mu B+\mathcal{O}(B^{2})\,.
+\end{alignat}
+Under this model, the amplification of CPV is equally compensated by suppression at lowest order for polarized particles in spin states. An overall unpolarized neutrino beam in strong fields would only manifest a true shift at second order in magnetic fields. As the neutrino magnetic moment is expected to be relatively small, this is unlikely to be observable in most contexts. The situation is more promising for free quarks within quark-gluon-plasmas (QGP), whether produced in heavy-ion collisions or existing in the Early Universe. Terrestrially produced QGP in beam collisions are generally subjected to extremely powerful magnetic fields which may serve to polarize QGP. \ar A topic of future interest is whether the amplification factor $\mathcal{R}$ may be relevant for hadronization of QGP where CPV processes could be amplified or suppressed.

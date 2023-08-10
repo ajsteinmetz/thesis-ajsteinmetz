@@ -1,0 +1,295 @@
+\chapter{Spin in Kaluza-Klein theory}
+\section{KK theory}
+\section{Mathisson-Papapetrou–Dixon equations}\label{sec:MPDEquations}
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+Before we tackle the dynamics of particles in a five-dimensional space-time, we should first take the time to review the behavior of objects in a four-dimensional curved space-time. For the duration of this work we shall use the mostly positive metric signature $\mathrm{Sgn}(g_{\mu\nu})~=~\{-,+,+,+\}$ so that there arises no ambiguity in the determinant as we add or remove spatial dimensions from the discussion. For a given object, submersed in a gravitational field, we can define the existence of a stress energy tensor $T^{\mu\nu}$, which is conserved
+\begin{alignat}{1}
+  \label{STRESS01} \nabla_{\nu}T^{\mu\nu}=0\,,
+\end{alignat}
+where $\nabla_{\nu}$ is the covariant derivative. If our object follows a trajectory for some world-line $z^{\mu}(\tau)$, we can write down the multi-pole expansion of the stress-energy tensor
+\begin{alignat}{1}
+  \notag \sqrt{-g}\ T^{\mu\nu}&=\int\mathrm{d}\tau\Bigg(\mathcal{T}^{\mu\nu}\delta^{(4)}T-\nabla_{\rho}\left(\mathcal{T}^{\mu\nu\rho}\delta^{(4)}\right)\\
+  \label{STRESS02} &+\frac{1}{2!}\nabla_{(\rho}\nabla_{\sigma)}\left(\mathcal{T}^{\mu\nu\rho\sigma}\delta^{(4)}\right)+\cdots\Bigg)\,,
+\end{alignat}
+where $g$ is the determinant of the metric tensor $g_{\mu\nu}$, $\delta^{(4)}$ is a four dimensional delta function centered on the world-line $z^{\mu}(\tau)$, and $\mathcal{T}^{\mu\nu\ldots}$ are the various multi-pole moments of the stress-energy tensor. The four-velocity is therefore defined in the usual way along the trajectory $z(\tau)$ with $u^{\mu}=\mathrm{D}z^{\mu}/\mathrm{D}\tau$ and $\mathrm{D}/\mathrm{D}\tau$ is understood to be the proper time derivative. Parenthesis on indices $(\rho\ \sigma)$ represent index symmetrization while brackets $[\rho\ \sigma]$ represent anti-symmetrization. For our purposes, we will consider the object to be small and particle-like and truncate the stress-energy to include only up to the dipole moment. We will also ignore self gravitational effects treating the object as a test particle subject only to external fields.
+
+Now that we've reduced the stress energy to only include the monopole and dipole terms, we find that each term in the expansion must independently satisfy eq.~\eqref{STRESS01}. In this we introduce the definitions of momentum as a four-vector and spin as an anti-symmetric tensor
+\begin{alignat}{1}
+  \label{STRESS03} p^{\mu}&=\int_{\Sigma}T^{\mu\nu}\mathrm{d}\Sigma_{\nu}\,,\\
+  \label{STRESS04} s^{\mu\nu}&=2\int_{\Sigma}(y-x)^{[\mu}T^{\nu]\sigma}\mathrm{d}\Sigma_{\sigma}(y)\,.
+\end{alignat}
+Equations~\eqref{STRESS03} and \eqref{STRESS04} are integrated over a space-like volume 1-form hypersurface $\mathrm{d}\Sigma_{\mu}=\epsilon_{\mu\nu\rho\sigma}\mathrm{d}x^{\nu}\mathrm{d}x^{\rho}\mathrm{d}x^{\sigma}$. Using eq.~\eqref{STRESS03} and \eqref{STRESS04} we can recast eq.~\eqref{STRESS02} as
+\begin{alignat}{1}
+  \label{STRESS05} \sqrt{-g}\ T^{\mu\nu}=\int\mathrm{d}\tau\left(u^{(\mu}p^{\nu)}\delta^{(4)}-\nabla_{\rho}\left(s^{\rho(\mu}u^{\nu)}\delta^{(4)}\right)\right)\,,
+\end{alignat}
+which satisfies the conservation of the stress-energy tensor, eq.~\eqref{STRESS01}, provided the momentum and spin obey the following equations of motion
+\begin{alignat}{1}
+  \label{STRESS06} \frac{Dp^{\mu}}{D\tau}+\frac{1}{2}u^{\nu}s^{\rho\sigma}R^{\mu}_{\ \nu\rho\sigma}&=0\,,\\
+  \label{STRESS07} \frac{Ds^{\mu\nu}}{D\tau}+2u^{[\mu}p^{\nu]}&=0\,.
+\end{alignat}
+Equations~\eqref{STRESS06} and \eqref{STRESS07} are known as the Mathisson-Papapetrou–Dixon (MPD) equations. The rank-four tensor $R^{\mu}_{\ \nu\rho\sigma}$ is the Rienmann curvature tensor defined by
+\begin{alignat}{1}
+  \label{STRESS08} R^{\mu}_{\ \nu\rho\sigma}V^{\nu}=2\nabla_{[\rho}\nabla_{\sigma]}V^{\mu}\,,
+\end{alignat}
+where $V^{\mu}$ is any arbitrary vector. The significance of eq.~\eqref{STRESS06} and~\eqref{STRESS07} is that particle motion will deviate away from traditional geodesic motion due to a coupling of the curvature to the spin. Additionally, the particle will precess by an amount determined by the disalignment of the four-velocity and the four-momentum.
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\subsection{Motion of particles with spin in gravity}\label{sec:SpinMotion}
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+Considering our test particle with both mass and spin in a gravitational field, the equations of motion and precession will be described by the MPD equations. A useful form of the MPD equations can be obtained by recognizing that the four-momentum of the spinning particle is not necessarily co-linear with the four-velocity. This difficulty remains present even in the flat space-time case.
+
+We note that the four-velocity and spin tensor obey the following properties
+\begin{alignat}{1}
+  \label{MPD01} u^{2}&=c^{2}\,,\\
+  \label{MPD02} \frac{1}{2}s^{\mu\nu}s_{\mu\nu}&=\left|\mathbf{s}\right|^{2}\,,
+\end{alignat}
+and are indeed constants of motion. By contracting eq.~\eqref{STRESS07} with four-velocity, the four-momentum can be defined as
+\begin{alignat}{1}
+  \label{MPD03} p^{\mu}=\frac{1}{c^{2}}\left((p\cdot u)u^{\mu}+\frac{Ds^{\mu\nu}}{D\tau}u_{\nu}\right)\,.
+\end{alignat} 
+Equation~\eqref{MPD03} reveals that the \lq\lq rest mass\rq\rq\ is given by
+\begin{alignat}{1}
+  \label{MPD04} p_{\mu}u^{\mu}/c^{2}&=m\,.
+\end{alignat}
+Care must be taken as $m$ is not necessarily a constant of motion. But in the appropriate limit where spin does not precess, $m$ can be understood as mass in the usual manner. A second definition of mass can be defined from the inner product of the four-momentum,
+\begin{alignat}{1}
+  \label{MPD05} p_{\mu}p^{\mu}/c^{2}&=\mathcal{M}^{2}\,.
+\end{alignat}
+We recognize that $\mathcal{M}$ refers to a \lq\lq center-of-momentum\rq\rq\ (CM) mass in the frame where the three-momentum is zero while $m$ is the mass of the particle measured in the frame where the three-velocity is zero. The difference between the two masses is
+\begin{alignat}{1}
+  \label{MPD06} (\mathcal{M}^{2}-m^{2})c^{2}=p_{\mu}\frac{Ds^{\mu\nu}}{D\tau}u_{\nu}=\frac{1}{2}\frac{Ds^{\mu\nu}}{D\tau}\frac{Ds_{\mu\nu}}{D\tau}\,,
+\end{alignat}
+which is the magnitude of the spin precession. Using eq.~\eqref{MPD03} we can then recast the MPD equations as
+\begin{alignat}{1}
+  \label{MPD07} \frac{D}{D\tau}\left(mu^{\mu}+\frac{Ds^{\mu\nu}}{D\tau}u_{\nu}\right)+\frac{1}{2}u^{\nu}s^{\rho\sigma}R^{\mu}_{\ \nu\rho\sigma}&=0\,,\\
+  \label{MPD08} \frac{1}{u^{2}}\frac{Ds^{\mu\nu}}{D\tau}+u^{\mu}\frac{Ds^{\nu\sigma}}{D\tau}u_{\sigma}-u^{\nu}\frac{Ds^{\mu\sigma}}{D\tau}u_{\sigma}&=0\,.
+\end{alignat}
+As it stands, equations \eqref{MPD07} and \eqref{MPD08} contain too many degrees of freedom as there are ten equations of motion (six for $s^{\mu\nu}$ and four for $p^{\mu}$), but thirteen components (six for $s^{\mu\nu}$, four for $p^{\mu}$ and three for $u^{\mu}$). Therefore to obtain a solution to the particle trajectory, we need to impose an additional constraint on the equations of motion. There are a number of options in the literature with differing merits. For our purposes we will consider the existence of some time-like four-vector proportional to $p^{\mu}$ such that
+\begin{alignat}{1}
+  \label{MPD09} p^{\mu}=\mathcal{M}U^{\mu}\,.
+\end{alignat}
+The four-vector $U^{\mu}$ can be considered the \lq dynamic velocity\rq\ whereas the usual four-velocity can be regarded as the kinematic velocity. We then adopt the Tulczyjew-Dixon constraint
+\begin{alignat}{1}
+  \label{MPD10} s^{\mu\nu}p_{\nu}=0\,.
+\end{alignat}
+In the CM frame, under this constraint, the spin tensor is reduced to three degrees of freedom as
+\begin{alignat}{1}
+  \label{MPD11} s^{\mu0}=0\,.
+\end{alignat}
+This condition fixes the degrees of freedom to the number of equations allowing for a unique solution to be obtained in principle. We define the spin four-vector as
+\begin{alignat}{1}
+  \label{MPD12} S_{\mu}=\frac{1}{2}\epsilon_{\mu\nu\rho\sigma}s^{\nu\rho}U^{\sigma}\,,
+\end{alignat}
+using the dynamical velocity rather than the kinematic four-velocity, though we can define an alternate four-spin vector using the latter defined velocity. In our notation \lq\lq capital\rq\rq\ variables will refer to the dynamic variables tied to the definition of the four-momentum rather than the four-velocity. This definition ensures that the spin four-vector remains orthogonal to the four-momentum $p^{\mu}$. This is an essential ingredient when we construct the Thomas-Bargmann-Michel-Telegdi (TMBT) equations in a gravitational field further on. The precession equation~\eqref{MPD08} then reduces to the simpler expression
+\begin{alignat}{1}
+  \label{MPD13} \frac{DS^{\mu}}{D\tau}=U^{\mu}S_{\nu}\frac{DU^{\nu}}{D\tau}\,.
+\end{alignat}
+It is unwieldy solve for the trajectory of a particle when the equations of motion involve both dynamic and kinematic velocities. Therefore it is useful to define one in terms of the other entirely. Rearranging equations~\eqref{STRESS06},~\eqref{MPD03} and~\eqref{MPD09} yields
+\begin{alignat}{1}
+  \label{MPD14} u^{\mu}=\frac{m}{\mathcal{M}}\left(U^{\mu}+\frac{2s^{\mu\nu}R_{\nu\alpha\beta\gamma}U^{\alpha}s^{\beta\gamma}}{2\mathcal{M}^{2}+R_{\alpha\beta\gamma\delta}s^{\alpha\beta}s^{\gamma\delta}}\right)\,.
+\end{alignat}
+This expression defines the four-velocity entirely in terms of the spin, Riemann curvature, and dynamical four-velocity. In the appropriate limit of no spin or curvature, the dynamical and kinematic velocities become equivalent. The time-like character of $u^{\mu}$ does not necessarily always hold true under the MPD equations, but this occurs in limits where the validity of MPD are questionable and the dynamical velocity may no longer be considered physically well defined.
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\section{Ein einbein}\label{sec:Einbein}
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+In this section were are going to carefully consider the motion of the relativistic point particle examining the physical consistency of \lq\lq world-line reparametrization symmetry\rq\rq. Let us consider a massive particle moving in (1+D)-dimensions with D total spatial dimensions. The Polyakov-type action principle for the particle is
+\begin{alignat}{1}
+	\label{eq:EPolyakovAction}\mathcal{S}[x^{\mu}(\tau),\eta(\tau)]=\frac{c^{2}}{2}\int\mathrm{d}\tau\left(\frac{1}{\eta}g_{\mu\nu}\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}-\eta M^{2}c^{2}\right)
+\end{alignat}
+In this section Greek indices are 1+D rather than four dimensional. The variable $\tau$ denotes the affine parameter which is monotonically increasing and parametrizes the trajectory of the world-line and has units of length. The action is a functional of an additional field $\eta(\tau)$ referred to as the \lq\lq induced world-line metric\rq\rq\ and represents the one-dimensional equivalent of the vielbien or \lq\lq einbein\rq\rq. In the context of string theory, for the string action, $\eta$ would be the induced metric on the string world-sheet and parametrized by the world-sheet's area rather than the proper time. This action also generalizes to the motion of the massless particle when $M=0$. Minimizing the action with respect to variation in the einbein $\eta$ yields
+\begin{alignat}{1}
+	\label{eq:EEtaMotion}\frac{1}{\eta^{2}}g_{\mu\nu}\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}\frac{\mathrm{d}x^{\nu}}{\mathrm{d}\tau}=-M^{2}c^{2}\,.
+\end{alignat}
+For the massive particle, in terms of a suitable comoving coordinates with time $\tau'$, eq.~\eqref{eq:EEtaMotion} reduces to
+\begin{alignat}{1}
+	\label{eq:EEtaMotionMetric}\eta(\tau')=\frac{1}{Mc}\sqrt{-g_{00}(\tau')}\,.
+\end{alignat}
+We also can define the normalized velocity
+\begin{alignat}{1}
+	\label{eq:EEtaMomentum}u^{\mu}=\frac{1}{\eta M}\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}\,
+,\end{alignat}
+such that eq.~\eqref{eq:EEtaMotion} returns the familiar expression
+\begin{alignat}{1}
+	\label{eq:EEtaMotionNorm}g_{\mu\nu}u^{\mu}u^{\nu}=-c^{2}\,,
+\end{alignat}
+and therefore the orthogonality of the covariant velocity and covariant acceleration is preserved
+\begin{alignat}{1}
+	\label{eq:EEtaMotionOrtho}u_{\mu}\frac{\mathrm{D}u^{\mu}}{\mathrm{D}\tau}=0\,.
+\end{alignat}
+The traditional point particle dynamics are recovered by relaxing any deformation in the induced metric $\eta~\rightarrow~1/Mc$. This procedure is suspiciously reminiscent of the kinematic and dynamic distinction between four-velocity and four-momentum which resulted from the introduction of spin in Sec.~\ref{sec:SpinMotion} therefore there is an analogy to be made between the deformation of the induced metric and the non-geodesic motion of the MFD equations. We define the dimensionless einbein as
+\begin{alignat}{1}
+	\label{eq:EDimensionlessEta}\bar{\eta}=\eta Mc\,.
+\end{alignat}
+Substituting in eq.~\eqref{eq:EEtaMotionMetric}, the proper time derivative of the einbein equation of motion eq.~\eqref{eq:EEtaMotion} is
+\begin{alignat}{1}
+	\label{eq:EEtaProperTime}\frac{\mathrm{d}x_{\mu}}{\mathrm{d}\tau}\frac{\mathrm{d}^{2}x^{\mu}}{\mathrm{d}\tau^{2}}=2\bar{\eta}\frac{\mathrm{d}\bar{\eta}}{\mathrm{d}\tau}=-\frac{1}{2}\frac{\mathrm{d}g_{00}}{\mathrm{d}\tau'}\frac{\mathrm{d}\tau'}{\mathrm{d}\tau}\,,
+\end{alignat}
+which showcases the non-orthogonality of the kinematic velocity and acceleration.
+
+
+The minimization of eq.~\eqref{eq:EPolyakovAction} results in the equations of motion
+\begin{alignat}{1}
+	\label{eq:EParticleMotion} \frac{\mathrm{d}^{2}\hat{x}^{A}}{\mathrm{d}\hat{\tau}^{2}}+\hat{\Gamma}^{A}_{BC}\frac{\mathrm{d}\hat{x}^{B}}{\mathrm{d}\hat{\tau}}\frac{\mathrm{d}\hat{x}^{C}}{\mathrm{d}\hat{\tau}}-\frac{\mathrm{d}}{\mathrm{d}\hat{\tau}}\left(\mathrm{ln}\left(\gamma^{1/2}\right)\right)\frac{\mathrm{d}\hat{x}^{A}}{\mathrm{d}\hat{\tau}}=0\,.
+\end{alignat}
+Therefore the presence of a deformation $\gamma\neq1$ of the world-line metric results in deviations from geodesic motion. The variable $\gamma$ can be defined in terms of the spacetime interval
+\begin{alignat}{1}
+	\label{eq:EInterval}\mathrm{d}\hat{\tau}^{2}&=\hat{g}_{AB}\mathrm{d}\hat{x}^{A}\mathrm{d}\hat{x}^{B}\,,\\
+	\notag&=\hat{g}_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}+2\hat{g}_{\mu5}\mathrm{d}x^{\mu}\mathrm{d}y+\hat{g}_{55}\mathrm{d}y^{2}
+\end{alignat}
+\begin{alignat}{1}
+	\label{eq:EInducedMetric}\eta^{2}(\hat{\tau})\equiv\hat{g}_{AB}\frac{\mathrm{d}\hat{x}^{A}}{\mathrm{d}\hat{\tau}}\frac{\mathrm{d}\hat{x}^{B}}{\mathrm{d}\hat{\tau}}
+\end{alignat}
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\section{The Kaluza-Klein framework}\label{sec:KKFramework}
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+The \lq miracle\rq\ of Kaluza-Klein is that both 4D gravitation and electromagnetism emerge from a higher dimension 5D gravitational theory. While the specific importance of Kaluza's result to the physical world (if there is one) has yet to be revealed, the ideas of Kaluza-Klein have been extensively used to showcase the emergence of unified physics from higher dimensional geometries. 
+
+In the modern context, we understand that Kaluza-Klein in its original form cannot strictly be correct as we are operating purely in the classical regime and we are missing the incorporation of the weak and strong interactions as well. With all that said, there is still value in exploring the implications of Kaluza-Klein in that Kaluza's miracle might very well not be an accident, but a natural result from a fuller more complete implementation of these ideas.
+
+The main program of this paper is to obtain the spin dynamics of a test particle in the context of a 5D Kaluza-Klein style theory in the same spirit as was done above to obtain the MPD equations. We consider a particle under free-fall motion in the five-dimensional bulk. Free-fall motion in the five-dimensional bulk then manifests as accelerated motion caused by the electromagnetic force and an additional scalar force in the four-dimensional sector. Because particles with spin deviate from geodesics in free-fall, there should ultimately spin precession generated by electromagnetism, the scalar field, and gravitation.
+
+In our notation, all five-dimensional objects $\hat{\mathcal{P}}$ will be dressed with a hat and Latin letters will represent the indices of a five-dimensional $\{0-3,5\}$ space-time. The position five-vector is then denoted by $\hat{x}^{A}=\{x^{\mu},y\}$ where $y$ is the fifth coordinate position. The Einstein-Hilbert action principle that we will use is
+\begin{alignat}{1}
+	\label{KALUZA01} \mathcal{S}[\hat{g}_{AB}]=\frac{c^{4}}{16\pi\hat{G}}\int\mathrm{d}\hat{x}^{5}\sqrt{-\hat{g}}\hat{R}\,.
+\end{alignat}
+The variable $\hat{G}$ is the gravitational constant and $\hat{R}$ is the Ricci scalar in the 5D space-time. Kaluza-Klein theories are usually expressed as Ricci-flat theories with the scalar curvature $\hat{R}=0$, but in general nothing prevents us from including matter or other fields in the five-dimensional bulk by adding terms to the above action. In this paper will stick with the Ricci-flat universe though we may return to the question of bulk matter in the future. Additionally, unlike especially many early papers on Kaluza-Klein, we will not be neglecting the dynamics of the scalar field $\phi$ which arises due to the extra degree of freedom in the metric tensor via $\hat{g}_{55}$. 
+
+This scalar field is often referred to as the dilaton field due to connections with conformal invariance and string theory which generically produce such fields. Kaluza-Klein therefore belongs to a family of Einstein-Maxwell-Dilaton (EMD) theories alongside scalar-gravity and string theories. It should also be noted that solutions to 5D Kaluza-Klein theory can be recomposed from higher dimensional supergravity (SUGRA) theories affording us much flexibility. 
+
+In an otherwise empty universe, the Ricci tensor resulting from varying the action in eq.~\eqref{KALUZA01} is
+\begin{alignat}{1}
+	\label{KALUZA02} \hat{R}_{AB}=0\,.
+\end{alignat}
+The 4D field equations are then obtained by evaluating the 5D Ricci tensor. To explain how an entirely new dimension could go so-far undetected in everyday experience, Kaluza in his original paper introduced a \lq\lq cylinder condition\rq\rq\ to remove the metric's dependence on the fifth coordinate
+\begin{alignat}{1}
+	\label{KALUZA03} \frac{\partial\hat{g}_{AB}}{\partial y}=0\,.
+\end{alignat}
+This succeeds is preventing the equations of motion to depend on the fifth coordinate. The cylinder condition, which is not a Lorentz covariant statement, was later justified by Klein via compactification of the extra dimension into a periodic dimension of small circumference. Other explanations for the cylinder condition exist as well and in our paper we take the agnostic view that, from whatever mechanism, the cylinder conditions holds at least approximately true. Other authors have explored relaxing this condition which results in rather more complex dynamics.
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\subsection{Point particle dynamics II.}\label{sec:KKPointParticle}
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+In lieu of introducing the complication of spin, we should take a moment and consider how the point particle should be implemented as presumably particles in our 4D space-time have some equivalent description occurring in the 5D bulk space-time. Particles in the 5D bulk may be both massive or massless which then have non-trivial representations in our physical 4D space-time. If we identify the five-vector $\hat{p}^{A}$ as the five-momentum, then the inner product, assuming momentarily a diagonalized isotropic metric, is the invariant
+\begin{alignat}{1}
+	\notag\hat{g}_{AB}\hat{p}^{A}\hat{p}^{B}&=\hat{M}^{2}c^{2}\,,\\
+	\label{eq:KKFiveMomentum}\hat{g}_{\mu\nu}p^{\mu}p^{\nu}-|\hat{g}_{55}|\hat{p}^{2}_{5}&=\hat{M}^{2}c^{2}\,.
+\end{alignat}
+There is flexibility in the particle types which can populate our theory as the correspondence between massive and massless particles in the higher dimension are not necessarily maintained when we move to the lower dimensional theory. This is easiest to see for the \lq\lq massless\rq\rq\ particle $\hat{M}=0$ which can acquire a mass through momentum in the fifth coordinate. If this momentum is a constant of motion, then the invariant 4D mass $m$ familiar to us from special relativity is generated.
+\begin{alignat}{1}
+	\label{KALUZA04} \frac{\mathrm{d}^{2}\hat{x}^{A}}{\mathrm{d}\hat{\tau}^{2}}+\hat{\Gamma}^{A}_{BC}\frac{\mathrm{d}\hat{x}^{B}}{\mathrm{d}\hat{\tau}}\frac{\mathrm{d}\hat{x}^{C}}{\mathrm{d}\hat{\tau}}=0\,.
+\end{alignat}
+We choose our five-dimensional metric tensor to have the form
+\begin{alignat}{1}
+ 	\label{KALUZA05} \hat{g}_{AB}=
+		\begin{pmatrix}
+			g_{\mu\nu}+\phi f^{2}A_{\mu}A_{\nu} & \phi fA_{\mu}\\
+			\phi fA_{\nu} & \phi
+		\end{pmatrix}\,,
+\end{alignat}
+which explicitly introduces the electromagnetic four-potential $A_{\mu}$ and the scalar field $\phi$. The constant $f$ ensures that the product $fA_{\mu}$ remains dimensionless and is defined as
+\begin{alignat}{1}
+	\label{eq:kkfdef}f^{2}\equiv\frac{16\pi G}{\mu_{0}c^{4}}\,,
+\end{alignat}
+where $\mu_{0}$ is the vacuum permeability. This specific parametrization of the metric is useful in that $A_{\mu}$ transforms under $y$-translations in the same manner as the U(1) gauge transformation. This fact allows us to connect the degrees of freedom along $\hat{g}_{\mu5}$ to the electromagnetic four-potential. The physical metric $g_{\mu\nu}$ is constructed to be invariant under $y$-translations as $\hat{g}_{\mu\nu}$ is not. Using eq.~\eqref{KALUZA05}, the equations of motion reduce from eq.~\eqref{KALUZA04} to
+\begin{alignat}{2}
+	\notag\frac{\mathrm{d}^{2}x^{\mu}}{\mathrm{d}\hat{\tau}^{2}}&+\Gamma^{\mu}_{\rho\sigma}\frac{\mathrm{d}x^{\rho}}{\mathrm{d}\hat{\tau}}\frac{\mathrm{d}x^{\sigma}}{\mathrm{d}\hat{\tau}}=\phi\left(\frac{\mathrm{d}y}{\mathrm{d}\hat{\tau}}+fA_{\mu}\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\hat{\tau}}\right)fF^{\mu}_{\ \nu}\frac{\mathrm{d}x^{\nu}}{\mathrm{d}\hat{\tau}}&&\\
+	\label{KALUZA06}&+\frac{1}{2}\left[\phi\left(\frac{\mathrm{d}y}{\mathrm{d}\hat{\tau}}+fA_{\mu}\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\hat{\tau}}\right)\right]^{2}\frac{1}{\phi^{2}}\ \partial^{\mu}\phi\,,&&
+\end{alignat}
+and for the equation of motion along fifth coordinate
+\begin{alignat}{1}
+	\label{KALUZA07} \frac{\mathrm{d}}{\mathrm{d}\hat{\tau}}\left[\phi\left(\frac{\mathrm{d}y}{\mathrm{d}\hat{\tau}}+fA_{\mu}\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\hat{\tau}}\right)\right]=0\,.
+\end{alignat}
+The tensor $F^{\mu}_{\ \nu}$ is the electromagnetic field tensor defined in the usual way. It holds from eq.~\eqref{KALUZA07} that
+\begin{alignat}{1}
+	\label{KALUZA08} Q\equiv\phi\left(\frac{\mathrm{d}y}{\mathrm{d}\hat{\tau}}+fA_{\mu}\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\hat{\tau}}\right)\,,
+\end{alignat}
+is a constant of motion. Considering the infinitesimal line element defined by eq.~\eqref{KALUZA05}, we can convert between the affine parameter $\hat{\tau}$ and the physical proper time $\tau$ via
+\begin{alignat}{1}
+	\label{KALUZA09} \mathrm{d}\tau^{2}=\mathrm{d}\hat{\tau}^{2}\left(1-\frac{Q^{2}}{\phi c^{2}}\right)\,.
+\end{alignat}
+We will restrict ourselves to the $(1-Q^{2}/\phi c^{2})>1$ case so that $\hat{\tau}$ is always time-like if $\tau$ is also time-like. We define the charge to mass ratio $e/m$ as
+\begin{alignat}{1}
+	\label{KALUZA10} \left(\frac{e}{m}\right)\equiv\frac{Qf}{\left(1-Q^{2}/\phi c^{2}\right)^{1/2}}\,.
+\end{alignat}
+A more illuminating form of the above equation can be obtained by assigning a natural scale to the scalar field $\phi_{0}=Q^{2}/c^{2}$ resulting in
+\begin{alignat}{1}
+	\label{KALUZA11} f^{2}c^{2}\left(\frac{e}{m}\right)^{-2}=\frac{1}{\phi_0}-\frac{1}{\phi}\,.
+\end{alignat}
+This form of the equation more comfortably highlights that charge is a deviancy from a natural scale. Using the charge-to-mass ratio of the electron we obtain
+\begin{alignat}{1}
+	\label{eq:kkelectron} \frac{1}{\phi_0}-\frac{1}{\phi}\sim10^{-44}\,.
+\end{alignat}
+Combining equations~\eqref{KALUZA06},~\eqref{KALUZA09} and~\eqref{KALUZA10} yields
+\begin{alignat}{1}
+	\notag\frac{\mathrm{d}^{2}x^{\mu}}{\mathrm{d}\tau}&+\Gamma^{\mu}_{\rho\sigma}u^{\rho}u^{\sigma}=\left(\frac{e}{m}\right)F^{\mu}_{\ \nu}u^{\nu}\\
+	\label{KALUZA12}&+\frac{1}{2}\left(\frac{e}{m}\right)^{2}\left(\frac{1}{\phi fc}\right)^{2}\left(c^{2}\partial^{\mu}\phi-u^{\mu}\frac{\mathrm{d}\phi}{\mathrm{d}\tau}\right)\,,
+\end{alignat}
+where we have the recognizable Lorentz force and an additional scalar force sensitive to the square of $e/m$. It is important to note that the charge-to-mass ratio is not inherently a constant of motion if the scalar field varies in space-time. The proper time derivative eq.~\eqref{KALUZA10} is then
+\begin{alignat}{1}
+	\label{KALUZA13} \frac{\mathrm{d}}{\mathrm{d}\tau}\left(\frac{e}{m}\right)=-\frac{1}{2}\left(\frac{e}{m}\right)^{3}\left(\frac{1}{\phi fc}\right)^{2}\frac{\mathrm{d}\phi}{\mathrm{d}\tau}\,.
+\end{alignat}
+Inserting eq.~\eqref{KALUZA13} into eq.~\eqref{KALUZA12} produces an additional form of the Lorentz and scalar forces given by
+\begin{alignat}{1}
+	\notag \frac{\mathrm{d}^{2}x^{\mu}}{\mathrm{d}\tau}&+\Gamma^{\mu}_{\rho\sigma}u^{\rho}u^{\sigma}=\left(\frac{e}{m}\right)F^{\mu}_{\ \nu}u^{\nu}\\
+	\label{KALUZA14}&-\left(\frac{e}{m}\right)^{-1}\left(c^{2}\partial^{\mu}\left(\frac{e}{m}\right)-u^{\mu}\frac{\mathrm{d}}{\mathrm{d}\tau}\left(\frac{e}{m}\right)\right)\,,
+\end{alignat}
+or equivalently in the logarithmic form
+\begin{alignat}{1}
+	\notag \frac{\mathrm{d}^{2}x^{\mu}}{\mathrm{d}\tau}&+\Gamma^{\mu}_{\rho\sigma}u^{\rho}u^{\sigma}=\left(\frac{e}{m}\right)F^{\mu}_{\ \nu}u^{\nu}\\
+	\label{eq:kklog}&-\left(c^{2}\partial^{\mu}\mathrm{ln}\left(\frac{e}{m}\right)-u^{\mu}\frac{\mathrm{d}}{\mathrm{d}\tau}\mathrm{ln}\left(\frac{e}{m}\right)\right)\,.
+\end{alignat}
+Both eq.~\eqref{KALUZA14} and eq.~\eqref{eq:kklog} are expressed entirely in observable variables. In these expressions, neither the scalar field $\phi$ nor the constant $f$ appear. This is a rather striking analytic expression suggesting that the charge-to-mass ratio itself should be treated as a scalar field and in the logarithmic form presents exactly as the relativistic generalization of the Newton-like scalar force.
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\subsection{The role of charge in Kaluza-Klein}\label{sec:kkcharge}
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+In this section we will explore the specific role charge carries in the theory and the implications for electromagnetism. From the structure of the theory described thus far, we find it natural to keep charge and mass grouped together wherever possible and that there is little motivation to treat the two concepts as independent of one another. The charge-to-mass $e/m$ ratio was defined in the prior section in eq.~\eqref{KALUZA11} which reveals that unless the scalar field $\phi$ is considered a true constant, then the charge-to-mass ratio must also be described by a field which may be considered dynamic. 
+
+If so, then we should be able to express the metric in terms of this $e/m$-field (which is an easily measurable physical observable) rather than the more abstract scalar field. Due to the incredible difference in coupling strength between electromagnetism and gravitation, it is useful to explore two specific limits: (a) where $e/m$ is much larger than the scalar scale $\phi_{0}$ and (b) where $e/m$ is much smaller than $\phi_{0}$. The scalar field thus has the following limits
+\begin{alignat}{1}
+	\notag\lim_{(\text{{\scriptsize{$e/m$}}})^{2}\gg\phi_{0}}\phi&=\phi_{0}+f^{2}c^{2}\left(\frac{e}{m}\right)^{-2}\phi_{0}^{2}\\
+	\label{SCALE01}&+f^{4}c^{4}\left(\frac{e}{m}\right)^{-4}\phi_{0}^{3}+\ldots\\
+	\notag\lim_{(\text{{\scriptsize{$e/m$}}})^{2}\ll\phi_{0}}\phi&=-\frac{1}{f^{2}c^{2}}\left(\frac{e}{m}\right)^{2}-\frac{1}{\phi_{0}f^{4}c^{4}}\left(\frac{e}{m}\right)^{4}\\
+	\label{SCALE02}&-\frac{1}{\phi_{0}^{2}f^{6}c^{6}}\left(\frac{e}{m}\right)^{6}+\ldots
+\end{alignat}
+Equation~\eqref{eq:kkelectron} suggests from its dramatically small value of $10^{-44}$ for the electron that if such a scalar force is physical, then the former limit given by eq.~\eqref{SCALE01} is more relevant at the particle level. With that said, in our analysis we will pursue both ideas equally in this work. There is also a third possible mathematical limit via $\phi\rightarrow\infty$, which we will only consider as a mathematical curiosity, though there are some context in literature where an analogous procedure is pursued. We are afforded an additional interpretation of these two limits which is revealed by defining
+\begin{alignat}{1}
+	\label{eq:ScaleRadius}r_{s}=\frac{2GM}{c^{2}}\,,\indent r_{q}^{2}=\frac{q^{2}G}{4\pi\epsilon_{0}c^{4}}\,,
+\end{alignat}
+where $r_{s}$ is the Schwarzschild radius and $r_{q}$ is the characteristic charge length seen in the Reissner-Nordstr{\"o}m  (RN) metric for the charged black hole. Equation~\eqref{eq:kkelectron} can then be recast as
+\begin{alignat}{1}
+	\label{eq:ScaleRadiusRatio}\frac{r_{s}^{2}}{r_{q}^{2}}=\frac{1}{\phi_{0}}-\frac{1}{\phi}\,.
+\end{alignat}
+The large charge case is then identified with that of elementary particles, which confirms our intuition above, as the electron would be in the context of the RN metric to be super-extremal. The small charge case is then identified with the sub-extremal charged black hole solution which is equivalent to that of the macroscopic particle whose charge-to-mass ratio is small. It is interesting that despite not invoking the concept of black holes, our would-be point particle's behavior differs between that of an extremal versus sub-extremal object. The exact delineation between the sub, exact, and super-extremal cases depends on which EMD theory being considered. This is seen explicitly for the two cases (a) and (b) as the metric, at lowest order, takes the form
+\begin{alignat}{1}
+ 	\label{SCALE03} \lim_{(\text{{\scriptsize{$e/m$}}})^{2}\gg\phi_{0}}\hat{g}_{AB}^{(0)}&=
+		\begin{pmatrix}
+			g_{\mu\nu}+\phi_{0} f^{2}A_{\mu}A_{\nu} & \phi_{0} fA_{\mu}\\
+			\phi_{0} fA_{\nu} & \phi_{0}
+		\end{pmatrix}\,,\\
+ 	\notag\lim_{(\text{{\scriptsize{$e/m$}}})^{2}\ll\phi_{0}}\hat{g}_{AB}^{(0)}&=\\
+		\label{SCALE04}&\begin{pmatrix}
+			g_{\mu\nu}-\left(\frac{e}{m}\right)^{2}\frac{1}{c^{2}}A_{\mu}A_{\nu} & -\left(\frac{e}{m}\right)^{2}\frac{1}{fc^{2}}A_{\mu}\\
+			-\left(\frac{e}{m}\right)^{2}\frac{1}{fc^{2}}A_{\nu} & -\frac{1}{f^{2}c^{2}}\left(\frac{e}{m}\right)^{2}
+		\end{pmatrix}\,.
+\end{alignat}
+We see that the first metric, for the elementary particle, to first order takes on the standard Kaluza-Klein metric with constant scalar field. This is the form of the metric given originally by Kaluza and assumed by many subsequent authors. As the metric described by eq.~\eqref{SCALE03} results in a vanishing scalar force at lowest order, this could provide a natural explanation for the lack of detection of the scalar force in everyday electromagnetism. 
+
+In the second metric, for the sub-extremal RN black hole, the metric to first order is similar to the original Kaluza-Klein metric with a dynamic scalar field, but the scalar field has been replaced by the square of the charge-to-mass ratio. This suggests that the EMD theory would most relevant in the context of astrophysics where the experimental consequences of the scalar field might be most visible.
+
+The metrics can then be represented perturbatively, to first order
+\begin{alignat}{1}
+ 	\label{eq:ScalePerturbCo}\hat{g}_{AB}&=\hat{g}_{AB}^{(0)}+\hat{g}_{AB}^{(1)}\,,\\
+ 	\label{eq:ScalePerturbContra}\hat{g}^{AB}&=\hat{g}^{AB}_{(0)}-\hat{g}^{AC}_{(0)}\hat{g}_{CD}^{(1)}\hat{g}^{DB}_{(0)}\,,\\
+ 	\label{eq:ScalePerturbDet}\sqrt{-\hat{g}}&=1+\hat{g}^{AB}_{(0)}\hat{g}_{AB}^{(1)}\,.
+\end{alignat}
+It is understood here that only the charge-to-mass ratio has been taken in some limit and that the non-perturbative 4D sector metric $g_{\mu\nu}$ is unchanged.
+
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\subsection{Spin precession in 5D Kaluza-Klein}
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\subsection{Gravito-electromagnetic spin interactions}
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\subsection{Correspondence to particle Lagrangians}
+\section{5D Spin}
