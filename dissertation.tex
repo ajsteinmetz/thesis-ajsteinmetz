@@ -25,48 +25,20 @@
 %\documentclass[thesis]{uathesis}
 %\documentclass[document]{uathesis}
 
-% Package Usage
 % These are the packages that we need
-\usepackage{graphicx}
-\usepackage{natbib}			% natbib is available on most systems, and is
-					% terribly handy.
-					% If you want to use a different Bibliography package, 
-					% you should be able to, just change this
-					% and the \bibliographystyle command below.  Be warned
-					% that you may need to do a little hacking to get
-					% the REFERENCES item to show up in your TOC.
 
-% Compatibility with the AASTEX package 
-% of the American Astronomical Society.
-% I COMMENTED OUT LINE 150 OF DELUXETABLE.STY
-\usepackage{deluxetable}		% Allows use of AASTEX deluxe tables
-\usepackage{aastex_hack}		% Allows other AASTEX functionality.
-
-
-% These are other packages that you might find useful.
-% For controlling the fonts, see
-% http://www.math.uiuc.edu/~hartke/computer/latex/survey/survey.html
-% The following is a nice font set:
-%\usepackage{mathtime}			% Times for letters; Belleek math.
-%
-\usepackage{amsmath}			% AMS Math (advanced math typesetting)
-\usepackage{amssymb} 
-\usepackage{lscape}			% Used for making fitting large tables in by putting them landscape
-\usepackage[tableposition=t]{caption} % NICK ADDED THIS (makes table captions normal size when font set smaller)
-
-%%% Evan added the following
+% My packages
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=magenta]{hyperref}
+\usepackage{natbib}
+\usepackage{pdfpages}
+\usepackage{authblk}
+\usepackage{caption}
+\usepackage{lscape}
+\usepackage[tableposition=t]{caption} 
 \usepackage{mathtools}
 \usepackage{bm}
 \usepackage{enumitem}
-\usepackage{units} % includes nicefrac
-
-% My packages
-\usepackage[colorlinks=true,linkcolor=blue,citecolor=cyan]{hyperref}
-\usepackage{pdfpages}
-%\usepackage[numbers]{natbib}
-\usepackage{authblk}
-\usepackage{caption}
-%\usepackage{subcaption}
+\usepackage{units}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -75,8 +47,14 @@
 \usepackage{xcolor}
 \usepackage{float}
 \usepackage{doi}
-\usepackage{tikz-feynman}
-\tikzfeynmanset{compat=1.1.0}
+\usepackage{mathrsfs}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage{setspace}
+\usepackage[normalem]{ulem}
 
 % Useful macros for equations and units in HEP
 \newcommand*{\TeV}{\text{ TeV}}
@@ -92,6 +70,7 @@
 \newcommand{\rf}[1]{Fig.~{\ref{#1}}}
 \newcommand{\rsec}[1]{Section\,{\ref{#1}}}
 \newcommand{\rchap}[1]{Chapter\,{\ref{#1}}}
+\newcommand*{\Msun}{\mathrm{M}_{\odot}}
 
 % Useful macros for annotation
 \newcommand*{\xred}{\color{red}}
@@ -110,27 +89,14 @@
     \renewcommand*{\thefootnote}{\arabic{footnote}}%
     }
 
-\newcommand{\Msun}{\mathrm{M}_{\odot}}
-%\usepackage{refs}			
-%
-% If you are using hyper-ref (recommended), this command must go after all 
-% other package inclusions (from the hyperref package documentation).
-% The purpose of hyperref is to make the PDF created extensively
-% cross-referenced.
-%\usepackage[hidelinks]{hyperref}
-
-
-% Set up some values.
-\completetitle{Fundamental applications of relativistic classical and quantum magnetism}
-\fullname{Andrew James Steinmetz}			% Grad college wants your full name here.
-\degreename{Doctor of Philosophy}	% Title of your degree.
-\degreemajor{Physics} % Degree major
+% Title and author setup.
+\completetitle{Modern topics in spin dynamics and magnetism}
+\fullname{Andrew James Steinmetz}
+\degreename{Doctor of Philosophy}
+\degreemajor{Physics} 
 \begin{document}
-
-
-% Set up the title page
 \maketitlepage
-{DEPARTMENT OF PHYSICS}	% Title of your department.
+{DEPARTMENT OF PHYSICS}
 {2023}							
 
 % Insert the approval form.  Note that for electronic submission
@@ -157,48 +123,41 @@
 % approval form insertion above):
 %\statementbyauthor[Jane M. Doe\\Professor of Chemistry]
 
-% Include the ``Acknowledgements''
-\incacknowledgements{acknowledgements}
-
-% Include the ``Dedication''
-\incdedication{dedication}
-
-% Create a ``Table of Contents''
+% Include the Preamble documents
+\incacknowledgements{subtex/acknowledgements}
+\incdedication{subtex/dedication}
 \tableofcontents
-
-% Create a ``List of Figures''
 \listoffigures
-
-% Create a ``List of Tables''
 \listoftables
+\incabstract{subtex/abstract}
 
-% Include the ``Abstract''
-\incabstract{00abstract}
+% Include chapters or main body of text
+% Chapter 1 - Introduction and overview
+\include{subtex/chap01intro}
+% Chapter 2 - Magnetic dipoles
+\include{subtex/chap02moment}
+% Chapter 3 - Neutrinos
+\include{subtex/chap03neutrino}
+% Chapter 4 - Magnetization
+\include{subtex/chap04cosmo}
+% Chapter 5 - Outlook
+\include{subtex/chap05outlook}
 
-% Include the various chapters
-\include{01introduction}
-\include{02classicaldipole}
-\include{03quantumdipole}
-\include{04neutral}
-\include{05cosmology}
-\include{06outlook}
-
-
-% Include the various appendices
-\appendix
+% Include appendices meant for BEFORE the biblio
+%\appendix
 %\include{07appendix}
 %\include{08appendix}
 
 % Switch the spacing to single-spaced for the references
-\renewcommand{\baselinestretch}{1}		% chaning the value
-\small\normalsize						% switch size to make the value take
+\renewcommand{\baselinestretch}{1}
+\small\normalsize
 
 % Create the References list
-%\bibliographystyle{uabibnat}
-%\bibliography{bibliography}
+\bibliographystyle{uabibnat}
+\bibliography{bibs/chap04-neutrino-refs,bibs/chap05-magnetization-refs}
 
-% Include the various appendices
-\appendix
-\include{09appendix}
+% Include appendices meant for AFTER the biblio
+%\appendix
+%\include{subtex/publications}
 
 \end{document}
