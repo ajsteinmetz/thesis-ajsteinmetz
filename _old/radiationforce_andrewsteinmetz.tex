@@ -1,0 +1,121 @@
+\documentclass[]{article}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+
+\numberwithin{equation}{subsection}
+\cfoot{\thepage}
+\begin{document}
+\linespread{0.75}
+
+\title{A More Careful Derivation of the Relativistic Larmor Formula}
+\author{Andrew James Steinmetz\\ University of Arizona -- Department of Physics}
+\date{January 2017}
+\maketitle
+\noindent \emph{Show that Dirac's relativistic radiation reaction force's zero component reduces to the nonrelativistic Larmor energy loss.}\\
+
+\noindent The force on a charged particle with an applied external force and taking into account radiation reaction is
+	\begin{alignat}{1}
+	\label{h01}		&ma^{\mu}=f^{\mu}_{ext}+\mathcal{F}_{rad}^{\mu}
+	\end{alignat}
+The relativistic radiation reaction force can be written as
+	\begin{alignat}{1}
+	\label{h02}		&\mathcal{F}_{rad}^{\mu}=m\tau_{o}\Big(j^{\mu}-u^{\mu}u_{\nu}j^{\nu}/c^{2}\Big)\\
+	\label{h03}		&j^{\mu}=\frac{\mathrm{d}a^{\mu}}{\mathrm{d}\tau}
+	\end{alignat}
+An alternate form can be written by recognizing that
+	\begin{alignat}{1}
+	\label{h04}		&u_{\mu}j^{\mu}+a_{\mu}a^{\mu}=0
+	\end{alignat}
+but it is unimportant which version is used (the result is the same) so we will remain with (\ref{h02}) as written. To obtain the power emitted by the accelerated charge, we note that the second term on the right hand side of (\ref{h02}) is not orthogonal to 4-velocity
+	\begin{alignat}{1}
+	\label{h05}		&u_{\mu}u^{\mu}u_{\nu}j^{\nu}/c^{2}=u_{\nu}j^{\nu}\neq0
+	\end{alignat}
+however the full reaction force is orthogonal
+	\begin{alignat}{1}
+	\label{h06}		&u_{\mu}\mathcal{F}_{rad}^{\mu}=0
+	\end{alignat}
+because of the presence of the term $j^{\mu}$. Dirac writes that $m\tau_{o}j^{\mu}$ is the differential of 
+\begin{displayquote}
+the ``acceleration energy'' of the electron. Changes in the acceleration energy correspond to a reversible form of emission or absorption of field energy, which never gets very far from the electron.
+\end{displayquote}
+\indent---Dirac, P.A.M. ``Classical theory of radiating electrons.'' \emph{Proceedings of the Royal Society of London.} (1938).\\
+
+\noindent Another interpretation is that this term restores the rest massenergy of the electron which otherwise would have been lost due to the emission of radiation. Therefore we can rewrite equation (\ref{h01}) and (\ref{h02}) as a total differential
+	\begin{alignat}{1}
+	\label{h07}		&\frac{\mathrm{d}}{\mathrm{d}\tau}\mathcal{G}^{\mu}=\frac{\mathrm{d}}{\mathrm{d}\tau}(mu^{\mu}-m\tau_{o}a^{\mu})\\
+	\label{h08}		&\frac{\mathrm{d}}{\mathrm{d}\tau}\mathcal{G}^{\mu}=f^{\mu}_{ext}-m\tau_{o}u^{\mu}u_{\nu}j^{\nu}/c^{2}
+	\end{alignat}
+The second term on the right hand side of (\ref{h08}) is then associated with the produced radiation. Ignoring the external force, the zero component of (\ref{h08}) should be the power loss through radiation.
+	\begin{alignat}{1}
+	\label{h09}		&\frac{1}{mc\tau_{o}}\frac{\mathrm{d}}{\mathrm{d}\tau}\mathcal{G}^{0}=\frac{\gamma P}{mc\tau_{o}}\\
+	\label{h10}		&\frac{\gamma P}{mc\tau_{o}}=-u^{0}(u_{0}j^{0}-(u_{i}j^{i}))/c^{3}
+	\end{alignat}
+Note that these following relations will prove very useful
+	\begin{alignat}{1}
+	\label{h11}		&u^{\mu}/c=
+		\begin{pmatrix}
+			\gamma\\
+			\gamma\vec{\beta}
+		\end{pmatrix}\\
+	\label{h12}		&a^{\mu}/c=
+		\begin{pmatrix}
+			\gamma\dot{\gamma}\\
+			\gamma\dot{\gamma}\vec{\beta}+\gamma^{2}\dot{\vec{\beta}}
+		\end{pmatrix}\\
+	\label{h13}		&j^{\mu}/c=
+		\begin{pmatrix}
+			\gamma^{2}\ddot{\gamma}+\gamma\dot{\gamma}\dot{\gamma}\\
+			\gamma^{2}\ddot{\gamma}\vec{\beta}+\gamma\dot{\gamma}\dot{\gamma}\vec{\beta}+3\gamma^{2}\dot{\gamma}\dot{\vec{\beta}}+\gamma^{3}\ddot{\vec{\beta}}
+		\end{pmatrix}\\
+	\label{h14}		&\gamma\dot{\gamma}=\gamma^{4}(\vec{\beta}\cdot\dot{\vec{\beta}})\\
+	\label{h15}		&\gamma^{2}\ddot{\gamma}=3\gamma\dot{\gamma}\dot{\gamma}+\gamma^{5}(\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})+\gamma^{5}(\vec{\beta}\cdot\ddot{\vec{\beta}})
+	\end{alignat}
+Using the above we can finish the evaluation. Starting from (\ref{h10}) we apply (\ref{h11}) and (\ref{h13})
+
+	\begin{alignat}{1}
+	\label{hh01}		&\frac{\gamma P}{mc\tau_{o}}=-u^{0}(u_{0}j^{0})/c^{3}+u^{0}(u_{i}j^{i})/c^{3}\\
+	\label{hh02}		&\frac{\gamma P}{mc\tau_{o}}=-(\gamma^{4}\ddot{\gamma}+\gamma^{3}\dot{\gamma}\dot{\gamma})+(\gamma^{2}\vec{\beta})\cdot(\gamma^{2}\ddot{\gamma}\vec{\beta}+\gamma\dot{\gamma}\dot{\gamma}\vec{\beta}+3\gamma^{2}\dot{\gamma}\dot{\vec{\beta}}+\gamma^{3}\ddot{\vec{\beta}})\\
+	\label{h16}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{4}\ddot{\gamma}-\gamma^{3}\dot{\gamma}\dot{\gamma}+\gamma^{4}\ddot{\gamma}(\vec{\beta}\cdot\vec{\beta})+\gamma^{3}\dot{\gamma}\dot{\gamma}(\vec{\beta}\cdot\vec{\beta})+3\gamma^{4}\dot{\gamma}(\vec{\beta}\cdot\dot{\vec{\beta}})+\gamma^{5}(\vec{\beta}\cdot\ddot{\vec{\beta}})
+	\end{alignat}
+The astute observer will see that the first four terms on the right hand side of (\ref{h16}) combine because $1/\gamma^{2}=1-(\vec{\beta}\cdot\vec{\beta})$. The fifth term in (\ref{h16}) can be rewritten using (\ref{h14}).
+	\begin{alignat}{1}
+	\label{h17}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{2}\ddot{\gamma}-\gamma\dot{\gamma}\dot{\gamma}+3\gamma\dot{\gamma}\dot{\gamma}+\gamma^{5}(\vec{\beta}\cdot\ddot{\vec{\beta}})\\
+	\label{h18}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{2}\ddot{\gamma}+2\gamma\dot{\gamma}\dot{\gamma}+\gamma^{5}(\vec{\beta}\cdot\ddot{\vec{\beta}})
+        \end{alignat}
+Now we can introduce additional subtitutions using (\ref{h14}) and (\ref{h15}) with the intent to remove all derivatives of $\gamma$ and second derivatives of $\vec{\beta}$. First we apply (\ref{h15})
+        \begin{alignat}{1}
+	\label{h19}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma\dot{\gamma}\dot{\gamma}-\gamma^{5}(\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})
+	\end{alignat}
+Then we apply (\ref{h14}) twice to the first term of the right hand side of (\ref{h19})
+        \begin{alignat}{1}
+	\label{h20}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{7}(\vec{\beta}\cdot\dot{\vec{\beta}})^{2}-\gamma^{5}(\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})\\
+	\label{h21}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{7}(\vec{\beta}\cdot\dot{\vec{\beta}})^{2}-\gamma^{7}(\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})(1-\vec{\beta}\cdot\vec{\beta})
+	\end{alignat}
+Finally using the Binet-Cauchy identity in three dimensions
+	\begin{alignat}{1}
+	\label{hh03}		&(\vec{A}\times\vec{B})\cdot(\vec{C}\times\vec{D})=(\vec{A}\cdot\vec{C})(\vec{B}\cdot\vec{D})-(\vec{A}\cdot\vec{D})(\vec{B}\cdot\vec{C})
+	\end{alignat}
+where $\vec{C}=\vec{A}$ and $\vec{D}=\vec{B}$
+	\begin{alignat}{1}
+	\label{hh04}		&(\vec{A}\times\vec{B})\cdot(\vec{A}\times\vec{B})=(\vec{A}\cdot\vec{A})(\vec{B}\cdot\vec{B})-(\vec{A}\cdot\vec{B})(\vec{B}\cdot\vec{A})
+	\end{alignat}
+we arrive at
+	\begin{alignat}{1}
+	\label{h22}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{7}((\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})-(\vec{\beta}\times\dot{\vec{\beta}})^{2})\\
+	\label{h23}		&P=(mc\tau_{o})(-\gamma^{6}((\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})-(\vec{\beta}\times\dot{\vec{\beta}})^{2}))\\
+	\label{h24}		&P=(m\tau_{o}/c)a_{\mu}a^{\mu}=-(m\tau_{o}/c)\alpha^{2}
+	\end{alignat}
+where $\alpha$ is the proper acceleration. Here we see explicitly the relationship in (\ref{h04}) pop out without coercion. Equation (\ref{h23}) and (\ref{h24}) are known as the Li\'enard power which is the relativistic form of the Larmor power. In the non-relativistic limit, we see that the Larmor formula is naturally recovered.
+	\begin{alignat}{1}
+	\label{h26}		&P=-m\tau_{o}c(\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})
+	\end{alignat}
+\end{document}

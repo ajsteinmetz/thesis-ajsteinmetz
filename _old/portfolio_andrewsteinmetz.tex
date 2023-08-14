@@ -1,0 +1,1682 @@
+
+%\documentclass[twocolumn]{article}
+\documentclass[]{article}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+%\usepackage[left=1.5cm,top=2cm,right=1.5cm,bottom=3cm]{geometry}
+
+\numberwithin{equation}{subsection}
+%\pagestyle{fancy}
+%\fancyhf{}
+\cfoot{\thepage}
+
+\begin{document}
+\linespread{0.5}
+
+\title{Relativity and Quantum Mechanics Portfolio}
+\author{Andrew James Steinmetz\\ PHYS568 -- University of Arizona -- Department of Physics}
+\date{December 6th 2016}
+\maketitle
+\renewcommand{\abstractname}{Foreword}
+\begin{abstract}
+This document is a record of work accomplished in PHYS 568 during Fall 2016 taught by Dr. Rafelski at the University of Arizona and contains worked out physics problems accomplished during the course. Relativity and quantum mechanics are two infinitely interesting topics to study and it is well worth the effort.\let\thefootnote\relax\footnote{** indicates major revisions. * indicates minor revisions.}
+
+\end{abstract}
+\tableofcontents
+\section{Class Assignments}
+\subsection{Assignment \#1**}
+\subsubsection*{Problem \#1}
+\emph{Describe the Rossi-Hall experiment.}\\
+
+\noindent In the Rossi Hall experiment (Rossi, Hall ``Variation of the Rate of Decay of Mesotrons with Momentum'' \emph{Phys. Rev.} 1941), the ionization losses of the muon are minor and the attenuation of the muons is dominated by their decay lifetimes as measured by a Earth observer. This measured lifetime is modified by the momentum of the muons. The trick of the experiment is that two different altitudes (Echo lake -- $h_{EL}=3,240m$ and Denver -- $h_{D}=1616m$) were measured and that at the higher altitude, an amount of iron absorber $S$ was added to mimic the extra air absorber a muon would have to traverse to reach the lower altitude. If the muon was stable, the two fluxes should be nearly the same. The difference in absorption lengths also differentiates between higher and lower momentum muons in accordance with the Bethe--Bloch formula.
+
+A lead absorber $\Sigma$ allowed the differentiation between a softer momentum population $n$ and a higher momentum population $N$. The average distance traveled is given by $L=\beta\tau=p\tau_{0}/\mu$. The decay model for the muons is given by
+\begin{alignat}{1}
+	\label{aa01}	&\frac{\mathrm{d}N}{\mathrm{d}x}=LN\\
+	\label{aa02}	&L=p\tau/\mu=\beta\tau
+\end{alignat}
+whose solution is
+\begin{alignat}{1}
+	\label{aa03}	&N/N_{o}=\mathrm{exp}(-x/L)
+\end{alignat}
+Since the momentum is restricted by the removable lead, the $\tau_{0}$ can be calculated knowing the effective distance established by ratios of $n$ and $N$.
+\begin{alignat}{1}
+	\label{aa04}	&N_{D}/N_{EL}=\frac{\mathrm{exp}((H-h_{D})/L)}{\mathrm{exp}((H-h_{EL})/L)}=\mathrm{exp}(-(h_{EL}-h_{D})/L)
+\end{alignat}
+The ratio of momentum restricted muons between 440 and 480 MeV (due to the absorbers discussed earlier) was calculated to a ratio value of $N_{D}/N_{EL}=0.698\pm0.031$. This gives a value for the lifetime of $\tau\approx2.4\pm0.3\ \mu s$. This is higher than rest frame lifetime of $\tau_{o}=2.197\ \mu s$.
+\subsubsection*{Problem \#2+3}
+\emph{Obtain the relativistic velocity transform and show its magnitude remains below the speed of light.}\\
+
+\noindent To start, let's orient our frames $S$ and $S'$ such that the boost--$V$ is only in one direction. Therefore we have the Lorentz transformations 
+\begin{alignat}{1}
+	\label{a01}	&x'=x\\
+	\label{a02}	&y'=y\\
+	\label{a03}	&z'=\gamma(z-Vt)\\
+	\label{a04}	&ct'=\gamma(ct-Vz/c)
+\end{alignat}
+and their differential forms
+\begin{alignat}{1}
+	\label{a05}	&\mathrm{d}x'=\mathrm{d}x\\
+	\label{a06}	&\mathrm{d}y'=\mathrm{d}y\\
+	\label{a07}	&\mathrm{d}z'=\gamma(\mathrm{d}z-V\mathrm{d}t)\\
+	\label{a08}	&c\mathrm{d}t'=\gamma(c\mathrm{d}t-V\mathrm{d}z/c)	
+\end{alignat}
+We're interested in the arbitrary velocity of an object $\vec{U}=\mathrm{d}\vec{x}/\mathrm{d}t$ as it transforms into $\vec{U'}=\mathrm{d}\vec{x'}/\mathrm{d}t'$ in the primed frame. Therefore
+\begin{alignat}{1}
+	\label{009}	&\frac{\mathrm{d}x'}{\mathrm{d}t'}=U'_{x}=\frac{U_{x}}{\gamma(1-VU_{z}/c^{2})}\\
+	\label{010}	&\frac{\mathrm{d}y'}{\mathrm{d}t'}=U'_{y}=\frac{U_{y}}{\gamma(1-VU_{z}/c^{2})}\\
+	\label{011}	&\frac{\mathrm{d}z'}{\mathrm{d}t'}=U'_{z}=\frac{U_{z}-V}{(1-VU_{z}/c^{2})}
+\end{alignat}
+We know that $U^{2}<c^{2}$ is always true so we can check if ${U'}^{2}<c^{2}$ is also true by evaluating the inner product ${U'}^{2}$.
+\begin{alignat}{1}
+	\label{a12}	&{U'}^{2}=\frac{(U_{x}^{2}+U_{y}^{2})/\gamma^{2}+(U_{z}-V)^{2}}{(1-VU_{z}/c^{2})^{2}}\\
+	\label{a13}	&{U'}^{2}=\frac{(U^{2}-U_{z}^{2})(1-V^{2}/c^{2})+(U_{z}-V)^{2}}{(1-VU_{z}/c^{2})^{2}}\\
+	\label{a14}	&{U'}^{2}=c^{2}\frac{(1-VU_{z}/c^{2})^{2}-(1-U^{2}/c^{2})(1-V^{2}/c^{2})}{(1-VU_{z}/c^{2})^{2}}\\
+	\label{a15}	&{U'}^{2}/c^{2}=\Big(1-\frac{(1-U^{2}/c^{2})(1-V^{2}/c^{2})}{(1-VU_{z}/c^{2})^{2}}\Big)
+\end{alignat}
+The transformed velocity can never exceed $c$ because the right hand side is always less than one. We can generalize this by noting that only the magnitude of either velocity in the $S$ frame appears except in the denominator where the object's z-velocity is specifically pulled out which suggests a projection. So for an arbitrary primed frame $S'$ we have,  
+\begin{alignat}{1}
+	\label{a16}	&{U'}^{2}/c^{2}=\Big(1-\frac{(1-U^{2}/c^{2})(1-V^{2}/c^{2})}{(1-\vec{U}\cdot\vec{V}/c^{2})^{2}}\Big)
+\end{alignat}
+Noting the vector identity $(\vec{U}\times\vec{V})^{2}=U^{2}V^{2}-(\vec{U}\cdot\vec{V})^{2}$ the above can be rewritten as
+\begin{alignat}{1}
+	\label{a17}	&{U'}^{2}/c^{2}=\Big(\frac{(\vec{U}-\vec{V})^{2}/c^{2}-(\vec{U}\times\vec{V})^{2}/c^{2}}{(1-\vec{U}\cdot\vec{V}/c^{2})^{2}}\Big)
+\end{alignat}
+This is the same formula as seen in Exercise III-12. (Rafelski, ``Relativity Matters'' manuscript)
+\subsubsection*{Problem \#4}
+\emph{Calculate the passage of time on Earth compared to the 3 year journey of a relativistic spaceship.}\\
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth,trim=200bp 80bp 100bp 60bp,clip]{minkowski01}
+	\caption{Spaceship worldline and Earth coordinates.}
+	\label{fig01}
+\end{figure}
+\noindent To solve the time experienced on Earth shown in Figure~\ref{fig01} we can quickly note that the proper time of the spaceship is the root of the spacetime interval for the spaceship's frame of reference.
+\begin{alignat}{1}
+	\label{a18}	&(\Delta s)^{2} = \eta_{\alpha\beta}\Delta x^{\alpha}\Delta x^{\beta}\\
+	\label{a19}	&(\Delta c\tau)^{2} = (\Delta ct)^{2} - (\Delta x)^{2}\\
+	\label{a20}	&(\Delta t)^{2} = 9\ \mathrm{yr}^{2} + 16\ \mathrm{yr}^{2}\\
+	\label{a21}	&\Delta t = 5\ \mathrm{yr}
+\end{alignat}
+\subsection{Assignment \#2}
+\subsubsection*{Problem \#1}
+\emph{In the nonrelativistic limit obtain the Galilean momentum and energy transforms.}\\
+
+\noindent We can note that energy and momentum can be packaged into a single four-vector.
+\begin{alignat}{1}
+	\label{b01}	&P^{\mu}=(E/c,\vec{p})
+\end{alignat}
+Therefore (\ref{b01}) should transform as any four-vector does in Special Relativity. Below is a comparison of the Lorentz transformation compared to the Galilean transformation for energy and momentum. Since we are boosting an object already with kinetic energy we will differentiate the boosted velocity from the original velocity using subscripts $b$ and $a$.
+\begin{alignat}{1}
+	\label{b02}	&E'=\gamma_{b}(E-\beta_{b} pc)\\
+	\label{b03}	&p'=\gamma_{b}(p-\beta_{b}E/c)\\
+	\label{b04}	&E'=(mv_{a}-mv_{b})^{2}/2m\\
+	\label{b05}	&p'=mv_{a}-mv_{b}
+\end{alignat}
+To obtain the Galileo transformations for these we will need to expand the relativistic expressions for energy and momentum and take the limit $c\rightarrow\infty$ such that only the first handful of terms are involved. 
+\begin{alignat}{1}
+	\label{b06}	&E=\gamma_{a} mc^{2}\rightarrow mc^{2}\big(1+\frac{1}{2}\beta_{a}^{2}+...\big)\\
+	\label{b07}	&p=\gamma_{a} mc\beta_{a}\rightarrow mc\beta_{a}\big(1+\frac{1}{2}\beta_{a}^{2}+...\big)
+\end{alignat}
+These can be substituted into the transformation equations with also their $\gamma_{b}$ factors expanded as well. All terms third order or higher in $\beta$ are omitted because they will not survive the $c\rightarrow\infty$ limit.
+\begin{alignat}{6}
+	\label{b08}	&E'=(1+\frac{1}{2}\beta_{b}^{2})(mc^{2}(1+\frac{1}{2}\beta_{a}^{2})-mc^{2}\beta_{b}\beta_{a}(1+\frac{1}{2}\beta_{a}^{2}))\\
+	\label{b09}	&E'=mc^{2}(1+\frac{1}{2}\beta_{b}^{2})(1+\frac{1}{2}\beta_{a}^{2}-\beta_{b}\beta_{a})\\
+	\label{b10}	&E'=mc^{2}(1+\frac{1}{2}\beta_{a}^{2}-\beta_{b}\beta_{a}+\frac{1}{2}\beta_{b}^{2})\\
+	\label{b11}	&E'=mc^{2}(1+\frac{1}{2}(\beta_{a}-\beta_{b})^{2})\\
+	\label{b12}	&E'=mc^{2}+\frac{mc^{2}}{2}(\beta_{a}-\beta_{b})^{2}\\
+	\label{b13}	&E'=mc^{2}+\frac{(mv_{a}-mv_{b})^{2}}{2m}		
+\end{alignat}
+The Galilean transformation of energy is recovered with the rest energy content as well. Interestingly, the rest energy content played a role in the step from (\ref{b09}) to (\ref{b10}). Next we can do the same analysis for momentum.
+\begin{alignat}{3}
+	\label{b14}	&p'c=(1+\frac{1}{2}\beta_{b}^{2})(mc^{2}\beta_{a}(1+\frac{1}{2}\beta_{a}^{2})-mc^{2}\beta_{b}(1+\frac{1}{2}\beta_{a}^{2}))\\
+	\label{b15}	&p'c=mc^{2}(1+\frac{1}{2}\beta_{b}^{2})(\beta_{a}-\beta_{b})\\
+	\label{b16}	&p'=mv_{a}-mv_{b}
+\end{alignat}
+Equation (\ref{b16}) is then our Galilean momentum transformation.
+\subsubsection*{Problem\#2}
+\emph{Present the logical steps to obtain the constancy of light speed.}
+
+\begin{itemize}
+	\item If space is homogeneous and isotropic and the speed of light is the same in all inertial reference frames ($c=c'$ condition) we can derive the Lorentz transformations which modify coordinate systems that share relative motion between them.
+	\item Then consider a mass at rest which decays into two photons such as a positronium or Higgs. To conserve momentum, the two photons will travel in opposite directions and their momentums will be equal and opposite.
+	\item In this frame they will share the same frequency and their total energy will be $E_{\gamma}=\hbar\omega$. Twice this energy will be equal to the energy of the original particle which decayed $E=2E_{\gamma}$.
+	\item If we consider a traveling observer with motion parallel to the light, one photon will be blueshifted and the other will be redshifted.
+	\item The combined energy of the shifted photons must now equal to the energy of the original rest particle and what would have been its motion in this frame. From this, the relativistic equation for energy can be arrived at from the shifting of the photons.
+	\item By recognizing the dispersion relation for light $\nu=ck$ we can connect relativistic energy to relativistic momentum.
+	\end{itemize}
+\subsubsection*{Problem\#3+4}
+\emph{(a) Show that the aberration of light equations are consistent. (b) Calculate the aberration of a relativistic ray going less than the speed of light.}\\
+
+\noindent \emph{(a)} The equations for the aberration in altitude angle for incoming light and relative motion are
+\begin{alignat}{1}
+	\label{b17}	&\sin\theta'=\frac{\sin\theta}{\gamma(1+\beta\cos\theta)}\\
+	\label{b18}	&\cos\theta'=\frac{\cos\theta+\beta}{1+\beta\cos\theta}
+\end{alignat}
+We can use the relation $\sin^{2}\theta+\cos^{2}\theta=1$ to show that these equations are consistent.
+\begin{alignat}{1}
+	\label{b19}	&1=\sin^{2}\theta'+\cos^{2}\theta'\\
+	\label{b20}	&1=\frac{\sin^{2}\theta(1-\beta^{2})+\cos^{2}\theta+\beta^{2}+2\beta\cos\theta}{(1+\beta\cos\theta)^{2}}\\
+	\label{b21}	&1=\frac{1-\sin^{2}\theta\beta^{2}+\beta^{2}+2\beta\cos\theta}{(1+\beta\cos\theta)^{2}}\\
+	\label{b22}	&1=\frac{1+\cos^{2}\theta\beta^{2}+2\beta\cos\theta}{(1+\beta\cos\theta)^{2}}\\
+	\label{b23}	&1=1
+\end{alignat}
+\emph{(b)} Using equations (7.11) in (Rafelski, ``Relativity Matters'' manuscript, pp.99) and replacing the incoming light ray with a relativistic particle of z-velocity $u_{z}=-d\cos\theta$ we get
+\begin{alignat}{1}
+	\label{b24}	&d'\cos\theta'=\frac{d\cos\theta+v}{1+dv\cos\theta}\\
+	\label{b25}	&d'\sin\theta'=\frac{d\sin\theta}{\gamma(1+dv\cos\theta)}
+\end{alignat}
+Combined this forms  
+\begin{alignat}{1}
+	\label{b26}	&\cot\theta'=\gamma\frac{\cos\theta+v/d}{\sin\theta}=\gamma(\cot\theta+\frac{v/d}{\sin\theta})
+\end{alignat}
+This is similar to the aberration of light
+\begin{alignat}{1}
+	\label{b27}	&\cot\theta'=\gamma(\cot\theta+\frac{v/c}{\sin\theta})
+\end{alignat}
+The difference is that the for any particle $d<c$ the aberration angle will be increased because the velocity factor $v/d>v/c$. This makes sense physically, a slower moving ray will change angle more drastically than a faster moving ray. In the classical limit, aberration will not occur for the light ray, but will for finite speed rays.
+\subsection{Assignment \#3**}
+\subsubsection*{Problem \#1+2}
+\emph{Obtain the trajectory of a rocket under constant acceleration.}\\
+
+\noindent In the instantaneous reference frame of the spaceship $S'$, inertial observers measure the differential acceleration of the spaceship as
+\begin{alignat}{2}
+	\label{c01}	&\mathrm{d}v'=g\mathrm{d}t'
+\end{alignat}
+We will use dimensionless velocities ($\tilde{v}=vc$). From the lab frame $S$ we observe the spaceship accelerate from $v$ to $v+\mathrm{d}v$, this is described by the velocity-addition formula
+\begin{alignat}{1}
+	\label{c02}	&v+\mathrm{d}v=\frac{v+\mathrm{d}v'}{1+v\mathrm{d}v'}
+\end{alignat}
+This can be interpreted as an added differential velocity to the instantaneous inertial frame of the spaceship at some point along its trajectory. From this we can relate $\mathrm{d}v$ to $\mathrm{d}v'$
+\begin{alignat}{1}
+	\label{c03}	&\mathrm{d}v=\mathrm{d}v'\frac{(1-v^{2})}{1+v\mathrm{d}v'}
+\end{alignat}
+By Taylor expanding the denominator of (\ref{c04}) and ignoring $(\mathrm{d}v')^{2}$ and all higher orders this simplifies to
+\begin{alignat}{1}
+	\label{c04}	&\mathrm{d}v=\mathrm{d}v'(1-v^{2})\\
+	\label{c05}	&\frac{\mathrm{d}v}{(1-v^{2})}=\mathrm{d}v'=g\mathrm{d}t'
+\end{alignat}
+which integrates as
+\begin{alignat}{1}
+	\label{c06}	&\mathrm{arctanh}(v)=gt'\\
+	\label{c07}	&v=\tanh(gt')=\tanh(y)
+\end{alignat}
+The limits are set such that the spaceship is at rest in the lab frame at the start of its acceleration. In (\ref{c07}) we've related the spaceship frame time $t'$ to rapidity $y$. This is helpful because the Lorentz factor $\gamma$ can be related to the rapidity through $\gamma=\cosh(y)$. Using  (\ref{c01}) the `dynamic' Lorentz factor which relates proper time to time is completely parametrized to the proper time.
+\begin{alignat}{1}
+	\label{c08}	&\mathrm{d}t=\gamma(t')\mathrm{d}t'=\cosh(gt')\mathrm{d}t'
+\end{alignat}
+Therefore  
+\begin{alignat}{1}
+	\label{c09}	&t=\frac{1}{g}\sinh(gt')
+\end{alignat}
+Lastly the trajectory as a function of ship proper time can be obtained from (\ref{c01}), (\ref{c07}), and (\ref{c08})
+\begin{alignat}{1}
+	\label{c10}	&\mathrm{d} x=\mathrm{d}t\tanh(gt')\\
+	\label{c11}	&\mathrm{d} x=\mathrm{d}t'\cosh(gt')\tanh(gt')=\mathrm{d}t'\sinh(gt')\\
+	\label{c12}	&x=\frac{1}{g}(\cosh(gt')-1)
+\end{alignat}
+For a 10,000 light-year journey, the way to reduce the proper time length as much as possible and land safely without modifying the engine is to accelerate until the halfway point in the lab frame and then decelerate for the remainder of the trip. The trajectory equations will maintain their same form (excluding constants), but with a rapidity transform of $gt'\rightarrow g(2T'-t')$ where $T'\approx 9\ \mathrm{yr}$ is the elapsed proper time once 5,000 light-years is traversed in the lab frame. Figure~\ref{fig02} shows that the total elapsed proper time for the journey is approximately 18 years.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth,trim=30bp 30bp 30bp 50bp,clip]{relativisticrocket01}
+	\caption{The rocket's 10,000 light-year trip. (solid) distance traveled (dotted) observed velocity}
+	\label{fig02}
+\end{figure}
+\subsubsection*{Problem\#2+3}
+\emph{Obtain the relativistic rocket equations and calculate the massenergy of a rocket as it increases its rapidity}\\
+
+\noindent A rocket of mass $m$ must eject mass $\Delta m$ to accelerate and we can characterize the relativistic momentum balance before and after ejection
+\begin{alignat}{1}
+	\label{c13}	&p_{1}=(m+\Delta m)c\sinh(y_{r})\\
+	\label{c14}	&p_{2}=(m-\delta m)c\sinh(y_{r}+\Delta y)+(\Delta m)c\sinh(y_{ex})
+\end{alignat}
+The quantity $\delta m$ is the mass loss due to fuel combustion. The quantity $\Delta y$ is the change in rapidity of the rocket due to the ejected exhaust. For the energy balance to succeed, the kinetic energy of the exhaust must be taken from the mass of the rocket. We've expressed the momentum in terms of rapidity. Because the rapidity is additive, the rapidity of the exhaust $y_{ex}=y_{r}-y_{V}$ where $y_{V}$ is the propellant rapidity in the rocket's frame. This quantity is characteristic of the engine. We can characterize a companion energy balance as well
+\begin{alignat}{1}
+	\label{c15}	&E_{1}=(m+\Delta m)c^{2}\cosh(y_{r})\\
+	\label{c16}	&E_{2}=(m-\delta m)c^{2}\cosh(y_{r}+\Delta y)+(\Delta m)c^{2}\cosh(y_{ex})
+\end{alignat}
+To satisfy energy and momentum conservation $E_{1}=E_{2}$ and $p_{1}=p_{2}$. To obtain a relationship for $\Delta y$ we square both $E_{1}=E_{2}$ and $p_{1}=p_{2}$ and take the difference. Note that $\cosh^{2}(x)-\sinh^{2}(x)=1$ and $\cosh(x)\cosh(y)-\sinh(x)\sinh(y)=\cosh(x-y)$.
+\begin{alignat}{1}
+	\label{cc01}	&(m+\Delta m)^{2}=2(m-\delta m)\Delta m\cosh(y_{r}+\Delta y)\cosh(y_{ex})
+\end{alignat}
+$$
+	-2(m-\delta m)\Delta m\sinh(y_{r}+\Delta y)\sinh(y_{ex})+(m-\delta m)^{2}+(\Delta m)^{2}
+$$
+\begin{alignat}{1}
+	\label{cc02}	&(m+\Delta m)^{2}=2(m-\delta m)\Delta m\cosh(y_{r}+\Delta y-y_{ex})+(m-\delta m)^{2}+(\Delta m)^{2}\\
+	\label{cc03}	&(m+\Delta m)^{2}=2(m-\delta m)\Delta m\cosh(\Delta y+y_{V})+(m-\delta m)^{2}+(\Delta m)^{2}
+\end{alignat}
+The equation (\ref{cc03}) is an exact expression from which the rapidity change of the rocket $\Delta y$ can be calculated from engine characteristics. Expanding this equations yields
+\begin{alignat}{1}
+	\label{cc04}	&2m(\Delta m+\delta m)-\delta m^{2}=2(m-\delta m)\Delta m\cosh(\Delta y+y_{V})
+\end{alignat}
+Now taking the limit $-\mathrm{d}m\rightarrow\Delta m+\delta m$ and $\Delta y\rightarrow\mathrm{d}y_{r}$ and only keeping first order of differential quantities
+\begin{alignat}{1}
+	\label{cc05}	&-\mathrm{d}m=\Delta m\cosh(y_{V})
+\end{alignat}
+ To obtain the relativistic rocket equation we multiply the energy balance by $\sinh(y_{r}+\Delta y)$, the momentum balance by $\cosh(y_{r}+\Delta y)$. We then take the difference  
+\begin{alignat}{1}
+	\label{cc06}	&(m+\Delta m)(\cosh(y_{r})\sinh(y_{r}+\Delta y)-\sinh(y_{r})\cosh(y_{r}+\Delta y))=
+\end{alignat}
+$$
+	\Delta m(\cosh(y_{ex})\sinh(y_{r}+\Delta y)-\sinh(y_{ex})\cosh(y_{r}+\Delta y))
+$$
+\begin{alignat}{1}
+	\label{c17}	&(m+\Delta m)\sinh(\Delta y)=\Delta m\sinh(y_{ex}-y_{r}-\Delta y)\\
+	\label{c18}	&(m+\Delta m)\sinh(\Delta y)=\Delta m\sinh(\Delta y+y_{V})
+\end{alignat}
+Equation (\ref{c18}) is the exact expression for the relativistic rocket equation. In the limit $\Delta y\rightarrow\mathrm{d}y_{r}$ and again keeping only linear terms
+\begin{alignat}{1}
+	\label{cc07}	&m\mathrm{d}y_{r}=\Delta m\sinh(y_{V})
+\end{alignat}
+The relativistic energy of an object in terms of rapidity is given by
+\begin{alignat}{1}
+	\label{c19}	&E=mc^{2}\cosh(y_{r})
+\end{alignat}
+If the mass and rapidity are time dependent then the differential of the energy of the rocket in the lab frame is of the form
+\begin{alignat}{1}
+	\label{cc08}	&\mathrm{d}E=\mathrm{d}mc^{2}\cosh(y_{r})+mc^{2}\sinh(y_{r}\mathrm{d})y_{r}
+\end{alignat}
+The ratio of the differential to the energy is then
+\begin{alignat}{1}
+	\label{cc09}	&\mathrm{d}E/E=\mathrm{d}m/m+\mathrm{d}y_{r}\tanh(y_{r})
+\end{alignat}
+We can apply the linear approximation obtained in equation (\ref{cc05}) to (\ref{cc09}) which yields
+\begin{alignat}{1}
+	\label{cc10}	&\mathrm{d}E/E=-\frac{\Delta m}{m}\cosh(y_{V})+\mathrm{d}y_{r}\tanh(y_{r})
+\end{alignat}
+To remove $\Delta m$ apply equation (\ref{cc07}) resulting in
+\begin{alignat}{1}
+	\label{cc11}	&\mathrm{d}E/E=\mathrm{d}y_{r}(-\mathrm{coth}(y_{V})+\tanh(y_{r}))
+\end{alignat}
+To make the integration more simple, approximate $\mathrm{coth(y_{V})}\approx1/V$ where $V$ is the speed of propellant. We can then integrate (\ref{cc11}) into
+\begin{alignat}{1}
+	\label{cc12}	&\int^{E}_{m_{o}c^{2}}\mathrm{d}E'/E'=\int^{y_{r}}_{0}\mathrm{d}y'_{r}(-1/V+\tanh(y'_{r}))\\
+	\label{cc13}	&E=m_{o}\mathrm{e}^{-y_{r}/V}c^{2}\cosh(y_{r})
+\end{alignat}
+\subsection{Assignment \#4}
+\subsubsection*{Problem \#1+2}
+\emph{(a) Show considering energy and momentum conservation that in collision of two particles of mass $m_{1}$ and $m_{2}$ the formation of another single particle $M$ must be equal to or greater than the sum of the initial masses. (bi) Show the inequality holds for the reverse process of decay into $m_{1}$ and $m_{2}$. (bii) Argue that massless photons cannot decay if one of the products is massive.}\\
+
+\noindent In the center of momentum frame with $(\vec{p}_{1}=-\vec{p}_{2})$, $M$ is produced at rest.
+\begin{alignat}{1}
+	\label{d01}	&M^{2}c^{4}=(E_{1}+E_{2})^{2}-(\vec{p}_{1}+\vec{p}_{2})^{2}c^{2}\\
+	\label{d02}	&M^{2}c^{4}=(E_{1}+E_{2})^{2}\\
+	\label{d03}	&Mc^{2}=E_{1}+E_{2}\\
+	\label{d04}	&M=\gamma_{1}m_{1}+\gamma_{2}m_{2}\\
+	\label{d05}	&M\geq m_{1}+m_{2}
+\end{alignat}
+As the Lorentz factor is always greater than 1 the inequality is true. For this system $M$ is also the invariant mass. \emph{(bi)} If we consider the reverse process of decay again the center of momentum frame we see that equation (\ref{d01}) is identical and therefore the inequality (\ref{d05}) still holds true but now for daughters $m_{1}$ and $m_{2}$ rather than parents. \emph{(bii)} If we consider the two particle system of one mass $m_{1}$ and one photon of energy $p_{2}c$, in the center of momentum frame we have
+\begin{alignat}{1}
+	\label{d06}	&M^{2}c^{4}=(E_{1}+E_{2})^{2}-(\vec{p}_{1}+\vec{p}_{2})^{2}c^{2}\\
+	\label{d07}	&Mc^{2}=E_{1}+E_{2}\\
+	\label{d08}	&M=\gamma_{1}m_{1}+p_{2}c\\
+	\label{d09}	&M\geq 0
+\end{alignat}
+However in the single photon frame there exists no center of momentum. The energy momentum relations becomes
+\begin{alignat}{1}
+	\label{d10}	&M^{2}c^{4}=E^{2}-p^{2}c^{2}\\
+	\label{d11}	&M=0
+\end{alignat}
+Therefore photons cannot decay into massive particles alone and neither can massive particles decay into a single massless particle. \emph{(bii)} Photon splitting as is done in crystals is allowed because kinematically the lattice atoms balance the energy-momentum allowing multiphoton finals states.
+
+\subsection{Assignment \#5**}
+\subsubsection*{Problem \#1}
+\emph{(a) Show that a particle 4-velocity is a time-like vector and determine its magnitude. (b) Show that the 4-acceleration is a space-like vector that can have arbitrary magnitude.}\\
+
+\noindent For the $(+,-,-,-)$ signature of the Minkowski metric, the ``likeness'' of a vector is as follows  
+	\begin{itemize}[noitemsep]
+		\item $v_{\mu}v^{\mu}>0$, time-like\\
+		\item $v_{\mu}v^{\mu}<0$, space-like\\
+		\item $v_{\mu}v^{\mu}=0$, light-like or null
+	\end{itemize}	
+This follows from the evaluation of the spacetime interval $\mathrm{d}s^{2}$ for various paths through spacetime and demarcate points in spacetime which can or cannot be casually related. The 4-velocity is given by  
+\begin{alignat}{2}
+	\label{e01}	&u^{\mu}=\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}=\frac{\mathrm{d}t}{\mathrm{d}\tau}\frac{\mathrm{d}}{\mathrm{d}t}
+	\begin{pmatrix}
+		 ct\\
+		\vec{x}
+	\end{pmatrix}\\
+	\label{e02}	&u^{\mu}=\frac{\mathrm{d}t}{\mathrm{d}\tau}
+	\begin{pmatrix}
+		 c\\
+		\vec{v}
+	\end{pmatrix}
+\end{alignat}
+where $\vec{v}=\mathrm{d}\vec{x}/\mathrm{d}t$. We can then evaluate the invariant associated with the inner product of 4-velocity
+\begin{alignat}{1}
+	\label{e03}	&u_{\mu}u^{\mu}=(\frac{\mathrm{d}t}{\mathrm{d}\tau})^{2}(c^{2}-\vec{v}\cdot\vec{v})
+\end{alignat}
+For 4-velocity to be timelike, we see two conditions must be met. First, the factor $({\mathrm{d}t}/{\mathrm{d}\tau})^{2}$ which turns out be $\gamma^{2}$ must be real and positive. Second, the velocity must always be less than the speed of light i.e $|\vec{v}|<c$. To proceed we have to utilize the spacetime line element.
+\begin{alignat}{2}
+	\label{e04}	&c^{2}{\mathrm{d}\tau}^{2}=c^{2}{\mathrm{d}t}^{2}-{\mathrm{d}\vec{x}}^{2}\\
+	\label{e05}	&c^{2}\frac{\mathrm{d}\tau^{2}}{\mathrm{d}t^{2}}=c^{2}-\frac{\mathrm{d}\vec{x}^{2}}{\mathrm{d}t^{2}}=(c^{2}-\vec{v}\cdot\vec{v})
+\end{alignat}
+Therefore combining (\ref{e03}) and (\ref{e05})
+\begin{alignat}{1}
+	\label{e06}	&u_{\mu}u^{\mu}=c^{2}
+\end{alignat}
+Now let us turn our attention to the 4-acceleration which is a more complicated vector. It is given by  
+\begin{alignat}{1}
+	\label{e07}	a^{\mu}=\frac{\mathrm{d}u^{\mu}}{\mathrm{d}\tau}=\frac{\mathrm{d}}{\mathrm{d}\tau}
+	\begin{pmatrix}
+		\gamma c\\
+		\gamma\vec{v}
+	\end{pmatrix}
+\end{alignat}
+To evaluate this need to make note of the relation between proper time and laboratory time $(\gamma\mathrm{d}\tau=\mathrm{d}t)$ and the time derivative of the Lorentz factor
+\begin{alignat}{1}
+	\label{e08}	\frac{\mathrm{d}\gamma}{\mathrm{d}\tau}=\gamma\frac{\mathrm{d}\gamma}{\mathrm{d}t}=\gamma\dot{\gamma}=\gamma^{4}(\vec{v}\cdot\vec{a})/c^{2}
+\end{alignat}
+Then  
+\begin{alignat}{3}
+	\label{e09}	&a_{\mu}a^{\mu}=\big(\frac{\mathrm{d}(\gamma c)}{\mathrm{d}\tau}\big)^{2}-\big(\frac{\mathrm{d}(\gamma \vec{v})}{\mathrm{d}\tau}\big)^{2}\\
+	\label{e10}	&a_{\mu}a^{\mu}=\gamma^{8}(\vec{v}\cdot\vec{a})^{2}/c^{2}-\big(\gamma^{4}(\vec{v}\cdot\vec{a})\vec{v}/c^{2}+\gamma^{2}\vec{a}\big)^{2}\\
+	\label{e11}	&a_{\mu}a^{\mu}=\gamma^{8}(\vec{v}\cdot\vec{a})^{2}/c^{2}-\gamma^{8}(\vec{v}\cdot\vec{a})^{2}(\vec{v}\cdot\vec{v})/c^{4}
+\end{alignat}
+$$
+	-\gamma^{4}(\vec{a}\cdot\vec{a})-2\gamma^{6}(\vec{v}\cdot\vec{a})^{2}/c^{2}
+$$
+To clean up the factors of $c$ we introduce $\vec{\beta}=\vec{v}/c$. The first two terms in (\ref{e11}) combine with a common factor of $1/\gamma^{2}$ and the third term can be expanded to introduce an additional factor of $\gamma^{2}$. This leads to  
+\begin{alignat}{1}
+	\label{e12}	&a_{\mu}a^{\mu}=-\gamma^{6}(\vec{\beta}\cdot\vec{a})^{2}-\gamma^{6}(\vec{a}\cdot\vec{a})(1-\vec{\beta}\cdot\vec{\beta})\\
+	\label{e13}	&a_{\mu}a^{\mu}=-\gamma^{6}\Big((\vec{a}\cdot\vec{a})+(\vec{\beta}\cdot\vec{a})^{2}-(\vec{a}\cdot\vec{a})(\vec{\beta}\cdot\vec{\beta})\Big)
+\end{alignat}
+From the Cauchy–Schwarz inequality we know
+\begin{alignat}{1}
+	\label{e14}	&(\vec{\beta}\cdot\vec{a})^{2}-(\vec{a}\cdot\vec{a})(\vec{\beta}\cdot\vec{\beta})\leq 0
+\end{alignat}
+So without further thinking we are at risk of flipping the sign of the invariant from space-like to time-like. With some simple manipulation, we can show that the invariant must always be negative. We can relate the 3-vector dot products to the angle between them
+\begin{alignat}{1}
+	\label{e15}	&(\vec{\beta}\cdot\vec{a})^{2}-(\vec{a}\cdot\vec{a})(\vec{\beta}\cdot\vec{\beta})=\beta^{2}a^{2}(\cos^{2}\theta-1)\\
+	\label{e16}	&(\vec{\beta}\cdot\vec{a})^{2}-(\vec{a}\cdot\vec{a})(\vec{\beta}\cdot\vec{\beta})=-\beta^{2}a^{2}\sin^{2}\theta
+\end{alignat}
+Combining (\ref{e13}) and (\ref{e16}) we have  
+	\begin{alignat}{1}
+	\label{e17}	&a_{\mu}a^{\mu}=-\gamma^{6}a^{2}\Big(1-\beta^{2}\sin^{2}\theta\Big)
+	\end{alignat}
+This is very suggestive as $\beta\sin\theta$ is just the projection $\beta_{\perp}$ perpendicular to the 3-acceleration direction. In other words, specifically if we write $\vec{\beta}=\beta\cos{\theta}\hat{e}_{||}+\beta\sin{\theta}\hat{e}_{\perp}$ and $\vec{a}=a\hat{e}_{||}$. So finally we obtain  
+\begin{alignat}{1}
+	\label{e18}	&a_{\mu}a^{\mu}=-\frac{\gamma^{6}}{\gamma^{2}_{\perp}}a^{2}\\
+	\label{ee01}	&1/\gamma_{\perp}^{2}=(1-\beta^{2}\sin^{2}(\theta)
+\end{alignat}
+which is always negative and shows that the 4-acceleration is a space-like vector. To remove our dependence on angles we can recognize that (\ref{e13}) is the dot product of a cross product.
+\begin{alignat}{1}
+	\label{ee02}	&a_{\mu}a^{\mu}=-\gamma^{6}\Big((\vec{a}\cdot\vec{a})+(\vec{a}\times\vec{\beta})^{2})\Big)
+\end{alignat}
+Additionally we can define  
+\begin{alignat}{1}
+	\label{e19}	&\alpha=\sqrt{-a_{\mu}a^{\mu}}
+\end{alignat}
+which is known as the ``proper acceleration''.
+\subsubsection*{Problem \#2}
+\emph{Show that if the 4-force is defined as a change in 4-momentum of a particle per unit of proper time, the 3-force cannot be proportional to the 3-acceleration with the exception of the case that the 3-acceleration vector is normal to the 3-velocity vector.}\\
+
+\noindent If we define 4-force as
+\begin{alignat}{1}
+	\label{e20}	&F^{\mu}=\frac{\mathrm{d}p^{\mu}}{\mathrm{d}\tau}=\frac{\mathrm{d}(mu^{\mu})}{\mathrm{d}\tau}=ma^{\mu}
+\end{alignat}
+By combining (\ref{e07}), (\ref{e08}) and (\ref{e20}) we see that
+\begin{alignat}{1}
+	\label{e21}	&F^{\mu}=
+	\begin{pmatrix}
+		\gamma\dot{\gamma}mc\\
+		\gamma\dot{\gamma}m\vec{v}+\gamma^{2}m\vec{a}
+	\end{pmatrix}
+\end{alignat}
+Immediately and with no further calculation we see that the 3-force will have components which point in the direction of the 3-velocity as well as the 3-acceleration. Therefore 3-force and 3-acceleration cannot be simply proportional in relativistic mechanics like they are in Newtonian mechanics unless the 3-acceleration and 3-velocity are normal. To see this combine (\ref{e08}) and (\ref{e21})
+\begin{alignat}{3}
+	\label{e22}	&\vec{F}=\gamma\dot{\gamma}m\vec{v}+\gamma^{2}m\vec{a}\\
+	\label{e23}	&\vec{F}=\gamma^{4}(\vec{v}\cdot\vec{a})m\vec{v}/c^{2}+\gamma^{2}m\vec{a}
+\end{alignat}
+If $\vec{v}\cdot\vec{a}=0$ then
+\begin{alignat}{1}
+	\label{e24}	&\vec{F}=\frac{\mathrm{d}\vec{p}}{\mathrm{d}\tau}=\gamma^{2}m\vec{a}
+\end{alignat}
+\subsubsection*{Problem\#3+4}  
+\emph{Set-up friction 4-force for the relativistic rocket traveling in a universe filled with a gas of stationary particles for two limiting cases: (a) Total inelastic collisions, all particles are collected by the rocket. (b) All particles are reflected.}\\  
+
+\noindent \emph{(a)} If the rocket absorbs all incident particles the change in mass will be related to the particle flux which is proportional to the velocity of the spacecraft. To see this, let us consider the infinitesimal change in mass after time $\delta t$
+\begin{alignat}{1}
+	\label{e25}	&\frac{\mathrm{d}m}{\mathrm{d}t}=\lim_{\delta t\to 0}\frac{m_{(t+\delta t)}-m_{(t)}}{\delta t}=\lim_{\delta t\to 0}N\tilde{m}/\delta t
+\end{alignat}
+where $N$ is the number of incident particles and $\tilde{m}$ is rest mass of each particle. The number of incident particles is related to the density over an infinitesimal distance $\delta \vec{x}=\vec{v}\delta t$.  
+\begin{alignat}{1}
+	\label{e26} N=\rho V/\tilde{m}=\rho \vec{A}\cdot\delta\vec{x}/\tilde{m}=\rho (\vec{A}\cdot\vec{v})\delta t/\tilde{m}
+\end{alignat}
+The density $\rho$ is expressed in the rest frame of the cosmic fluid (which is also our lab frame) and $\vec{A}$ is the cross-sectional orientation of the spacecraft. Therefore the mass change is  
+\begin{alignat}{1}
+	\label{e27}	&\frac{\mathrm{d}m}{\mathrm{d}t}=\lim_{\delta t\to 0}\rho(\vec{A}\cdot\vec{v})\frac{\tilde{m}\delta t}{\tilde{m}\delta t}=\rho(\vec{A}\cdot\vec{v})
+\end{alignat}
+A similar argument can be made for 3-momentum over an infinitesimal time $\delta t$. In a completely inelastic collision no radiation or emission occurs, therefore the momentum of the rocket is a constant as the momentum before and after collision can only be attributable to the rocket.
+\begin{alignat}{1}
+	\label{e28}	&\vec{p}_{(t)}=\vec{p}_{(t+\delta t)}\Longrightarrow\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}=0
+\end{alignat}
+Therefore the 3-force on the rocket must be zero as the momentum loss due to decreased speed is exactly canceled by the momentum increase due to increased mass. The 4-force is then
+\begin{alignat}{1}
+	\label{e29}	&F^{\mu}_{Inelastic}=\frac{\mathrm{d}p^{\mu}}{\mathrm{d}\tau}=
+	\begin{pmatrix}
+		\gamma\frac{\mathrm{d}}{\mathrm{d}t}(\gamma m c)\\
+		\gamma\frac{\mathrm{d}}{\mathrm{d}t}(\gamma m\vec{v})=0
+	\end{pmatrix}\\
+	\label{e30}	&F^{\mu}_{Inelastic}=
+	\begin{pmatrix}
+		\gamma^{2}\dot{m}c+\gamma^{4}(\vec{v}\cdot\vec{a})m/c\\
+		0
+	\end{pmatrix}\\
+	\label{e31}	&F^{0}=\gamma^{4}(\vec{v}\cdot\vec{a})m/c+\gamma^{2}\rho(\vec{A}\cdot\vec{v})c=\gamma\frac{\mathrm{d}E/c}{\mathrm{d}t}\\
+	\label{e32}	&\vec{F}=\gamma^{4}(\vec{v}\cdot\vec{a})m\vec{v}/c^{2}+\gamma^{2}\rho(\vec{A}\cdot\vec{v})\vec{v}+\gamma^{2}m\vec{a}=0
+\end{alignat}
+We see there is a relationship between the change in energy of the rocket (\ref{e31}) and the 3-acceleration (\ref{e32})
+\begin{alignat}{1}
+	\label{e33}	&\gamma\frac{\mathrm{d}E}{\mathrm{d}t}\frac{\vec{v}}{c^{2}}+\gamma^{2}m\vec{a}=0
+\end{alignat}
+Using the energy balance  
+\begin{alignat}{1}
+	\label{e34}	&\gamma_{(t)}mc^{2}+\tilde{m}Nc^{2}=\gamma_{(t+\delta t)}(m+N\tilde{m})c^{2}
+\end{alignat}
+We can immediately rewrite the quantity $\gamma\mathrm{d}E/\mathrm{d}t$ as
+\begin{alignat}{1}
+	\label{e35}	&\gamma\frac{\mathrm{d}E}{\mathrm{d}t}=-\rho(\vec{A}\cdot\gamma\vec{v})
+\end{alignat}
+One useful equation would be to look at how the proper velocity changes over time.
+\begin{alignat}{1}
+	\label{e36}	&\vec{p}_{(t)}=\vec{p}_{(t+\delta t)}\\
+	\label{e37}	&\gamma_{(t)}m\vec{v}_{(t)}=\gamma_{(t+\delta t)}(m+N\tilde{m})\vec{v}_{(t+\delta t)}\\
+	\label{e38}	&\gamma_{(t+\delta t)}\vec{v}_{(t+\delta t)}=\frac{m}{(m+N\tilde{m})}\gamma_{(t)}\vec{v}_{(t)}\\
+	\label{e39}	&\frac{\mathrm{d}(\gamma\vec{v})}{\mathrm{d}t}=\lim_{\delta t\to 0}\frac{\gamma_{(t+\delta t)}\vec{v}_{(t+\delta t)}-\gamma_{(t)}\vec{v}_{(t)}}{\delta t}\\
+	\label{e40}	&\frac{\mathrm{d}(\gamma\vec{v})}{\mathrm{d}t}=\lim_{\delta t\to 0}\frac{\gamma\vec{v}}{\delta t}\frac{-N\tilde{m}}{m+N\tilde{m}}=\lim_{\delta t\to 0}\frac{\gamma\vec{v}}{\delta t}\frac{-\rho(\vec{A}\cdot\vec{v})\delta t}{m+\rho(\vec{A}\cdot\vec{v})\delta t}\\
+	\label{e41}	&\frac{\mathrm{d}(\gamma\vec{v})}{\mathrm{d}t}=-\gamma\rho(\vec{A}\cdot\vec{v})\vec{v}/m
+\end{alignat}
+This quantity is exactly canceled out by the change in mass. It is reassuring to see that the friction force appears as velocity-squared which is how it manifests in the non-relativistic drag equation. Since we have the constraint that the momentum is constant i.e. $p=\gamma m v$, we can solve for the proper velocity over time. Let us consider only linear motion with the substitution $w=\gamma v$
+\begin{alignat}{1}
+	\label{e42}	&\frac{\mathrm{d}w}{\mathrm{d}\tau}=-\rho Aw^{2}/m=-\rho Aw^{3}/p\\
+	\label{e43}	&\frac{\mathrm{d}w}{w^{3}}=(-\rho A/p)\mathrm{d}\tau
+\end{alignat}
+Which integrates to
+\begin{alignat}{1}
+	\label{e44}	&\frac{1}{2w_{o}^{2}}-\frac{1}{2w^{2}}=-(\tau-\tau_{o})\rho A/p\\
+	\label{e45}	&w=w_{o}/\sqrt{1+(\tau-\tau_{o})\rho Aw_{o}^{2}/p}	
+\end{alignat}
+\emph{(b)} In the case of the reflected particles the mass of rocket does not change. The momentum and energy balance is then 
+\begin{alignat}{1}
+	\label{e46}	&\vec{P}=\gamma_{(t)}m\vec{v}_{(t)}=\gamma_{(t+\delta t)}m\vec{v}_{(t+\delta t)}+\tilde{\gamma}_{(t+\delta t)}N\tilde{m}\tilde{v}_{(t+\delta t)}\\
+	\label{e47}	&E=\gamma_{(t)}mc^{2}+N\tilde{m}c^{2}=\gamma_{(t+\delta t)}mc^{2}+\tilde{\gamma}_{(t+\delta t)}N\tilde{m}c^{2}
+\end{alignat}
+Using (\ref{e46}) and (\ref{e47}) and again considering an infinitesimal change as done in part \emph{(a)} we can evaluate the derivative in the rocket's momentum and energy  
+\begin{alignat}{1}
+	\label{e48}	&\frac{\mathrm{d}\vec{p}}{\mathrm{d}\tau}=m\gamma\frac{\mathrm{d}(\gamma\vec{v})}{\mathrm{d}t}=-\tilde{\gamma}\tilde{v}\rho(\vec{A}\cdot\gamma\vec{v})\\
+	\label{e49}&\frac{\mathrm{d}E}{\mathrm{d}\tau}=mc^{2}\gamma\frac{\mathrm{d}\gamma}{\mathrm{d}t}=(1-\tilde{\gamma})\rho(\vec{A}\cdot\gamma\vec{v})c^{2}
+\end{alignat}
+To evaluate the recoil of the cosmic fluid $\tilde{\gamma}$ and $\tilde{v}$ more easily, we will move to using rapidity and note that the center of momentum frame has a relative speed to the lab frame of  
+\begin{alignat}{1}
+	\label{e50}	&v_{CM}=c\tanh(y_{CM})=\frac{Pc^{2}}{E}
+\end{alignat}
+In the momentum frame elastic collisions flip the direction of the velocity, but maintain the magnitude. For a static fluid, this means it is the velocity of the center of momentum frame that is used. Using velocity addition we transform back into the lab frame thus  
+\begin{alignat}{1}
+	\label{e51}	&\tilde{v}=c\tanh(y_{CM}+y_{CM})=c\tanh(2y_{CM})
+\end{alignat}
+From (\ref{e47}) if $m>>\tilde{m}N$ then the rapidity of the center of momentum frame will be the rapidity of the rocket.
+\begin{alignat}{1}
+	\label{e52}	&\tilde{v}\approx c\tanh(2y)
+\end{alignat}
+Therefore rewriting (\ref{e48}) and (\ref{e49}) and assuming linear motion 
+\begin{alignat}{1}
+	\label{e53}	&\frac{\mathrm{d}\vec{p}}{\mathrm{d}\tau}=-\sinh(2y)\sinh(y)\rho Ac^{2}\\
+	\label{e54}	&\frac{\mathrm{d}E}{\mathrm{d}\tau}=(1-\cosh(2y))\sinh(y)\rho Ac^{3}=-2\sinh^{3}(y)\rho Ac^{3}
+\end{alignat}
+Keeping in mind that $\gamma=\cosh(y)$ and $\gamma v=c\sinh(y)$ we can see that the friction force for the elastic and inelastic cases are quite different. Using (\ref{e54}) we can solve for rapidity.  
+\begin{alignat}{1}
+	\label{e55}	&\frac{\mathrm{d}\cosh(y)mc^{2}}{\mathrm{d}\tau}=-2\sinh^{3}(y)\rho Ac^{3}\\
+	\label{e56}	&\frac{\mathrm{d}y}{\mathrm{d}\tau}\sinh(y)=-2\sinh^{3}(y)\rho Ac/m\\
+	\label{e57}	&\frac{\mathrm{d}y}{\mathrm{d}\tau}=-2\sinh^{2}(y)\rho Ac/m\\
+	\label{e58}	&\frac{\mathrm{d}y}{\sinh^{2}(y)}=-(2\rho Ac/m)\mathrm{d}\tau
+\end{alignat}
+Which integrates to
+\begin{alignat}{2}
+	\label{e59}	&\frac{1}{\tanh(y_{o})}-\frac{1}{\tanh(y)}=-(2\rho Ac/m)(\tau-\tau_{o})\\
+	\label{e60}	&v=v_{o}/(1+2(\tau-\tau_{o})v_{o}\rho A/m)
+\end{alignat}
+Comparing (\ref{e45}) to (\ref{e60}) we see that the elastic rocket suffers a much more dramatic velocity drag per unit of proper time than the inelastic rocket which is plotted in Figure~\ref{fig03}. This is because the energy loss by the rocket in the inelastic case is proportional to proper velocity but proper velocity cubed in the elastic case. In other words, the reflected particles have a very high rapidity and consume much of the kinetic energy.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth,trim=50bp 20bp 40bp 10bp,clip]{propervelocity01}
+	\caption{(solid) Inelastic rocket (dashed) Elastic rocket}
+	\label{fig03}
+\end{figure}
+It would then be interesting to characterize the covariant form of the inelastic and elastic frictional forces. One difficultly is that in the inelastic case ``what is the rocket?'' becomes unclear as it consumes a large amount of mass rivaling its initial mass. Also the change in momentum is strictly zero which isn't very useful. Rather the 4-acceleration can be clearly defined for both cases and might me more appropriate than 4-force. In either approach the relevant vectors are rocket velocity $u^{\mu}$ and fluid velocity $V^{\mu}$. Two simple combinations would then be  
+\begin{alignat}{1}
+	\label{e61}	&F^{\alpha}\propto u_{\mu}u^{\alpha}V^{\mu}\ \mathrm{(elastic?)}\\
+	\label{e62}	&F^{\alpha}\propto u_{\mu}V^{\alpha}V^{\mu}\ \mathrm{(inelastic?)}
+\end{alignat}
+\subsection{Assignment \#6*}
+\subsubsection*{Problem \#1}
+\emph{A 4-force must be a 4-vector describing the change of a particle 4-momentum per unit of proper time. Argue in a mathematically strict way that a 4-force cannot be velocity independent. Present two allowed forms of the 4-force - one based on a vector $f^{\mu}$ and the other on a `tensor' $F^{\mu\nu}$.}\\
+
+\noindent The velocity dependence of the 4-force can be seen via an important property of the 4-velocity.
+\begin{alignat}{3}
+	\label{f01}	&u^{\mu}u_{\mu}=c^{2}\\
+	\label{f02}	&\frac{\mathrm{d}}{\mathrm{d}\tau}(u^{\mu}u_{\mu})=2\frac{\mathrm{d}u^{\mu}}{\mathrm{d}\tau}u_{\mu}=0\\
+	\label{f03}	&a^{\mu}u_{\mu}=0
+\end{alignat}
+The 4-acceleration is orthogonal to the 4-velocity. This comes about because 4-acceleration is a spacelike vector with inner product $a^{\mu}a_{\mu}<0$ while 4-velocity is a timelike vector with inner product $u^{\mu}u_{\mu}>0$. If we define the 4-force as $F^{\mu}=ma^{\mu}$ (assuming $\mathrm{d}m/\mathrm{d}\tau=0$) then we see from (\ref{f03}) that
+\begin{alignat}{1}
+	\label{f04}	&F^{\mu}u_{\mu}=0
+\end{alignat}
+This relation only holds if the 4-force and 4-acceleration are functionals of 4-velocity and an antisymmetric rank-2 tensor. To show this let us guess the form of the 4-force and then contract it with velocity.
+\begin{alignat}{1}
+	\label{f05}	&F^{\beta}=u_{\alpha}F^{\alpha\beta}\\
+	\label{f06}	&u_{\beta}F^{\beta}=u_{\beta}u_{\alpha}F^{\alpha\beta}
+\end{alignat}
+The outer product of $u_{\beta}$ is a symmetric tensor and symmetric tensors when contracted with antisymmetric tensors are identically zero. Therefore the 4-force often called the Minkowski force of form (\ref{f05}) is appropriate.
+
+\subsubsection*{Problem \#2}
+\emph{Unlike the common wisdom that teaches that the Lorentz force acts in the direction of $\vec{E}$ and $\vec{v}\times\vec{B}$ it turns out that a particle is also accelerated in the direction $\vec{E}\times\vec{B}$. Present a qualitative argument why this is not surprising.}\\
+
+\noindent The Lorentz force is given by  
+\begin{alignat}{1}
+	\label{f10}	&\vec{F}=m\frac{\mathrm{d}\vec{v}}{\mathrm{d}t}=e(\vec{E}+\vec{v}\times\vec{B})
+\end{alignat}
+The integral solution of velocity is then  
+\begin{alignat}{1}
+	\label{f11}	&\vec{v}(t)=\vec{v}(0)+(\frac{e}{m})\int_0^{t}\mathrm{d}t'(\vec{E}+\vec{v}(t')\times\vec{B})
+\end{alignat}
+For simplicity, we are considering the $\vec{E}$ and $\vec{B}$ fields to be approximately constant. If we iterate this equation once
+\begin{alignat}{1}
+	\label{f12}	&\vec{v}(t)=\vec{v}(0)+(\frac{e}{m})\int_0^{t}\mathrm{d}t'(\vec{E}+\Big[\vec{v}(0)
+\end{alignat}
+$$
++(\frac{e}{m})\int_0^{t'}\mathrm{d}t''(\vec{E}+\vec{v}(t'')\times\vec{B})\Big]\times\vec{B})
+$$
+It is then clearly seen that the velocity will pick up $\vec{E}\times\vec{B}$ contributions. Specifically from (\ref{f12}) we can pull out  
+\begin{alignat}{1}
+	\label{f13}	&\vec{v}(t)|_{\vec{E}\times\vec{B}}=(\frac{e}{m})^{2}\int_0^{t}\mathrm{d}t'\int_0^{t'}\mathrm{d}t''(\vec{E}\times\vec{B})
+\end{alignat}
+\subsubsection*{Problem \#3+4}
+\emph{The integral solution to the Lorentz force can be expanded into powers of $\tau$ proper time. (i) Establish the dimensionless parameter that is implicit in this type of expansion and discuss the conditions of validity for it. (ii) Describe an independent iterative scheme defining aside of the 4-velocity $u^{\mu}$ also 4-acceleration $a^{\mu}$. (iii) For (nearly) constant fields carry out the calculation showing your result for these two quantities through third order $\mathcal{O}(\tau^{3})$ explicitly. (iv) For (nearly) constant fields obtain $u^{2}$, $u\cdot a$, and $a\cdot a$ valid to forth order $\mathcal{O}(\tau^{4})$. BONUS: Find closed form of 4-velocity and 4-acceleration.}\\
+
+\noindent \emph{(i)} In Exercise X-10 (Rafelski, ``Relativity Matters'' manuscript, pp.393-397) the dimensionless parameter of the expansion in its region of validity is given as  
+\begin{alignat}{1}
+	\label{f14}	&\frac{e|\vec{\mathcal{E}}|\tau}{mc}<<1
+\end{alignat}
+Where $|\vec{\mathcal{E}}|$ is the amplitude of the EM field tensor. The validity of the analysis done in X-10 requires that both the time span $\tau$ be very small so that only the first few orders $\mathcal{O}(\tau^{N})$ are relevant. If we are only looking at accelerations over timespans much less than the characteristic timescale of the physical system, then naturally the higher orders will lose relevancy as $(\tau/\tau_{o})^{N}\rightarrow0$ for increasing $N$. This satisfies the idea that these terms are perturbative.\\
+
+\noindent \emph{(ii)} For simplicity, we will suppress the indices of the Lorentz force and work in the matrix formulation.
+\begin{alignat}{1}
+	\label{f16}	&F^{\alpha\beta}g_{\beta\gamma}u^{\gamma}\rightarrow(Fg)u
+\end{alignat}
+Again, the EM fields will be taken as near constants. The integral form of the covariant velocity is  
+\begin{alignat}{1}
+	\label{f17}	&u(\tau)=u(0)+(\frac{e}{m})\int_0^{\tau}\mathrm{d}\tau'(Fg)u(\tau')
+\end{alignat}
+Which can be iterated like the 3-force in (\ref{f11}) was before  
+\begin{alignat}{1}
+	\label{f18}	&u(\tau)=u(0)+(\frac{e}{m})\int_0^{\tau}\mathrm{d}\tau'(Fg)u(0)
+\end{alignat}
+$$
+	+(\frac{e}{m})^{2}\int_0^{\tau}\mathrm{d}\tau'(Fg)\int_0^{\tau'}\mathrm{d}\tau''(Fg)u(\tau'')
+$$
+By taking the derivative with respect to the proper time the series for the 4-acceleration can be found  
+\begin{alignat}{1}
+	\label{f19}	&\frac{\mathrm{d}u(\tau)}{\mathrm{d}\tau}=(\frac{e}{m})(Fg)u(0)
+\end{alignat}
+$$
+	+(\frac{e}{m})^{2}(Fg)\int_0^{\tau}\mathrm{d}\tau'(Fg)u(\tau')
+$$
+It is very similar to the series in (\ref{f18}) except that it's been ``pushed back'' one order as the first order velocity term corresponds to the zeroth order acceleration term and similarly for subsequent terms. Of course we can iterate all these series far further into higher orders using (\ref{f17}), but this is more compact.\\
+
+\noindent \emph{(iii)} The covariant velocity up to third order is  
+\begin{alignat}{1}
+	\label{f20}	&u(\tau)=u(0)+(\frac{e}{m})\int_0^{\tau}\mathrm{d}\tau'(Fg)u(0)
+\end{alignat}
+$$
+	+(\frac{e}{m})^{2}\int_0^{\tau}\mathrm{d}\tau'(Fg)\int_0^{\tau'}\mathrm{d}\tau''(Fg)u(0)
+$$	$$
+	+(\frac{e}{m})^{3}\int_0^{\tau}\mathrm{d}\tau'(Fg)\int_0^{\tau'}\mathrm{d}\tau''(Fg)\int_0^{\tau''}\mathrm{d}\tau'''(Fg)u(\tau''')
+$$
+The covariant acceleration up to third order is
+\begin{alignat}{1}
+	\label{f21}	&\frac{\mathrm{d}u(\tau)}{\mathrm{d}\tau}=(\frac{e}{m})(Fg)u(0)
+\end{alignat}
+$$
+	+(\frac{e}{m})^{2}(Fg)\int_0^{\tau}\mathrm{d}\tau'(Fg)u(0)
+$$	$$
+	+(\frac{e}{m})^{3}(Fg)\int_0^{\tau}\mathrm{d}\tau'(Fg)\int_0^{\tau'}\mathrm{d}\tau''(Fg)u(0)
+$$	$$
+	+(\frac{e}{m})^{4}(Fg)\int_0^{\tau}\mathrm{d}\tau'(Fg)\int_0^{\tau'}\mathrm{d}\tau''(Fg)\int_0^{\tau''}\mathrm{d}\tau'''(Fg)u(\tau''')
+$$
+\noindent \emph{(iv)} By setting $\tau'''\approx0$ we can evaluate both velocity and acceleration
+\begin{alignat}{1}
+	\label{f22}	&u(\tau)=u(0)+(\frac{e\tau}{mc})(cFg)u(0)
+\end{alignat}
+$$
+	+\frac{1}{2}(\frac{e\tau}{mc})^{2}(cFg)^{2}u(0)+\frac{1}{6}(\frac{e\tau}{mc})^{3}(cFg)^{3}u(0)
+$$
+There is an obvious pattern here, so let's make the factor out front dimensionless by introducing $F\rightarrow|\vec{\mathcal{E}}|\tilde{F}$. The series to infinite order is then  
+\begin{alignat}{2}
+	\label{f23}	&u(\tau)=\sum_{n=0}^{\infty}\frac{\Big((\tau/\tau_{o})(c\tilde{F}g)\Big)^{n}}{n!}u(0)\\
+	\label{f24}	&u(\tau)=\mathrm{e}^{(\tau/\tau_{o})(c\tilde{F}g)}u(0)
+\end{alignat}
+This very much looks like a time evolution operator acting on an initial $u(0)$. Now let's evaluate acceleration
+\begin{alignat}{1}
+	\label{f25}	&\frac{\mathrm{d}u(\tau)}{\mathrm{d}\tau}=(\frac{e}{mc})(cFg)u(0)
+\end{alignat}
+$$
+	+\tau(\frac{e}{mc})^{2}(cFg)^{2}u(0)+\frac{1}{2}\tau^{2}(\frac{e}{mc})^{3}(cFg)^{3}u(0)
+$$
+Again a pattern to infinite order is clear  
+\begin{alignat}{2}
+	\label{f26}	&a(\tau)=\frac{\mathrm{d}u(\tau)}{\mathrm{d}\tau}=\frac{\mathrm{d}}{\mathrm{d}\tau}\mathrm{e}^{(\tau/\tau_{o})(c\tilde{F}g)}u(0)\\
+	\label{f27}	&a(\tau)=\frac{\mathrm{d}u(\tau)}{\mathrm{d}\tau}=(1/\tau_{o})(c\tilde{F}g)\mathrm{e}^{(\tau/\tau_{o})(c\tilde{F}g)}u(0)
+\end{alignat}
+Lastly let us look at the various inner products up to forth order in $\tau$.
+\begin{alignat}{3}
+	\label{f28}	&u\cdot u=u\cdot u|_{\tau=0}\Big(\sum_{n=0}^{4}\frac{1}{n!}(\frac{\tau c\tilde{F}g}{\tau_{o}})^{n}\Big)^{2}\\
+	\label{f29}	&a\cdot a=(1/\tau_{o}^{2})u\cdot u|_{\tau=0}\Big(\sum_{n=0}^{4}\frac{1}{n!}(\frac{\tau c\tilde{F}g}{\tau_{o}})^{n}\Big)^{2}(c\tilde{F}g){2}\\
+	\label{f30}	&a\cdot u=(1/\tau_{o})u\cdot u|_{\tau=0}\Big(\sum_{n=0}^{4}\frac{1}{n!}(\frac{\tau c\tilde{F}g}{\tau_{o}})^{n}\Big)^{2}(c\tilde{F}g)
+\end{alignat}
+	Once expanded, everything higher than $\tau^{4}$ is removed
+\begin{alignat}{1}
+	\label{f31}	&u\cdot u=u\cdot u|_{\tau=0}(1+2x+2x^{2}+\frac{4}{3}x^{3}+\frac{2}{3}x^{4})
+\end{alignat}
+\subsection{Assignment \#7*}
+\subsubsection*{Problem \#1}
+\emph{Explain the method to obtain the Lorentz transformation of EM fields using $\vec{E}$ and $\vec{B}$ fields only and show how to derive the LT form of the fields. Make sure that your result agrees with the book as you'll need to use the correct results below.}\\
+
+\noindent The 3-vectors $\vec{E}$ and $\vec{B}$ are by themselves insufficient to define a consistent Lorentz transformation as seen for 4-vectors such as $x'^{\mu}=\Lambda^{\mu}_{\ \nu}x^{\nu}$. Where the transformation matrix (for a boost in the third space coordinate) takes the form
+\begin{alignat}{1}
+	\label{g01}	&\Lambda^{\mu}_{\ \nu}=
+	\begin{pmatrix}
+		\gamma&0&0&-\gamma\beta\\
+		0&1&0&0\\
+		0&0&1&0\\
+		-\gamma\beta&0&0&\gamma
+	\end{pmatrix}
+\end{alignat}
+Rather a more complicated object $F^{\mu\nu}$ called the electromagnetic field tensor combining both E and B fields will be needed.  We can obtain it by considering how the EM fields relate to the 4-potential
+\begin{alignat}{3}
+	\label{g02}	&A^{\mu} =(V/c,\vec{A})=(A^{0},A^{i})\\
+	\label{g03}	&E^{i}/c=-\partial^{i}A^{0}-\partial^{0}A^{i}\ [\mathrm{Noting\ }\partial^{\mu}=(\partial^{0},-\partial^{i})]\\
+	\label{g04}	&B^{i}=\epsilon^{ijk}\partial_{j}A_{k}
+\end{alignat}
+which suggests that the electromagnetic field tensor is made out of some combination of $\{\partial^{\mu}A^{\nu}\}$. For $F^{\mu\nu}$ to be antisymmetric and only linear in the fields, it must take the form
+\begin{alignat}{2}
+	\label{g05}	&F^{\mu\nu}=\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu}\\
+	\label{g06}	&F^{\mu\nu}=
+	\begin{pmatrix}
+		0&-E^{1}/c&-E^{2}/c&-E^{3}/c\\
+		E^{1}/c&0&-B^{3}&B^{2}\\
+		E^{2}/c&B^{3}&0&-B^{1}\\
+		E^{3}/c&-B^{2}&B^{1}&0	
+	\end{pmatrix}
+\end{alignat}
+From (\ref{g05}) we can immediately see how it must Lorentz transform by applying the transformation matrix to each index.
+\begin{alignat}{1}
+	\label{g07}	&F'^{\mu\nu}=\Lambda^{\mu}_{\ \alpha}\Lambda^{\nu}_{\ \beta}F^{\alpha\beta}
+\end{alignat}
+Or in matrix form
+\begin{alignat}{1}
+	\label{g08}	&F'=\Lambda F \Lambda^{T}
+\end{alignat}
+Let us evaluate (\ref{g08}) explicitly
+\begin{alignat}{3}
+	\label{g09}	&F\Lambda^{T}=
+	\begin{pmatrix}
+		0&-E^{1}/c&-E^{2}/c&-E^{3}/c\\
+		E^{1}/c&0&-B^{3}&B^{2}\\
+		E^{2}/c&B^{3}&0&-B^{1}\\
+		E^{3}/c&-B^{2}&B^{1}&0	
+	\end{pmatrix}
+	\begin{pmatrix}
+		\gamma&0&0&-\gamma\beta\\
+		0&1&0&0\\
+		0&0&1&0\\
+		-\gamma\beta&0&0&\gamma
+	\end{pmatrix}
+\end{alignat}
+\begin{alignat}{1}
+	\label{g10}	&F\Lambda^{T}=
+	\begin{pmatrix}
+		\gamma\beta E^{3}/c&-E^{1}/c&-E^{2}/c&-\gamma E^{3}/c\\
+		\gamma(E^{1}/c-\beta B^{2})&0&-B^{3}&\gamma(B^{2}-\beta E^{1}/c)\\
+		\gamma(E^{2}/c+\beta B^{1})&B^{3}&0&-\gamma(B^{1}+\beta E^{2}/c)\\
+		\gamma E^{3}/c&-B^{2}&B^{1}&-\gamma\beta E^{3}/c
+	\end{pmatrix}
+\end{alignat}
+\begin{alignat}{1}
+	\label{g11}	&F'=\Lambda F\Lambda^{T}=
+\end{alignat}
+$$
+	\begin{pmatrix}
+		0&-\gamma(E^{1}/c-\beta B^{2})&-\gamma(E^{2}/c+\beta B^{1})&-E^{3}/c\\
+		\gamma(E^{1}/c-\beta B^{2})&0&-B^{3}&\gamma(B^{2}-\beta E^{1}/c)\\
+		\gamma(E^{2}/c+\beta B^{1})&B^{3}&0&-\gamma(B^{1}+\beta E^{2}/c)\\
+		E^{3}/c&\gamma(B^{2}-\beta E^{1}/c)&\gamma(B^{1}-\beta E^{2}/c)&0
+	\end{pmatrix}
+$$
+It is interesting to note that only fields transverse to the boost direction are transformed. By considering $\vec{E}=\vec{E}_{||}+\vec{E}_{\perp}$ and $\vec{B}=\vec{B}_{||}+\vec{B}_{\perp}$ and noting that the flipping of signs in the elements of (\ref{g11}) indicates a cross-product we can write
+\begin{alignat}{2}
+	\label{g12}	&\vec{E}'/c=\vec{E}_{||}/c+\gamma(\vec{E}_{\perp}/c+\vec{\beta}\times\vec{B}_{\perp})\\
+	\label{g13}	&\vec{B}'=\vec{B}_{||}+\gamma(\vec{B}_{\perp}/c-\vec{\beta}\times\vec{E}_{\perp}/c)
+\end{alignat}
+\subsubsection*{Problem \#2+3}
+\emph{Since there are two vector fields $\vec{E}$ and $\vec{B}$ there are several bilinear forms you can form--show them all and evaluate their behavior under LT transforms based on the results in Problem \#1. Identify linear combinations of bilinear forms that do not change under LT transformations, there are the Lorentz invariants of the EM fields. There is one linearly independent form that is not a Lorentz invariant, identify it choosing $\vec{E}$ and $\vec{B}$ symmetric format of your choice and show how your choice Lorentz transforms.}\\
+
+\noindent There are four immediate bilinear forms we can construct  
+\begin{alignat}{4}
+	\label{g14}	&bl_{1}=B^{2}-E^{2}/c^{2}\\
+	\label{g15}	&bl_{2}=B^{2}+E^{2}/c^{2}\\
+	\label{g16}	&bl_{3}=\vec{E}\cdot\vec{B}/c\\
+	\label{g17}	&bl_{4}=\vec{E}\times\vec{B}/c
+\end{alignat}
+The first form $bl_{1}$ is proportional to the total inner product of the EM field tensor  
+\begin{alignat}{3}
+	\label{g18}	&S=F^{\mu\nu}F_{\mu\nu}=Tr[FgFg]\\
+	\label{g19}	&Fg=
+	\begin{pmatrix}
+		0&-E^{1}/c&-E^{2}/c&-E^{3}/c\\
+		E^{1}/c&0&-B^{3}&B^{2}\\
+		E^{2}/c&B^{3}&0&-B^{1}\\
+		E^{3}/c&-B^{2}&B^{1}&0	
+	\end{pmatrix}
+	\begin{pmatrix}
+		1&0&0&0\\
+		0&-1&0&0\\
+		0&0&-1&0\\
+		0&0&0&-1\\		
+	\end{pmatrix}
+\end{alignat}
+$$
+Fg=
+	\begin{pmatrix}
+		0&E^{1}/c&E^{2}/c&E^{3}/c\\
+		E^{1}/c&0&B^{3}&-B^{2}\\
+		E^{2}/c&-B^{3}&0&B^{1}\\
+		E^{3}/c&B^{2}&-B^{1}&0	
+	\end{pmatrix}\\
+$$
+\begin{alignat}{1}
+	\label{g20}	&FgFg=
+		\begin{pmatrix}
+		0&E^{1}/c&E^{2}/c&E^{3}/c\\
+		E^{1}/c&0&B^{3}&-B^{2}\\
+		E^{2}/c&-B^{3}&0&B^{1}\\
+		E^{3}/c&B^{2}&-B^{1}&0	
+	\end{pmatrix}
+		\begin{pmatrix}
+		0&E^{1}/c&E^{2}/c&E^{3}/c\\
+		E^{1}/c&0&B^{3}&-B^{2}\\
+		E^{2}/c&-B^{3}&0&B^{1}\\
+		E^{3}/c&B^{2}&-B^{1}&0	
+	\end{pmatrix}
+\end{alignat}
+$$
+	\rightarrow S=Tr[FgFg]=2(B^{2}-E^{2}/c^{2})
+$$
+Using the results in (\ref{g12}) and (\ref{g13}) we can make sure that $S$ is indeed a Lorentz invariant.
+\begin{alignat}{4}
+	\label{g21}	&\vec{E}'\cdot\vec{E}'/c^{2}=E^{2}_{||}/c^{2}+\gamma^{2}(\vec{E}_{\perp}/c+\vec{\beta}\times\vec{B}_{\perp})^{2}\\
+	\label{g22}	&\vec{E}'\cdot\vec{E}'/c^{2}=E^{2}_{||}/c^{2}+\gamma^{2}E^{2}_{\perp}/c^{2}+\gamma^{2}\beta^{2}B^{2}_{\perp}+2\gamma^{2}\vec{E}_{\perp}\cdot(\vec{\beta}\times\vec{B}_{\perp})/c\\
+	\label{g23}	&\vec{B}'\cdot\vec{B}'=B^{2}_{||}+\gamma^{2}(\vec{B}_{\perp}-\vec{\beta}\times\vec{E}_{\perp}/c)^{2}\\
+	\label{g24}	&\vec{B}'\cdot\vec{B}'=B^{2}_{||}+\gamma^{2}B^{2}_{\perp}+\gamma^{2}\beta^{2}E^{2}_{\perp}/c^{2}-2\gamma^{2}\vec{B}_{\perp}\cdot(\vec{\beta}\times\vec{E}_{\perp})/c
+\end{alignat}
+Due to the cyclic property of the triple product, the last terms in (\ref{g22}) and (\ref{g24}) are equal. Finally noting $1/\gamma^{2}=1-\beta^{2}$ we arrive at
+\begin{alignat}{3}
+	\label{g25}	&S'/2=B^{2}_{||}+\gamma^{2}B^{2}_{\perp}+\gamma^{2}\beta^{2}E^{2}_{\perp}/c^{2}-E^{2}_{||}/c^{2}-\gamma^{2}E^{2}_{\perp}/c^{2}-\gamma^{2}\beta^{2}B^{2}_{\perp}\\
+	\label{g26}	&S'/2=B^{2}_{||}+B^{2}_{\perp}-E^{2}_{||}/c^{2}-E^{2}_{\perp}/c^{2}=B^{2}-E^{2}/c^{2}\\
+	\label{g27}	&S'=S
+\end{alignat}
+Therefore the bilinear form S is a LI. The second bilinear form $bl_{2}$ is not a LI which is clear from (\ref{g22}) and (\ref{g24}) as no elegant cancellations will occur. This quantity is related to the energy density of the field. 
+\begin{alignat}{1}
+	\label{g28}	&B'^{2}+E'^{2}/c^{2}=B^{2}_{||}+E^{2}_{||}/c^{2}+\gamma^{2}(1+\beta^{2})(B^{2}_{\perp}+E^{2}_{\perp}/c^{2})+4\gamma^{2}\vec{\beta}\cdot(\vec{B}_{\perp}\times\vec{E}_{\perp})/c
+\end{alignat}
+The third from $bl_{3}$ is related to the total inner product of the EM field tensor and its dual tensor
+\begin{alignat}{2}
+	\label{g29}	& G_{\mu\nu}=\frac{1}{2}\epsilon_{\mu\nu\alpha\beta}F^{\alpha\beta}\\
+	\label{g30}	&P=-F^{\mu\nu}G_{\mu\nu}=Tr[-F\epsilon F]/2=4(\vec{B}\cdot\vec{E})/c
+\end{alignat}
+The quantity P ends up being a pseudoscalar in that it is invariant under proper transformations, but not under improper rotations such as coordinate inversions. We can show it is invariant under LT
+\begin{alignat}{2}
+	\label{g31}	&\vec{B}'\cdot\vec{E}'/c=\vec{B}_{||}\cdot\vec{E}_{||}/c+\gamma^{2}(\vec{E}_{\perp}/c+\vec{\beta}\times\vec{B}_{\perp})\cdot(\vec{B}_{\perp}-\vec{\beta}\times\vec{E}_{\perp}/c)\\
+	\label{g32}	&\vec{B}'\cdot\vec{E}'/c=\vec{B}_{||}\cdot\vec{E}_{||}/c+\gamma^{2}\vec{B}_{\perp}\cdot\vec{E}_{\perp}-\gamma^{2}(\vec{\beta}\times\vec{B}_{\perp})\cdot(\vec{\beta}\times\vec{E}_{\perp})/c
+\end{alignat}
+We can use the Binet-Cauchy identity $(a\times b)\cdot(c\times d)=(a\cdot c)(b\cdot d)-(a\cdot d)(b\cdot c)$ to rewrite the last term above.
+\begin{alignat}{3}
+	\label{g33}	&\vec{B}'\cdot\vec{E}'/c=\vec{B}_{||}\cdot\vec{E}_{||}/c+\gamma^{2}\vec{B}_{\perp}\cdot\vec{E}_{\perp}-\gamma^{2}\beta^{2}(\vec{B}_{\perp}\cdot\vec{E}_{\perp})/c\\
+	\label{g34}	&\vec{B}'\cdot\vec{E}'/c=\vec{B}_{||}\cdot\vec{E}_{||}/c+\vec{B}_{\perp}\cdot\vec{E}_{\perp}\\
+	\label{g35}	&P'=P
+\end{alignat}
+\subsubsection*{Problem \#4}
+\emph{Determine the instantaneously electric and magnetic fields for a charged object traveling at some speed v submerged in a magnetic field.}\\
+
+\noindent In the lab frame, the electric fields are zero. The Lorentz transformed fields (\ref{g12}--\ref{g13}) then reduce to
+\begin{alignat}{2}
+	\label{g36}	&\vec{E}'/c=\gamma(\vec{\beta}\times\vec{B}_{\perp})\\
+	\label{g37}	&\vec{B}'=\vec{B}_{||}+\gamma(\vec{B}_{\perp}/c)
+\end{alignat}
+\subsection{Assignment \#8}
+\subsubsection*{Problem \#1}
+\emph{(a) Show that Dirac's relativistic radiation reaction force's zero component reduces to the nonrelativistic Larmor energy loss. (b) Show that the spatial components reduce to the nonrelativistic Abraham--Lorentz radiation reaction force.}\\
+
+\noindent \emph{(a)} The force on a charged particle with an applied external force and taking into account radiation reaction is
+	\begin{alignat}{1}
+	\label{h01}		&ma^{\mu}=f^{\mu}_{ext}+\mathcal{F}_{rad}^{\mu}
+	\end{alignat}
+The relativistic radiation reaction force can be written as
+	\begin{alignat}{1}
+	\label{h02}		&\mathcal{F}_{rad}^{\mu}=m\tau_{o}\Big(j^{\mu}-u^{\mu}u_{\nu}j^{\nu}/c^{2}\Big)\\
+	\label{h03}		&j^{\mu}=\frac{\mathrm{d}a^{\mu}}{\mathrm{d}\tau}
+	\end{alignat}
+An alternate form can be written by recognizing that
+	\begin{alignat}{1}
+	\label{h04}		&u_{\mu}j^{\mu}+a_{\mu}a^{\mu}=0
+	\end{alignat}
+but it is unimportant which version is used (the result is the same) so we will remain with (\ref{h02}) as written. To obtain the power emitted by the accelerated charge, we note that the second term on the right hand side of (\ref{h02}) is not orthogonal to 4-velocity
+	\begin{alignat}{1}
+	\label{h05}		&u_{\mu}u^{\mu}u_{\nu}j^{\nu}/c^{2}=u_{\nu}j^{\nu}\neq0
+	\end{alignat}
+however the full reaction force is orthogonal
+	\begin{alignat}{1}
+	\label{h06}		&u_{\mu}\mathcal{F}_{rad}^{\mu}=0
+	\end{alignat}
+because of the presence of the term $j^{\mu}$. Dirac writes that $m\tau_{o}j^{\mu}$ is the differential of 
+\begin{displayquote}
+the ``acceleration energy'' of the electron. Changes in the acceleration energy correspond to a reversible form of emission or absorption of field energy, which never gets very far from the electron.
+\end{displayquote}
+\indent---Dirac, P.A.M. ``Classical theory of radiating electrons.'' \emph{Proceedings of the Royal Society of London.} (1938).\\
+
+\noindent Another interpretation is that this term restores the rest massenergy of the electron which otherwise would have been lost due to the emission of radiation. Therefore we can rewrite equation (\ref{h01}) and (\ref{h02}) as a total differential
+	\begin{alignat}{1}
+	\label{h07}		&\frac{\mathrm{d}}{\mathrm{d}\tau}\mathcal{G}^{\mu}=\frac{\mathrm{d}}{\mathrm{d}\tau}(mu^{\mu}-m\tau_{o}a^{\mu})\\
+	\label{h08}		&\frac{\mathrm{d}}{\mathrm{d}\tau}\mathcal{G}^{\mu}=f^{\mu}_{ext}-m\tau_{o}u^{\mu}u_{\nu}j^{\nu}/c^{2}
+	\end{alignat}
+The second term on the right hand side of (\ref{h08}) is then associated with the produced radiation. Ignoring the external force, the zero component of (\ref{h08}) should be the power loss through radiation.
+	\begin{alignat}{1}
+	\label{h09}		&\frac{1}{mc\tau_{o}}\frac{\mathrm{d}}{\mathrm{d}\tau}\mathcal{G}^{0}=\frac{\gamma P}{mc\tau_{o}}\\
+	\label{h10}		&\frac{\gamma P}{mc\tau_{o}}=-u^{0}(u_{0}j^{0}-(u_{i}j^{i}))/c^{3}
+	\end{alignat}
+Note that these following relations will prove very useful
+	\begin{alignat}{1}
+	\label{h11}		&u^{\mu}/c=
+		\begin{pmatrix}
+			\gamma\\
+			\gamma\vec{\beta}
+		\end{pmatrix}\\
+	\label{h12}		&a^{\mu}/c=
+		\begin{pmatrix}
+			\gamma\dot{\gamma}\\
+			\gamma\dot{\gamma}\vec{\beta}+\gamma^{2}\dot{\vec{\beta}}
+		\end{pmatrix}\\
+	\label{h13}		&j^{\mu}/c=
+		\begin{pmatrix}
+			\gamma^{2}\ddot{\gamma}+\gamma\dot{\gamma}\dot{\gamma}\\
+			\gamma^{2}\ddot{\gamma}\vec{\beta}+\gamma\dot{\gamma}\dot{\gamma}\vec{\beta}+3\gamma^{2}\dot{\gamma}\dot{\vec{\beta}}+\gamma^{3}\ddot{\vec{\beta}}
+		\end{pmatrix}\\
+	\label{h14}		&\gamma\dot{\gamma}=\gamma^{4}(\vec{\beta}\cdot\dot{\vec{\beta}})\\
+	\label{h15}		&\gamma^{2}\ddot{\gamma}=3\gamma\dot{\gamma}\dot{\gamma}+\gamma^{5}(\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})+\gamma^{5}(\vec{\beta}\cdot\ddot{\vec{\beta}})
+	\end{alignat}
+Using the above we can finish the evaluation. Starting from (\ref{h10}) we apply (\ref{h11}) and (\ref{h13})
+
+	\begin{alignat}{1}
+	\label{hh01}		&\frac{\gamma P}{mc\tau_{o}}=-u^{0}(u_{0}j^{0})/c^{3}+u^{0}(u_{i}j^{i})/c^{3}\\
+	\label{hh02}		&\frac{\gamma P}{mc\tau_{o}}=-(\gamma^{4}\ddot{\gamma}+\gamma^{3}\dot{\gamma}\dot{\gamma})+(\gamma^{2}\vec{\beta})\cdot(\gamma^{2}\ddot{\gamma}\vec{\beta}+\gamma\dot{\gamma}\dot{\gamma}\vec{\beta}+3\gamma^{2}\dot{\gamma}\dot{\vec{\beta}}+\gamma^{3}\ddot{\vec{\beta}})\\
+	\label{h16}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{4}\ddot{\gamma}-\gamma^{3}\dot{\gamma}\dot{\gamma}+\gamma^{4}\ddot{\gamma}(\vec{\beta}\cdot\vec{\beta})+\gamma^{3}\dot{\gamma}\dot{\gamma}(\vec{\beta}\cdot\vec{\beta})+3\gamma^{4}\dot{\gamma}(\vec{\beta}\cdot\dot{\vec{\beta}})+\gamma^{5}(\vec{\beta}\cdot\ddot{\vec{\beta}})
+	\end{alignat}
+The astute observer will see that the first four terms on the right hand side of (\ref{h16}) combine because $1/\gamma^{2}=1-(\vec{\beta}\cdot\vec{\beta})$. The fifth term in (\ref{h16}) can be rewritten using (\ref{h14}).
+	\begin{alignat}{1}
+	\label{h17}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{2}\ddot{\gamma}-\gamma\dot{\gamma}\dot{\gamma}+3\gamma\dot{\gamma}\dot{\gamma}+\gamma^{5}(\vec{\beta}\cdot\ddot{\vec{\beta}})\\
+	\label{h18}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{2}\ddot{\gamma}+2\gamma\dot{\gamma}\dot{\gamma}+\gamma^{5}(\vec{\beta}\cdot\ddot{\vec{\beta}})
+        \end{alignat}
+Now we can introduce additional subtitutions using (\ref{h14}) and (\ref{h15}) with the intent to remove all derivatives of $\gamma$ and second derivatives of $\vec{\beta}$. First we apply (\ref{h15})
+        \begin{alignat}{1}
+	\label{h19}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma\dot{\gamma}\dot{\gamma}-\gamma^{5}(\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})
+	\end{alignat}
+Then we apply (\ref{h14}) twice to the first term of the right hand side of (\ref{h19})
+        \begin{alignat}{1}
+	\label{h20}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{7}(\vec{\beta}\cdot\dot{\vec{\beta}})^{2}-\gamma^{5}(\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})\\
+	\label{h21}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{7}(\vec{\beta}\cdot\dot{\vec{\beta}})^{2}-\gamma^{7}(\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})(1-\vec{\beta}\cdot\vec{\beta})
+	\end{alignat}
+Finally using the Binet-Cauchy identity in three dimensions
+	\begin{alignat}{1}
+	\label{hh03}		&(\vec{A}\times\vec{B})\cdot(\vec{C}\times\vec{D})=(\vec{A}\cdot\vec{C})(\vec{B}\cdot\vec{D})-(\vec{A}\cdot\vec{D})(\vec{B}\cdot\vec{C})
+	\end{alignat}
+where $\vec{C}=\vec{A}$ and $\vec{D}=\vec{B}$
+	\begin{alignat}{1}
+	\label{hh04}		&(\vec{A}\times\vec{B})\cdot(\vec{A}\times\vec{B})=(\vec{A}\cdot\vec{A})(\vec{B}\cdot\vec{B})-(\vec{A}\cdot\vec{B})(\vec{B}\cdot\vec{A})
+	\end{alignat}
+we arrive at
+	\begin{alignat}{1}
+	\label{h22}		&\frac{\gamma P}{mc\tau_{o}}=-\gamma^{7}((\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})-(\vec{\beta}\times\dot{\vec{\beta}})^{2})\\
+	\label{h23}		&P=(mc\tau_{o})(-\gamma^{6}((\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})-(\vec{\beta}\times\dot{\vec{\beta}})^{2}))\\
+	\label{h24}		&P=(m\tau_{o}/c)a_{\mu}a^{\mu}=-(m\tau_{o}/c)\alpha^{2}
+	\end{alignat}
+where $\alpha$ is the proper acceleration. Here we see explicitly the relationship in (\ref{h04}) pop out without coercion. Equation (\ref{h23}) and (\ref{h24}) are known as the Li\'enard power which is the relativistic form of the Larmor power. In the non-relativistic limit, we see that the Larmor formula is naturally recovered.
+	\begin{alignat}{1}
+	\label{h26}		&P=-m\tau_{o}c(\dot{\vec{\beta}}\cdot\dot{\vec{\beta}})
+	\end{alignat}
+\emph{(b)} To obtain the Abraham--Lorentz force we want to evaluate
+	\begin{alignat}{1}
+	\label{h27}		&ma^{i}=f^{i}_{ext}+m\tau_{o}(j^{i}-u^{i}u_{\nu}j^{\nu}/c^{2})
+	\end{alignat}
+We can immediately replace $m\tau_{o}u_{\nu}j^{\nu}/c^{2}$ with $P$.
+	\begin{alignat}{2}
+	\label{h28}		&ma^{i}=f^{i}_{ext}+m\tau_{o}j^{i}-u^{i}P)\\
+	\label{h29}		&\frac{1}{\tau_{o}}(\gamma\dot{\gamma}\vec{\beta}+\gamma^{2}\dot{\vec{\beta}})=\frac{f^{i}_{ext}}{mc\tau_{o}}+\gamma^{2}\ddot{\gamma}\vec{\beta}+\gamma\dot{\gamma}\dot{\gamma}\vec{\beta}
+	\end{alignat}
+	$$
+		+3\gamma^{2}\dot{\gamma}\dot{\vec{\beta}}+\gamma^{3}\ddot{\vec{\beta}}-\vec{\beta}\frac{P}{m\tau_{o}}
+	$$
+Which reduces in the non-relativistic limit to
+	\begin{alignat}{1}
+	\label{h30}		&m\vec{a}=f^{i}_{ext}+m\tau_{o}\dot{\vec{a}}
+	\end{alignat}
+\subsection{Assignment \#9**}
+\subsubsection*{Problem \#1+2}
+\emph{(i) Review the Feshbach and Villars (FV) formation of the KG equation which is only first order in time and second order in spatial derivatives. (ii) Demonstrate that the plane wave spectrum of the FV formulation matches the spectrum of the KG equation. (iii) Obtain the normalization condition for both FV and KG. (iv) Demonstrate completeness for the both sets of solutions.}\\
+
+\noindent \emph{(i)} These notes follow the derivation done by Feshbach and Villars with the unit convention that four-position is represented by
+\begin{alignat}{2}
+  \label{i01}  &x_{\mu}=(x_{k},x_{4})=(x_{1},x_{2},x_{3},ix_{0})\\
+  \label{i02}  &x_{0}=ct
+\end{alignat}
+Therefore
+\begin{alignat}{1}
+  \label{i03}  &x_{\mu}^{2}=x_{k}^{2}+x_{4}^{2}=x_{k}^{2}-c^{2}t^{2}
+\end{alignat}
+Similarly four-potential then has the form
+\begin{alignat}{1}
+  \label{i04}  &A_{\mu}=(A_{k},A_{4})=(A_{k},iV)
+\end{alignat}
+Out goal it to reach a form of the KG equation which resembles the Schr{\"o}dinger equation and is single order in the time derivative. Beginning with the KG equation
+\begin{alignat}{3}
+  \label{i05}  &(D_{\mu}^{2}-\kappa^{2})\psi=0\\
+  \label{i06}  &D_{\mu}=(\frac{\partial}{\partial x^{\mu}}-\frac{ie}{\hbar c}A_{\mu})\\
+  \label{i07}  &\kappa = mc/\hbar
+\end{alignat}
+we can first separate the portion of equation (\ref{i05}) which contains the second order time derivative
+\begin{alignat}{1}
+  \label{i08}  &(D_{k}^{2}+D_{4}^{2}-\kappa^{2})\psi=0
+\end{alignat}
+and invent the substitution
+\begin{alignat}{1}
+  \label{i09}  &\psi_{4}=\frac{-1}{\kappa}D_{4}\psi
+\end{alignat}
+which when put into (\ref{i08}) yields
+\begin{alignat}{1}
+  \label{i10} &D_{k}^{2}\psi-\kappa D_{4}\psi_{4}-\kappa^{2}\psi=0
+\end{alignat}
+Now we introduce two new fields given by
+\begin{alignat}{2}
+  \label{i11} &\psi=(\phi+\chi)/\sqrt{2}\\
+  \label{i12} &\psi_{4}=(\psi-\chi)/\sqrt{2}
+\end{alignat}
+After a little algebra by putting (\ref{i11}) and (\ref{i12}) into (\ref{i09}) and (\ref{i10}) we get
+\begin{alignat}{2}
+  \label{i13} &D_{4}\phi=\frac{1}{2\kappa}D_{k}^{2}(\phi+\chi)-\kappa\phi\\
+  \label{i14} &D_{4}\chi=\frac{-1}{2\kappa}D_{k}^{2}(\phi+\chi)+\kappa\chi
+\end{alignat}
+By expanding the derivative out we obtain
+\begin{alignat}{2}
+  \label{i15} &i\hbar\frac{\partial}{\partial t}\phi=\frac{1}{2m}(p_{k}-\frac{e}{c}A_{k})^{2}(\phi+\chi)+(eV+mc^{2})\phi\\
+  \label{i16} &i\hbar\frac{\partial}{\partial t}\chi=\frac{-1}{2m}(p_{k}-\frac{e}{c}A_{k})^{2}(\phi+\chi)+(eV-mc^{2})\chi
+\end{alignat}
+We have arrived at the coupled FV equations which are no longer second order in the time derivative. The price for that benefit is that our field amplitude is now two valued. This is because it represents the degree of freedom of charge which can be either positive or negative. After some careful observation, we can see that (\ref{i15}) and (\ref{i16}) can be unified into a Schr{\"o}dinger-like equation
+\begin{alignat}{1}
+  \label{i17} &H\Psi=i\hbar\frac{\partial}{\partial t}\Psi\\
+  \label{i18} &\Psi=
+  \begin{pmatrix}
+    \phi\\
+    \chi
+  \end{pmatrix}\\
+  \label{i19} &H=(\tau_{3}+i\tau_{2})\frac{1}{2m}(p_{k}-\frac{e}{c}A_{k})^{2}+mc^{2}\tau_{3}+eV\mathbb{I}_{2}
+\end{alignat}
+where $\tau_{1}, \tau_{2}, \tau_{3}$ and $\mathbb{I}_{2}$ represent the usual Pauli matrices and identity.\\
+
+\noindent \emph{(ii)} In the free particle case the Hamiltonian reduces to
+\begin{alignat}{2}
+  \label{i20} &H=(\tau_{3}+i\tau_{2})\frac{p_{k}^{2}}{2m}+mc^{2}\tau_{3}
+\end{alignat}
+We can guess at the waveform which satisfies the eigenvalue problem in (\ref{i17}) as
+\begin{alignat}{1}
+  \label{i21} &\Psi=\Psi_{o}(p_{k})e^{i(p_{k}x_{k}-Et)/\hbar}=N
+  \begin{pmatrix}
+    \phi_{o}(p_{k})\\
+    \chi_{o}(p_{k})
+  \end{pmatrix}e^{i(p_{k}x_{k}-Et)/\hbar}
+\end{alignat}
+By applying (\ref{i21}) into (\ref{i17}) we arrive at
+\begin{alignat}{1}
+  \label{i22} &E
+  \begin{pmatrix}
+    \phi_{o}\\
+    \chi_{o}
+  \end{pmatrix}=\frac{p_{k}^{2}}{2m}
+  \begin{pmatrix}
+    \phi_{o}+\chi_{o}\\
+    -\phi_{o}-\chi_{o}
+  \end{pmatrix}+mc^{2}
+  \begin{pmatrix}
+    \phi_{o}\\
+    -\chi_{o}
+  \end{pmatrix}
+\end{alignat}
+There are then two cases based depending on whether $E<0$ or $E>0$. The solutions are
+\begin{alignat}{2}
+  \label{i23} &\Psi_{o}^{(+)}=
+  \begin{pmatrix}
+    \phi_{o}^{(+)}=(mc^{2}+E)/\sqrt{4mc^{2}E}\\
+    \chi_{o}^{(+)}=(mc^{2}-E)/\sqrt{4mc^{2}E}
+  \end{pmatrix}\\
+  \label{i24} &\Psi_{o}^{(-)}=
+  \begin{pmatrix}
+    \phi_{o}^{(-)}=(mc^{2}-|E|)/\sqrt{4mc^{2}|E|}\\
+    \chi_{o}^{(-)}=(mc^{2}+|E|)/\sqrt{4mc^{2}|E|}
+  \end{pmatrix}
+\end{alignat}
+for positive and negative energies respectively. This is the same spectrum seen in the traditional formulation of the KG equation.\\
+
+\noindent\emph{(iii,iv)} Because the operator in the free KG is Hermitian, a continuity equation can be constructed safely. To do this first multiply the KG from the left with $\psi^{\dagger}$
+\begin{alignat}{1}
+  \label{ii01} &\psi^{\dagger}(\partial^{2}-\kappa^{2})\psi=0
+\end{alignat}
+And now take the Hermitian conjugate
+\begin{alignat}{1}
+  \label{ii02} &\psi(\partial^{2}-\kappa^{2})\psi^{\dagger}=0
+\end{alignat}
+and subtract the two equations
+\begin{alignat}{1}
+  \label{ii03} &\psi^{\dagger}(\partial^{2})\psi-\psi(\partial^{2})\psi^{\dagger}=0
+\end{alignat}
+which is a total derivative equal to zero, with a conserved current
+\begin{alignat}{1}
+  \label{ii04} &j^{\mu}=\psi^{\dagger}\partial^{\mu}\psi-\psi\partial^{\mu}\psi^{\dagger}\\
+  \label{i25} &\frac{\partial}{\partial x^{\mu}}j^{\mu}=0
+\end{alignat}
+where the forth component which describes density is
+\begin{alignat}{1}
+  \label{i26} &\rho=\frac{ie}{2mc^{2}}(\psi^{*}\frac{\partial\psi}{\partial t}-\psi\frac{\partial\psi^{*}}{\partial t})
+\end{alignat}
+If we substitute in the definition we invented in (\ref{i09}) and apply the FV two component formalism from (\ref{i11}) and (\ref{i12}) the density transforms into
+\begin{alignat}{1}
+  \label{i27} &\rho=|\phi|^{2}-|\chi|^{2}=\Psi^{\dagger}\tau_{3}\Psi
+\end{alignat}
+Either formalism has the same normalization condition in the general sense that
+\begin{alignat}{1}
+  \label{i28} &\int\rho\mathrm{d}^{3}x=\pm 1
+\end{alignat}
+must hold true even if the explicit form of the density is different in both KG and FV formalism. The particle and antiparticle components must drop out and not interfere in the spatial integration over the density (whose own normalization is a Dirac delta in momentum much like for plane waves in non relativistic Sch{\"o}dinger theory) Therefore using the results from (\ref{i23}) and (\ref{i24}) for the particle and antiparticle states, the norm and orthogonality conditions  are then
+\begin{alignat}{2}
+  \label{i29} &\Psi_{o}^{(\pm)}\tau_{3}\Psi_{0}^{(\pm)}=(\phi_{o}^{(\pm)})^{2}-(\chi_{o}^{(\pm)})^{2}=\pm 1\\
+  \label{i30} &\Psi_{o}^{(\pm)}\tau_{3}\Psi_{0}^{(\mp)}=0
+\end{alignat}
+
+\subsubsection*{Problem \#3}
+\emph{Normalize the solutions of the free particle Dirac equation.}\\
+
+\noindent The plane wave solution is given by
+\begin{alignat}{1}
+  \label{i31} &\Psi=U(p_{k})e^{i(p_{k}x_{k}-Et)/\hbar}=N
+  \begin{pmatrix}
+    u_{A}(p_{k})\\
+    u_{B}(p_{k})
+  \end{pmatrix}e^{i(p_{k}x_{k}-Et)/\hbar}
+\end{alignat}
+which when inserted into the Dirac equation yield
+\begin{alignat}{2}
+  \label{i32} &u_{A}=\frac{c}{E-mc^{2}}(\sigma_{k}p_{k})u_{B}\\
+  \label{i33} &u_{B}=\frac{c}{E+mc^{2}}(\sigma_{k}p_{k})u_{A}
+\end{alignat}
+For $E>0$ if we choose $u_{A}=\xi$ or $u_{A}=\eta$ such that
+\begin{alignat}{2}
+  \label{i34} &\xi^{\dagger}\xi=\eta^{\dagger}\eta=1\\
+  \label{i35} &\xi^{\dagger}\eta=\eta^{\dagger}\xi=0
+\end{alignat}
+then this yields
+\begin{alignat}{1}
+  \label{i36} &U^{1}=N
+  \begin{pmatrix}
+    \xi\\(\sigma_{k}p_{k})\xi/(E+mc^{2})
+  \end{pmatrix}\\
+  \label{i37} &U^{2}=N
+  \begin{pmatrix}
+    \eta\\(\sigma_{k}p_{k})\eta/(E+mc^{2})
+  \end{pmatrix}
+\end{alignat}
+For $E<0$ if we choose $u_{B}=\xi$ or $u_{B}=\eta$ then this yields
+\begin{alignat}{1}
+  \label{i38} &U^{3}=N
+  \begin{pmatrix}
+    -(\sigma_{k}p_{k})\xi/(|E|+mc^{2})\\ \xi
+  \end{pmatrix}\\
+  \label{i39} &U^{4}=N
+  \begin{pmatrix}
+    -(\sigma_{k}p_{k})\eta/(|E|+mc^{2})\\ \eta
+  \end{pmatrix}
+\end{alignat}
+All these states are orthogonal
+\begin{alignat}{1}
+  \label{i40} &U^{(s)\dagger}U^{(r)}=0\ \mathrm{for}\ s\neq r
+\end{alignat}
+These four states form a complete set and are all linearly independent. These four-spinors have four elements each to accommodate the expanded Hilbert space of not just particles and antiparticles as explored in the previous problem, but spin-1/2 space as well. If we pick out normalization condition to be
+\begin{alignat}{1}
+  \label{i41} &U^{\dagger(r)}U^{(s)}=\delta_{rs}
+\end{alignat}
+Therefore
+\begin{alignat}{1}
+  \label{i42} &U^{\dagger(1)}U^{(1)}=N^{2}(1+\frac{(pc)^{2}}{(E+mc^{2})^{2}})=1\\
+  \label{ii05} &N=\pm\sqrt{(|E|+mc^{2})/2|E|}
+\end{alignat}
+\subsubsection*{Problem \#4}
+\emph{(i) Show that $\{\gamma^{\mu},\gamma^{\nu}\}=2g^{\mu\nu}$ using the positive time metric signature. (ii) In the Dirac basis, explicitly show the matrix representation of $\gamma^{5}\equiv i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}$ as well as its square and how it anti-commutes with the rest of the gamma matrices. (iii) Find the Hermitian conjugates of all the gamma matrices.}\\
+
+\noindent\emph{(i)} It is easiest to show the anti-commutation relation by representing the gamma matrices as Kronecker products of Pauli matrices or identity. This allows us to take advantage of the commutation relations of Pauli matrices which themselves also follow Clifford Algebra.
+\begin{alignat}{1}
+  \label{i43} &\gamma^{0}=\tau_{3}\otimes\mathbb{I}_{2}\\
+  \label{i44} &\gamma^{k}=i\tau_{2}\otimes\sigma_{k}
+\end{alignat}
+Therefore $\{\gamma^{k},\gamma^{m}\}=2g^{km}$ for indexes 1, 2, or 3 becomes
+\begin{alignat}{1}
+  \label{i45} &\{\gamma^{k},\gamma^{m}\}=i^{2}(\tau_{2}\otimes\sigma_{k})(\tau_{2}\otimes\sigma_{m})+i^{2}(\tau_{2}\otimes\sigma_{m})(\tau_{2}\otimes\sigma_{k})\\
+  \label{i46} &\{\gamma^{k},\gamma^{m}\}=-\tau_{2}^{2}\otimes\sigma_{k}\sigma_{m}-\tau_{2}^{2}\otimes\sigma_{m}\sigma_{k}\\
+  \label{i47} &\{\gamma^{k},\gamma^{m}\}=-\mathbb{I}_{2}\otimes\{\sigma_{k},\sigma_{m}\}\\
+  \label{i48} &\{\gamma^{k},\gamma^{m}\}=-2\delta_{km}\mathbb{I}_{4}
+\end{alignat}
+The anti-commutation with indexes 1, 2, or 3 with 0 are
+\begin{alignat}{1}
+  \label{i49} &\{\gamma^{k},\gamma^{0}\}=i(\tau_{2}\otimes\sigma_{k})(\tau_{3}\otimes\mathbb{I}_{2})+i(\tau_{3}\otimes\mathbb{I}_{2})(\tau_{2}\otimes\sigma_{k})\\
+  \label{i50} &\{\gamma^{k},\gamma^{0}\}=i\tau_{2}\tau_{3}\otimes\sigma_{k}+i\tau_{3}\tau_{2}\otimes\sigma_{k}\\
+  \label{i51} &\{\gamma^{k},\gamma^{0}\}=i\{\tau_{2},\tau_{3}\}\otimes\sigma_{k}=0
+\end{alignat}
+Lastly we check the anti-commutation when both indexes are 0.
+\begin{alignat}{1}
+  \label{i52} &\{\gamma^{0},\gamma^{0}\}=(\tau_{3}\otimes\mathbb{I}_{2})(\tau_{3}\otimes\mathbb{I}_{2})+(\tau_{3}\otimes\mathbb{I}_{2})(\tau_{3}\otimes\mathbb{I}_{2})\\
+  \label{i53} &\{\gamma^{0},\gamma^{0}\}=\{\tau_{3},\tau_{3}\}\otimes\mathbb{I}_{2}=2\mathbb{I}_{2}\otimes\mathbb{I}_{2}\\
+  \label{i54} &\{\gamma^{0},\gamma^{0}\}=2\mathbb{I}_{4}
+\end{alignat}
+\emph{(ii)} The same procedure for $\gamma^{5}$ can be done
+\begin{alignat}{1}
+  \label{i55} &\gamma^{5}=i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}\\
+  \label{i56} &\gamma^{5}=i(\tau_{3}\otimes\mathbb{I}_{2})(i\tau_{2}\otimes\sigma_{1})(i\tau_{2}\otimes\sigma_{2})(i\tau_{2}\otimes\sigma_{3})\\
+  \label{i57} &\gamma^{5}=\tau_{3}\tau_{2}\tau_{2}\tau_{2}\otimes\sigma_{1}\sigma_{2}\sigma_{3}\\
+  \label{i58} &\gamma^{5}=\tau_{1}\otimes\mathbb{I}_{2}\\
+  \label{i59} &\gamma^{5}=
+  \begin{pmatrix}
+    0 & \mathbb{I}_{2}\\
+    \mathbb{I}_{2} & 0
+  \end{pmatrix}
+\end{alignat}
+Naturally then
+\begin{alignat}{1}
+  \label{i60} &(\gamma^{5})^{2}=\mathbb{I}_{4}
+\end{alignat}
+The anti-commutation of the fifth gamma matrix and the indexes 1, 2, or 3 is
+\begin{alignat}{1}
+  \label{i61} &\{\gamma^{5},\gamma^{k}\}=i(\tau_{1}\otimes\mathbb{I}_{2})(\tau_{2}\otimes\sigma_{k})+i(\tau_{2}\otimes\sigma_{k})(\tau_{1}\otimes\mathbb{I}_{2})\\
+  \label{i62} &\{\gamma^{5},\gamma^{k}\}=i(\tau_{1}\tau_{2}\otimes\sigma_{k})+i(\tau_{2}\tau_{1}\otimes\sigma_{k})\\
+  \label{i63} &\{\gamma^{5},\gamma^{k}\}=i\{\tau_{1},\tau_{2}\}\otimes\sigma_{k}\\
+  \label{i64} &\{\gamma^{5},\gamma^{k}\}=0
+\end{alignat}
+The anti-commutation with index 0 is then
+\begin{alignat}{1}
+  \label{i65} &\{\gamma^{5},\gamma^{0}\}=(\tau_{1}\otimes\mathbb{I}_{2})(\tau_{3}\otimes\mathbb{I}_{2})+(\tau_{3}\otimes\mathbb{I}_{2})(\tau_{1}\otimes\mathbb{I}_{2})\\
+  \label{i66} &\{\gamma^{5},\gamma^{0}\}=\{\tau_{1},\tau_{3}\}\otimes\mathbb{I}_{2}\\
+  \label{i67} &\{\gamma^{5},\gamma^{0}\}=0
+\end{alignat}
+\emph{(iii)} We can show that $\gamma^{k}$ is anti-Hermitian
+\begin{alignat}{1}
+  \label{i68} &(\gamma^{k})^{\dagger}=\gamma^{0}\gamma^{k}\gamma^{0}\\
+  \label{i69} &(\gamma^{k})^{\dagger}=(\tau_{3}\otimes\mathbb{I}_{2})(i\tau_{2}\otimes\sigma_{k})(\tau_{3}\otimes\mathbb{I}_{2})\\
+  \label{i70} &(\gamma^{k})^{\dagger}=i\tau_{3}\tau_{2}\tau_{3}\otimes\sigma_{k}\\
+  \label{i71} &(\gamma^{k})^{\dagger}=-i\tau_{2}\otimes\sigma_{k}=(\gamma^{k})^{\dagger}
+\end{alignat}
+The zeroth gamma matrix is Hermitian which is easy to see knowing $\gamma^{0}\gamma^{0}=\mathbb{I}_{4}$. The same is true for $\gamma^{5}$ in the Dirac basis as it is purely real and off-diagonal. In this way, the zeroth and fifth gamma matrices are ``time-like'' and the anti-Hermitian matrices are ``space-like''. If we multiply either Dirac basis zeroth or fifth gamma matrix by \emph{i} it becomes anti-Hermitian and ``space-like''. If you're interested in additional spatial dimensions, then that is the procedure you would use.
+
+\subsection*{Problem \#5+6}
+\emph{(i) Identify the appropriate matrices in the Majorana and Weyl representation. Show that the Majorana matrices are purely imaginary. (ii) Find the unitary transformation which converts the Dirac basis into some other basis.}\\
+
+\noindent\emph{(i)} The Majorana gamma matrices makes the Dirac equation completely real. We can guess at the representation by trying to remove the imaginary components
+\begin{alignat}{1}
+  \label{i72} &\frac{1}{c}\frac{\partial}{\partial t}\Psi+\vec{\alpha}\cdot\vec{\nabla}\Psi+\frac{mc}{\hbar}i\beta\Psi=0
+\end{alignat}
+The exchange of $\beta$ with $\alpha_{2}$ and flipping the signs of $\alpha_{1}$ and $\alpha_{3}$ makes the entire equation real. However, a much better procedure can be established by using a unitary matrix to rotate the gamma matrices into different representations. We're interested in something of the form
+\begin{alignat}{1}
+  \label{i73} &U_{D\rightarrow M}\gamma_{Dirac}^{\mu}U_{D\rightarrow M}^{\dagger}=\gamma_{Majorana}^{\mu}\\
+  \label{i74} &U_{D\rightarrow M}\Psi_{Dirac}=\Psi_{Majorana}
+\end{alignat}
+The appropriate matrix is
+\begin{alignat}{1}
+  \label{i75} &U_{D\rightarrow M}=U_{D\rightarrow M}^{\dagger}=\frac{1}{\sqrt{2}}
+  \begin{pmatrix}
+    \mathbb{I}_{2}&\sigma_{2}\\
+    \sigma_{2}&-\mathbb{I}_{2}
+  \end{pmatrix}
+\end{alignat}
+Therefore the Majorana matrices are given by
+\begin{alignat}{1}
+  \label{i76} &\beta_{M}=\tau_{1}\otimes\sigma_{2}\\
+  \label{i77} &\alpha_{1,M}=-\tau_{1}\otimes\sigma_{1}\\
+  \label{i78} &\alpha_{2,M}=\tau_{3}\otimes\mathbb{I}_{2}\\
+  \label{i79} &\alpha_{3,M}=-\tau_{1}\otimes\sigma_{3}
+\end{alignat}
+Another often used representation is the Chiral representation which diagonalizes the $\alpha$ matrices which keeps the momentum operator diagonal and $\beta$ off diagonal. This is useful for perturbative calculations where the mass can be taken to be small. The rotation matrix is given by
+\begin{alignat}{1}
+  \label{i80} &U_{D\rightarrow C}=U_{D\rightarrow C}^{\dagger}=\frac{1}{\sqrt{2}}(\mathbb{I}_{4}-\beta\gamma^{5})
+\end{alignat}
+The Chiral matrices are then given by
+\begin{alignat}{1}
+  \label{i81} &\beta_{C}=\tau_{1}\otimes\mathbb{I}_{2}\\
+  \label{i82} &\alpha_{i,C}=-\tau_{3}\otimes\sigma_{i}
+\end{alignat}
+
+
+\subsection{Assignment \#10**}
+\subsubsection*{Problem \#1}
+\emph{Explore the 2rd order relativistic Pauli Equation and show how g-factor can be modified.}\\
+
+\noindent The covariant form of the Dirac equation with EM fields can be written as
+\begin{alignat}{1}
+  \label{j01} &(i\gamma^{\mu}(\partial_{\mu}+\frac{ie}{\hbar c}A_{\mu})-mc/\hbar)\Psi=0\\
+  \label{j02} &(i\gamma^{\mu}D_{\mu}-\mu)\Psi=0
+\end{alignat}
+where $D_{\mu}$ is a gauge covariant derivative. An important thing to note that the commutator of the gauge covariant derivative is the EM field tensor.
+\begin{alignat}{1}
+  \label{j03} &[D_{\mu},D_{\nu}]=\frac{ie}{\hbar c}(\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu})=\frac{ie}{\hbar c}F_{\mu\nu}
+\end{alignat}
+This relation establishes the EM field tensor as related to curvature in the gauge field. Analogously the commutator of the covariant derivative in general relativity produces the Rienmann curvature tensor
+\begin{alignat}{1}
+  \label{j04} &[D_{\mu},D_{\nu}]V^{\beta}\propto R^{\beta}_{\ \sigma\mu\nu}V^{\sigma}
+\end{alignat}
+Now apply the operator $(i\gamma^{\mu}D_{\mu}+\mu)$ from the adjoint equation to the Dirac equation
+\begin{alignat}{1}
+  \label{j05} &(i\gamma^{\mu}D_{\mu}+\mu)(i\gamma^{\nu}D_{\nu}-\mu)\Psi=0\\
+  \label{j06} &((\gamma^{\mu}D_{\mu})^{2}+\mu^{2})\Psi=0\\
+  \label{j07} &((D_{\mu})^{2}+\frac{1}{2i}\sigma^{\mu\nu}[D_{\mu},D_{\nu}]+\mu^{2})\Psi=0\\
+  \label{j08} &((D_{\mu})^{2}+\frac{e}{2}\sigma^{\mu\nu}F_{\mu\nu}+\mu^{2})\Psi=0
+\end{alignat}
+This is the 2nd order Dirac equation, also called the relativistic Pauli equation. It is similar to the Klein-Gordon equation except that there is explcitly spin coupling to the EM fields. The spin coupling term can be evaluated (Itzykson, Zuber ``Quantum Field Theory'' pp.66)
+\begin{alignat}{1}
+  \label{j09} &\sigma^{\mu\nu}F_{\mu\nu}=(i\vec{\alpha}\cdot\vec{E}+\vec{\sigma}\cdot\vec{B})
+\end{alignat}
+The forms written down so far are for $g=2$ exactly. For anomolous g-factor we can introduce a non minimal coupling or ``Pauli term'' into the 1st order Dirac equation
+\begin{alignat}{1}
+  \label{j10} &(i\gamma^{\mu}D_{\mu}-\mu+\frac{\Delta g}{2}\frac{e}{4m}\sigma^{\mu\nu}F_{\mu\nu})\Psi=0\\
+  \label{j11} &\Delta g = g-2
+\end{alignat}
+\subsubsection*{Problem \#4}
+
+\section{Examinations}
+\subsection{Corrections to Exam \#1}
+\subsubsection*{Problem \#1}
+\emph{(1.1.i)} The Lorentz transformation for time is
+\begin{alignat}{1}
+  \label{k01}            &t'=\frac{t-vz/c^{2}}{1-v^{2}/c^{2}}\
+\end{alignat}
+\emph{(1.3)} The four-momentum of a massive object is given by
+\begin{alignat}{1}
+  \label{k02}            &p^{\mu}=mu^{\mu}=\gamma(mc,m\vec{v})
+\end{alignat}
+\subsubsection*{Problem \#2}
+In the nonrelativistic limit, object speeds simply add or subtract. Relativistically this is not the case. The correct velocity addition forumla for two approaching objects is given by
+\begin{alignat}{1}
+  \label{k03}            &\beta'=\frac{\beta_{1}+\beta_{2}}{1+\beta_{1}\beta_{2}}
+\end{alignat}
+If in the lab frame each object was traveling at $\beta_{1}=\beta_{2}=1/2$ then the boosted speed either object observes of the other is
+\begin{alignat}{1}
+  \label{k04}            &\beta'=\frac{1/2+1/2}{1+1/4}=\frac{1}{5/4}=4/5
+\end{alignat}
+This quantity is manifestly always less than the speed of light and simply approaches $\beta'\rightarrow1$ for ultrarelativistic objects.
+\subsubsection*{Problem \#4}
+\emph{(iii)} In a Compton scattering process the energy balance is
+\begin{alignat}{1}
+  \label{k05}            &E_{e}+E_{\gamma}=E_{e'}+E_{\gamma'}\\
+  \label{k06}            &mc^{2}+p_{\gamma}c=\sqrt{p_{e'}^{2}c^{2}+m^{2}c^{4}}+p_{\gamma'}c\\
+  \label{k07}            &p_{e'}^{2}c^{2}=(mc^{2}+p_{\gamma}c-p_{\gamma'}c)^{2}-m^{2}c^{4}
+\end{alignat}
+The momentum balance is
+\begin{alignat}{1}
+  \label{k08}            &\vec{p}_{\gamma}=\vec{p}_{e'}+\vec{p}_{\gamma'}\\
+  \label{k09}            &p_{e'}^{2}=(\vec{p}_{\gamma}-\vec{p}_{\gamma'})^{2}\\
+  \label{k10}            &p_{e'}^{2}=p_{\gamma}^{2}+p_{\gamma'}^{2}-2\vec{p}_{\gamma'}\cdot\vec{p}_{\gamma}\\
+  \label{k11}            &p_{e'}^{2}=p_{\gamma}^{2}+p_{\gamma'}^{2}-2p_{\gamma'}p_{\gamma}\cos(\theta)
+\end{alignat}
+We can equate equations (\ref{k07}) and (\ref{k11}) which yields
+\begin{alignat}{1}
+  \label{k12}            &p_{\gamma}^{2}c^{2}+p_{\gamma'}^{2}c^{2}-2p_{\gamma'}p_{\gamma}c^{2}\cos(\theta)=2mc^{2}(p_{\gamma}c-p_{\gamma'}c)+(p_{\gamma}c-p_{\gamma'}c)^{2}\\
+  \label{k13}            &-2p_{\gamma'}p_{\gamma}c^{2}\cos(\theta)=2mc^{2}(p_{\gamma}c-p_{\gamma'}c)-2p_{\gamma}p_{\gamma'}c^{2}\\
+  \label{k14}            &1-\cos(\theta)=mc^{2}\frac{p_{\gamma}c-p_{\gamma'}c}{p_{\gamma}p_{\gamma'}c^{2}}=mc^{2}(1/p_{\gamma'}-/p_{\gamma'})\\
+  \label{k15}            &\frac{1}{mc}(1-\cos(\theta))=1/p_{\gamma'}-/p_{\gamma'}
+\end{alignat}
+For photons, momentum and wavelength are related by $p=h/\lambda$ therefore
+\begin{alignat}{1}
+  \label{k16}            &\frac{h}{mc}(1-\cos(\theta))=\lambda'-\lambda
+\end{alignat}
+\subsection{Corrections to Exam \#2}
+\subsubsection*{Problem \#4}
+\emph{(b)} The free Dirac equations produces four spinors which are orthogonal to one another.
+\begin{alignat}{1}
+  \label{l01}            &U^{\dagger(r)}U^{(s)}=\delta_{rs}
+\end{alignat}
+If these spinors from a complete set then
+\begin{alignat}{1}
+  \label{l02}            &\sum^{4}_{j}U^{(j)}U^{\dagger(j)}=\mathbb{I}_{4}
+\end{alignat}
+and can be inserted anywhere without disruption. Let us squeeze the completeness relation into (\ref{l01})
+\begin{alignat}{1}
+  \label{l03}            &\sum^{4}_{j}U^{\dagger(r)}U^{(j)}U^{\dagger(j)}U^{(s)}=\sum^{4}_{j}\delta_{rj}\delta_{js}=\delta_{rs}
+\end{alignat}
+Therefore completeness holds.
+
+\section{Class Project}
+\subsection{Lorentz and Stern-Gerlach forces\\ from Quantum Theory}
+In the following we will derive expressions using Ehrenfest-like theorems for the Lorentz force and Stern-Gerlach force, the latter being a magnetic dipole term which couples to inhomogeneous magnetic fields.
+
+In classical mechanics, the Lorentz force for the charged particle is 
+\begin{alignat}{1}
+  \label{m01}		&\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}=e\big(\vec{E}+\frac{\vec{v}}{c}\times\vec{B}\big)
+\end{alignat}
+We will see that for wave equations which include spin, extra terms will arise including the force responsible for the separation of particles in Stern-Gerlach experiments.
+\subsection{Acceleration in the Pauli Theory}
+The Pauli equation wave equation is given by
+\begin{alignat}{1}
+  \label{m02}		&i\hbar\frac{\partial}{\partial t}\psi=\Big(\frac{1}{2m}(\vec{\sigma}\cdot\vec{\pi})^{2}+eV\Big)\psi\\
+  \label{m03}		&\vec{\pi}=\vec{p}-\frac{e}{c}\vec{A}
+\end{alignat}
+where $\vec{\pi}$ is the kinematic or mechanical momentum. The symbols $\vec{\sigma}$ represent the Pauli matrices. To ease evaluations, we will move from vector to index notation.
+\begin{alignat}{1}
+  \label{m04}		&i\hbar\frac{\partial}{\partial t}\psi=\Big(\frac{1}{2m}(\sigma_{n}\sigma_{m}\pi_{n}\pi_{m})+eV\Big)\psi\\
+  \label{m05}		&\pi_{k}=p_{k}-\frac{e}{c}A_{k}
+\end{alignat}
+In the Heisenberg representation, operators obeys the following equation of motion
+\begin{alignat}{1}
+  \label{m06}		&i\hbar\frac{\mathrm{d}\hat{O}}{\mathrm{d}t}-i\hbar\frac{\partial\hat{O}}{\partial t}=[\hat{O},\hat{H}]
+\end{alignat}
+and the expectation value is of course
+\begin{alignat}{1}
+  \label{m07}		&\langle i\hbar\frac{\mathrm{d}\hat{O}}{\mathrm{d}t}\rangle-\langle i\hbar\frac{\partial\hat{O}}{\partial t}\rangle=\langle[\hat{O},\hat{H}]\rangle
+\end{alignat}
+To begin we will calculate the ``velocity operator'' for the Pauli Hamiltonian. It is assumed that it does not explicitly depend on time.
+\begin{alignat}{1}
+  \label{m08}		&\frac{\mathrm{d}x_{k}}{\mathrm{d}t}=[x_{k},\hat{H}]/i\hbar\\
+  \label{m09}		&\frac{\mathrm{d}x_{k}}{\mathrm{d}t}=\frac{1}{2mi\hbar}\sigma_{n}\sigma_{m}[x_{k},\pi_{n}\pi_{m}]\\
+  \label{m10}		&\frac{\mathrm{d}x_{k}}{\mathrm{d}t}=\frac{1}{2mi\hbar}\sigma_{n}\sigma_{m}(\pi_{n}[x_{k},\pi_{m}]+[x_{k},\pi_{n}]\pi_{m})
+\end{alignat}
+These two expressions will be very useful throughout
+\begin{alignat}{1}
+  \label{m11}		&[x_{k},F(\vec{p})]=i\hbar\frac{\partial F}{\partial p_{k}}\\
+  \label{m12}		&[p_{k},G(\vec{x})]=-i\hbar\frac{\partial G}{\partial x_{k}}
+\end{alignat}
+Therefore continuing from (\ref{m10}) we have
+\begin{alignat}{1}
+  \label{m13}		&\frac{\mathrm{d}x_{k}}{\mathrm{d}t}=\frac{1}{2mi\hbar}\sigma_{n}\sigma_{m}(\pi_{n}\delta_{km}i\hbar+\delta_{kn}i\hbar\pi_{m})\\
+  \label{m14}		&\frac{\mathrm{d}x_{k}}{\mathrm{d}t}=\frac{1}{2m}(\sigma_{m}\sigma_{k}\pi_{m}+\sigma_{k}\sigma_{m}\pi_{m})\\
+  \label{m15}		&\frac{\mathrm{d}x_{k}}{\mathrm{d}t}=\frac{1}{2m}\{\sigma_{m}\sigma_{k}\}\pi_{m}\\
+  \label{m16}		&\frac{\mathrm{d}x_{k}}{\mathrm{d}t}=\frac{1}{m}\pi_{k}
+\end{alignat}
+Here we see that the velocity operator in the Pauli theory is proportional to the kinematic momentum. Now we are interested in the ``acceleration operator'' which also happens to be proportional to the ``force operator.''
+\begin{alignat}{1}
+  \label{m17}		&m\frac{\mathrm{d}^{2}x_{k}}{\mathrm{d}t^{2}}=\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=[\pi_{k},\hat{H}]/i\hbar+\frac{\partial\pi_{k}}{\partial t}\\
+  \label{m18}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=\frac{1}{2mi\hbar}\sigma_{n}\sigma_{m}[\pi_{k},\pi_{n}\pi_{m}]+\frac{e}{i\hbar}[\pi_{k},V]+\frac{\partial\pi_{k}}{\partial t}\\
+  \label{m19}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=\frac{1}{2mi\hbar}\sigma_{n}\sigma_{m}(\pi_{n}[\pi_{k},\pi_{m}]+[\pi_{k},\pi_{n}]\pi_{m})
+\end{alignat}
+$$
+-\frac{e}{c}\frac{\partial A_{k}}{\partial t}-e\nabla_{k}V
+$$
+The last two terms in (\ref{m19}) are just the electric field. Here we note using (\ref{m12}) that
+\begin{alignat}{1}
+  \label{m20}		&[\pi_{i},\pi_{j}]=\frac{ie\hbar}{c}\epsilon_{ijk}B_{k}
+\end{alignat}
+Therefore
+\begin{alignat}{1}
+  \label{m21}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=\frac{e}{2mc}\sigma_{n}\sigma_{m}(\epsilon_{kma}\pi_{n}B_{a}+\epsilon_{kna}B_{a}\pi_{m})+eE_{k}
+\end{alignat}
+A helpful property of Pauli matrices is
+\begin{alignat}{1}
+  \label{m22}		&\sigma_{n}\sigma_{m}=\delta_{nm}+i\epsilon_{nmb}\sigma_{b}
+\end{alignat}
+which converts (\ref{m21}) to
+\begin{alignat}{1}
+  \label{m23}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=eE_{k}+\frac{e}{2mc}\Big(\epsilon_{kma}(\pi_{m}B_{a}+B_{a}\pi_{m})
+\end{alignat}
+$$
++i\epsilon_{mnb}\epsilon_{mka}\sigma_{b}\pi_{n}B_{a}-i\epsilon_{nmb}\epsilon_{nka}\sigma_{b}B_{a}\pi_{n}\Big)
+$$
+\begin{alignat}{1}
+  \label{m24}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=eE_{k}+\frac{e}{2mc}\epsilon_{kma}\{\pi_{m}B_{a}\}
+\end{alignat}
+$$
++\frac{e}{2mc}\Big(i\epsilon_{mnb}\epsilon_{mka}\sigma_{b}\pi_{n}B_{a}-i\epsilon_{nmb}\epsilon_{nka}\sigma_{b}B_{a}\pi_{n}\Big)
+$$
+It is good to see that the first two terms in (\ref{m24}) correspond to the Lorentz force since
+\begin{alignat}{1}
+  \label{m25}		&\epsilon_{kma}\{\pi_{m}B_{a}\}=(\vec{\pi}\times\vec{B}-\vec{B}\times\vec{\pi})_{k}
+\end{alignat}
+The last term in (\ref{m24}) will yield our magnetic moment force. One property of Levi-Civita symbols is that
+\begin{alignat}{1}
+  \label{m26}		&\epsilon_{mnb}\epsilon_{mka}=\delta_{nk}\delta_{ba}-\delta_{na}\delta_{kb}
+\end{alignat}
+Therefore
+\begin{alignat}{1}
+  \label{m27}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=eE_{k}+\frac{e}{2mc}\epsilon_{kma}\{\pi_{m}B_{a}\}
+\end{alignat}
+$$
++\frac{e}{2mc}\Big(i\sigma_{b}\pi_{k}B_{b}-i\sigma_{k}\pi_{b}B_{b}+i\sigma_{b}B_{b}\pi_{k}-i\sigma_{k}B_{b}\pi_{b}\Big)
+$$
+Here we make use of the commutation relation between the kinematic momentum and the magnetic field as well as the fact that the magnetic field is divergenceless.
+\begin{alignat}{1}
+  \label{m28}		&[\pi_{i},B_{j}]=\pi_{i}B_{j}-B_{j}\pi_{i}=-i\hbar\nabla_{i}B_{j}\\
+  \label{m29}		&[\pi_{j},B_{j}]=\pi_{j}B_{j}-B_{j}\pi_{j}=-i\hbar\nabla_{j}B_{j}=0
+\end{alignat}
+\begin{alignat}{1}
+  \label{m30}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=eE_{k}+\frac{e}{2mc}\epsilon_{kma}\{\pi_{m}B_{a}\}
+\end{alignat}
+$$
++\frac{e}{2mc}\Big(i\sigma_{b}(-i\hbar)\nabla_{k}B_{b}+i\sigma_{n}B_{b}\pi_{k}-i\sigma_{n}B_{b}\pi_{k}
+$$	$$
++i\sigma_{k}(\pi_{b}B_{b}-B_{b}\pi_{b})\Big)
+$$
+Which finally yields
+\begin{alignat}{1}
+  \label{m31}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=eE_{k}+\frac{e}{2mc}(\vec{\pi}\times\vec{B}-\vec{B}\times\vec{\pi})_{k}+\frac{e\hbar}{2mc}\vec{\sigma}\cdot\nabla_{k}\vec{B}
+\end{alignat}
+which contains the Stern-Gerlach force and correct magnetic moment with $g=2$.
+\subsection{Acceleration in the Dirac Theory}
+The Dirac equation is given by
+\begin{alignat}{1}
+  \label{m32}		&i\hbar\frac{\partial}{\partial t}\Psi=\Big(c\alpha_{m}\pi_{m}+eV+\beta mc^{2}\Big)\psi\\
+  \label{m33}		&\alpha_{k}=
+  \begin{pmatrix}
+    0&\sigma_{k}\\
+    \sigma_{k}&0
+  \end{pmatrix}\\
+  \label{m34}		&\beta=
+  \begin{pmatrix}
+    1&0\\
+    0&-1
+  \end{pmatrix}
+\end{alignat}
+It is understood that the elements in the above matrices are themselves $2\times2$ matrices. We can start via the same procedure as before and obtain the ``velocity operator'' for the Dirac Hamiltonian in the Heisenberg representation.
+\begin{alignat}{1}
+  \label{m35}		&\frac{\mathrm{d}x_{k}}{\mathrm{d}t}=[x_{k},\hat{H}]/i\hbar\\
+  \label{m36}		&\frac{\mathrm{d}x_{k}}{\mathrm{d}t}=[x_{k},c\alpha_{m}\pi_{m}]/i\hbar\\
+  \label{m37}            &\frac{\mathrm{d}x_{k}}{\mathrm{d}t}=c\alpha_{k}
+\end{alignat}
+This velocity operator is a bit unsusual in that its eigenvalues are $\pm c$. However, it can be shown that this peculiarity is the result of mixing between positive and negative energy waveforms. If we take the expectation value of only positive energy plane waves (Sakurai, Advanced Quantum Mechanics, pp.123) we find
+\begin{alignat}{1}
+  \label{m38}		&\langle\alpha_{k}\rangle_{+}=\int_{V}\mathrm{dx}^{3}\Psi^{\dagger}_{E>0}\alpha_{k}\Psi_{E>0}\\
+  \label{m39}		&\langle\alpha_{k}\rangle_{+}=\langle p_{k}c/E\rangle
+\end{alignat}
+which is always less than $c$. Similarly the negative energy plane waves have the expectation value
+\begin{alignat}{1}
+  \label{m40}		&\langle\alpha_{k}\rangle_{-}=-\langle p_{k}c/E\rangle
+\end{alignat}
+The negative energy wave velocity travels in opposite to the momentum. This velocity operator is not a constant of motion, even for free particles. The ``acceleration operator'' for the free Dirac Hamiltonian is
+\begin{alignat}{1}
+  \label{m41}		&\frac{1}{c}\frac{\mathrm{d}^{2}x_{k}}{\mathrm{d}t^{2}}=\frac{\mathrm{d}\alpha_{k}}{\mathrm{d}t}=[\alpha_{k},\hat{H}]/i\hbar\\
+  \label{m42}		&\frac{\mathrm{d}\alpha_{k}}{\mathrm{d}t}=2p_{k}c-2H\alpha_{k}
+\end{alignat}
+This result can be integrated to reveal the so-called \emph{Zitterbewegung} or trembling motion. (Sakurai, Advanced Quantum Mechanics, pp.128) Interpretation of this and the acceleration operator not as clear like in the Pauli theory, though we can see for ensembles of only positive plane waves, the acceleration vanishes.
+\begin{alignat}{1}
+  \label{m43}		&\langle\frac{\mathrm{d}\alpha_{k}}{\mathrm{d}t}\rangle_{+}=\langle2p_{k}c-2H\alpha_{k}\rangle=0
+\end{alignat}
+ Given that the Dirac theory has the usual kinetic momentum, we can ask whether its equation of motion creates an appropriate force equation.
+\begin{alignat}{1}
+  \label{m44}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=[\pi_{k},\hat{H}]/i\hbar\\
+  \label{m45}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=c\alpha_{m}[\pi_{k},\pi_{m}]+e[\pi_{k},V]-\frac{e}{c}\frac{\partial A_{k}}{\partial t}\\
+  \label{m46}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=e E_{k}+e(\vec{\alpha}\times\vec{B})_{k}
+\end{alignat}
+Equation (\ref{m46}) is our Lorentz force equation for the Dirac Hamiltonian. Our aim in the next section will be to evaluate this equation and match it to (\ref{m31}) which is the Lorentz force in the non relativistic Pauli Hamiltonian.
+\subsection{Non Relativistic Limit of Lorentz Operator*}
+Before we continue, let us look back at (\ref{m46}) and recast it as
+\begin{alignat}{1}
+  \label{m47}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=e E_{k}+e\gamma^{5}(\vec{\Sigma}\times\vec{B})_{k}\\
+  \label{m48}		&\Sigma_{k}=
+  \begin{pmatrix}
+    \sigma_{k}&0\\
+    0&\sigma_{k}
+  \end{pmatrix}\\
+  \label{m49}		&\gamma^{5}=
+  \begin{pmatrix}
+    0&1\\
+    1&0
+  \end{pmatrix}
+\end{alignat}
+The symbol $\Sigma_{k}$ is our spin operator. This is to highlight that the Lorentz force contains off-diagonal elements which when evaluated will mix spinor elements. The four-spinor can be written in two-component formalism as
+\begin{alignat}{1}
+  \label{m50}		&\Psi=
+  \begin{pmatrix}
+    \psi_{A}\\
+    \psi_{B}
+  \end{pmatrix}
+\end{alignat}
+ For example using (\ref{m50}) note that
+\begin{alignat}{1}
+  \label{m51}		&\Psi^{\dagger}\Psi=\psi^{\dagger}_{A}\psi_{A}+\psi^{\dagger}_{B}\psi_{B}\\
+  \label{m52}		&\Psi^{\dagger}\gamma^{5}\Psi=\psi^{\dagger}_{A}\psi_{B}+\psi^{\dagger}_{B}\psi_{A}
+\end{alignat}
+There are various ways to examine the non relativistic limit of the Dirac equation. One method is to consider the ``big and small components'' of the four-spinor. When (\ref{m50}) is applied to the Dirac equation we yield two coupled equations
+\begin{alignat}{1}
+  \label{m53}		&\sigma_{m}\pi_{m}\psi_{B}=\frac{1}{c}(E-eV-mc^{2})\psi_{A}\\
+  \label{m54}		&\sigma_{m}\pi_{m}\psi_{A}=\frac{1}{c}(E-eV+mc^{2})\psi_{B}
+\end{alignat}
+In the non relativistic limit the energy will be dominated by the mass as $E\approx mc^{2}$. We can rewrite (\ref{m54}) as to lowest order
+\begin{alignat}{1}
+  \label{m55}		&\frac{\sigma_{m}\pi_{m}}{2mc}\psi_{A}\approx\psi_{B}
+\end{alignat}
+The small components of the spinor then go as $pc/mc^{2}$. Now let us evaluate the Lorentz force operator
+\begin{alignat}{1}
+  \label{m56}		&\Psi^{\dagger}\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}\Psi=\psi^{\dagger}_{A}eE_{k}\psi_{A}+\psi^{\dagger}_{B}eE_{k}\psi_{B}
+\end{alignat}
+$$
+\psi^{\dagger}_{A}e(\vec{\sigma}\times\vec{B})_{k}\psi_{B}+\psi^{\dagger}_{B}e(\vec{\sigma}\times\vec{B})_{k}\psi_{A}
+$$
+Now we can apply the non relativistic limit to (\ref{m56}) by applying (\ref{m55})
+\begin{alignat}{1}
+  \label{m57}		&\Psi^{\dagger}\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}\Psi=\psi^{\dagger}_{A}eE_{k}\psi_{A}+\psi^{\dagger}_{A}\frac{\sigma_{m}\pi_{m}}{2mc}eE_{k}\frac{\sigma_{m}\pi_{m}}{2mc}\psi_{A}
+\end{alignat}
+$$
+\psi^{\dagger}_{A}e(\vec{\sigma}\times\vec{B})_{k}\frac{\sigma_{m}\pi_{m}}{2mc}\psi_{A}+\psi^{\dagger}_{A}\frac{\sigma_{m}\pi_{m}}{2mc}e(\vec{\sigma}\times\vec{B})_{k}\psi_{A}
+$$
+We can now rewrite the Lorentz force operator in a new form
+\begin{alignat}{1}
+  \label{m58}		&\Psi^{\dagger}\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}\Psi\rightarrow\psi^{\dagger}_{A}\frac{\mathrm{d}\Pi_{k}}{\mathrm{d}t}\psi_{A}
+\end{alignat}
+where
+\begin{alignat}{1}
+  \label{m59}		&\int_{V}\mathrm{dx}^{3}\psi^{\dagger}_{A}\psi_{A}\approx 1
+\end{alignat}
+at lowest order. The new operator has the form
+\begin{alignat}{1}
+  \label{m60}		&\frac{\mathrm{d}\Pi_{k}}{\mathrm{d}t}=eE_{k}+\frac{\sigma_{m}\pi_{m}}{2mc}eE_{k}\frac{\sigma_{m}\pi_{m}}{2mc}
+\end{alignat}
+$$
+e(\vec{\sigma}\times\vec{B})_{k}\frac{\sigma_{m}\pi_{m}}{2mc}+\frac{\sigma_{m}\pi_{m}}{2mc}e(\vec{\sigma}\times\vec{B})_{k}
+$$
+The first term is the traditional first half our Lorentz force in the electric field. The second term when evaluated will yield terms related to spin interactions with the electric field. The last two terms when combined will lead to the second half of the Lorentz force as well as the Stern-Gerlach force.
+\begin{alignat}{1}
+  \label{m61}		&W_{k}=e(\vec{\sigma}\times\vec{B})_{k}\frac{\sigma_{m}\pi_{m}}{2mc}+\frac{\sigma_{m}\pi_{m}}{2mc}e(\vec{\sigma}\times\vec{B})_{k}\\
+  \label{m62}            &W_{k}=\frac{e}{2mc}\epsilon_{kab}\Big(\sigma_{a}B_{b}\sigma_{m}\pi_{m}+\sigma_{m}\pi_{m}\sigma_{a}B_{b}\Big)\\
+  \label{m63}            &W_{k}=\frac{e}{2mc}\epsilon_{kab}\Big(\sigma_{a}\sigma_{m}B_{b}\pi_{m}+\sigma_{m}\sigma_{a}\pi_{m}B_{b}\Big)\\
+  \label{m64}            &W_{k}=\frac{e}{2mc}\epsilon_{kab}\Big(\sigma_{a}\sigma_{m}B_{b}\pi_{m}+\sigma_{m}\sigma_{a}(-i\hbar\nabla_{m}B_{b}+B_{b}\pi_{m})\Big)\\
+  \label{m65}            &W_{k}=\frac{e}{2mc}\epsilon_{kab}\Big(\{\sigma_{a}\sigma_{m}\}B_{b}\pi_{m}+\sigma_{m}\sigma_{a}(-i\hbar\nabla_{m}B_{b})\Big)
+\end{alignat}
+Making use of (\ref{m22}) again
+\begin{alignat}{1}
+  \label{m66}            &W_{k}=\frac{e}{2mc}\epsilon_{kab}\Big(\{\sigma_{a}\sigma_{m}\}B_{b}\pi_{m}+(\delta_{ma}+i\epsilon_{mac}\sigma_{c})(-i\hbar\nabla_{m}B_{b})\Big)
+\end{alignat}
+And thus we arrive at the Stern-Gerlach force
+\begin{alignat}{1}
+  \label{m67}            &W^{SG}_{k}=\frac{e}{2mc}\epsilon_{kab}\Big(i\epsilon_{mac}\sigma_{c}(-i\hbar\nabla_{m}B_{b})\Big)
+\end{alignat}
+which making use of the Levi-Chivita symbol's properties and the divergenceless magnetic field as we did in the Pauli theory yield
+\begin{alignat}{1}
+  \label{m68}            &W^{SG}_{k}=\frac{e\hbar}{2mc}\vec{\sigma}\cdot\nabla_{k}\vec{B}
+\end{alignat}
+The correct $g=2$ factor is respected and the remaining terms in $W_{k}$ yield the magnetic portion of the traditional Lorentz force. Thus we have derived classical Lorentz force as well as Stern-Gerlach force from the Dirac theory.
+
+\section{Class Project Questions}
+\subsection{Lorentz and Stern-Gerlach Project}
+\emph{The following phrase could be added at the very end of the write-up ``...since the  approximation made to describe the Dirac wave function Eq (\ref{m55}) leads to the Pauli equations for electrons and a similar approximation can be made to obtain the positron Pauli  equation.'' (a) Show  that this phrase is correct (b) Improve the approximation by not neglecting V compared to E+m and thus improve the Eq (\ref{m68}) finding perhaps aside of spin  also the angular momentum  with g=1  included in the new force.}\\
+
+\noindent\emph{(a)} Starting with the coupled two component Dirac equation in equations (\ref{m53}--\ref{m54}) we can take the nonrelativistic positron limit by taking $E\approx-mc^{2}$ indicating that the negative energy solutions dominate. This yields an analogous approximation which switches which components are ``big'' and ``small.''
+\begin{alignat}{1}
+  \label{m69} &-\frac{\sigma_{m}\pi_{m}}{2mc}\psi_{B}\approx\psi_{A}
+\end{alignat}
+This can be applied into equation (\ref{m54}) eliminating the $\psi_{A}$ component entirely.
+\begin{alignat}{1}
+  \label{m70}		&\frac{1}{2m}\sigma_{m}\pi_{m}\sigma_{n}\pi_{n}\psi_{B}=-(E-eV+mc^{2})\psi_{B}
+\end{alignat}
+The measured energy of the nonrelativistic state is $E=-E^{NR}-mc^{2}$ therefore
+\begin{alignat}{1}
+  \label{m71}		&\frac{1}{2m}\sigma_{m}\pi_{m}\sigma_{n}\pi_{n}\psi_{B}=(E^{NR}+eV)\psi_{B}
+\end{alignat}
+Equation (\ref{m71}) is the nonrelativistic positron Pauli equation. Notice that the sign of the potential has been flipped compared to the electron equation in (\ref{m02}) indicating the positron's flipped charge.\\
+
+\noindent\emph{(b)} We take the limit $E\approx mc^{2}$ using the coupled equations but do not throw away potential term. The new version of (\ref{m55}) takes the form
+\begin{alignat}{1}
+  \label{m72}		&\frac{c}{2mc^{2}-eV}\sigma_{m}\pi_{m}\psi_{A}\approx\psi_{B}
+\end{alignat}
+This can be substituted into (\ref{m56}) yielding
+\begin{alignat}{1}
+  \label{m73}		&\Psi^{\dagger}\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}\Psi=\psi^{\dagger}_{A}eE_{k}\psi_{A}+\psi^{\dagger}_{A}\sigma_{m}\pi_{m}\frac{c}{2mc^{2}-eV}eE_{k}\frac{c}{2mc^{2}-eV}\sigma_{m}\pi_{m}\psi_{A}
+\end{alignat}
+$$
+\psi^{\dagger}_{A}e(\vec{\sigma}\times\vec{B})_{k}\frac{c}{2mc^{2}-eV}\sigma_{m}\pi_{m}\psi_{A}+\psi^{\dagger}_{A}\sigma_{m}\pi_{m}\frac{c}{2mc^{2}-eV}e(\vec{\sigma}\times\vec{B})_{k}\psi_{A}
+$$
+The new force operator takes the form
+\begin{alignat}{1}
+  \label{m74}		&\frac{\mathrm{d}\Pi_{k}}{\mathrm{d}t}=eE_{k}+\sigma_{m}\pi_{m}\frac{c}{2mc^{2}-eV}eE_{k}\frac{c}{2mc^{2}-eV}\sigma_{m}\pi_{m}
+\end{alignat}
+$$
+  e(\vec{\sigma}\times\vec{B})_{k}\frac{c}{2mc^{2}-eV}\sigma_{m}\pi_{m}+\sigma_{m}\pi_{m}\frac{c}{2mc^{2}-eV}e(\vec{\sigma}\times\vec{B})_{k}
+$$
+The higher order Stern-Gerlach force would originate from the last two terms.
+\begin{alignat}{1}
+  \label{m75}  &W_{k}^{ST(2)}=e(\vec{\sigma}\times\vec{B})_{k}\frac{c}{2mc^{2}-eV}\sigma_{m}\pi_{m}+\sigma_{m}\pi_{m}\frac{c}{2mc^{2}-eV}e(\vec{\sigma}\times\vec{B})_{k}\\
+  \label{m76}  &W_{k}^{ST(2)}=\epsilon_{kab}\sigma_{a}B_{b}\frac{ec}{2mc^{2}-eV}\sigma_{m}\pi_{m}+\sigma_{m}\pi_{m}\frac{ec}{2mc^{2}-eV}\epsilon_{kab}\sigma_{a}B_{b}\\
+  \label{m77}  &W_{k}^{ST(2)}=\epsilon_{kab}\Big(\sigma_{a}\sigma_{m}B_{b}\frac{ec}{2mc^{2}-eV}\pi_{m}+\sigma_{m}\sigma_{a}\pi_{m}\frac{ec}{2mc^{2}-eV}B_{b}\Big)
+\end{alignat}
+Let us rearrange the potential operator as $\xi=eV/2mc^{2}$.
+\begin{alignat}{1}
+  \label{m78}  &W_{k}^{ST(2)}=\frac{e}{2mc}\epsilon_{kab}\Big(\sigma_{a}\sigma_{m}B_{b}\frac{1}{1-\xi}\pi_{m}+\sigma_{m}\sigma_{a}\pi_{m}\frac{1}{1-\xi}B_{b}\Big)
+\end{alignat}
+The commutator of the inverse potential and kinematic momentum is
+\begin{alignat}{1}
+  \label{m79}  &[\frac{1}{1-\xi},\pi_{k}]=\frac{1}{1-\xi}\pi_{k}-\pi_{k}\frac{i\hbar}{1-\xi}=\frac{1}{(1-\xi)^{2}}\nabla_{k}\xi\\
+  \label{m80}  &W_{k}^{ST(2)}=\frac{e}{2mc}\epsilon_{kab}\Big(\sigma_{a}\sigma_{m}B_{b}\big(\pi_{m}\frac{1}{1-\xi}+\frac{i\hbar}{(1-\xi)^{2}}\nabla_{k}\xi\big)+\sigma_{m}\sigma_{a}\pi_{m}B_{b}\frac{1}{1-\xi}\Big)
+\end{alignat}
+The first and last terms are identical to the lower order case except for an amplifier factor. The second term is brand new.
+\begin{alignat}{1}
+  \label{m81}  &Y_{k}^{ST(2)}=\frac{e\hbar}{2mc}\epsilon_{kab}\Big(\sigma_{a}\sigma_{m}B_{b}\frac{i}{(1-\xi)^{2}}\nabla_{k}\xi\Big)\\
+  \label{m82}  &Y_{k}^{ST(2)}=\frac{e\hbar}{2mc}\epsilon_{kab}\Big((\delta_{am}+i\epsilon_{amc}\sigma_{c})B_{b}\frac{i}{(1-\xi)^{2}}\nabla_{k}\xi\Big)
+\end{alignat}
+\end{document}
