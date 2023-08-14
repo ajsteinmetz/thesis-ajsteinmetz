@@ -1,11 +1,199 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Antimatter origin of cosmic magnetism: A first look}
-    \section{Electron-positron epoch of the universe}
-        \subsection{Baryon content}
-            \subsubsection{Entropy conservation}
-        \subsection{Chemical fugacity}
-        \subsection{Spin fugacity}
-            \subsubsection{Non-relativistic spin fugacity}
-    \section{Magnetized partition function}
-        \subsection{Magnetized chemical potential}
-        \subsection{Magnetization of the medium}
-    \section{Temperature and density effects}
+\label{chap:cosmo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent This chapter primarily is a review of the research published in \lq\lq Antimatter origin of cosmic magnetism: A first look\rq\rq\ by Steinmetz et. al. (2023) which is printed in Appendix E in full.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Magnetization}
+\label{section:magnetization}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent When exposed to external magnetic fields, matter can become magnetized enhancing or reducing the overall net field within the material. The origin of this magnetization is well known to be quantum mechanical in origin. The magnetic susceptibility $\chi$ is a measure of the material response given by
+\begin{alignat}{1}
+  \label{CHIeq01} \textbf{M}&=\chi\textbf{H}\,,\\
+  \label{CHIeq02} \textbf{B}&=\mu_{vac.}\left(\textbf{H}+\textbf{M}\right)=\mu_{vac.}\left(1+\chi\right)\textbf{H}\,,
+\end{alignat}
+where $\textbf{H}$ is the external magnetic field strength and $\textbf{B}$ is the total magnetic flux density. The magnetization $\textbf{M}$ is the magnetic moment density of the medium. The coefficient $\mu_{vac.}$ is the vacuum permeability, which with $\chi$ can define a material permeability $\mu_{mat.}=\mu_{vac.}(1+\chi)$. Paramagnetism occurs when $\chi>0$ which increases the magnetic flux as the magnetization $\textbf{M}$ is aligned with the external field. In contrast, diamagnetism is when $\chi<0$ reducing the overall magnetic flux as the magnetization is anti-aligned with the external field. In the most general case, the susceptibility can be described by a tensor which is neither paramagnetic or diamagnetic. In this work, we will be considering only the simple case where the susceptibility is single-valued.
+
+Before we handle an ensemble system, we will look at the magnetic moment $\boldsymbol{\mu}$ of a single-particle quantum system. To avoid confusion, the permeability will always be denoted either by a subscript for the vacuum or medium to always differentiate from magnetic moment. If we apply an external field with the local constant value of $B$ which is primarily responsible for the particle's response, the magnetic moment can be evaluated from the matrix element
+\begin{alignat}{1}
+  \label{CHIeq03} \left|\boldsymbol{\mu}_{n}\right|=-\left\langle n\left|\partial\hat{\mathcal{H}}/\partial B\right|n\right\rangle=-\frac{\partial E_{n}}{\partial B}\,,
+\end{alignat}
+where $\hat{\mathcal{H}}$ is the Hamiltonian of the system. It is valuable to point out that the individual dipole's response within a medium is only uniquely dependent on the external field $\textbf{H}$ in the case of weak medium magnetization. However, if the bulk magnetization is may easily be large and thus influential to each individual dipole. Physically each dipole is sensitive to the total magnetic flux $\textbf{B}$ which includes a mixture of external field and bulk magnetization $\textbf{M}$ from its neighbors. The magnetization density of the quantum system is then
+\begin{alignat}{1}
+  \label{CHIeq04} M_{n}(B)=\frac{1}{V}\left|\boldsymbol{\mu}_{n}\right|\,.
+\end{alignat}
+If we couple the system to a thermal reservoir of temperature $T$, the averaged magnetization at thermal and chemical equilibrium is
+\begin{alignat}{1}
+  \label{CHIeq05} M(B,T,\eta)=\frac{\sum_{n}M_{n}e^{-\beta (E_{n}-\eta N)}}{\sum_{n}e^{-\beta (E_{n}-\eta N)}}\,,
+\end{alignat}
+where $\beta=1/k_{B}T$, $k_{B}$ is the Boltzmann constant and $\eta$ is the chemical potential. We then introduce the grand potential $\Phi$ defined by
+\begin{alignat}{1}
+  \label{CHIeq06} \Phi=-\frac{1}{\beta}\ln\left({\sum_{n}e^{-\beta (E_{n}-\eta N)}}\right)=-\frac{1}{\beta}\ln\left(\mathcal{Z}\right)\,,
+\end{alignat}
+where $\mathcal{Z}$ is the grand partition function. This allows us to rewrite eq.~\eqref{CHIeq05} as
+\begin{alignat}{1}
+  \label{CHIeq07} M(B,T,\eta)=-\frac{1}{V}\frac{\partial \Phi}{\partial B}\,.
+\end{alignat}
+Combining eq.~\eqref{CHIeq06} and eq.~\eqref{CHIeq07} in the grand ensemble yields
+\begin{alignat}{1}
+  \label{Mag} M=\frac{1}{\beta V}\frac{\partial}{\partial B}\ln\left(\mathcal{Z}\right)\,.
+\end{alignat}
+The magnetic susceptibility is related to the magnetization via
+\begin{alignat}{1}
+  \label{CHIeq09} \chi=\mu_{vac.}\frac{\partial M}{\partial B}\,.
+\end{alignat}
+If a given thermodynamic system is well described by a partition function, we can evaluate the susceptibility using eq.~\eqref{CHIeq09}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Landau energy eigenvalues in cosmology}
+\label{sec:expansion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The standard model of cosmology with a cosmological constant plus cold dark matter ($\Lambda\mathrm{CDM}$) is described by the Friedman-Lemaître-Robertson-Walker (FLRW) metric. The spatially flat (Gaussian curvature $k=0$) FLRW metric with metric signature $(+1,-1,-1,-1)$ in Cartesian coordinates is
+\begin{align}
+    \label{FLRW} ds^2=dt^2-a^2(t)\left[dx^2+dy^2+dz^2\right]\,.
+\end{align}
+The scale factor $a(t)$ denotes the change of proper distances in an expanding (or contracting) universe which is both homogeneous and isotropic. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ as follows
+\begin{align}
+  \label{Friedmann} H(t)^{2}\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_{N}}{3}\rho_{tot},\quad \frac{\ddot a}{a}=-qH^2,\quad 
+q\equiv -\frac{a\ddot a}{\dot a^2},\quad \dot H=-H^2(1+q).
+\end{align}
+where $G_N$ is the Newtonian constant of gravitation, $\rho_{tot}$ is the total energy density of the universe and $q$ is the cosmic deceleration parameter. \req{Friedmann} is also known as the Friedmann equations. 
+
+There is another natural scale for the magnetic field besides \req{MagMassFail} when considering the consequences of FLRW expansion on the $e^{\pm}$ fluid. As the universe expands, different terms in the energies and thus partition function evolve as a function of the scale factor $a(t)$ which arises in the FLRW metric. We can consider the expansion to be an adiabatic process which results in a smooth shifting of the relevant dynamical quantities. From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion starting at some initial time $t_{0}$ is given by
+\begin{alignat}{1}
+    \label{BScale} B(t) = B(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
+\end{alignat}
+As the universe expands, the temperature also cools as the cosmological redshift reduces the momenta of particles in the universe lowering their contribution to the energy content of the universe. This cosmological redshift is written as
+\begin{alignat}{1}
+  \label{Redshift} p_{i}(t) = p_{i}(t_{0})\frac{a(t_{0})}{a(t)}\,,\qquad T(t) = T(t_{0})\frac{a(t_{0})}{a(t)}\,.
+\end{alignat}
+The momenta scale with the same factor as temperature as it is the origin of cosmological redshift. The energy of massive free particles in the universe scales differently based on their momentum (and thus temperature). When hot and relativistic, particle energy scales with inverse scale factors like radiation. However as particles transition to non-relativistic momenta, their energies scale with the inverse square of the scale factor like magnetic flux.
+\begin{alignat}{1}
+    \label{EScale} E(t) = E(t_{0})\frac{a(t_{0})}{a(t)}\xrightarrow{\mathrm{NR}}\  E(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
+\end{alignat}
+This occurs because of the functional dependence of energy on momentum in the relativistic versus non-relativistic cases. The argument in the Boltzmann statistical factor is given by
+\begin{alignat}{1}
+    \label{Boltz} X_{n}^{s}\equiv\frac{E_{n}^{s}}{T}\,.
+\end{alignat}
+We can explore this relationship for the magnetized system explicitly by writing out \req{Boltz} using the KGP eigen-energies as
+\begin{alignat}{1}
+    \label{XExplicit} X_{n}^{s} = \sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{p_{z}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,,
+\end{alignat}
+where we now introduce the expansion scale factor via \req{BScale} - \req{PScale}. The Boltzmann factor can then be written as
+\begin{alignat}{1}
+    \label{XScale} X_{n}^{s}[a(t)] = \sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,.
+\end{alignat}
+This reveals that only the mass contribution is dynamic over cosmological time. For any given eigen-state, the mass term increases driving the state into the non-relativistic limit while the momenta and magnetic contributions are frozen by initial conditions. As a point of comparison, the Boltzmann factor for the DP eigen-energies becomes
+\begin{alignat}{1}
+    \label{XDP} X_{n}^{s}\vert_{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-s\right)}-\frac{eB}{2mT}(g-2)s\right)^{2}+\frac{p_{z}^{2}}{T^{2}}}\,,
+\end{alignat}
+which over cosmological time under expansion scales as
+\begin{alignat}{1}
+    \label{XScaleDP} X_{n}^{s}[a(t)]\vert_{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-s\right)}-\frac{eB(t_{0})}{2mT(t_{0})}\frac{a(t_{0})}{a(t)}(g-2)s\right)^{2}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}}\,.
+\end{alignat}
+We note here one important difference between KGP and DP eigen-energies in the context of cosmology: The anomalous magnetic moment portion of the DP statistics is suppressed by $1/a(t)$ over cosmological time while the AMM contribution is preserved in the KGP model. That the universe's expansion makes a distinction between $g=2$ magnetic moment and AMM for DP fermions appears as a rather artificial and nonphysical trait. While the suppression of AMM may often be small for particles such as electrons, this suppression is non-trivial for particles with large AMM values such as the proton. That cosmological redshift would push DP protons to be described by $g=2$ eign-energies in the non-relativistic limit counts as a malaise for the model and further strengthens our thinking that the KGP model is more appropriate for cosmological studies. Motivated by \req{XScale}, we can introduce a dimensionless cosmic magnetic scale which is frozen in the homogeneous case as
+\begin{alignat}{1}
+    \label{Bo} b_{0}\equiv\frac{eB}{T^{2}}=\frac{eB\hbar c^{2}}{(k_{B}T)^{2}}\ \mathrm{(S.I)}\,,
+\end{alignat}
+where we've included the expression explicitly in full SI units. We can estimate the value of $b_{0}$ from the bounds on the extra-galactic magnetic field strength and the temperature of the universe today.  If the origin of deep space extra-galactic magnetic fields are relic fields from the early universe, which today are expected to exist between $5\times10^{-12}\ \mathrm{T}>B_{relic}>10^{-20}\ \mathrm{T}$, then at temperature $T=2.7\ \mathrm{K}$, the value of the cosmic magnetic scale is between
+\begin{alignat}{1}
+    \label{BoScale} 5.5\times10^{-5}>b_{0}>1.1\times10^{-11}\,.
+\end{alignat}
+This should remain constant in the universe at-large up to the last epoch the universe was sufficiently magnetized to disturb this value. As the electron-proton plasma which generated the CMB was relatively dilute over its duration, it was unlikely sufficiently magnetized to significantly alter this value over extra-galactic scales. Rather, the best candidate plasma to have been sufficiently magnetized and dense to have set the relic field magnetic scale would have been the electron-positron plasma which existed during the duration of Big Bang Nucleosynthesis (BBN) and beforehand.
+
+Higher order non-minimal magnetic contributions which can be introduced via \req{MagMass} to the eigen-energies like $\approx\mu_{B}^{2}B^{2}/T^{2}$ are even more surpressed over cosmological time which drives the system into minimal electromagnetic coupling with the exception of the anomalous magnetic moment in the KGP case. It is interesting to note that cosmological expansion serves to \lq\lq smooth out\rq\rq\ the characteristics of more complex BSM electrodynmaics erasing them from a statistical perspective in favor of the minimal or minimal-like dynamics. As $b_0$ is a constant of expansion, assuming the electron-proton plasma between the CMB and electron-positron annihilation did not greatly disturbed it, we can calculate the remnant values at the temperature $T=50\ \mathrm{keV}$ with the expression
+\begin{align}
+  \label{BBNFields} B(T)=\frac{b_{0}}{e}T^{2}\,,
+\end{align}
+yielding a range of field strengths
+\begin{align}
+  \label{BBNRange} 2.3\times10^{5}\ \mathrm{T}>B(T=50\ \mathrm{keV})>4.6\times10^{-4}\ \mathrm{T}\,,
+\end{align}
+during which the electron-positron plasma in the universe had a number density comparable to that of the Solar core with $n_{e}=4.49\times10^{24}\ \mathrm{cm}^{-3}$ at $r=0.01R_{\odot}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Partition Function}\label{sec:partition}
+\noindent Now that we've obtained the energy eigenvalues of the KGP particle, we can work towards evaluating the grand partition function of the system and ultimately the magnetic properties of the magnetized KGP Fermi gas. In addition to considering polarization, there are also the positive and negative energy states. The grand partition function for the relativistic Fermi-Dirac ensemble is given by the standard definition
+\begin{alignat}{1}
+    \label{PartFunc} \ln\left(\mathcal{Z}_{L}\right)=\sum_{\alpha}\ln\left(1+z_{\sigma}\exp(-X_{s})\right)\,,
+\end{alignat}
+where we are summing over all possible quantum numbers $\alpha = \{p_{z},n,s,\sigma,\tilde{g}\}$. The summation over $\tilde{g}$ represents the occupancy of Landau states which are matched to the available phase space within $\Delta p_{x}\Delta p_{y}$. The fugacity $z_{\sigma}$ is defined as
+\begin{alignat}{1}
+    \label{Fugacity} z_{\sigma}=\exp\left(\sigma\eta\right)\,,
+\end{alignat}
+where $\eta$ is the chemical potential of the species and $\sigma\in\pm1$ denotes between particles and antiparticles. The chemical potential $\eta$ is an increasing function of the number of particles present within a given volume and fixed by the particle number
+\begin{alignat}{1}
+  \label{Number} N=\sum_{\alpha}\langle n_{\alpha}\rangle=\sum_{\alpha}\frac{1}{\exp(X_{s})z_{\sigma}^{-1}+1}\,.
+\end{alignat}
+If we consider the Landau energies to represent the transverse momentum $p_{T}^{2}=p_{x}^{2}+p_{y}^{2}$ of the system, then the relationship that defines $\tilde{g}$ is given by
+\begin{alignat}{1}
+    \label{PhaseSpace} \frac{L^{2}}{(2\pi)^{2}}\Delta p_{x}\Delta p_{y}=\frac{qBL^{2}}{2\pi}\Delta n\,,\indent \tilde{g}=\frac{eBL^{2}}{2\pi}\,.
+\end{alignat}
+The summation over the continous $p_{z}$ can be replaced with an integration
+\begin{alignat}{1}
+    \label{pzInt} \sum_{p_{z}}\rightarrow\frac{L}{2\pi}\int^{+\infty}_{-\infty}dp_{z}\,,
+\end{alignat}
+where $L$ defines the boundary length of our considered volume. The partition function \req{PartFunc} can be then rewritten as
+\begin{alignat}{1}
+    \label{PartFuncOne} \ln\left(\mathcal{Z}_{L}\right)=\sum_{\sigma}^{\pm1}\sum_{s}^{\pm1/2}\frac{2eBL^{3}}{(2\pi)^{2}}\int^{+\infty}_{0}dp_{z}\sum_{n=0}^{\infty}\ln\left(1+z_{\sigma}\exp(-X_{s})\right)\,.
+\end{alignat}
+We note that the partition function can be broken into four quantum gasses: Particles and antiparticles, and spin aligned and antialigned. This can be represented by separate partition functions $\ln\left(\mathcal{Z}^{\sigma}_{s}\right)$ where
+\begin{alignat}{1}
+    \label{FourGasses} \ln\left(\mathcal{Z}_{L}\right)=\sum_{\sigma,s}\ln\left(\mathcal{Z}^{\sigma}_{s}\right)\,,
+\end{alignat}
+For KGP particles, the anomalous moment (a) breaks the degeneracy between Landau levels of opposite alignment and (b) depending on the size of the anomaly, flips the sign of the magnetic contribution to the energy for certain eccentric states. For $0<a<2$ the aligned ground state is uniquely separated from the rest of the states while for $2<a<4$ the aligned ground state and first excited state are uniquely separated. The pattern of unique eccentric states continues for further extreme values of anomalous moment. While we consider the $g$-factor to be the immutable description of magnetic moment, it is useful in the case of Landau levels to consider the anomaly $a$ as from the energies given in eq.~\eqref{LANeq02}, $g$ always is linearly added or subtracted from the Landau quantum number which are integers.
+
+Degeneracy is restored for values of the anomalous parameter given in eq.~\eqref{LANeq04}. While generating a large number of eccentric states from large anomalous moment may be of theoretical interest, it is of practical interest to consider particles like the proton or electron where only the ground state is uniquely disturbed. Due to the properties of logs, the overall partition function will be sum of the partition function of each species, which allows us to consider each species separately. The next step is to replace the sum over $n$ Landau levels and replace it with an integration using the Euler-Maclaurin integration formula. The Euler-Maclaurin formula is given by
+\begin{alignat}{1}
+    \label{EulerM} \sum^{b}_{n=a}f(n)-\int^{b}_{a}f(x)dx = \frac{1}{2}\left(f(b)+f(a)\right)+\sum_{i=1}^{k}\frac{b_{2i}}{(2i)!}\left(f^{(2i-1)}(b)-f^{(2i-1)}(a)\right)+R(k)\,,
+\end{alignat}
+where $b_{n}$ are the Bernoulli numbers and $R(k)$ is the error remainder defined by integrals over Bernoulli polynomials. The integer $k$ is chosen for the level of approximation that is desired. Using \req{EulerM} allows us to convert the sum over $n$ quantum numbers in \req{PartFuncOne} into an integral. We define
+\begin{alignat}{1}
+    \label{Func} f(p_{z},n,s,\sigma)=\ln\left(1+z_{\sigma}\exp(-X_{s})\right)\,,
+\end{alignat}
+The result for $k=1$ is
+\begin{alignat}{1}
+    \label{PartFuncTwo} \ln\left(\mathcal{Z}_{s}^{\sigma}\right)=\frac{2eBL^{3}}{(2\pi)^{2}}\int_{0}^{+\infty}dp_{z}\left(\int_{0}^{+\infty}dn f(n) + \frac{1}{2}f(0) + \frac{1}{12}\frac{\partial f(n)}{\partial n}\bigg\rvert_{n=0} + R(1)\right)
+\end{alignat}
+It is to be recognized that the first term in expression \req{PartFuncTwo} is merely the free particle fermion partition function with a rescaled mass $m_{s}$. This then allows us to achieve our goal of a \lq\lq separated\rq\rq\ partition function which explicitly reveals the particle portion of the phase-phase and the spin portions as different contributions. This separation is however not fully independant as the rescaled mass $m_{s}$ is intrinsically a function of the spin alignment. It will be demonstrated further below that the free-like portion is the relativistic equivalent of the Hamiltonian modified by $E_{M}=-\bb{\mu}\cdot\bb{B}$ dipole energies. We introduce the dimensionless variables
+\begin{alignat}{1}
+    \label{Unitless} a_{s}=\frac{m_{s}}{T}\,,\indent y_{s}=\frac{p_{z}}{m_{s}}\,,\indent u_{s}=\frac{2qB}{m_{s}^{2}}n\,,
+\end{alignat}
+which allows us to express \req{Boltz} as
+\begin{alignat}{1}
+    \label{UnitlessBoltz} X_{s}(y_{s},u_{s})=a_{s}\sqrt{1+y_{s}^{2}+u_{s}}\,.
+\end{alignat}
+Via substitution of dimensionless variables, and some rearrangment, we can write the magnetized partition function in terms of free fermion partition functions of differing masses, yielding,
+\begin{alignat}{1}
+    \label{Equality} \ln\left(\mathcal{Z}^{\sigma}_{s}\right) = \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}} + \frac{2eBL^{3}}{(2\pi)^{2}}m_{s}\int_{0}^{+\infty}dy\left(\frac{1}{2}f(0) + \frac{1}{12}\frac{\partial f(n)}{\partial n}\bigg\rvert_{n=0} + R(1)\right)\,,
+\end{alignat}
+where we have dropped the spin subscript from the dimensionless z-momentum $y$ as it is does not impact the limits of integration. The free-like portion of the partition function is given by
+\begin{alignat}{1}
+    \label{Freelike} \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}=\frac{L^{3}}{(2\pi)^{3}}\int^{+\infty}_{-\infty}d\bb{p}^{3}\ln\left(1+z_{\sigma}\exp(-X^{s}_{F})\right)\,,\qquad X^{s}_{F} = X^{s}\vert_{u_{s}=0} = a_{s}\sqrt{1+y^{2}}\,,
+\end{alignat}
+In dimensionless units we can represent \req{Freelike} as
+\begin{alignat}{1}
+    \label{FreelikeAlt} \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}=\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\int^{+\infty}_{-\infty}dy\left[y^{2}\ln\left(1+z_{\sigma}\exp(-X^{s}_{F})\right)\right]\,,
+\end{alignat}
+Integrating by parts, we arrive at
+\begin{alignat}{1}
+    \label{FreelikeParts} \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}=\frac{1}{3}\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\left(\frac{m_{s}}{T}\right)\int^{+\infty}_{-\infty}dy\left[\frac{y^{4}}{\epsilon}F[X_{s},\sigma]\right]\,,\qquad \epsilon=m_{s}\sqrt{1+y^{2}}\,,\\
+    \label{FermD} F[X_{s},\sigma] = \frac{1}{\exp(X_{s})z_{\sigma}^{-1}+1}\,,
+\end{alignat}
+where $\epsilon$ is the free eigen-energy and $F$ is the Fermi particle(antiparticle) distribution. By introducing a change of variables of $y=\sinh(t)$ this simplifies to
+\begin{alignat}{1}
+    \label{FreelikeFinal} \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}=\frac{1}{3}\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\left(\frac{m_{s}}{T}\right)\int^{+\infty}_{-\infty}dt\left[\frac{\sinh(t)^{4}}{\exp(a_{s}\cosh(t))z_{\sigma}^{-1}+1}\right]\,,
+\end{alignat}
+This integrand is well behaved and has a finite integration value within the restriction that $m_{s}$ remains physical. The magnetization of this term, defined by \req{Mag}, is found to be
+\begin{alignat}{1}
+    \label{FreelikeMag} M_{F}^{s,\sigma}=\frac{T}{V}\frac{\partial m_{s}}{\partial B}\frac{\partial}{\partial m_{s}}\ln(\mathcal{Z}_{F}^{\sigma})\,\,,
+\end{alignat}
+with the total magnetization given by the sum over the four species
+\begin{alignat}{1}
+    \label{TotalFreeMag} M_{F}=\sum_{s,\sigma}M_{F}^{s,\sigma}\,.
+\end{alignat}
+The term by term magnetization evalutes as
+\begin{align}
+  \label{MagExplicit} M_{F}^{s,\sigma} = \frac{e(1-gs)}{2m_{s}}\left(\frac{5}{m_{s}}\ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}-\frac{1}{3}\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\left(\frac{m_{s}}{T}\right)^{2}\int_{-\infty}^{+\infty}dt\left[z_{\sigma}^{-1}e^{a_{s}\cosh(t)}\cosh(t)\sinh^{4}(t)F^{2}\left[X_{s},\sigma\right]\right]\right)
+\end{align}
