@@ -2,18 +2,156 @@
 \chapter{Antimatter origin of cosmic magnetism: A first look}
 \label{chap:cosmo}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent This chapter primarily is a review of the research published in \lq\lq Antimatter origin of cosmic magnetism: A first look\rq\rq\ by Steinmetz et. al. (2023) which is printed in Appendix E in full.\\
+\noindent This chapter primarily is a review of our work in~\cite{Steinmetz:2023} and portions of~\cite{Rafelski:2023emw} where we propose that the early universe electron-positron plasma was a highly magnetized environment. In \rsec{sec:thermo} we cover the thermodynamics necessary to explain magnetization in the bulk thermal primordial universe. \rsec{sec:magnetization} described the magnetization of the electron-positron gas which responds in primarily a paramagnetic fashion. We then propose in \rsec{sec:self} a model of self-magnetization caused by spin polarization within the individual species in the gas. This chapter will also use natural units $(c=\hbar=k_{B}=1)$ unless otherwise noted.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Magnetism in the universe}
+\label{sec:universe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+IGMF are notably difficult to measure and difficult to explain. The bounds for IGMF at a length scale of $1{\rm\ Mpc}$ are today~\cite{Neronov:2010gir,Taylor:2011bn,Pshirkov:2015tua,Jedamzik:2018itu,Vernstrom:2021hru}
+\begin{align}
+ \label{igmf}
+ 10^{-8}{\rm\ G}>\mathcal{B}_{\rm IGMF}>10^{-16}{\rm\ G}\,.
+\end{align}
+We note that generating PMFs with such large coherent length scales is nontrivial~\cite{Giovannini:2022rrl} though currently the length scale for PMFs are not well constrained~\cite{AlvesBatista:2021sln}. Faraday rotation from distant radio active galaxy nuclei (AGN)~\cite{Pomakov:2022cem} suggest that neither dynamo nor astrophysical processes would sufficiently account for the presence of magnetic fields in the universe today if the IGMF strength was around the upper bound of ${\cal B}_{\rm IGMF}\simeq30-60{\rm\ nG}$ as found in Ref.~\cite{Vernstrom:2021hru}. Such strong magnetic fields would then require that at least some portion of the IGMF arise from primordial sources that predate the formation of stars.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Thermodynamics in cosmology}
+\label{sec:thermo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The spatially flat (Gaussian curvature $k=0$) FLRW metric with metric signature $(+1,-1,-1,-1)$ in Cartesian coordinates is
+\begin{align}
+    \label{FLRW} ds^2=dt^2-a^2(t)\left[dx^2+dy^2+dz^2\right]\,.
+\end{align}
+The scale factor $a(t)$ denotes the change of proper distances in an expanding (or contracting) universe which is both homogeneous and isotropic. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ as follows
+\begin{align}
+  \label{Friedmann} H(t)^{2}\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_{N}}{3}\rho_{tot},\quad \frac{\ddot a}{a}=-qH^2,\quad 
+q\equiv -\frac{a\ddot a}{\dot a^2},\quad \dot H=-H^2(1+q).
+\end{align}
+where $G_N$ is the Newtonian constant of gravitation, $\rho_{tot}$ is the total energy density of the universe and $q$ is the cosmic deceleration parameter. \req{Friedmann} is also known as the Friedmann equations. 
+
+As the universe undergoes isotropic expansion, the temperature decreases adiabatically~\cite{Abdalla:2022yfr} and conserves entropy as 
+\begin{align}
+ \label{tscale}
+ T(t)=T_{0}\frac{a_{0}}{a(t)}\rightarrow T(z)=T_{0}(1+z)\,,
+\end{align}
+where $a(t)$ is the scale factor defined by the Friedmann-Lema{\^i}tre-Robertson-Walker (FLRW) metric~\cite{weinberg1972gravitation} and $z$ is the redshift. The comoving temperature $T_{0}$ is given by the present day temperature of the CMB, with contemporary scale factor $a_{0}=1$. Within a homogeneous magnetic domain, the magnetic field varies~\cite{Durrer:2013pga} over cosmic expansion as
+\begin{align}
+ \label{bscale}
+ \bb{B}(t)=\bb{B}_{0}\frac{a_{0}^{2}}{a^{2}(t)}\rightarrow\bb{B}(z)=\bb{B}_{0}\left(1+z\right)^{2}\,,
+\end{align}
+where $\bb{B}_{0}$ is the comoving value of the magnetic field obtained from the contemporary value of the magnetic field today given in \req{igmf}. Non-primordial magnetic fields (which are generated through other mechanisms such as dynamo or astrophysical sources) do not follow this scaling~\cite{Pomakov:2022cem}. The presence of matter and late universe structure formation also contaminates the primordial field evolution in \req{bscale}. It is only in deep intergalactic space where primordial fields remain preserved and comoving over cosmic time.
+
+As the universe expands, different terms in the energies and thus partition function evolve as a function of the scale factor $a(t)$ which arises in the FLRW metric. We can consider the expansion to be an adiabatic process which results in a smooth shifting of the relevant dynamical quantities. From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion starting at some initial time $t_{0}$ is given by
+\begin{alignat}{1}
+    \label{BScale} B(t) = B(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
+\end{alignat}
+As the universe expands, the temperature also cools as the cosmological redshift reduces the momenta of particles in the universe lowering their contribution to the energy content of the universe. This cosmological redshift is written as
+\begin{alignat}{1}
+  \label{Redshift} p_{i}(t) = p_{i}(t_{0})\frac{a(t_{0})}{a(t)}\,,\qquad T(t) = T(t_{0})\frac{a(t_{0})}{a(t)}\,.
+\end{alignat}
+The momenta scale with the same factor as temperature as it is the origin of cosmological redshift. The energy of massive free particles in the universe scales differently based on their momentum (and thus temperature). When hot and relativistic, particle energy scales with inverse scale factors like radiation. However as particles transition to non-relativistic momenta, their energies scale with the inverse square of the scale factor like magnetic flux.
+\begin{alignat}{1}
+    \label{EScale} E(t) = E(t_{0})\frac{a(t_{0})}{a(t)}\xrightarrow{\mathrm{NR}}\  E(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
+\end{alignat}
+This occurs because of the functional dependence of energy on momentum in the relativistic versus non-relativistic cases.
+
+The argument in the Boltzmann statistical factor is given by
+\begin{alignat}{1}
+    \label{Boltz} X_{n}^{s}\equiv\frac{E_{n}^{s}}{T}\,.
+\end{alignat}
+We can explore this relationship for the magnetized system explicitly by writing out \req{Boltz} using the KGP eigen-energies as
+\begin{alignat}{1}
+    \label{XExplicit} X_{n}^{s} = \sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{p_{z}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,,
+\end{alignat}
+where we now introduce the expansion scale factor via \req{BScale} - \req{PScale}. The Boltzmann factor can then be written as
+\begin{alignat}{1}
+    \label{XScale} X_{n}^{s}[a(t)] = \sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,.
+\end{alignat}
+This reveals that only the mass contribution is dynamic over cosmological time. For any given eigen-state, the mass term increases driving the state into the non-relativistic limit while the momenta and magnetic contributions are frozen by initial conditions. 
+
+As a point of comparison, the Boltzmann factor for the DP eigen-energies becomes
+\begin{alignat}{1}
+    \label{XDP} X_{n}^{s}\vert_{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-s\right)}-\frac{eB}{2mT}(g-2)s\right)^{2}+\frac{p_{z}^{2}}{T^{2}}}\,,
+\end{alignat}
+which over cosmological time under expansion scales as
+\begin{multline}
+    \label{XScaleDP} X_{n}^{s}[a(t)]\vert_{DP} =\\ \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-s\right)}-\frac{eB(t_{0})}{2mT(t_{0})}\frac{a(t_{0})}{a(t)}(g-2)s\right)^{2}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}}\,.
+\end{multline}
+While the above expression is rather complicated, we note that the KGP~\req{XScale} and DP~\req{XDP} Boltzmann factors both reduce to the Sch{\"o}dinger-Pauli limit as $m_{e}a(t)\rightarrow\infty$ thereby demonstrating that the total magnetic moment is protected under the adiabatic expansion of the universe.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Magnetized fermion partition function}
+\label{sec:partition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In the presence of a magnetic field $\bb{B}$ there is some modification of the usual relativistic fermion partition function which is now given by
+\begin{align}
+ \label{partition}
+ \ln{\cal Z}_{e^{+}e^{-}}=\frac{e\bb{B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm}\sum_{s}^{\pm}\sum_{n=0}^{\infty}\int_{-\infty}^{\infty}{\rm d}p_{z}
+ \left[\ln\left(1+\lambda_{\sigma}\xi_{s}e^{-E_{n}^{s}/T}\right)\right]\,,\\
+ \Upsilon_{\sigma}^{s}=\lambda_{\sigma}\xi_{s} = \exp{\frac{\mu_{\sigma}+\eta_{s}}{T}}\,,
+\end{align}
+with electric charge $e\equiv q_{e^{+}}=-q_{e^{-}}$. The index $\sigma$ in \req{partition} is a sum over electron and positron states while $s$ is a sum over polarizations. Since we are interested in small asymmetries (e.g. baryon excess over antibaryons, one spin polarization over another) we introduce the generalized particle fugacity $\Upsilon_{\sigma}^{s}$ as the product of:
+\begin{itemize}[nosep]
+ \item[a.] Chemical fugacity $\lambda_{\sigma}$
+ \item[b.] Spin fugacity $\xi_{s}$
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Electron-positron chemical potential}
+\label{sec:potentials}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+During the $e^{+}e^{-}$ plasma epoch, the density changed dramatically over time changing the chemical potential in turn. We can then parameterize the chemical potential of the $e^{+}e^{-}$ plasma as a function of temperature $\mu\rightarrow\mu(T)$ via the charge neutrality of the universe which implies
+\begin{align}
+ \label{chargeneutrality}
+ n_{p}=n_{e^{-}}-n_{e^{+}}=\frac{1}{V}\lambda\frac{\partial}{\partial\lambda}\ln{\cal Z}_{e^{+}e^{-}}\,.
+\end{align}
+In \req{chargeneutrality}, $n_{p}$ is the observed total number density of protons in all baryon species. The parameter $V$ relays the proper volume under consideration and $\ln{\cal Z}_{e^{+}e^{-}}$ is the partition function for the electron-positron gas.
+
+For matter $(\sigma=+1)$ and antimatter $(\sigma=-1)$ particles, a nonzero chemical potential $\mu_{\sigma}=\sigma\mu$ is caused by an imbalance of matter and antimatter. While the primordial electron-positron plasma era was overall charge neutral, there was a small asymmetry in the charged leptons from baryon asymmetry~\cite{Fromerth:2012fe,Canetti:2012zc} in the universe. Consideration of reactions such as $e^+e^-\leftrightarrow\gamma\gamma$ constrains the chemical potentials of electrons and positrons~\cite{Elze:1980er} as 
+\begin{align}
+ \label{cpotential}
+ \mu\equiv\mu_{e^{-}}=-\mu_{e^{+}}\,,\qquad
+ \lambda\equiv\lambda_{e^{-}}=\lambda_{e^{+}}^{-1}=\exp\frac{\mu}{T}\,,
+\end{align}
+where $\lambda$ is the fugacity of the system. The chemical potential defined in \req{cpotential} is obtained from the requirement that the positive charge of baryons (protons, $\alpha$ particles, light nuclei produced after BBN) is exactly and locally compensated by a tiny net excess of electrons over positrons.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electron-positron plasma magnetization}
-\label{section:magnetization}
+\label{sec:magnetization}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent When exposed to external magnetic fields, matter can become magnetized enhancing or reducing the overall net field within the material. The origin of this magnetization is well known to be quantum mechanical in origin. The magnetic susceptibility $\chi$ is a measure of the material response given by
-\begin{alignat}{1}
-  \label{CHIeq01} \textbf{M}&=\chi\textbf{H}\,,\\
-  \label{CHIeq02} \textbf{B}&=\mu_{vac.}\left(\textbf{H}+\textbf{M}\right)=\mu_{vac.}\left(1+\chi\right)\textbf{H}\,,
-\end{alignat}
-where $\textbf{H}$ is the external magnetic field strength and $\textbf{B}$ is the total magnetic flux density. The magnetization $\textbf{M}$ is the magnetic moment density of the medium. The coefficient $\mu_{vac.}$ is the vacuum permeability, which with $\chi$ can define a material permeability $\mu_{mat.}=\mu_{vac.}(1+\chi)$. Paramagnetism occurs when $\chi>0$ which increases the magnetic flux as the magnetization $\textbf{M}$ is aligned with the external field. In contrast, diamagnetism is when $\chi<0$ reducing the overall magnetic flux as the magnetization is anti-aligned with the external field. In the most general case, the susceptibility can be described by a tensor which is neither paramagnetic or diamagnetic. In this work, we will be considering only the simple case where the susceptibility is single-valued.
+\begin{align}
+ \label{mag:1}
+ \bb{B}_{\rm total} = \bb{B} + {\cal M}\,,
+\end{align}
+where $\bb{B}$ is the external magnetic field strength and $\bb{B}_{\rm total}$ is the total magnetic flux density. The magnetization ${\cal M}$ is the magnetic moment density of the medium. For mediums without ferromagnetic or hysteresis effects, the relationship can be parameterized by the susceptibility $\chi$ of the medium as
+\begin{align}
+ \label{mag:2}
+ \bb{B}_{\rm total} = (1+\chi)\bb{B}\,,\qquad {\cal M} = \chi\bb{B}\,,
+\end{align}
+with the possibility of both paramagnetic materials $(\chi>1)$ and diamagnetic materials $(\chi<1)$. Paramagnetism occurs when the magnetization $\textbf{M}$ is aligned with the external field. In contrast, diamagnetism is when is anti-aligned with the external field reducing the overall magnetic flux. In the most general case, the susceptibility can be described by a field dependant spatial tensor which is neither paramagnetic or diamagnetic.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sensitivity of magnetization to g-factor}
+\label{sec:gfactor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Spin potential and self-magnetization}
+\label{sec:self}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Raw materials}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 Before we handle an ensemble system, we will look at the magnetic moment $\boldsymbol{\mu}$ of a single-particle quantum system. To avoid confusion, the permeability will always be denoted either by a subscript for the vacuum or medium to always differentiate from magnetic moment. If we apply an external field with the local constant value of $B$ which is primarily responsible for the particle's response, the magnetic moment can be evaluated from the matrix element
 \begin{alignat}{1}
@@ -45,53 +183,17 @@ The magnetic susceptibility is related to the magnetization via
 \end{alignat}
 If a given thermodynamic system is well described by a partition function, we can evaluate the susceptibility using eq.~\eqref{CHIeq09}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Landau energy eigenvalues in cosmology}
-\label{sec:expansion}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent The standard model of cosmology with a cosmological constant plus cold dark matter ($\Lambda\mathrm{CDM}$) is described by the Friedman-Lemaître-Robertson-Walker (FLRW) metric. The spatially flat (Gaussian curvature $k=0$) FLRW metric with metric signature $(+1,-1,-1,-1)$ in Cartesian coordinates is
-\begin{align}
-    \label{FLRW} ds^2=dt^2-a^2(t)\left[dx^2+dy^2+dz^2\right]\,.
-\end{align}
-The scale factor $a(t)$ denotes the change of proper distances in an expanding (or contracting) universe which is both homogeneous and isotropic. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ as follows
-\begin{align}
-  \label{Friedmann} H(t)^{2}\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_{N}}{3}\rho_{tot},\quad \frac{\ddot a}{a}=-qH^2,\quad 
-q\equiv -\frac{a\ddot a}{\dot a^2},\quad \dot H=-H^2(1+q).
-\end{align}
-where $G_N$ is the Newtonian constant of gravitation, $\rho_{tot}$ is the total energy density of the universe and $q$ is the cosmic deceleration parameter. \req{Friedmann} is also known as the Friedmann equations. 
 
-There is another natural scale for the magnetic field besides \req{MagMassFail} when considering the consequences of FLRW expansion on the $e^{\pm}$ fluid. As the universe expands, different terms in the energies and thus partition function evolve as a function of the scale factor $a(t)$ which arises in the FLRW metric. We can consider the expansion to be an adiabatic process which results in a smooth shifting of the relevant dynamical quantities. From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion starting at some initial time $t_{0}$ is given by
-\begin{alignat}{1}
-    \label{BScale} B(t) = B(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
-\end{alignat}
-As the universe expands, the temperature also cools as the cosmological redshift reduces the momenta of particles in the universe lowering their contribution to the energy content of the universe. This cosmological redshift is written as
-\begin{alignat}{1}
-  \label{Redshift} p_{i}(t) = p_{i}(t_{0})\frac{a(t_{0})}{a(t)}\,,\qquad T(t) = T(t_{0})\frac{a(t_{0})}{a(t)}\,.
-\end{alignat}
-The momenta scale with the same factor as temperature as it is the origin of cosmological redshift. The energy of massive free particles in the universe scales differently based on their momentum (and thus temperature). When hot and relativistic, particle energy scales with inverse scale factors like radiation. However as particles transition to non-relativistic momenta, their energies scale with the inverse square of the scale factor like magnetic flux.
-\begin{alignat}{1}
-    \label{EScale} E(t) = E(t_{0})\frac{a(t_{0})}{a(t)}\xrightarrow{\mathrm{NR}}\  E(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
-\end{alignat}
-This occurs because of the functional dependence of energy on momentum in the relativistic versus non-relativistic cases. The argument in the Boltzmann statistical factor is given by
-\begin{alignat}{1}
-    \label{Boltz} X_{n}^{s}\equiv\frac{E_{n}^{s}}{T}\,.
-\end{alignat}
-We can explore this relationship for the magnetized system explicitly by writing out \req{Boltz} using the KGP eigen-energies as
-\begin{alignat}{1}
-    \label{XExplicit} X_{n}^{s} = \sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{p_{z}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,,
-\end{alignat}
-where we now introduce the expansion scale factor via \req{BScale} - \req{PScale}. The Boltzmann factor can then be written as
-\begin{alignat}{1}
-    \label{XScale} X_{n}^{s}[a(t)] = \sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,.
-\end{alignat}
-This reveals that only the mass contribution is dynamic over cosmological time. For any given eigen-state, the mass term increases driving the state into the non-relativistic limit while the momenta and magnetic contributions are frozen by initial conditions. As a point of comparison, the Boltzmann factor for the DP eigen-energies becomes
-\begin{alignat}{1}
-    \label{XDP} X_{n}^{s}\vert_{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-s\right)}-\frac{eB}{2mT}(g-2)s\right)^{2}+\frac{p_{z}^{2}}{T^{2}}}\,,
-\end{alignat}
-which over cosmological time under expansion scales as
-\begin{multline}
-    \label{XScaleDP} X_{n}^{s}[a(t)]\vert_{DP} =\\ \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-s\right)}-\frac{eB(t_{0})}{2mT(t_{0})}\frac{a(t_{0})}{a(t)}(g-2)s\right)^{2}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}}\,.
-\end{multline}
+
+
+
+
+
+
+
+
+
+
 We note here one important difference between KGP and DP eigen-energies in the context of cosmology: The anomalous magnetic moment portion of the DP statistics is suppressed by $1/a(t)$ over cosmological time while the AMM contribution is preserved in the KGP model. That the universe's expansion makes a distinction between $g=2$ magnetic moment and AMM for DP fermions appears as a rather artificial and nonphysical trait. While the suppression of AMM may often be small for particles such as electrons, this suppression is non-trivial for particles with large AMM values such as the proton. That cosmological redshift would push DP protons to be described by $g=2$ eign-energies in the non-relativistic limit counts as a malaise for the model and further strengthens our thinking that the KGP model is more appropriate for cosmological studies. Motivated by \req{XScale}, we can introduce a dimensionless cosmic magnetic scale which is frozen in the homogeneous case as
 \begin{alignat}{1}
     \label{Bo} b_{0}\equiv\frac{eB}{T^{2}}=\frac{eB\hbar c^{2}}{(k_{B}T)^{2}}\ \mathrm{(S.I)}\,,
@@ -112,8 +214,16 @@ yielding a range of field strengths
 \end{align}
 during which the electron-positron plasma in the universe had a number density comparable to that of the Solar core with $n_{e}=4.49\times10^{24}\ \mathrm{cm}^{-3}$ at $r=0.01R_{\odot}$.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Partition Function}\label{sec:partition}
+
+
+
+
+
+
+
+
+
+
 \noindent Now that we've obtained the energy eigenvalues of the KGP particle, we can work towards evaluating the grand partition function of the system and ultimately the magnetic properties of the magnetized KGP Fermi gas. In addition to considering polarization, there are also the positive and negative energy states. The grand partition function for the relativistic Fermi-Dirac ensemble is given by the standard definition
 \begin{alignat}{1}
     \label{PartFunc} \ln\left(\mathcal{Z}_{L}\right)=\sum_{\alpha}\ln\left(1+z_{\sigma}\exp(-X_{s})\right)\,,

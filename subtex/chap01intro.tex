@@ -89,7 +89,7 @@ The parameter $g$ in \req{mag:2} is the gyromagnetic ratio (or g-factor) of the 
     a\equiv\frac{g}{2}-1\,,\qquad
     a\frac{e\hbar}{2m_{\ell}}\rightarrow\delta\mu\equiv\mu-\mu_{\ell}\,,
 \end{align}
-where $a$ is the anomaly parameter. We also introduce $\delta\mu$ as the anomalous magneton which will be helpful in our proposal to connect mass and magnetic moment in \rsec{sec:improvedkgp} and \rsec{sec:numoment}.
+where $a$ is the anomaly parameter. We also introduce $\delta\mu$ as the anomalous magneton which will be helpful in our proposal to connect mass and magnetic moment in \rsec{sec:ikgp} and \rsec{sec:numoment}.
 
 The anomalous magnetic moment of a particle can arise from a variety of physical sources with the most famous being the one-loop vacuum polarization contribution to the electron first computed by~\cite{Schwinger:1951nm}. In that work, the first correction to $g$ is given by
 \begin{align}
@@ -112,13 +112,13 @@ Four-vectors and tensors in this work will be denoted by Greek indices. Inner pr
     \label{dirac:2}
     \partial^{\alpha}=\left(\frac{1}{c}\frac{\partial}{\partial t},\,-\bb{\nabla}\right)\,,\qquad A^{\alpha}=\left(\frac{V}{c},\,\bb{A}\right)\,.
 \end{align}
-The wave function $\psi$ in \req{dirac:1} is understood to be a four-component spinor. We have written the Dirac equation here in the covariant form where $\gamma_{\alpha}$ are the gamma matrices which obey the anti-commuting Clifford algebra
+The wave function $\psi$ in \req{dirac:1} is understood to be a four-component spinor. We have written the Dirac equation here in the covariant form where $\gamma^{\alpha}$ are the gamma matrices which obey the anti-commuting Clifford algebra
 \begin{align}
     \label{gamma:1}
     \{\gamma_{\alpha},\gamma_{\beta}\}=\gamma_{\alpha}\gamma_{\beta} + \gamma_{\beta}\gamma_{\alpha} = 2\eta_{\alpha\beta}\,,\\
     \eta_{\alpha\beta}={\rm diag}(+1,-1,-1,-1)\,,
 \end{align}
-where $\eta_{\alpha\beta}$ is the flat spacetime Minkowski metric tensor defined with a positive time metric signature. As $\gamma_{\alpha}$ are also spinor matrices, the commutator in \req{gamma:1} carries implicit spinor indices which here computes to the $4\times4$ identity matrix $\mathbbm{1}_{4}$. We also introduce the \lq fifth\rq\ gamma matrix $\gamma^{5}$ which anti-commutes with $\gamma^{\alpha}$ and the following standard conventions following~\cite{Itzykson:1980rh}
+where $\eta_{\alpha\beta}$ is the flat spacetime Minkowski metric tensor defined with a positive time metric signature. The metric tensor is also responsible for raising and lowering covariant and contravariant indices e.g. $a_{\alpha}=\eta_{\alpha\beta}a^{\beta}$. As $\gamma^{\alpha}$ are also spinor matrices, the commutator in \req{gamma:1} carries implicit spinor indices which here computes to the $4\times4$ identity matrix $\mathbbm{1}_{4}$ (which is suppressed). We also introduce the \lq fifth\rq\ gamma matrix $\gamma^{5}$ which anti-commutes with $\gamma^{\alpha}$ and the following standard conventions following~\cite{Itzykson:1980rh}
 \begin{alignat}{1}
 	\label{conventions:1} \bb{\alpha}=\gamma^{0}\bb{\gamma}\,,\indent \bb{\Sigma}=\gamma^{5}\bb{\alpha}\,,\indent \gamma^{5}=i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}\,,\indent \gamma^{2}_{5}=1\,.
 \end{alignat}
@@ -204,7 +204,7 @@ The KGP equation is generally considered to be the \lq\lq square\rq\rq\ of the D
 \begin{alignat}{1}
 	\label{kgp:1} \left((i\hbar\partial^{\alpha}-eA^{\alpha})^{2}-m_{\ell}^{2}c^{2}-\left(g\mu_{\ell}+i\epsilon\gamma^{5}\right)m_{\ell}\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=0\,.
 \end{alignat}
-In the above we printed both the AMM and EDM for theoretical interest, but will drop the EDM term for the remainder of this thesis. The initial benefit of the KGP formulation is that the wave equation fully commutes with $\gamma^{5}$ making all eigen-functions good chiral states though at the expense of more complicated parity relationships.
+In the above we printed both the AMM and EDM for theoretical interest, but will drop the EDM term for the remainder of this thesis. The initial benefit of the KGP formulation is that the wave equation fully commutes with $\gamma^{5}$ making eigen-functions explicitly good chiral states.
 
 \req{kgp:1} is mathematically similar to the Klein-Gordon equation which describes charged scalar particles. In the same manner as scalar-QED, the squared covariant derivative contains a $e^{2}A^{2}$ term which in QFT results in the presence of a 4-vertex seagull interaction~\citep{Schwartz:2014sze} at tree-level.
 
@@ -252,7 +252,7 @@ This non-local behavior ultimately breaks the unitarity of the theory making it 
 %{\color{red}Here we talk about some of the problems DP has. The theory is non-renormalizable. It spits the magnetic behavior into two very different mathematical regimes. The QED vacuum contribution to the electron \lq\lq melts\rq\rq\ in strong fields (though this might not affect the hadronic component) making DP it unsuitable. This last point is a light criticism of Ferrer and astrophysics community.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The unique nature of $g=2$}
+\subsection{The unique nature of g=2}
 \label{sec:unique}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 As discussed by Feynman (Feynman, 1961), there is a strong predilection in nature towards $g=2$ gyro-magnetic factors which can be explained by the requirements of kinetic operator in quantum mechanics. We note that because the $2\times2$ Pauli matrices $\bb{\sigma}$ all anti-commute, we can write down the relation
@@ -296,14 +296,14 @@ yielding
 	\label{eq:spin:07a} \left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta}-\frac{i}{2}\sigma_{\alpha\beta}\left[\pi^{\alpha},\pi^{\beta}\right]\right)\Psi&=m^{2}c^{2}\Psi\,,\\
 	\label{eq:spin:07b} \left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta}-\frac{e\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi&=m^{2}c^{2}\Psi\,.
 \end{alignat}
-\req{eq:spin:07b} is the square of the Dirac equation with precisely $g=2$. Furthermore, compelling arguments can be made that all elementary particles (Ferrara et. al. 1992) of any spin have a natural value of $g=2$, though a competing idea is Belinfante's conjecture of $g=1/s$. To paraphrase the argument by Ferrara, Porrati and Telegdi, $g=2$ is likely the natural scale for particles of any spin because:
+\req{eq:spin:07b} is the square of the Dirac equation with precisely $g=2$. Furthermore, compelling arguments can be made that all elementary particles (Ferrara et. al. 1992) of any spin have a natural value of $g=2$, though a competing idea is Belinfante's conjecture of $g=1/s$. To paraphrase the argument by~\citet*{Ferrara:1992yc}, $g=2$ is likely the natural scale for particles of any spin because:
 \begin{enumerate}[nosep]
 	\item The W boson, as the only known higher spin charged elementary particle, has at tree level $g=2$ via a Proca-like equation.
 	\item The relativistic TBMT spin equation is the same simplified form for any classical spin value.
 	\item For arbitrary spin, $g=2$ facilitates finite Compton scattering cross sections without additional physical requirements.
 	\item For arbitrary spin, open bosonic and super-symmetric string theory predicts $g=2$.
 \end{enumerate}
-While the above provide a nice justification for why particles should tend to this specific g-factor, the reality is no particle has exactly $g=2$ with all of them displaying some form of anomaly. The charged leptons come the closest to the natural value, but famously have vacuum polarization contributions~\cite{Schwinger:1951nm} from QED, non-perturbative hadronic contributions~\cite{Jegerlehner:2001wq,Jegerlehner:2017gek}, and potentially BSM interactions~\cite{Czarnecki:2001pv,Knecht:2004,Jegerlehner:2009ry} contributing to their anomalous magnetic dipole moment. There are then two major approaches to deal with anomalous moments. The first is to consider the fundamental quantum field theory describing the particle, and then analyzing the resulting tree level diagrams which contribute to the moment in a perturbative fashion. The second is to utilize an effective field theory with the anomalous moment already implemented in the base wave dynamics. While the first approach has proven to be exceedingly successful for the charged leptons (the muon's anomaly notwithstanding), it is not appropriate for particles whose moments are dramatically different from $g=2$ or if the origin of the anomaly comes from internal structure such as the hadrons whose moments are determined by nonpertubative QCD~\cite{Eichmann:2016yit,Pacetti:2014jai} and not vacuum structure as is the case for the nucleons and atoms.
+While the above provide a nice justification for why particles should tend to this specific g-factor, the reality is no particle has exactly $g=2$ with all of them displaying some form of anomaly. The charged leptons come the closest to the natural value, but famously have vacuum polarization contributions~\citep{Schwinger:1951nm} from QED, non-perturbative hadronic contributions~\citep{Jegerlehner:2017gek}, and potentially BSM interactions~\citep{Knecht:2003kc} contributing to their anomalous magnetic dipole moment. There are then two major approaches to deal with anomalous moments. The first is to consider the fundamental quantum field theory describing the particle, and then analyzing the resulting tree level diagrams which contribute to the moment in a perturbative fashion. The second is to utilize an effective field theory with the anomalous moment already implemented in the base wave dynamics. While the first approach has proven to be exceedingly successful for the charged leptons (the muon's anomaly notwithstanding), it is not appropriate for particles whose moments are dramatically different from $g=2$ or if the origin of the anomaly comes from internal structure such as the hadrons whose moments are determined by non-perturbative QCD~\cite{Eichmann:2016yit,Pacetti:2014jai} and not vacuum structure as is the case for the nucleons and atoms.
 
 \begin{table}
 	\centering
