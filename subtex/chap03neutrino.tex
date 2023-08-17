@@ -2,8 +2,11 @@
 \chapter{Neutrino magnetism frontiers}
 \label{chap:neutrino}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent \emph{This chapter is a manuscript still in development to be hosted on arXiv and submitted for publication shortly after the publication of this thesis.}\\
+\noindent \emph{This chapter is a manuscript still in development to be hosted on arXiv and submitted for publication shortly after the submission of this thesis.}\\
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Connection between neutrino masses and magnetic moments}\label{sec:flavor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent Electromagnetic processes in the neutrino sector may yield measurable effects in two aspects of neutrino physics: (a) neutrino oscillation which is evidence of the non-zero mass eigenstates and (b) the Charge-Parity violation (CPV) in the neutrino sector which occurs due to the presence of at least three generations of neutrinos or additional CP violating interactions. This paper explores the effect of strong electromagnetic fields on neutrino CP violation by analysis of the electromagnetic dipole interaction and determining its influence on the Jarlskog invariant $J$~\citep{jarlskog1985basis,jarlskog1985commutator,jarlskog2005invariants} which controls the size of CPV. The size of the neutrino magnetic dipole moment is relatively small with a lower bound determined by the standard model and an upper bound from reactor or solar observations given by~\citep{alexander2016status,canas2016updating,sierra2022neutrino}
 
 \begin{align}
@@ -11,18 +14,77 @@
     10^{-19}\mu_{B}<\mu_{\nu}^{\mathrm eff}<10^{-10}\mu_{B}\,,\qquad\mu_{B}=\frac{e\hbar}{2m}
 \end{align}
 
-where $\mu_{B}$ is the Bohr magneton and $\mu_{\nu}^{\mathrm eff}$ is the effective and characteristic size of the neutrino magnetic moment. In the standard model, neutrinos do not interact electromagnetically at tree level as they are only coupled to the weak interaction via the $SU(2)_{L}$ doublet~\citep{schwartz2014quantum}. However, through higher order loop interactions it is expected that the neutrino should manifestation some non-minimal EM interactions~\citep{shrock1980new,abi2021prospects} via an electromagnetic dipole moment. This leaves open the possibility for Beyond Standard Model (BSM) physics to produce an abnormally large electromagnetic dipole~\citep{giunti2015neutrino,lindner2017revisiting,brdar2021neutrino} between the bounds of~\req{momentbound:1} which may manifest in strong field or matter dense environments.
+where $\mu_{B}$ is the Bohr magneton and $\mu_{\nu}^{\mathrm eff}$ is the effective and characteristic size of the neutrino magnetic moment. In the standard model, neutrinos do not interact electromagnetically at tree level as they are only coupled to the weak interaction via the $SU(2)_{L}$ doublet~\citep{Schwartz:2014sze}. However, through higher order loop interactions it is expected that the neutrino should manifestation some non-minimal EM interactions~\citep{shrock1980new,abi2021prospects} via an electromagnetic dipole moment. This leaves open the possibility for Beyond Standard Model (BSM) physics to produce an abnormally large electromagnetic dipole~\citep{giunti2015neutrino,lindner2017revisiting,brdar2021neutrino} between the bounds of~\req{momentbound:1} which may manifest in strong field or matter dense environments.
 
 One important aspect of neutrino physics is the size of the CP violation~\citep{wolfenstein1978oscillations,xing2001commutators,giunti2007fundamentals,huber2022snowmass} which can yield insights not only in fundamental physics but cosmology as well. One of the goals of modern neutrino experiments such as DUNE~\citep{abi2020long} is to better characterize such effects in astrophysical contexts such as supernova~\citep{abi2021supernova,abi2021prospects,athar2022status} and magnetars~\citep{lichkunov2019neutrino}. Additionally, there may be a connection~\citep{pehlivan2014neutrino,balaji2020cpa,balaji2020cpb} between CP violation in the neutrino sector and the anomalous magnetic moment (AMM) of the neutrino.
 
 If neutrinos are Dirac-like possessing both left and right handed chiral species, CPV is then caused by a single CP breaking phases $\delta$ while if neutrino masses are Majorana-like, then there are up to three distinct complex phases $(\delta,\rho,\sigma)$ responsible for CPV~\citep{giunti2007fundamentals}. For illustrative purposes, we will assume that neutrinos are Majorana particles though we will comment on applicability to Dirac-like neutrinos as well. We propose in this work that electromagnetic processes in strong fields may have an amplifying effect on the already present CP violation intrinsic to the neutrino sector. Amplified CPV is already expected in matter~\citep{harrison2000cp} such as when travelling through the Earth's crust due to the abundance of electrons and the lack of muons and taus which preferentially affect the electron neutrinos via the weak interaction. This effect may also play a role in the primordial universe where nuetrinos would propagate through incredibly matter dense gasses such as during the electron-positron epoch~\citep{rafelski2023short}. Matter modifies CPV because it changes the effective Hamiltonian of the propagating neutrinos, therefore we should look to other possible sources for modification of the Hamiltonian for CPV amplification or suppression.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Flavor characteristics}\label{sec:flavor}
+\subsection{Neutrino (transition) magnetic moments}
+\label{sec:numoment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent As neutrinos are electrically neutral, they have no intrinsic magnetic moment due to their spin, therefore any magnetic moment present is considered anomalous. A small anomalous magnetic moment (AMM) can be introduced into the Lagrangian~\citep{Itzykson:1980rh,Steinmetz:2018ryf} for the neutrino via a Pauli term. As our focus is on effective field theories, we will not worry with the fact that the Pauli Lagrangian is 5-Dimensional and thus fails to be renormalizable. The Pauli Lagrangian for the AMM for Majorana-like neutrinos in the flavor basis is given by
+\begin{align}
+	\label{moment:1} -\mathcal{L}_{\mathrm{AMM}}^{\mathrm Maj.}=\frac{1}{2}\bb{\bar{\nu}_{f}^{L}}\bb{\mu}\frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\left(\bb{\nu_{f}^{L}}\right)^{c}+\mathrm{h.c.}
+\end{align}
+The matrix $\bb{\mu}$ are the AMM couplings while $F^{\alpha\beta}$ is our standard electromagnetic field tensor. The expression $i\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}/2$ can be evaluated using standard notation as
+\begin{align}
+	\label{convention:1}
+    \frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta} = \frac{i}{c}\bb{\alpha}\cdot\bb{E}-\bb{\Sigma}\cdot\bb{B}\,,\\
+	\label{convention:2}
+    \bb{\alpha}=\gamma_{0}\bb{\gamma}\,,\qquad
+    \vec{\Sigma}=\gamma_{5}\bb{\alpha}\,,\qquad
+    \gamma_{5}=i\gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3}\,,\qquad
+    \gamma_{5}^{2}=\mathbbm{1}\,.
+\end{align}
+We denote our conventions for the $\gamma$ matrices in~\req{convention:2}. In principle an electric dipole can also be included via the substitution
+\begin{align}
+    \label{electric:1}
+    \bb{\mu}\rightarrow\bb{\mu}+i\gamma^{5}\bb{\epsilon}
+\end{align}
+
+It is important to note that because of CPT considerations, Majorana neutrino are forbidden diagonal magnetic moments and can only have off-diagonal transition moments. Since transition AMM elements serve to break lepton number conservation, it suggests than neutrinos could be \lq\lq remixed\rq\rq\ when exposed to strong electrodynamic fields similar to remixing within matter in the Mikheyev-Smirnov-Wolfenstein (MSW) effect~\citep{wolfenstein1978neutrino,mikheev1985resonance,bethe1986possible,greiner2009gauge}. 
+
+We can combine the AMM contribution and the mass term in~\req{mass:1} and~\req{moment:1} to write an effective Lagrangian containing both terms as
+\begin{align}
+	\label{massmom:1}
+    \mathcal{L}_{\rm eff}^{\rm Maj.}=\mathcal{L}_{\rm mass}^{\rm Maj.} + \mathcal{L}_{\rm AMM}^{\rm Maj.}=-\frac{1}{2}\bb{\bar{\nu}_{f}^{L}}\left(\bb{M}_{\nu}+\bb{\mu}\frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\left(\bb{\nu_{f}^{L}}\right)^{c}+\rm{h.c.}
+\end{align}
+The generalized mass-dipole matrix $\bb{\mathcal M}$ present in \req{massmom:1} can be cast in the following manner
+\begin{align}
+	\label{massmom:2}
+    {\bb{\mathcal{M}}}(\vec{E},\vec{B})\equiv\bb{M}_{\nu}+\bb{\mu}\frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\,.
+\end{align}
+Further, we can understand the mass matrix (in the flavor basis) as a diagonal part and traceless part
+\begin{align}
+	\label{massmom:3}
+    \bb{M}_{\nu}=\bb{m}+\bb{I}\,,\qquad
+    \bb{m}=\mathrm{diag}(m_{\nu_{e}},m_{\nu_{\mu}},m_{\nu_{\tau}})\,,\qquad
+    \mathrm{Tr}\left[\bb{I}\right] = 0 \,,
+\end{align}
+where $\bb{m}$ is the intrinsic flavor masses and $\bb{I}$ is the off-diagonal interaction coupling between flavors prescribed by BSM physics. Since neutrino oscillation is experimentally verified, the coupling matrix cannot be fully zero, though elements of the intrinsic flavor masses can. Depending on what theory generates the AMM elements, there is the possibility of non-Hermitian $\bb{\mu}$ with $\bb{\mu}^{\dagger}\neq\bb{\mu}$. Additionally, the conditions for $\bb{I}$ can be further constrained by group symmetry such as flavor SU(3). While non-Hermitian moments and group structure raise interesting possibilities, we will not explore them further here. 
+
+If we require that the mass matrix $\bb{M}_{\nu}$ be invertible, we can reparameterize the magnetic moment as 
+\begin{align}
+	\label{invert:1}
+    \mathbbm{1} = \bb{M}_{\nu}^{-1}\bb{M}_{\nu}\,,\qquad
+    \bb{\mu} = \bb{M}_{\nu}\bb{K}\,.
+\end{align}
+This allows \req{massmom:2} to be rewritten as
+\begin{alignat}{1}
+	\label{invert:2} {\bb{\mathcal{M}}} = \bb{M}_{\nu}\left(\mathbbm{1} + \frac{i}{2}\bb{K}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\,.
+\end{alignat}
+We note that \req{invert:2} suggests that there may by some perturbative connection between particle mass and magnetic moment whereas the magnetic moment signifies the presence of a complex phase. We've pointed out the potential connection between mass and magnetic moment in prior work~\citep{Steinmetz:2018ryf} and note that this relationship would only manifest in strong fields where non-minimal coupled electromagnetism may be large. To this end we propose the following mass matrix as a possible ansatz
+\begin{alignat}{1}
+	\label{mass:eq:10} {\bb{\mathcal{M}}} = \bb{M}_{\nu}\,\mathrm{exp}\left(\frac{i}{2}\bb{K}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\,,
+\end{alignat}
+which for weak fields $F\rightarrow0$ reduces to the prior form \req{invert:2}. Regardless of whether the perturbative connection exists, as written in \req{mass:eq:10}, the presence of magnetic moment should ultimately modify the flavor mixing matrix thus providing a connection between spin and flavor states.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Neutrino masses}\label{sec:mix}
+\subsection{Flavor, mass and magnetic eigenstates}\label{sec:mix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent As neutrinos have masses, there is no guarantee that their $SU(2)_{L}$ flavor eigenstates will be simultaneously their propagating mass eigenstates. This misalignment between the two representations can then written as rotation of the neutrino flavor 3-vector where $N=3$ is the number of generations. The unitary mixing matrix $\bb{V}$ allows for the change of basis between mass and flavor eigenstates via
 \begin{alignat}{1}
@@ -49,7 +111,7 @@ where $\bb{\nu_{f}}$ is the neutrino state vector written in the flavor basis wh
 	\label{phases:2} \bb{P}_{\mathrm Dirac} = \mathbb{1}\,,\\
 	\label{phases:3} \bb{P}_{\mathrm Maj.} = {\mathrm diag}(e^{i\rho},e^{i\sigma},1)\,.
 \end{align}
-Majorana neutrinos allow up to two additional complex phases $\rho$ and $\sigma$ which participate in CPV. In the standard parameterization~\citep{schwartz2014quantum}, the rotation matrix $\bb{U}$ can be expressed as
+Majorana neutrinos allow up to two additional complex phases $\rho$ and $\sigma$ which participate in CPV. In the standard parameterization~\citep{Schwartz:2014sze}, the rotation matrix $\bb{U}$ can be expressed as
 \begin{alignat}{1}
 	\label{rotation:1} \bb{U} =
 	  \begin{pmatrix}
@@ -71,77 +133,16 @@ The source of CPV in the neutrino sector is ultimately attributable to the funda
 \end{alignat}
 where the subscript $\nu$ refers to neutrino states while $\ell$ refers to charged lepton states. We have specifically defined the charged leptons flavor states as being simultaneously mass eigenstates without a loss of generality. We will not consider oscillation among the charged leptons, though that may be an avenue of further study~\citep{akhmedov2007charged}. We note that being unitary, the matrix $\bb{V}$ can diagonalize the Hermitian square of the mass matrices as well as the mass matrices themselves.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Neutrino magnetic moments}\label{sec:moment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent As neutrinos are electrically neutral, they have no intrinsic magnetic moment due to their spin, therefore any magnetic moment present is considered anomalous. A small anomalous magnetic moment (AMM) can be introduced into the Lagrangian~\citep{itzykson2012quantum,steinmetz2018magnetic} for the neutrino via a Pauli term. As our focus is on effective field theories, we will not worry with the fact that the Pauli Lagrangian is 5-Dimensional and thus fails to be renormalizable. The Pauli Lagrangian for the AMM for Majorana-like neutrinos in the flavor basis is given by
-\begin{align}
-	\label{moment:1} -\mathcal{L}_{\mathrm{AMM}}^{\mathrm Maj.}=\frac{1}{2}\bb{\bar{\nu}_{f}^{L}}\bb{\mu}\frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\left(\bb{\nu_{f}^{L}}\right)^{c}+\mathrm{h.c.}
-\end{align}
-The matrix $\bb{\mu}$ are the AMM couplings while $F^{\alpha\beta}$ is our standard electromagnetic field tensor. The expression $i\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}/2$ can be evaluated using standard notation as
-\begin{align}
-	\label{convention:1}
-    \frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta} = \frac{i}{c}\bb{\alpha}\cdot\bb{E}-\bb{\Sigma}\cdot\bb{B}\,,\\
-	\label{convention:2}
-    \bb{\alpha}=\gamma_{0}\bb{\gamma}\,,\qquad
-    \vec{\Sigma}=\gamma_{5}\bb{\alpha}\,,\qquad
-    \gamma_{5}=i\gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3}\,,\qquad
-    \gamma_{5}^{2}=\mathbbm{1}\,.
-\end{align}
-We denote our conventions for the $\gamma$ matrices in~\req{convention:2}. In principle an electric dipole can also be included via the substitution
-\begin{align}
-    \label{electric:1}
-    \bb{\mu}\rightarrow\bb{\mu}+i\gamma^{5}\bb{\epsilon}
-\end{align}
-
-It is important to note that because of CPT considerations, Majorana neutrino are forbidden diagonal magnetic moments and can only have off-diagonal transition moments. Since transition AMM elements serve to break lepton number conservation, it suggests than neutrinos could be \lq\lq remixed\rq\rq\ when exposed to strong electrodynamic fields similar to remixing within matter in the Mikheyev-Smirnov-Wolfenstein (MSW) effect~\citep{wolfenstein1978neutrino,mikheev1985resonance,bethe1986possible,greiner2009gauge}. 
-
-We can combine the AMM contribution and the mass term in~\req{mass:1} and~\req{moment:1} to write an effective Lagrangian containing both terms as
-\begin{align}
-	\label{massmom:1}
-    \mathcal{L}_{\mathrm eff}^{\mathrm Maj.}=\mathcal{L}_{\mathrm mass}^{\mathrm Maj.} + \mathcal{L}_{\mathrm AMM}^{\mathrm Maj.}=-\frac{1}{2}\bb{\bar{\nu}_{f}^{L}}\left(\bb{M}_{\nu}+\bb{\mu}\frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\left(\bb{\nu_{f}^{L}}\right)^{c}+\mathrm{h.c.}
-\end{align}
-The generalized mass-dipole matrix $\bb{\mathcal M}$ present in \req{massmom:1} can be cast in the following manner
-\begin{align}
-	\label{massmom:2}
-    {\bb{\mathcal{M}}}(\vec{E},\vec{B})\equiv\bb{M}_{\nu}+\bb{\mu}\frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\,.
-\end{align}
-Further, we can understand the mass matrix (in the flavor basis) as a diagonal part and traceless part
-\begin{align}
-	\label{massmom:3}
-    \bb{M}_{\nu}=\bb{m}+\bb{I}\,,\qquad
-    \bb{m}=\mathrm{diag}(m_{\nu_{e}},m_{\nu_{\mu}},m_{\nu_{\tau}})\,,\qquad
-    \mathrm{Tr}\left[\bb{I}\right] = 0 \,,
-\end{align}
-where $\bb{m}$ is the intrinsic flavor masses and $\bb{I}$ is the off-diagonal interaction coupling between flavors prescribed by BSM physics. Since neutrino oscillation is experimentally verified, the coupling matrix cannot be fully zero, though elements of the intrinsic flavor masses can. Depending on what theory generates the AMM elements, there is the possibility of non-Hermitian $\bb{\mu}$ with $\bb{\mu}^{\dagger}\neq\bb{\mu}$. Additionally, the conditions for $\bb{I}$ can be further constrained by group symmetry such as flavor SU(3). While non-Hermitian moments and group structure raise interesting possibilities, we will not explore them further here. 
-
-If we require that the mass matrix $\bb{M}_{\nu}$ be invertible, we can reparameterize the magnetic moment as 
-\begin{align}
-	\label{invert:1}
-    \mathbbm{1} = \bb{M}_{\nu}^{-1}\bb{M}_{\nu}\,,\qquad
-    \bb{\mu} = \bb{M}_{\nu}\bb{K}\,.
-\end{align}
-This allows \req{massmom:2} to be rewritten as
-\begin{alignat}{1}
-	\label{invert:2} {\bb{\mathcal{M}}} = \bb{M}_{\nu}\left(\mathbbm{1} + \frac{i}{2}\bb{K}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\,.
-\end{alignat}
-We note that \req{invert:2} suggests that there may by some perturbative connection between particle mass and magnetic moment whereas the magnetic moment signifies the presence of a complex phase. We've pointed out the potential connection between mass and magnetic moment in prior work~\citep{steinmetz2018magnetic} and note that this relationship would only manifest in strong fields where non-minimal coupled electromagnetism may be large. To this end we propose the following mass matrix as a possible ansatz
-\begin{alignat}{1}
-	\label{mass:eq:10} {\bb{\mathcal{M}}} = \bb{M}_{\nu}\,\mathrm{exp}\left(\frac{i}{2}\bb{K}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\right)\,,
-\end{alignat}
-which for weak fields $F\rightarrow0$ reduces to the prior form \req{invert:2}. Regardless of whether the perturbative connection exists, as written in \req{mass:eq:10}, the presence of magnetic moment should ultimately modify the flavor mixing matrix thus providing a connection between spin and flavor states.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Effective Hamiltonian}\label{sec:effective}
+\section{Effective Hamiltonian method for neutrino magnetic dynamics}\label{sec:effective}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent Following the concept that interactions (of any variety) can modify the mass matrices to cause a shift in both flavor mixing and CP violation, such as in matter, we need to ask in what manner electromagnetic dipoles can be inserted. The simplest reasoning would be to examine the Lagrangian of the theory and add the dipole moments as Pauli terms \ar which would combine with the mass terms seen in \req{mass:1} and \req{mass:2}, but this would end up modifying the mass matrices with only the \emph{anomalous} dipole moments of the particles. While for neutral particles, such as neutrinos, the anomalous moment is the entire moment, this procedure would be incomplete for charged particles such as the quarks where strong field modification of the J-invariant is worth exploring.
 
 One reasonable justification for the modification of the mass matrices would be to consider defining the J-invariant in terms of the neutrino Hamiltonian as is done in beam experiments. In this, we look at the second-order single generation neutrino wave equation given by 
 \begin{alignat}{1}
-	\label{kgp:1} \left(\mathcal{D}^{2}-m^{2}c^{4}-\mu mc^{2}\frac{\sigma\cdot F}{2}\right)\Psi=0\,,\\
-	\label{kgp:2} \mu\equiv\frac{g}{2}\frac{e\hbar}{2m}=\frac{g}{2}\mu_{B}\,,\indent \mathcal{D}_{\mu}=i\hbar c\partial_{\mu}-eA_{\mu}\,,
+	\label{nkgp:1} \left(\mathcal{D}^{2}-m^{2}c^{4}-\mu mc^{2}\frac{\sigma\cdot F}{2}\right)\Psi=0\,,\\
+	\label{nkgp:2} \mu\equiv\frac{g}{2}\frac{e\hbar}{2m}=\frac{g}{2}\mu_{B}\,,\indent \mathcal{D}_{\mu}=i\hbar c\partial_{\mu}-eA_{\mu}\,,
 \end{alignat}
-where $\mu_{B}$ is the Bohr magneton. \req{kgp:1} is also referred to as the Klein-Gordon-Pauli (KGP) equation. \ar From this, we'd like to derive a first order Hamiltonian by considering energy eigenstates
+where $\mu_{B}$ is the Bohr magneton. \req{nkgp:1} is also referred to as the Klein-Gordon-Pauli (KGP) equation. \ar From this, we'd like to derive a first order Hamiltonian by considering energy eigenstates
 \begin{alignat}{1}
 	\label{eigen:1} \Psi = \Phi_{E}e^{-iEt/\hbar}\,,
 \end{alignat}
@@ -152,7 +153,7 @@ which for neutral particles in a pure magnetic field $B$ yields
 for anti-aligned and aligned spin eigenstates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Relativistic Case}\label{rel}
+\subsection{Electromagnetic and matter influence on laboratory experiments}\label{rel}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent\req{eigen:2} in the ultrarelativistic limit $p\gg mc$ is then, up to order $\mathcal{O}(p^{-2})$,
 \begin{alignat}{1}
@@ -188,7 +189,7 @@ Another consequence of \req{heff:1} is the spin-dependant nature of the effectiv
 The mass-dipole potential may have cosmological applications however in Early Universe conditions (or Early Universe-like conditions such as QGP) where the local magnetic fields can become truly gargantuan reaching many times the Schwinger critical field strength. \ar Another line of inquiry would be in highly magnetized neutron stars or magnetars \ar where magnetic field strengths may be strong enough to make the tiny magnetic moment of the neutrino relevant.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Non-relativistic Case}
+\subsubsection{Cosmic non-relativistic neutrinos}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent The other regime where an effective Hamiltonian can be defined is the non-relativistic case of $p<<mc$. The KGP energy eigenstate \req{eigen:2} can be written as, up to order $\mathcal{O}(m^{-2})$,
 \begin{alignat}{1}
@@ -227,7 +228,7 @@ The benefit of $J$ is it captures the \lq\lq size\rq\rq\ of CPV in a single valu
 While generally CPV comes exclusively from the presence of three flavor generations in the Standard Model, we would like to expand the usage of the J-invariant to encompass a generalized family of CP violating theories whether that CPV arises from the number of flavor generations, specific systems (matter, strong fields, etc...) which inherently break CP, or explicitly in CP violating terms in the Lagrangian such as the presence of electric dipoles.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{CP violation amplification}\label{sec:amp}
+\subsection{Amplification and generation of CP violation by magnetic fields}\label{sec:amp}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent While the specific change to neutrino mixing and CPV depends on the model of the neutrino dipole moment, a demonstrative model would be to assume that the $\bb{\kappa_{\nu}}$ matrix was simply proportional to the natural mass matrix of the neutrino at low order. If the same mechanism which produced neutrino masses also produced their dipoles through some BSM physics, this would not be an unreasonable assumption. Therefore we substitute
 \begin{alignat}{1}

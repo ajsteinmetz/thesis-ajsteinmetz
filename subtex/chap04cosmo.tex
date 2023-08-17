@@ -5,7 +5,7 @@
 \noindent This chapter primarily is a review of the research published in \lq\lq Antimatter origin of cosmic magnetism: A first look\rq\rq\ by Steinmetz et. al. (2023) which is printed in Appendix E in full.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Magnetization}
+\section{Electron-positron plasma magnetization}
 \label{section:magnetization}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent When exposed to external magnetic fields, matter can become magnetized enhancing or reducing the overall net field within the material. The origin of this magnetization is well known to be quantum mechanical in origin. The magnetic susceptibility $\chi$ is a measure of the material response given by
@@ -89,9 +89,9 @@ This reveals that only the mass contribution is dynamic over cosmological time. 
     \label{XDP} X_{n}^{s}\vert_{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-s\right)}-\frac{eB}{2mT}(g-2)s\right)^{2}+\frac{p_{z}^{2}}{T^{2}}}\,,
 \end{alignat}
 which over cosmological time under expansion scales as
-\begin{alignat}{1}
-    \label{XScaleDP} X_{n}^{s}[a(t)]\vert_{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-s\right)}-\frac{eB(t_{0})}{2mT(t_{0})}\frac{a(t_{0})}{a(t)}(g-2)s\right)^{2}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}}\,.
-\end{alignat}
+\begin{multline}
+    \label{XScaleDP} X_{n}^{s}[a(t)]\vert_{DP} =\\ \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-s\right)}-\frac{eB(t_{0})}{2mT(t_{0})}\frac{a(t_{0})}{a(t)}(g-2)s\right)^{2}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}}\,.
+\end{multline}
 We note here one important difference between KGP and DP eigen-energies in the context of cosmology: The anomalous magnetic moment portion of the DP statistics is suppressed by $1/a(t)$ over cosmological time while the AMM contribution is preserved in the KGP model. That the universe's expansion makes a distinction between $g=2$ magnetic moment and AMM for DP fermions appears as a rather artificial and nonphysical trait. While the suppression of AMM may often be small for particles such as electrons, this suppression is non-trivial for particles with large AMM values such as the proton. That cosmological redshift would push DP protons to be described by $g=2$ eign-energies in the non-relativistic limit counts as a malaise for the model and further strengthens our thinking that the KGP model is more appropriate for cosmological studies. Motivated by \req{XScale}, we can introduce a dimensionless cosmic magnetic scale which is frozen in the homogeneous case as
 \begin{alignat}{1}
     \label{Bo} b_{0}\equiv\frac{eB}{T^{2}}=\frac{eB\hbar c^{2}}{(k_{B}T)^{2}}\ \mathrm{(S.I)}\,,
@@ -169,9 +169,10 @@ Via substitution of dimensionless variables, and some rearrangment, we can write
     \label{Equality} \ln\left(\mathcal{Z}^{\sigma}_{s}\right) = \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}} + \frac{2eBL^{3}}{(2\pi)^{2}}m_{s}\int_{0}^{+\infty}dy\left(\frac{1}{2}f(0) + \frac{1}{12}\frac{\partial f(n)}{\partial n}\bigg\rvert_{n=0} + R(1)\right)\,,
 \end{alignat}
 where we have dropped the spin subscript from the dimensionless z-momentum $y$ as it is does not impact the limits of integration. The free-like portion of the partition function is given by
-\begin{alignat}{1}
-    \label{Freelike} \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}=\frac{L^{3}}{(2\pi)^{3}}\int^{+\infty}_{-\infty}d\bb{p}^{3}\ln\left(1+z_{\sigma}\exp(-X^{s}_{F})\right)\,,\qquad X^{s}_{F} = X^{s}\vert_{u_{s}=0} = a_{s}\sqrt{1+y^{2}}\,,
-\end{alignat}
+\begin{align}
+    \label{Freelike} \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}=\frac{L^{3}}{(2\pi)^{3}}\int^{+\infty}_{-\infty}d\bb{p}^{3}\ln\left(1+z_{\sigma}\exp(-X^{s}_{F})\right)\,,\\
+    X^{s}_{F} = X^{s}\vert_{u_{s}=0} = a_{s}\sqrt{1+y^{2}}\,,
+\end{align}
 In dimensionless units we can represent \req{Freelike} as
 \begin{alignat}{1}
     \label{FreelikeAlt} \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}=\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\int^{+\infty}_{-\infty}dy\left[y^{2}\ln\left(1+z_{\sigma}\exp(-X^{s}_{F})\right)\right]\,,
@@ -193,7 +194,9 @@ with the total magnetization given by the sum over the four species
 \begin{alignat}{1}
     \label{TotalFreeMag} M_{F}=\sum_{s,\sigma}M_{F}^{s,\sigma}\,.
 \end{alignat}
-The term by term magnetization evalutes as
-\begin{align}
-  \label{MagExplicit} M_{F}^{s,\sigma} = \frac{e(1-gs)}{2m_{s}}\left(\frac{5}{m_{s}}\ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}-\frac{1}{3}\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\left(\frac{m_{s}}{T}\right)^{2}\int_{-\infty}^{+\infty}dt\left[z_{\sigma}^{-1}e^{a_{s}\cosh(t)}\cosh(t)\sinh^{4}(t)F^{2}\left[X_{s},\sigma\right]\right]\right)
-\end{align}
+The term by term magnetization evaluates as
+\begin{multline}
+  \label{MagExplicit} M_{F}^{s,\sigma} = \frac{e(1-gs)}{2m_{s}}\frac{5}{m_{s}}\ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}\\
+  -\frac{e(1-gs)}{2m_{s}}\frac{1}{3}\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\left(\frac{m_{s}}{T}\right)^{2}
+  \int_{-\infty}^{+\infty}dt\left[z_{\sigma}^{-1}e^{a_{s}\cosh(t)}\cosh(t)\sinh^{4}(t)F^{2}\left[X_{s},\sigma\right]\right]\,,
+\end{multline}

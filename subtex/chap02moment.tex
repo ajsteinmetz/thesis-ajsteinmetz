@@ -1,55 +1,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Magnetic dipoles in quantum and classical theory}
+\chapter{Dynamics of charged particles with arbitrary magnetic moment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent This chapter reviews our work done in exploring relativistic dynamics with arbitrary magnetic dipoles in both a quantum mechanical and classical context. \rsec{sec:kgpapplications} is primarily based on~\cite{Steinmetz:2018ryf} and covers analytic solutions for the Klein-Gordon-Pauli (KGP) equation in the presence of homogeneous magnetic fields (\rsec{sec:homogeneous}) and the Coulomb problem (\rsec{sec:coulomb}) for hydrogen-like atoms. Comparisons with the Dirac-Pauli (DP) and Dirac solutions are made and novel consequences for strong fields are discussed.
+
+\rsec{sec:kgptopics} covers special topics related to KGP including a proposal which couples mass and magnetic moment (\rsec{sec:ikgp}) and an extension to particles (such as quarks) which are charged under both Albelian and non-Albelian fields (\rsec{sec:quarks}). The second special topic is yet unpublished outside this dissertation.
+
+Relativistic classical spin dynamics is discussed in \rsec{sec:cspin} and is based on our work in~\cite{Rafelski:2017hce}. We propose in \rsec{sec:magpotential} a covariant form of magnetic dipole potential which modifies the Lorentz force, extends the Thomas-Bargmann-Michel-Telegdi (TMBT) equation, and reproduces the Stern-Gerlach force in the non-relativistic limit. \rsec{sec:ampgil} discusses our finding that this magnetic potential also serves to unify both the Amp{\`e}rian and Gilbertian pictures of dipole moments.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Analytic solutions of the Klein-Gordon-Pauli equation}
+\label{sec:kgpapplications}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Dirac and Dirac-Pauli equations}\label{ajsss:diracpauli}
-The most straight-forward manner to generalize the magnetic moment for relativistic fermions is to add a Pauli term to the Dirac equation proportional to the anomalous portion. While in most texts, the moment is given in terms of g-factor \lq\lq$g$\rq\rq\ or the anomaly \lq\lq$a$\rq\rq\ we wish to keep our equations general to particles of any given charge $e$ and magnetic moment $\mu$.
-
-We then consider the substitution
-\begin{alignat}{1}
-	\label{eq:diracpauli:01a} a\frac{e\hbar}{2m_{\ell}}\longrightarrow\delta\mu\equiv\mu-\mu_{\ell}\,,
-\end{alignat}
-where $\mu_{\ell}$ is the lepton magneton as previously defined. The Dirac-Pauli (DP) equation then reads as
-\begin{alignat}{1}
-	\label{eq:diracpauli:01b} \left(\gamma_{\alpha}(i\hbar\partial^{\alpha}-eA^{\alpha})-m_{\ell}c-\delta\mu\frac{1}{2c}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\psi=0\,,
-\end{alignat}
-where the spin tensor is defined as
-\begin{alignat}{1}
-	\label{eq:diracpauli:02} \sigma_{\alpha\beta}=\frac{i}{2}\left[\gamma_{\alpha},\gamma_{\beta}\right]\,.
-\end{alignat}
-The wave function $\psi$ here is then a four-component spinor. When the anomalous part is zero, the standard Dirac equation is recovered. For charged leptons, the Pauli term can be understood to be a vacuum contribution which modifies the photon 3-vertex. This term can be further expressed as
-\begin{alignat}{1}
-	\label{eq:diracpauli:03} \frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}=\frac{i}{c}\bb{\alpha}\cdot\bb{E}-\bb{\Sigma}\cdot\bb{B}\,,
-\end{alignat}
-which captures that relativistic magnetic moments should be sensitive to electric as well as magnetic fields. This should be unsurprising if one considers how the non-relativistic dipole form must generalize under Lorentz boost. The Pauli term also informs how to construct the generalized electric dipole. The generalization to include the electric dipole is
-\begin{alignat}{1}
-	\label{eq:diracpauli:04} \delta\mu\rightarrow\delta\tilde{\mu}\equiv\delta\mu+i\epsilon\gamma^{5}\,,
-\end{alignat}
-where $\epsilon$ is the electric dipole of the lepton. As the natural electric dipole within the Dirac equation is zero, the presence of $\epsilon$ is always considered anomalous. We will use the following conventions throughout the remainder of the report
-\begin{alignat}{1}
-	\label{eq:diracpauli:05} \bb{\alpha}=\gamma_{0}\bb{\gamma}\,,\indent \bb{\Sigma}=\gamma_{5}\bb{\alpha}\,,\indent \gamma_{5}=i\gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3}\,,\indent \gamma^{2}_{5}=1\,.
-\end{alignat}
-Exact solutions to the DP equation are relatively scarce due to the complicating nature of the anomalous term. The most extensively studied solutions are those with high symmetries or constant external fields \cite{Thaller:2013,Bagrov:2014}.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Klein-Gordon-Pauli equation}
-\noindent While the DP equation is more commonly used, there exists an alternative wave equation which describes the magnetic behavior of fermions called the Klein-Gordon-Pauli (KGP) equation. This equation is physically distinct from the DP and Dirac equations and only share solutions when $g=2$. The KGP equation is generally considered to be the \lq\lq square\rq\rq\ of the Dirac equation as unlike the Dirac or DP equations, it is a second order equation given by
-\begin{alignat}{1}
-	\label{eq:kgp:01} \left((i\hbar\partial-eA)^{2}-m_{\ell}^{2}c^{2}-\left(\mu+i\epsilon\gamma^{5}\right)m_{\ell}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=0\,.
-\end{alignat}
-This equation is mathematically similar to the Klein-Gordon equation which describes charged scalar particles. Because the covariant derivative is squared, the above equation results in a $e^{2}A^{2}$ term which represents the presence of a 4-vertex seagull coupling between two fermion lines and two photons to maintain charge gauge invariance. For a g-factor of $g=2$, the equation reduces to the square of the Dirac equation which is explicitly shown in \req{eq:kgp:03}. If we define the Dirac operator as
-\begin{alignat}{1}
-	\label{eq:kgp:02} \mathcal{D}_{\pm}=\gamma_{\alpha}(i\hbar\partial^{\alpha}-eA^{\alpha})\pm m_{\ell}c\,,\indent\mathcal{D}_{-}=-\gamma^{5}\mathcal{D}_{+}\gamma^{5}\,,
-\end{alignat}
-in terms of a positive and negative mass, we can complete the square of the Dirac equation via the substitution
-\begin{alignat}{1}
-	\label{eq:kgp:03} \mathcal{D}_{+}\psi\rightarrow\mathcal{D}_{+}\mathcal{D}_{-}\Psi\,,\indent\mathcal{D}_{+}\mathcal{D}_{-}\Psi=\left((i\hbar\partial-eA)^{2}-m_{\ell}^{2}c^{2}-\frac{e\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=0\,.
-\end{alignat}
-This procedure yields \req{eq:kgp:01} or the KGP equation for $g=2$. More generally however, the KGP equation is able to describe fermions of any arbitrary magnetic and electric moments. The KGP equation was first introduced by Fock \cite{Fock:1937dy} and more thoroughly examined by Feynman and Gell-Mann \cite{Feynman:1958ty} for weak interactions. The initial benefit of the KGP formulation is that the wave equation fully commutes with $\gamma^{5}$ making all eigenfunctions good chiral states though at the expense of more complicated parity relationships.
-
+\subsection{Homogeneous magnetic fields}
+\label{sec:homogeneous}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{KGP in homogeneous fields}\label{ajsss:homogeneous}
 \noindent The case of the homogeneous magnetic field, sometimes referred to as the Landau problem, provides a stepping stone in which to examine all other consequences of quantum spin dynamics. We take a constant magnetic field in the $z$-direction to be
 \begin{alignat}{1}
 	\label{eq:homogeneous:01} \bb{B}=B\hat{z}\,.
@@ -154,14 +121,14 @@ The resulting eigenvalues, dropping the relativistic subscripts, are then given 
 To obtain the Dirac levels, simply set $g=2$. In this equation, we can clearly see the energy contribution contains an orbital part, which houses the transverse $x$ and $y$-momentum, and a magnetic contribution which can either raise of lower the level. In the Dirac case, there is a degeneracy among Landau levels as in the non-relativistic case which is then broken by the presence of the anomaly.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{KGP for hydrogen-like atoms}
+\subsection{Hydrogen-like atoms}
+\label{sec:coulomb}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Charged-Coulomb Problem}\label{ajsss:coulomb}
 The Coulomb problem, or sometimes referred to as the Kepler problem, provides us with a standard application of any quantum theory to explore. As the hydrogen-like atom is the most well understood atomic system in physics, any non-minimal behavior especially for high-$Z$ systems can lead to dramatic consequences for the resulting spectra. We take the Coulomb potential to be
 \begin{equation}
 	\label{eq:coulomb:01} V_\mathrm{C}\equiv e A^{0}=\frac{Z \alpha\hbar c}{r}\;,\qquad \vec{A}=\vec{0}\;.
 \end{equation}
-The KGP-Coulomb problem can be solved analytically {\color{red}Add citation.} We will briefly sketch out the solution and its consequences. For energy states $\Psi=e^{-iEt/\hbar}\Psi_{E}$ the KGP equation yields the following differential equation
+The KGP-Coulomb problem can be solved analytically \ar We will briefly sketch out the solution and its consequences. For energy states $\Psi=e^{-iEt/\hbar}\Psi_{E}$ the KGP equation yields the following differential equation
 \begin{alignat}{1}
 	\label{cou02} \left(\frac{E^{2}-m^{2}c^{4}}{\hbar^{2}c^{2}}+\frac{Z^{2}\alpha^{2}}{r^{2}}+\frac{2E}{\hbar c}\frac{Z\alpha}{r}+\frac{1}{r}\frac{\partial^{2}}{\partial r^{2}}r-\frac{L^{2}/\hbar^{2}}{r^{2}}-\frac{g}{2}Z\alpha\frac{i\vec{\alpha}\cdot\hat{r}}{r^{2}}\right)\Psi_{E}=0\;.
 \end{alignat}
@@ -169,7 +136,7 @@ We recast the squared angular momentum operator $L^{2}$ with the Dirac spin-alig
 \begin{alignat}{1}
 \label{cou04} &\mathcal{K}=\gamma^{0}\left(1+\bb{\Sigma}\cdot\frac{\bb{L}}{\hbar}\right)\;,\indent L^{2}/\hbar^{2}=\mathcal{K}\left(\mathcal{K}-\gamma^{0}\right)\;.
 \end{alignat}
-The operator $\mathcal{K}$ commutes with $\vec{\alpha}\cdot\hat{r}$ and its eigenvalues are given as either positive or negative integers $\kappa=\pm(j+1/2)$ where $j$ is the total angular momentum quantum number. By grouping all terms proportional to $1/r^{2}$, we see the effective angular momentum eigenvalues take on non-integer values which in the limit of classical mechanics corresponds to orbits which do not close. {\color{red}Add citation.} The non-integer eigenvalues depends explicitly on $g$-factor. The difficulty of this equation is that the effective angular momentum operator is non-diagonal in spinor space due to the presence of $\vec{\alpha}\cdot\hat{r}$ which mixes upper and lower components. The effective radial potential within \req{cou02} is then
+The operator $\mathcal{K}$ commutes with $\vec{\alpha}\cdot\hat{r}$ and its eigenvalues are given as either positive or negative integers $\kappa=\pm(j+1/2)$ where $j$ is the total angular momentum quantum number. By grouping all terms proportional to $1/r^{2}$, we see the effective angular momentum eigenvalues take on non-integer values which in the limit of classical mechanics corresponds to orbits which do not close. \ar The non-integer eigenvalues depends explicitly on $g$-factor. The difficulty of this equation is that the effective angular momentum operator is non-diagonal in spinor space due to the presence of $\vec{\alpha}\cdot\hat{r}$ which mixes upper and lower components. The effective radial potential within \req{cou02} is then
 \begin{alignat}{1}
 	\label{temp} V_{\rm eff}=-\frac{2E}{\hbar c}\frac{Z\alpha}{r}
 \end{alignat}
@@ -271,33 +238,12 @@ which even for enormous magnetic fields does not deviate significantly from the 
 The situation is different for composite particles such as the proton, neutron and light nuclei whose anomalous magnetic moments are dominated by their internal structure and not by vacuum fluctuations. In this situation we expect that the AMM interaction in high magnetic fields remains significant. Therefore, asking whether the DP or KGP equations better describes the dynamics of composite hadrons and atomic nuclei in presence of magnetar strength fields is a relevant question despite the standard choice in literature being the DP equation~\cite{Broderick:2000pe}. The same question can be asked for certain exotic hydrogen-like atoms where the constituent particles have anomalous moments which can be characterized as an external parameter. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Technical quibbles with magnetic moment Lagrangian}
-The Dirac-Pauli equation can be obtained from perturbative QED \cite{Itzykson:1980rh,Thaller:2013,Schwartz:2014sze} as an effective field theory for leptons due to vacuum polarization. However, if a particle's anomalous magnetic moment is not sourced by pertubative QFT terms, then the Pauli term must be added by hand \emph{ad-hoc}. This is the case for the hadronic contribution to anomalous magnetic moment of leptons as well as any composite particle such as the proton or neutron whose moment is determined by internal structure. {\color{red}Add cite.} There is no reason to expect nonperturbative sources of magnetic moment to strictly adhere to the DP form. Additionally, the DP equation has the physically inelegant consequence of splitting the spin dynamics of fermions into a natural behavior encompassed by the spinor structure of the Dirac equation and the anomalous behavior contained in the Pauli term. This is not the case for the KGP equation or Dirac equations where the magnetic moment is entirely described by the same mathematical formalism of a Pauli term in the case of KGP and the spinor structure of the gamma matrices in the case of the Dirac equation.
-
-As a quantum field theory, both DP and KGP run into difficulties, though each inherits a different problem. The Lagrangian which produces the DP equation is identical to the Dirac Lagrangian except for the addition of the anomalous interaction
-\begin{alignat}{1}
-	\label{eq:problems01} \mathcal{L}_{\mathrm{DP,AMM}}=-a\mu_{\ell}\bar{\psi}\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\psi\,.
-\end{alignat}
-This Lagrangian interaction has a coefficient of $[length]^{1}$ in natural units which makes it unsuitable for renormalization which is an essential feature required for the QFT to describe differing energy scales. While this does not stop us using DP as an effective QFT with some natural cutoff scale responsible for the anomalous moment, it does reduce the usefulness of the equation as a general description of quantum dipole moments.
-
-The KGP equation can be obtained from a Lagrangian not dissimilar to the Klein-Gordon Lagrangian and has the expression
-\begin{alignat}{1}
-	\label{eq:problems02} \mathcal{L}_{\mathrm{KGP}}=\hbar^{2}c^{2}\left(\nabla^{\alpha}_{\mathrm{A}}\bar{\Psi}\right)h_{\alpha\beta}\left(\nabla^{\beta}_{\mathrm{A}}\Psi\right)-m^{2}c^{4}\bar{\Psi}\Psi\,.
-\end{alignat}
-For $g\neq2$ the relationship between the DP and KGP equation becomes more complicated. Instead of a simpler root, the linearized KGP Lagrangian requires an infinite series expansion \cite{Veltman:1997am} resulting from the non-local inverse substitution 
-\begin{alignat}{1}
-	\label{eq:kgp:04} \Psi\rightarrow\frac{1}{\mathcal{D}_{-}}\psi=\frac{1}{i\hbar\gamma_{\alpha}\partial^{\alpha}-m_{\ell}c}\left(1-\frac{1}{i\hbar\gamma_{\alpha}\partial^{\alpha}-m_{\ell}c}e\gamma_{\alpha}A^{\alpha}+\ldots\right)\psi\,.
-\end{alignat}
-This non-local behavior ultimately breaks the unitarity of the theory making it also unsuitable as a fundamental particle theory. If a generalized description of magnetic moment outside $g=2$ theories exists and makes a good fundamental quantum field theory, then likely non-minimal electromagnetic terms are required to maintain both renormalization and unitarity.
-
-%{\color{red} Thought: What about ``strong field case'' where $A^{\alpha}$ is very large, even compared to the momentum states, would the expansion yield a nicer result? In otherwords, can strong fields restore unitarity?}
-
-%{\color{red}Here we talk about some of the problems DP has. The theory is non-renormalizable. It spits the magnetic behavior into two very different mathematical regimes. The QED vacuum contribution to the electron \lq\lq melts\rq\rq\ in strong fields (though this might not affect the hadronic component) making DP it unsuitable. This last point is a light criticism of Ferrer and astrophysics community.}
-
+\section{Topics related to Klein-Gordon-Pauli}
+\label{sec:kgptopics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Beyond KGP}
+\subsection{Unification of mass and magnetic moment}
+\label{sec:ikgp}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Improvements to KGP}\label{ajsss:ext}
 While we've thus far focused on the Dirac-Pauli and Klein-Gordon-Pauli models for magnetic dipole moments, the non-uniqueness of spin dynamics allows us to invent further non-linear EM models which all in the non-relativistic limit yield the non-relativisitc QM magnetic dipole Hamiltonian. One such extension to quantum spin dynamics is to note the close relationship mass and magnetic moment share in the KGP formalism. We can write a unified dipole-mass as
 \begin{alignat}{1}
     \label{eq:ext:01} \widetilde{m}c^{2}=mc^{2}+\frac{i}{2}\mu\left(\gamma_{\alpha}\partial^{\alpha}\gamma_{\beta}A^{\beta}\right)\,,
@@ -314,10 +260,24 @@ This modified KGP formulation then requires spin sensitive mass and an explicit 
 \begin{alignat}{1}
     \label{eq:ext:04a} \delta V=-2\mu^{2}\left(\mathcal{S}+i\gamma^{5}\mathcal{P}\right)\,,\indent\mathcal{S}=\frac{1}{2}(\bb{B}^{2}-\bb{E}^{2})\,,\indent \mathcal{P}=\bb{E}\cdot\bb{B}\,.
 \end{alignat}
-This represents simply only one possible non-linear extension to electromagnetism in relativistic quantum mechanics of which there are a family of extensions. {\color{red}Add Foldy 1950 citation.}
+This represents simply only one possible non-linear extension to electromagnetism in relativistic quantum mechanics of which there are a family of extensions~\citep{Foldy:1952a}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Extensions to Non-Albelian fields}
+\subsection{Extensions to non-Albelian fields}
+\label{sec:quarks}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+While most attention in particle physics focusses on the dipole moments of fermions, it is well known that bosons with spin can also carry dipole moments. The most pertinant example is that of the W-boson which after electroweak symmetry breaking has a magnetic dipole term which is analogous to the Pauli term in KGP or DP for fermions. While a wide variety of spin-1 formulations exist, such as the Duffin-Kemmer formulation \ar, in the following discussion we will write in the Proca formulation as it is most similar to how electromagnetic fields, which are also spin-1 fields, are written. For a complex spin-1 field, the Proca action is given by
+\begin{alignat}{1}
+	\label{eq:proca:01a} \mathcal{L}_{\mathrm{Proca}} = -\frac{1}{2}\mathcal{F}_{\mu\nu}^{*}\mathcal{F}^{\mu\nu}+\frac{m^{2}c^{2}}{\hbar^{2}}B_{\mu}^{*}B^{\mu}\,,\\
+	\label{eq:proca:01b} \mathcal{F}^{\mu\nu}=\partial^{\mu}B^{\nu}-\partial^{\nu}B^{\mu}\,.
+\end{alignat}
+The Euler-Lagrangian equations of motion are then
+\begin{alignat}{1}
+	\label{eq:proca:02a} \partial_{\mu}\mathcal{F}^{\mu\nu}+\frac{m^{2}c^{2}}{\hbar^{2}}B^{\nu}=0\,,
+\end{alignat}
+which if the Lorenz gauge $\partial\cdot B=0$ is taken simplifies to a Klein-Gordon style second-order wave equation. If we gauge the fields giving the spin-1 field an electric charge, we can produce a theory which naturally generates a magnetic moment.
+
 Briefly, we would like to comment on the g-factor of the quarks who unlike the leptons also participate in the strong color interaction. Since color charge follows a more complex SU(3) group structure unlike the more straight forward U(1) of electromagnetism, the \lq\lq color magnetism\rq\rq\ of QCD requires more than just the analogous Pauli term to describe color dipole moments owing due to the fact that QCD has non-Abelian gauge fields. The quarks, like the leptons, should obey the quantum mechanical analogue of the energy-momentum relation seen in \req{eq:spin:03} with the only theoretical difference being a differing covariant derivative. The covariant derivative, written in terms of momentum, should appear as
 \begin{alignat}{1}
 	\label{eq:spin:08} \pi^{\alpha}=p^{\alpha}-g_{S}\mathcal{A}^{\alpha}\,,
@@ -338,20 +298,21 @@ where $f^{abc}$ are the structure constants of the SU(3) group. The resulting KG
 which mirrors the electromagnetic case except for the extension to the magnetic portion due to the non commuting fields. While in electromagnetism, DP and KGP approaches only differ in the presence of strong EM fields and are otherwise identical in the weak field limit, this cannot be equally said in QCD. The perturbative limit which justifies the DP approach for leptons is possible due to the small value of the fine structure constant. The equivalent coupling in QCD is however large and prevents the perturbative approach from functioning. In other words, the weak field correspondence is impossible for color forces and comparisons can only be made in the strong field regime where DP is ill-defined and deviates dramatically from the KGP approach. There is also the added complexity of $g\neq2$ for color dipole which may be separate from the notion of anomalous moments for magnetic dipoles allowing for the possibility of multiple g-factor parameters. In unifed theories where there exists a nonlinear connection between the different interactions, the theory may even include product terms of the various moments in the theory.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Spin-1 Particles}\label{ajss:proca}
-While most attention in particle physics focusses on the dipole moments of fermions, it is well known that bosons with spin can also carry dipole moments. The most pertinant example is that of the W-boson which after electroweak symmetry breaking has a magnetic dipole term which is analogous to the Pauli term in KGP or DP for fermions. While a wide variety of spin-1 formulations exist, such as the Duffin-Kemmer formulation {\color{red}(Add cite)}, in the following discussion we will write in the Proca formulation as it is most similar to how electromagnetic fields, which are also spin-1 fields, are written. For a complex spin-1 field, the Proca action is given by
-\begin{alignat}{1}
-	\label{eq:proca:01a} \mathcal{L}_{\mathrm{Proca}} = -\frac{1}{2}\mathcal{F}_{\mu\nu}^{*}\mathcal{F}^{\mu\nu}+\frac{m^{2}c^{2}}{\hbar^{2}}B_{\mu}^{*}B^{\mu}\,,\\
-	\label{eq:proca:01b} \mathcal{F}^{\mu\nu}=\partial^{\mu}B^{\nu}-\partial^{\nu}B^{\mu}\,.
-\end{alignat}
-The Euler-Lagrangian equations of motion are then
-\begin{alignat}{1}
-	\label{eq:proca:02a} \partial_{\mu}\mathcal{F}^{\mu\nu}+\frac{m^{2}c^{2}}{\hbar^{2}}B^{\nu}=0\,,
-\end{alignat}
-which if the Lorenz gauge $\partial\cdot B=0$ is taken simplifies to a Klein-Gordon style second-order wave equation. If we gauge the fields giving the spin-1 field an electric charge, we can produce a theory which naturally generates a magnetic moment.
-
+\section{Classical relativistic spin dynamics}
+\label{sec:cspin}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Classical Spin}\label{sec:cspin}
-\subsection{TBMT equations}
-\subsection{Covariant magnetic potential}
-\subsection{Unifying Amperian and Gilbertian dipoles}
+\noindent In classical theory, we consider the covariant dipole force which acts upon a particle due to its intrinsic magnetic moment. The generalized covariant Lorentz and dipole force is given by
+\begin{alignat}{1}
+  \label{LSG01} m\frac{\mathrm{d}u^{\alpha}}{\mathrm{d}\tau}&=eF^{\alpha\beta}u_{\beta}+dG^{\alpha\beta}u_{\beta}\,,\\
+  \label{LSG02} G^{\alpha\beta}&=\partial^{\alpha}F^{*\beta\gamma}s_{\gamma}-\partial^{\beta}F^{*\alpha\gamma}s_{\gamma}\,,
+\end{alignat}
+where $e$ and $d$ are the electric and dipole charges, and $F^{*}$ is the electromagnetic dual tensor. While the first term in equation~\eqref{LSG01} is the standard Lorentz force, the second term is a covariant formulation of the Stern-Gerlach (SG) force. Because the spin precession is sensitive to the force on a particle, the presence of a SG force will induce precession terms which are second order in spin. The generalized spin precession that corresponds to eq.~\eqref{LSG01} is therefore
+\begin{alignat}{1}
+  \notag\frac{\mathrm{d}s^{\mu}}{\mathrm{d}\tau}&=(1+\tilde{a})\frac{e}{m}F^{\mu\nu}s_{\nu}-\tilde{a}\frac{e}{m}u^{\mu}\left(u_{\alpha}F^{\alpha\beta}s_{\beta}\right)/c^{2}\\
+  \label{LSG03}&+(1+\tilde{b})\frac{d}{m}G^{\mu\nu}s_{\nu}-\tilde{b}\frac{d}{m}u^{\mu}\left(u_{\alpha}G^{\alpha\beta}s_{\beta}\right)/c^{2}\,.
+\end{alignat}
+The constants $\tilde{a}$ and $\tilde{b}$ are arbitrary allowing for extra terms not forbidden by special relativity. In the standard derivation of relativistic spin precession, in the form of the TBMT equation, the $\tilde{a}$ constant is associated with the anomalous magnetic moment. In allowing for spin precession sourced by a Stern-Gerlach dipole force, an additional constant $\tilde{b}$ must be introduced. The terms in eq.~\eqref{LSG02} involving the $G$ tensor are spin precession directly originating from dipole forces. In homogeneous electromagnetic fields, eq.~\eqref{LSG02} reduces to the standard TBMT equation.
+\subsection{Covariant magnetic potential and modified Lorentz force}
+\label{sec:magpotential}
+\subsection{Unifying Amperian and Gilbertian magnetic dipoles}
+\label{sec:ampgil}
