@@ -22,6 +22,11 @@ We note that generating PMFs with such large coherent length scales is nontrivia
 Magnetized baryon inhomogeneities which in turn would produce anisotropies in the cosmic microwave background (CMB)~\cite{Jedamzik:2013gua,Abdalla:2022yfr}. Jedamzik and Pogosian~\cite{Jedamzik:2020krr} propose further that the presence of a magnetic field of $B_{\rm PMF}\simeq0.1{\rm\ nG}$ could be sufficient to explain the Hubble tension.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Theory of thermal matter-antimatter plasmas}
+\label{sec:theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Magnetized fermion partition function}
 \label{sec:partition}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -111,10 +116,12 @@ In dimensionless units we can represent \req{Freelike} as
     \label{FreelikeAlt} \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}=\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\int^{+\infty}_{-\infty}dy\left[y^{2}\ln\left(1+z_{\sigma}\exp(-X^{s}_{F})\right)\right]\,,
 \end{alignat}
 Integrating by parts, we arrive at
-\begin{alignat}{1}
-    \label{FreelikeParts} \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}=\frac{1}{3}\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\left(\frac{m_{s}}{T}\right)\int^{+\infty}_{-\infty}dy\left[\frac{y^{4}}{\epsilon}F[X_{s},\sigma]\right]\,,\qquad \epsilon=m_{s}\sqrt{1+y^{2}}\,,\\
-    \label{FermD} F[X_{s},\sigma] = \frac{1}{\exp(X_{s})z_{\sigma}^{-1}+1}\,,
-\end{alignat}
+\begin{gather}{1}
+    \label{FreelikeParts} \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}=\frac{1}{3}\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\left(\frac{m_{s}}{T}\right)\int^{+\infty}_{-\infty}dy\left[\frac{y^{4}}{\epsilon}F[X_{s},\sigma]\right]\,,\\
+    \label{FermD}
+    \epsilon=m_{s}\sqrt{1+y^{2}}\,,\qquad
+    F[X_{s},\sigma] = \frac{1}{\exp(X_{s})z_{\sigma}^{-1}+1}\,,
+\end{gather}
 where $\epsilon$ is the free eigen-energy and $F$ is the Fermi particle(antiparticle) distribution. By introducing a change of variables of $y=\sinh(t)$ this simplifies to
 \begin{alignat}{1}
     \label{FreelikeFinal} \ln\left(\mathcal{Z}^{\sigma}_{F}\right)|_{m_{s}}=\frac{1}{3}\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\left(\frac{m_{s}}{T}\right)\int^{+\infty}_{-\infty}dt\left[\frac{\sinh(t)^{4}}{\exp(a_{s}\cosh(t))z_{\sigma}^{-1}+1}\right]\,,
@@ -122,7 +129,7 @@ where $\epsilon$ is the free eigen-energy and $F$ is the Fermi particle(antipart
 This integrand is well behaved and has a finite integration value within the restriction that $m_{s}$ remains physical.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Boltzmann limit approach}
+\subsection{Boltzmann approach to electron-positron plasma}
 \label{sec:boltzmann}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent We now proceed with the Boltzmann approximation for the limit where $T\lesssim m_e$. The partition function shown in equation \req{partition} can be written removing the logarithm as
@@ -192,7 +199,7 @@ For matter $(\sigma=+1)$ and antimatter $(\sigma=-1)$ particles, a nonzero chemi
 where $\lambda$ is the fugacity of the system. The chemical potential defined in \req{cpotential} is obtained from the requirement that the positive charge of baryons (protons, $\alpha$ particles, light nuclei produced after BBN) is exactly and locally compensated by a tiny net excess of electrons over positrons.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Electron-positron plasma magnetization}
+\section{Relativistic paramagnetism of the electron-positron plasma}
 \label{sec:magnetization}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent When exposed to external magnetic fields, matter can become magnetized enhancing or reducing the overall net field within the material. The origin of this magnetization is well known to be quantum mechanical in origin. The magnetic susceptibility $\chi$ is a measure of the material response given by
@@ -238,7 +245,7 @@ As the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Spin potential and self-magnetization}
+\section{Hypothesis of ferromagnetic self-magnetization}
 \label{sec:self}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
