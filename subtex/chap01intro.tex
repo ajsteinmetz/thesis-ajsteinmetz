@@ -3,16 +3,18 @@
 \label{sec:pubs}
 \addcontentsline{toc}{chapter}{PUBLICATIONS AND AUTHOR CONTRIBUTIONS}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In the course of satisfying the University of Arizona Department of Physics's requirements for a Ph.D. doctoral thesis, I prepared the following publications which are reprinted in full in the appendices. This is not a total list of all my research efforts, but these publications do originate the majority of content in this dissertation. These articles are not ordered chronologically, but in the contextual order of presentation in this document. My contribution to each work is described under each item.
+In the course of satisfying the University of Arizona Department of Physics's requirements for a Ph.D. doctoral dissertation, I prepared the following publications which are reprinted in full in the appendices. These articles are not ordered chronologically, but in the contextual order of presentation in this document. My contribution to each work is described under each item.
 \begin{itemize}
     \item \rapp{appendixA} - \lq\lq Magnetic dipole moment in relativistic quantum mechanics\rq\rq\ by Steinmetz et. al. (2019) is a study and comparison of DP and KGP wave equations for homogeneous magnetic fields and hydrogen-like atoms. I performed all computation, writing, and figure making in preparation of the first draft and approved the final draft before submission. I acknowledge the help and consultation of Martin Formanek (MF) and Johann Rafelski (JR) in research, writing and editing.
     \item \rapp{appendixB} - \lq\lq Strong fields and neutral particle magnetic moment dynamics\rq\rq\ by Formanek et. al. (2018) is an overview of our research group's efforts in studying neutral particle dynamics in electromagnetic fields. I wrote Section 2.1 in collaboration with MF. I consulted and helped lead author MF and co-authors Stefan Evans (SE) and Cheng Tao Yang (CTY) in editing and revising the overall manuscript.
     \item \rapp{appendixC} - \lq\lq Relativistic dynamics of point magnetic moment\rq\rq\ by Rafelski et. al. (2018) introduces a new covariant formulation of classical spin dynamics and unifies Gilbertian and Amp{\`e}rian dipoles. I wrote Section 3 in collaboration with JR and MF and aided in the computation in Section 5.1. I otherwise consulted in the research, writing, and editing process of this publication. 
     \item \rapp{appendixD} - \lq\lq A Short Survey of Matter-Antimatter Evolution in the Primordial Universe\rq\rq\ by Rafelski et. al. (2023) is a 50 page long review with many novel results describing the role of antimatter in the early universe. I, in collaboration with CTY,  supervised the document creation, combining the writing contributions of all authors (including myself, Jeremiah Birrell (JB), CTY, and JR) into one coherent presentation. I also coordinated with all authors in formatting and editing the technical figures in this review by JB, CTY, and JR.
-    \item \rapp{appendixE} - \lq\lq Antimatter origin of cosmic magnetism: A first look\rq\rq\ by Steinmetz et. al. (2023) proposes a model of para-magnetization driven by the large matter-antimatter (electron-positron) content of the early universe. I carried out all writing in preparation of the first draft and approved the final draft before submission. Computation and figure making was done in collaboration with CTY who contributed key results and four technical figures. I acknowledge the help and consultation of CTY and JR in research, writing and editing.
+    \item \rapp{appendixE} - \lq\lq Antimatter origin of cosmic magnetism: A first look\rq\rq\ by Steinmetz et. al. (2023) proposes a model of para-magnetization driven by the large matter-antimatter (electron-positron) content of the early universe. I carried out all writing in preparation of the first draft and approved the final draft before submission. Computation and figure making was done in collaboration with CTY who contributed key results and five technical figures. I acknowledge the help and consultation of CTY and JR in research, writing and editing.
 \end{itemize}
 
-I was co-author on the following publications, but which are not used extensively in this dissertation and are not reprinted are appendices. They are listed in chronological order below. In these three works I consulted with MF and JR in research and editing making content clarifying contributions to these manuscripts:
+This is not a total list of all my research efforts, but forms the basis for \rchap{chap:moment} and \rchap{chap:cosmo} of this dissertation. \rchap{chap:neutrino} contains complete but still yet unpublished work. The content in \rchap{chap:neutrino} is intended to be published shortly after the finalization of this dissertation.
+
+I was also co-author on the following publications which are not used extensively in this dissertation and are not reprinted as appendices. They are listed in chronological order below. In these three works I consulted with MF and JR in research and editing making content clarifying contributions to these manuscripts:
 \begin{itemize}
     \item \lq\lq Classical neutral point particle in linearly polarized EM plane wave field\rq\rq\ by Formanek et. al. (2019) explores the dynamical equations presented in \rapp{appendixC} for neutral particles with magnetic moment.
     \item \lq\lq Radiation reaction friction: Resistive material medium\rq\rq\ by Formanek et. al. (2020) introduces a novel model of relativistic covariant friction within a medium.
@@ -23,7 +25,7 @@ I was co-author on the following publications, but which are not used extensivel
 \chapter{Introduction and overview}
 \label{chap:intro}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-This introduction serves to motivate the fundamental concepts of spin, magnetic moment and electromagnetism which have played a crucial role in the history physics and will be explored in the subsequent chapters. We discuss the relevancy of spin in physics in \rsec{sec:qspin}. Magnetic (and electric) dipoles, anomalous magnetic moments (AMM), and the wave equations which describe spin-1/2 fermions are covered in \rsec{sec:mom}. The classical connection between quantum operators, force and torque will be discussed in \rsec{sec:ehrenfest}. While the material in this chapter can largely be found elsewhere in standard literature, the presentation and organization of certain key concepts is unique. This chapter will also serve to establish notation and mathematical conventions. SI units will be used unless otherwise stated.
+This introduction serves to motivate the fundamental concepts of spin, magnetic moment and electromagnetism which have played a crucial role in the history physics and will be explored in the subsequent chapters. We discuss the relevancy of spin in physics in \rsec{sec:qspin}. Magnetic (and electric) dipoles, anomalous magnetic moments (AMM), and the wave equations which describe spin-1/2 fermions are covered in \rsec{sec:mom}. The classical connection between quantum operators, force and torque will be discussed in \rsec{sec:ehrenfest}. Lastly, \rsec{sec:flrw} covers topics in $\Lambda{\rm CDM}$ cosmology which are particular relevance to \rchap{chap:cosmo}. While the material in this chapter can largely be found elsewhere in standard literature, the presentation and organization of certain key concepts is unique. This chapter will also serve to establish notation and mathematical conventions. SI units will be used unless otherwise stated.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The importance of spin}
@@ -33,91 +35,110 @@ This introduction serves to motivate the fundamental concepts of spin, magnetic 
 
 In the realm of the Poincar{\'e} group of spacetime symmetry transformations (rotations, boosts and translations), each particle can be uniquely labeled by two distinct Casimir invariants (see \rsec{sec:cspin}). These two operators commute with all generators of the Poincar{\'e} group and are namely: mass and spin.
 
-If a particle is electrically charged, then by virtue of its spin it will have a magnetic dipole moment. Most neutral particles with spin, though not all, will also have magnetic dipoles though for more complex reasons. Therefore the magnetic behavior of particle is an important window into probing one of the most fundamental properties in physics. As quantum mechanics is not well described in terms of forces or accelerations (except in the context of Ehrenfest-style equations; see \rsec{sec:ehrenfest}), there is no simple operator description of torque and spin-forces despite having played a key role in the development of quantum mechanics. For a short historical overview see~\cite{ohanian1986spin}.
+If a particle is electrically charged, then by virtue of its spin it will have a magnetic dipole moment. Most neutral particles with spin, though not all, will also have magnetic dipoles though for more complex reasons. Therefore the magnetic behavior of particle is an important window into probing one of the most fundamental properties in physics. As quantum mechanics is not well described in terms of forces or accelerations (except in the context of Ehrenfest-style equations; see \rsec{sec:ehrenfest}), there is no simple operator description of torque and spin-forces despite having played a key role in the development of quantum mechanics. For a short historical overview of spin see~\cite{ohanian1986spin}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Quantum magnetic dipoles and wave equations}
 \label{sec:mom}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In classical theory, when charges rotate or circulate in some manner, a magnetic field is produced characterized by the magnetic dipole moment of the system. An Amp{\`e}rian loop of wire with a current is the quintessential example. This concept can be transplanted into quantum theory for spinning particles where the natural size of the magnetic moment of a particle (in this context a lepton) is given by the magneton value
-\begin{align}
+\begin{gather}
     \label{mag:1}
     \mu_{\ell}\equiv\frac{q_{\ell}\hbar}{2m_{\ell}}
-\end{align}
+\end{gather}
 where the lepton (denoted by $\ell$) has charge $q_{\ell}=\pm e$ and mass $m_{\ell}$. For electrons, this quantity is referred to as the Bohr magneton $\mu_{B}$. The non-relativistic spin operator $\bb{s}$ for a spin-1/2 particle is defined as
-\begin{align}
+\begin{gather}
     \label{qspin:1}
     \bb{ s}=\frac{\hbar}{2}\bb{\sigma}=\frac{\hbar}{2}\left(\sigma_{1},\,\sigma_{2},\,\sigma_{3}\right)
-\end{align}
+\end{gather}
 where $\bb{\sigma}$ is the three-vector comprised of the familiar $2\times2$ Pauli matrices.
 
 Euclidean three-vectors and matrices will be denoted by boldface font. If indices are specifically printed, they will be done so using Latin indices such as $s_{i}$. Inner products of three-vectors will be noted via $\bb{a}\cdot\bb{b}=a_{i}b_{i}$ using Einstein summation notation where repeated indices are summed over. The algebra defined by the commutators of the Pauli matrices serves as a representation of $SU(2)$ group structure
-\begin{align}
+\begin{gather}
     \label{pauli:1}
     [\sigma_{i},\sigma_{j}] = 2\varepsilon_{ijk}\sigma_{k}\,,
-\end{align}
+\end{gather}
 where $\varepsilon_{ijk}$ is the totally anti-symmetric Levi-Civita symbol.
 
 Taking inspiration from the classical (Cl.) form of magnetic dipole energy
-\begin{align}
+\begin{gather}
     \label{magenergy:1}
     U=-\bb{\mu}\vert_{\rm Cl.}\cdot\bb{B}\,,
-\end{align}
+\end{gather}
 we introduce the non-relativistic magnetic dipole Hamiltonian given in the usual way by
-\begin{align}
+\begin{gather}
 	\label{mag:2}
     {H}_{\mathrm{Mag}}=-\bb{\mu}\cdot\bb{B}\,.
-\end{align}
+\end{gather}
 The magnetic moment operator $\bb{\mu}$ is defined in terms of the Pauli matrices
-\begin{align}
+\begin{gather}
     \label{mag:3}
     \bb{\mu}=g\left(\frac{e\hbar}{2m_{\ell}}\right)\frac{\bb{\sigma}}{2}=g\mu_{\ell}\frac{\bb{\sigma}}{2}\,,\qquad\mu\equiv\frac{g}{2}\mu_{\ell}\,,
-\end{align}
+\end{gather}
 where $\mu$ is the \lq total magneton\rq\ value representing the full magnetic moment.
 
 In non-relativistic quantum mechanics, the time-dependant Schr{\"o}dinger-Pauli equation (with Hamiltonian $H_{\rm SP}$) for a charged particle is given by
-\begin{align}
+\begin{gather}
 	\label{sp:1}
     {H}_{\mathrm{SP}}\chi=\left(\frac{1}{2m_{\ell}}\bb{\pi}^{2}-\bb{\mu}\cdot\bb{B}+e{ V}\right)\chi=i\hbar\frac{\partial}{\partial t}\chi\,,\qquad
     \bb{\pi}=\bb{ p}-e{\bb{A}}\,,
-\end{align}
+\end{gather}
 where $\chi$ is a two-component spinor. Spinor indices will be suppressed or noted with Latin indices. The operator $\bb{\pi}$ is the kinetic momentum operator written in terms of canonical momentum $\bb{p}$ and vector potential $\bb{A}$. The electric potential is $V$. It is well known that \req{sp:1} is obtainable from the Dirac equation (see \rsec{sec:dp}) in the non-relativistic limit.
 
-The parameter $g$ in \req{mag:2} is the gyromagnetic ratio (or g-factor) of the particle. The \lq natural\rq\ value for $g$ is $g=2$. While this prediction is normally attributed to the Dirac equation, it justified from the construction of the kinetic energy operator in the Schrodinger-Pauli equation; see \rsec{sec:unique} and~\cite{sakurai1967advanced}. When $g\neq2$, which is true for all physical particles with magnetic moment, the anomalous magnetic moment (AMM) can be defined via 
-\begin{align}
+The parameter $g$ in \req{mag:3} is the gyromagnetic ratio (or $g$-factor) of the particle. The \lq natural\rq\ value is $g=2$. While this prediction is normally attributed to the Dirac equation, it justified from the construction of the kinetic energy operator in the Schr{\"o}dinger-Pauli equation; see \rsec{sec:unique} and~\cite{sakurai1967advanced}. 
+
+\begin{table}
+	\centering
+\begin{tabular}{r|c|l}
+    particle & category & $g$-factor\\
+    \hline
+	electron & fundamental & -2.002\ 319\ 304\ 362\ 56(35)\\
+	muon & fundamental & -2.002\ 331\ 8418(13)\\
+	tau & fundamental & -2.036(34)\\
+	neutron & composite & -3.826\ 085\ 45(90)\\
+	proton & composite & \ 5.585\ 694\ 6893(16)\\
+	deuterium & composite & \ 0.857\ 438\ 2338(22)\\
+	tritium & composite & \ 5.957\ 924\ 931(12)\\
+\end{tabular}
+	\caption{The $g$-factor of various particles found in~\cite{ParticleDataGroup:2022pth}.}
+	\label{tab:gfactor}
+\end{table}
+
+In nature however, there is no particle with exactly $g=2$. As seen in \rt{tab:gfactor}, composite particles often deviate from $g=2$ greatly as the $g$-factor of a composite particle is related to its internal composition. In the case of the neutron and proton, the internal quarks themselves are responsible. The comparison between three isotopes of hydrogen also displays how magnetic moments can \lq cancel out\rq. While deuterium's value of $g$ is suppressed by the extra neutron, the two neutrons in tritium balance one another returning the ratio into one manifestly similar to the proton. When $g\neq2$ (which is true for all physical particles with magnetic moment; composite of otherwise) the anomalous magnetic moment (AMM) can be defined via 
+\begin{gather}
     \label{amm:1}
     a\equiv\frac{g}{2}-1\,,\qquad
     a\frac{e\hbar}{2m_{\ell}}\rightarrow\delta\mu\equiv\mu-\mu_{\ell}\,,
-\end{align}
+\end{gather}
 where $a$ is the anomaly parameter. We also introduce $\delta\mu$ as the anomalous magneton which will be helpful in our proposal to connect mass and magnetic moment in \rsec{sec:ikgp} and \rsec{sec:numoment}.
 
 The anomalous magnetic moment of a particle can arise from a variety of physical sources with the most famous being the one-loop vacuum polarization contribution to the electron first computed by~\cite{Schwinger:1951nm}. In that work, the first correction to $g$ is given by
-\begin{align}
+\begin{gather}
     a_{e} = \frac{\alpha}{2\pi}\,,\qquad
     \alpha\equiv\frac{1}{4\pi\varepsilon_{0}}\frac{e^{2}}{\hbar c}\,,
-\end{align}
-where $\alpha$ is the fine structure constant with an approximate value of $1/137$. The measurement of the electron's $g$-factor is among the most precise measurements in all of physics~\citep{Tiesinga:2021myr} and rapid advancements in the measurement of the muon's anomalous magnetic moment have been announced even just prior to this thesis being finalized~\citep{Muong-2:2023cdq}. This makes the study of magnetic moment, and spin, an exciting area of physical research as new developments continue today.
+\end{gather}
+where $\alpha$ is the fine structure constant with an approximate value of $1/137$. The measurement of the electron's $g$-factor is among the most precise measurements in all of physics~\citep{Tiesinga:2021myr} and rapid advancements in the measurement of the muon's anomalous magnetic moment have been announced even just prior to this dissertation being finalized~\citep{Muong-2:2023cdq}. This makes the study of magnetic moment, and spin, an exciting area of physical research as new developments continue today.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dirac and Dirac-Pauli equations}
 \label{sec:dp}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent While it is always beneficial to be well-appraised of non-relativistic mechanics, nature is intrinsically relativistic and therefore this thesis must be as well. The relativistic generalization of \req{sp:1} is the Dirac equation given by
-\begin{align}
+\noindent While it is always beneficial to be well-appraised of non-relativistic mechanics, nature is intrinsically relativistic and therefore this dissertation must be as well. The relativistic generalization of \req{sp:1} is the Dirac equation given by
+\begin{gather}
     \label{dirac:1}
     \left(\gamma_{\alpha}\left(i\hbar\partial^{\alpha} - eA^{\alpha}\right)-m_{\ell}c\right)\psi=0\,.
-\end{align}
+\end{gather}
 Four-vectors and tensors in this work will be denoted by Greek indices. Inner products of four-vectors will be noted by $a\cdot b=a^{\alpha}\eta_{\alpha\beta}b^{\beta}=a^{\alpha}b_{\alpha}$ again following Einstein notation. The four-derivative $\partial^{\alpha}$ and four-potential $A^{\alpha}$ are defined as
-\begin{align}
+\begin{gather}
     \label{dirac:2}
     \partial^{\alpha}=\left(\frac{1}{c}\frac{\partial}{\partial t},\,-\bb{\nabla}\right)\,,\qquad A^{\alpha}=\left(\frac{V}{c},\,\bb{A}\right)\,.
-\end{align}
+\end{gather}
 The wave function $\psi$ in \req{dirac:1} is understood to be a four-component spinor. We have written the Dirac equation here in the covariant form where $\gamma^{\alpha}$ are the gamma matrices which obey the anti-commuting Clifford algebra
-\begin{align}
+\begin{gather}
     \label{gamma:1}
     \{\gamma_{\alpha},\gamma_{\beta}\}=\gamma_{\alpha}\gamma_{\beta} + \gamma_{\beta}\gamma_{\alpha} = 2\eta_{\alpha\beta}\,,\\
     \eta_{\alpha\beta}={\rm diag}(+1,-1,-1,-1)\,,
-\end{align}
+\end{gather}
 where $\eta_{\alpha\beta}$ is the flat spacetime Minkowski metric tensor defined with a positive time metric signature. The metric tensor is also responsible for raising and lowering covariant and contravariant indices e.g. $a_{\alpha}=\eta_{\alpha\beta}a^{\beta}$. As $\gamma^{\alpha}$ are also spinor matrices, the commutator in \req{gamma:1} carries implicit spinor indices which here computes to the $4\times4$ identity matrix $\mathbbm{1}_{4}$ (which is suppressed). We also introduce the \lq fifth\rq\ gamma matrix $\gamma^{5}$ which anti-commutes with $\gamma^{\alpha}$ and the following standard conventions following~\cite{Itzykson:1980rh}
 \begin{alignat}{1}
 	\label{conventions:1} \bb{\alpha}=\gamma^{0}\bb{\gamma}\,,\indent \bb{\Sigma}=\gamma^{5}\bb{\alpha}\,,\indent \gamma^{5}=i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}\,,\indent \gamma^{2}_{5}=1\,.
@@ -126,16 +147,16 @@ where $\eta_{\alpha\beta}$ is the flat spacetime Minkowski metric tensor defined
 As mentioned before, \req{dirac:1} predicts $g=2$ which is a standard calculation in many textbooks. The most straight-forward manner to generalize the Dirac equation allowing for an anomalous magnetic moment is to add a Pauli term proportional to the anomalous parameter $a$. While in most texts, the anomaly is given in terms of $g-2$ or $a$, we wish to keep our equations generalized to fermions of any given charge $e$ and magnetic moment $\mu$. 
 
 Therefore we make use of the substitution in \req{amm:1} and write the Dirac-Pauli~(DP) equation as
-\begin{align}
+\begin{gather}
 	\label{dp:1}
     \left(\gamma_{\alpha}\left(i\hbar\partial^{\alpha} - eA^{\alpha}\right) - m_{\ell}c - \delta\mu\frac{1}{2c}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\psi=0\,,
-\end{align}
+\end{gather}
 where the anti-symmetric spin tensor $\sigma_{\alpha\beta}$ is defined in terms of the commutator of the gamma matrices
 \begin{alignat}{1}
 	\label{sigma:1} \sigma_{\alpha\beta}=\frac{i}{2}\left[\gamma_{\alpha},\gamma_{\beta}\right]=\frac{i}{2}\left(\gamma_{\alpha}\gamma_{\beta}-\gamma_{\beta}\gamma_{\alpha}\right)\,.
 \end{alignat}
 Exact solutions to the DP equation are relatively scarce due to the complicating nature of the anomalous term. The most extensively studied solutions are those with high symmetries or constant external fields \citep{Thaller:1992ji}. When the anomalous part $\delta\mu$ is zero, the Dirac equation is recovered. $F^{\alpha\beta}$ is the standard anti-symmetric electromagnetic field tensor defined by
-\begin{align}
+\begin{gather}
     \label{em:1}
     F^{\alpha\beta} = \partial^{\alpha}A^{\beta} - \partial^{\beta}A^{\alpha} = 
     \begin{pmatrix}
@@ -144,9 +165,9 @@ Exact solutions to the DP equation are relatively scarce due to the complicating
         E_{2}/c  & B_{3}     & 0         & -B_{1}\\
         E_{3}/c  & -B_{2}    & B_{1}     & 0
     \end{pmatrix}\,.
-\end{align}
+\end{gather}
 It is also useful to define the Hodge dual of the electromagnetic field tensor
-\begin{align}
+\begin{gather}
     \label{em:2}
     F_{\alpha\beta}^{*} = \frac{1}{2}\varepsilon_{\alpha\beta\mu\nu}F^{\mu\nu} = 
     \begin{pmatrix}
@@ -155,7 +176,7 @@ It is also useful to define the Hodge dual of the electromagnetic field tensor
         B_{2}  & E_{3}/c     & 0         & -E_{1}/c\\
         B_{3}  & -E_{2}/c    & E_{1}/c     & 0
     \end{pmatrix}\,,
-\end{align}
+\end{gather}
 where we use the four-dimensional Levi-Civita pseudo-tensor $\varepsilon_{\alpha\beta\mu\nu}$ with the $\varepsilon_{0123}=+1$ convention. The contracted portion $\sigma_{\alpha\beta}F^{\alpha\beta}$ in the Pauli term in \req{dp:1} can be further expressed as
 \begin{alignat}{1}
 	\label{dp:2} \frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}=\frac{i}{c}\bb{\alpha}\cdot\bb{E}-\bb{\Sigma}\cdot\bb{B}\,,
@@ -163,33 +184,33 @@ where we use the four-dimensional Levi-Civita pseudo-tensor $\varepsilon_{\alpha
 which captures that relativistic magnetic moments should be sensitive to electric as well as magnetic fields. This should be unsurprising if one considers how the non-relativistic dipole form must generalize under Lorentz boost.
 
 The DP equation can be derived as an effective wave equation arising from the perturbative vacuum contribution developed by Schwinger~\citep{Itzykson:1980rh,Schwartz:2014sze} which modifies the photon 3-vertex in quantum electrodynamics. Therefore we can describe the AMM as an added Lagrangian interaction term
-\begin{align}
+\begin{gather}
     \label{lamm:1}
     {\cal L}_{\rm AMM} = -{\bar\psi}\left(\delta\mu\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\psi\,,
-\end{align}
-where ${\bar\psi}=\psi^{\dagger}\gamma^{0}$ is the Dirac adjoint. While the focus of this thesis is not on quantum field theory (QFT), it is valuable to note that the Pauli Lagrangian term in \req{lamm:1} is not renormalizable as the coupling coefficient has a natural unit of length.
+\end{gather}
+where ${\bar\psi}=\psi^{\dagger}\gamma^{0}$ is the Dirac adjoint. While the focus of this dissertation is not on quantum field theory (QFT), it is valuable to note that the Pauli Lagrangian term in \req{lamm:1} is not renormalizable as the coupling coefficient has a natural unit of length.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Electric dipole moments}
 \label{sec:edm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent While this thesis is primarily concerned with the dynamics of magnetic dipoles, we note that the techniques and methods discussed here may also find application in other important topics such as electric dipoles. I stress that the following section should be treated as an interesting avenue for future, not present, work.
+\noindent While this dissertation is primarily concerned with the dynamics of magnetic dipoles, we note that the techniques and methods discussed here may also find application in other important topics such as electric dipoles. I stress that the following section should be treated as an interesting avenue for future, not present, work.
 
 The structure of the Pauli term in \req{lamm:1} informs us how to construct the relativistic electric dipole moment (EDM); see~\cite{Knecht:2003kc,Jegerlehner:2017gek}. The generalization to include the electric dipole is
 \begin{alignat}{1}
 	\label{edm:1} \delta\mu\rightarrow\delta\tilde{\mu}\equiv\delta\mu+i\epsilon\gamma^{5}\,,
 \end{alignat}
 where $\epsilon$ is the EDM of the particle. As the natural electric dipole within the Dirac equation is zero, the presence of $\epsilon$ is always considered anomalous. The EDM Pauli Lagrangian term is
-\begin{align}
+\begin{gather}
     \label{ledm:1}
     {\cal L}_{\rm EDM} = -{\bar\psi}\left(i\epsilon\gamma^{5}\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\psi\,,
-\end{align}
+\end{gather}
 which is of interest because of the inclusion of $\gamma^{5}$. Taking advantage of the properties of $\gamma^{5}$, we can write the EDM in \req{ledm:1} as
-\begin{align}
+\begin{gather}
     \label{ledm:3}
     \gamma^{5}\sigma_{\mu\nu}=\frac{i}{2}\varepsilon_{\mu\nu\alpha\beta}\sigma^{\alpha\beta}\,\rightarrow
     {\cal L}_{\rm EDM} = +{\bar\psi}\left(\epsilon\frac{1}{2}\sigma^{\alpha\beta}F_{\alpha\beta}^{*}\right)\psi\,.
-\end{align}
+\end{gather}
 which is more closely analogous to the structure of the AMM in \req{lamm:1} making use of the dual form of the electromagnetic field tensor shown in \req{em:2}.
 
 The electric dipole is important because the presence of one would signify CP violation in the theory (assuming CPT is a true symmetry). Electrical fields are T-even while While such dipoles are common in composite or molecular systems, no electric dipole has ever been measured for a fundamental particle. As a point of comparison, the EDM of the electron is excluded~\citep{ACME:2018yjb,Roussy:2022cmp} by a bound of $|\epsilon_{e}/c|<4.1\times10^{-30}\, e\,{\rm cm}$.
@@ -204,7 +225,7 @@ The KGP equation is generally considered to be the \lq\lq square\rq\rq\ of the D
 \begin{alignat}{1}
 	\label{kgp:1} \left((i\hbar\partial^{\alpha}-eA^{\alpha})^{2}-m_{\ell}^{2}c^{2}-\left(g\mu_{\ell}+i\epsilon\gamma^{5}\right)m_{\ell}\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=0\,.
 \end{alignat}
-In the above we printed both the AMM and EDM for theoretical interest, but will drop the EDM term for the remainder of this thesis. The initial benefit of the KGP formulation is that the wave equation fully commutes with $\gamma^{5}$ making eigen-functions explicitly good chiral states.
+In the above we printed both the AMM and EDM for theoretical interest, but will drop the EDM term for the remainder of this dissertation. The initial benefit of the KGP formulation is that the wave equation fully commutes with $\gamma^{5}$ making eigen-functions explicitly good chiral states.
 
 \req{kgp:1} is mathematically similar to the Klein-Gordon equation which describes charged scalar particles. In the same manner as scalar-QED, the squared covariant derivative contains a $e^{2}A^{2}$ term which in QFT results in the presence of a 4-vertex seagull interaction~\citep{Schwartz:2014sze} at tree-level.
 
@@ -214,11 +235,11 @@ It is important to emphasize that the KGP \req{kgp:1} and DP \req{dp:1} are dist
     {\cal D}_{-}\psi=0\,,
 \end{alignat}
 with a \lq Dirac operator\rq\ defined in terms of $\pm m$ and the following properties
-\begin{align}
+\begin{gather}
     \label{do:2}
     \mathcal{D}_{-}=-\gamma^{5}\mathcal{D}_{+}\gamma^{5}\,,\qquad
     [{\cal D}_{+},{\cal D}_{-}]=0\,.
-\end{align}
+\end{gather}
 We can complete the square of the Dirac equation via the substitution
 \begin{alignat}{1}
 	\label{eq:kgp:03} \mathcal{D}_{+}\psi\rightarrow\mathcal{D}_{+}\mathcal{D}_{-}\Psi\,,\indent\mathcal{D}_{+}\mathcal{D}_{-}\Psi=\left((i\hbar\partial-eA)^{2}-m^{2}c^{2}-\frac{e\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=0\,.
@@ -255,7 +276,7 @@ This non-local behavior ultimately breaks the unitarity of the theory making it 
 \subsection{The unique nature of g=2}
 \label{sec:unique}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-As discussed by Feynman (Feynman, 1961), there is a strong predilection in nature towards $g=2$ gyro-magnetic factors which can be explained by the requirements of kinetic operator in quantum mechanics. We note that because the $2\times2$ Pauli matrices $\bb{\sigma}$ all anti-commute, we can write down the relation
+There is a strong predilection in nature towards $g=2$ which can be explained by the requirements of kinetic operator in quantum mechanics. We note that because the $2\times2$ Pauli matrices $\bb{\sigma}$ all anti-commute, we can write down the relation
 \begin{alignat}{1}
 	\label{nat:1} (\bb{\sigma}\cdot\bb{a})(\bb{\sigma}\cdot\bb{b})=\bb{a}\cdot\bb{b}+i\bb{\sigma}\cdot(\bb{a}\times\bb{b})\,.
 \end{alignat}
@@ -271,7 +292,7 @@ which is the magnetic moment term with size $g=2$. We recognize that $g=2$ appea
 \begin{alignat}{1}
 	\label{nat:4} \bb{\pi}\cdot\bb{\pi} \rightarrow (\bb{\pi}\cdot\bb{\sigma})(\bb{\sigma}\cdot\bb{\pi})\,.
 \end{alignat}
-An almost identical argument that g-factor arises from spin-structure and electromagnetic coupling can be made for the relativistic case as well. First we consider the quantum analog to the energy-momentum relation
+An almost identical argument that $g$-factor arises from spin-structure and electromagnetic coupling can be made for the relativistic case as well. First we consider the quantum analog to the energy-momentum relation
 \begin{alignat}{1}
 	\label{analog:1} \eta_{\alpha\beta}p^{\alpha}p^{\beta}\Psi=m^{2}c^{2}\Psi\,.
 \end{alignat}
@@ -303,22 +324,9 @@ yielding
 	\item For arbitrary spin, $g=2$ facilitates finite Compton scattering cross sections without additional physical requirements.
 	\item For arbitrary spin, open bosonic and super-symmetric string theory predicts $g=2$.
 \end{enumerate}
-While the above provide a nice justification for why particles should tend to this specific g-factor, the reality is no particle has exactly $g=2$ with all of them displaying some form of anomaly. The charged leptons come the closest to the natural value, but famously have vacuum polarization contributions~\citep{Schwinger:1951nm} from QED, non-perturbative hadronic contributions~\citep{Jegerlehner:2017gek}, and potentially BSM interactions~\citep{Knecht:2003kc} contributing to their anomalous magnetic dipole moment. There are then two major approaches to deal with anomalous moments. The first is to consider the fundamental quantum field theory describing the particle, and then analyzing the resulting tree level diagrams which contribute to the moment in a perturbative fashion. The second is to utilize an effective field theory with the anomalous moment already implemented in the base wave dynamics. While the first approach has proven to be exceedingly successful for the charged leptons (the muon's anomaly notwithstanding), it is not appropriate for particles whose moments are dramatically different from $g=2$ or if the origin of the anomaly comes from internal structure such as the hadrons whose moments are determined by non-perturbative QCD~\cite{Eichmann:2016yit,Pacetti:2014jai} and not vacuum structure as is the case for the nucleons and atoms.
+While the above provide a nice justification for why particles should tend to this specific $g$-factor, the reality is no particle has exactly $g=2$ with all of them displaying some form of anomaly. The charged leptons come the closest to the natural value, but famously have vacuum polarization contributions~\citep{Schwinger:1951nm} from QED, non-perturbative hadronic contributions~\citep{Jegerlehner:2017gek}, and potentially BSM interactions~\citep{Knecht:2003kc} contributing to their anomalous magnetic dipole moment.
 
-\begin{table}
-	\centering
-\begin{tabular}{|r|l|}
-	electron & -2.002\ 319\ 304\ 362\ 56(35)\\
-	muon & -2.002\ 331\ 8418(13)\\
-	tau & \ -2.036(34)\\
-	proton & \ 5.585\ 694\ 6893(16)\\
-	neutron & -3.826\ 085\ 45(90)\\
-	deuterium & \ 0.857\ 438\ 2338(22)\\
-	tritium & \ 5.957\ 924\ 931(12)
-\end{tabular}
-	\caption{The g-factor PDG values of various particles. Of those listed, only the tau is poorly measured and whose anomaly is not well constrained. As a general rule, composite particles deviate from $g=2$ greatly. Comparing the three isotopes of hydrogen shows how magnetic moments can \lq\lq cancel\rq\rq\ out so that while deuterium differs great from the proton, tritium with two neutrons does not and is similar.}
-	\label{ajs:table:01}
-\end{table}
+We then outline the two main approaches to anomalous moments: The first is to consider the fundamental quantum field theory describing the particle, and then analyzing the resulting tree level diagrams which contribute to the moment in a perturbative fashion. The second is to utilize an effective field theory with the anomalous moment already implemented in the base wave dynamics. While the first approach has proven to be exceedingly successful for the charged leptons (the muon's anomaly notwithstanding), it is not appropriate for particles whose moments are dramatically different from $g=2$ or if the origin of the anomaly comes from internal structure such as the hadrons whose moments are determined by non-perturbative QCD~\citep{Eichmann:2016yit,Pacetti:2014jai} and not vacuum structure as is the case for the nucleons and atoms.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Connecting quantum and classical theory}
@@ -385,3 +393,91 @@ By substituting eq.~\eqref{FW03} into eq.~\eqref{DIRAC03}, the non-relativistic 
 where $\mathbf{S}_{NR}$ is the non-relativistic spin operator. The first term is the expected Larmor precession, and the second is precession generated by spin-orbit coupling. The last term is second order in spin and sensitive to the curl of electric fields. This term cannot be easily categorized as a simple \lq\lq quantum correction\rq\rq\, as both orders of $\hbar$ are consumed by the definition of the spin operator and survive the $\hbar\rightarrow 0$ limit. This term in fact is more analogous to the $p^{4}$ correction to a particle's energy due to relativity.
 
 As spin dynamics in quantum mechanics exhibits more complicated behavior at higher orders, due to special relativity, we expect similar corrections to appear in the classical theory of spin precession in the same manner that energy corrections appear.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Feature of FLRW in Lambda-CDM}
+\label{sec:flrw}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent This section introduces some necessary concepts which will be useful in describing the magnetization of the electron-positron primordial plasma in \rchap{chap:cosmo}. We operate under the $\Lambda{\rm CDM}$ model of cosmology where the contemporary universe is approximately 69\% dark energy, 26\% dark matter, 5\% baryons, and $<1$\% photons and neutrinos in energy density~\citep{Planck:2018vyg}. The spatially flat (with Gaussian curvature $k=0$) Friedmann-Lema{\^i}tre-Robertson-Walker (FLRW) line element and metric~\citep{weinberg1972gravitation} in Cartesian coordinates is
+\begin{gather}
+    \label{FLRW} ds^2=dt^2-a^2(t)\left[dx^2+dy^2+dz^2\right]\,,\\
+    g_{\alpha\beta}=
+    \begin{pmatrix}
+        1&0&0&0\\
+        0&-a^{2}(t)&0&0\\
+        0&0&-a^{2}(t)&0\\
+        0&0&0&-a^{2}(t)
+    \end{pmatrix}\,.
+\end{gather}
+The scale factor $a(t)$ denotes the change of proper distances $L(t)$~\citep{Davis:2003ad} over time as
+\begin{gather}
+    L(t)=L_{0}\frac{a(t_{0})}{a(t)}\rightarrow L(z)=L_{0}(1+z)\,,
+\end{gather}
+where $z$ is the redshift and $L_{0}$ the comoving length. In an expanding (or contracting) universe which is both homogeneous and isotropic, this implies volumes change with $\propto1/a^{3}(t)$. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ as follows
+\begin{gather}
+  \label{Friedmann} H(t)^{2}\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_{N}}{3}\rho_{\rm total},\qquad \rho_{\rm total}(t)=\rho_{\Lambda}+\rho_{\rm DM}(t)+\rho_{\rm Baryons}(t)+\ldots\\
+  \frac{\ddot a}{a}=-qH^2,\qquad 
+q\equiv -\frac{a\ddot a}{\dot a^2},\qquad \dot H=-H^2(1+q).
+\end{gather}
+where $G_N$ is the Newtonian constant of gravitation. \req{Friedmann} is also known as the Friedmann equations. The total density $\rho_{\rm total}$ is the sum of all contributions from any form of matter, radiation or field. This includes but is not limited to: dark energy $(\Lambda)$, dark matter (DM), baryons (B), and photons $(\gamma)$. Depending on the age of the universe, the relative importance of each group changes as each dilutes different under expansion with dark energy infamously remaining constant in density and accelerating the universe today.
+
+The parameter $q$ is the cosmic deceleration parameter where for historical reasons expansion is slowing down for $q>0$. before the discovery of dark energy. The early universe was radiation dominated with $q = 1$, subsequently matter dominated with $q = 1/2$, and the contemporary universe is undergoing a transition from matter to dark energy dominated whereas the deceleration settles on the asymptotic value of $q = -1$; see~\cite{Rafelski:2013yka}.
+
+We can consider the expansion to be an adiabatic process~\citep{Abdalla:2022yfr} which results in a smooth shifting of the relevant dynamical quantities. As the universe undergoes isotropic expansion, the temperature decreases and conserves entropy as 
+\begin{gather}
+ \label{tscale}
+ T(t)=T_{0}\frac{a(t_{0})}{a(t)}\rightarrow T(z)=T_{0}(1+z)\,,
+\end{gather}
+where $z$ is the redshift. The comoving temperature $T_{0}$ is given by the present day temperature of the CMB, with contemporary scale factor $a_{0}=1$.
+
+Within a homogeneous magnetic domain defined along the $z$-axis
+\begin{gather}
+    \label{homoB:1}
+    \bb{B}=(0,\,0,\,B)\,,
+\end{gather}
+the magnetic field magnitude varies~\citep{Durrer:2013pga} over cosmic expansion as
+\begin{gather}
+ \label{bscale}
+ B(t)=B_{0}\frac{a_{0}^{2}}{a^{2}(t)}\rightarrow B(z)=B_{0}\left(1+z\right)^{2}\,,
+\end{gather}
+where $B_{0}$ is the comoving value of the magnetic field obtained from the contemporary value of the magnetic field today given in \req{igmf}. Non-primordial magnetic fields (which are generated through other mechanisms such as dynamo or astrophysical sources) do not follow this scaling~\citep{Pomakov:2022cem}. The presence of matter and late universe structure formation also contaminates the primordial field evolution in \req{bscale}. It is only in deep intergalactic space where primordial fields remain preserved and comoving over cosmic time.
+
+From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion starting at some initial time $t_{0}$ is given by
+\begin{alignat}{1}
+    \label{BScale} B(t) = B(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
+\end{alignat}
+As the universe expands, the temperature also cools as the cosmological redshift reduces the momenta of particles in the universe lowering their contribution to the energy content of the universe. This cosmological redshift is written as
+\begin{alignat}{1}
+  \label{Redshift} p_{i}(t) = p_{i}(t_{0})\frac{a(t_{0})}{a(t)}\,,\qquad T(t) = T(t_{0})\frac{a(t_{0})}{a(t)}\,.
+\end{alignat}
+The momenta scale with the same factor as temperature as it is the origin of cosmological redshift. The energy of massive free particles in the universe scales differently based on their momentum (and thus temperature). When hot and relativistic, particle energy scales with inverse scale factors like radiation. However as particles transition to non-relativistic momenta, their energies scale with the inverse square of the scale factor like magnetic flux.
+\begin{alignat}{1}
+    \label{EScale} E(t) = E(t_{0})\frac{a(t_{0})}{a(t)}\xrightarrow{\mathrm{NR}}\  E(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
+\end{alignat}
+This occurs because of the functional dependence of energy on momentum in the relativistic versus non-relativistic cases.
+
+The argument in the Boltzmann statistical factor is given by
+\begin{alignat}{1}
+    \label{Boltz} X_{n}^{s}\equiv\frac{E_{n}^{s}}{T}\,.
+\end{alignat}
+We can explore this relationship for the magnetized system explicitly by writing out \req{Boltz} using the KGP eigen-energies as
+\begin{alignat}{1}
+    \label{XExplicit} X_{n}^{s} = \sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{p_{z}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,,
+\end{alignat}
+where we now introduce the expansion scale factor via \req{BScale} - \req{PScale}. The Boltzmann factor can then be written as
+\begin{alignat}{1}
+    \label{XScale} X_{n}^{s}[a(t)] = \sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,.
+\end{alignat}
+This reveals that only the mass contribution is dynamic over cosmological time. For any given eigen-state, the mass term increases driving the state into the non-relativistic limit while the momenta and magnetic contributions are frozen by initial conditions. 
+
+As a point of comparison, the Boltzmann factor for the DP eigen-energies becomes
+\begin{alignat}{1}
+    \label{XDP} X_{n}^{s}\vert_{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-s\right)}-\frac{eB}{2mT}(g-2)s\right)^{2}+\frac{p_{z}^{2}}{T^{2}}}\,,
+\end{alignat}
+which over cosmological time under expansion scales as
+\begin{multline}
+    \label{XScaleDP} X_{n}^{s}[a(t)]\vert_{DP} =\\ \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-s\right)}-\frac{eB(t_{0})}{2mT(t_{0})}\frac{a(t_{0})}{a(t)}(g-2)s\right)^{2}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}}\,.
+\end{multline}
+While the above expression is rather complicated, we note that the KGP~\req{XScale} and DP~\req{XDP} Boltzmann factors both reduce to the Sch{\"o}dinger-Pauli limit as $a(t)\rightarrow\infty$ thereby demonstrating that the total magnetic moment is protected under the adiabatic expansion of the universe.
+
+Higher order non-minimal magnetic contributions which can be introduced to the eigen-energies like $\approx\mu_{B}^{2}B^{2}/T^{2}$ are then suppressed over cosmological time driving the system into minimal electromagnetic couplings with the exception of the anomalous magnetic moment. It is interesting to note that cosmological expansion serves to \lq smooth out\rq\ the characteristics of more complex BSM electrodynamics erasing them from a statistical perspective in favor of the minimal or minimal-like dynamics.
