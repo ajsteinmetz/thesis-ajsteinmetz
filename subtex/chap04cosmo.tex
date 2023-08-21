@@ -25,6 +25,48 @@ Magnetized baryon inhomogeneities which in turn would produce anisotropies in th
 \section{Theory of thermal matter-antimatter plasmas}
 \label{sec:theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent To evaluate magnetic properties of the thermal $e^{+}e^{-}$ pair plasma we take inspiration from Ch. 9 of Melrose's treatise on magnetized plasmas~\citep{melrose2008quantum}. We focus on the bulk properties of thermalized plasmas in (near) equilibrium. In considering $e^{+}e^{-}$ pair plasma, we introduce the microscopic energy of the charged relativistic fermion within a homogeneous ($z$-direction) magnetic field; see \rchap{chap:moment} and ~\citep{Steinmetz:2018ryf}. The energy eigenvalue is given by
+\begin{align}
+ \label{kgp}
+ E^{n}_{\sigma,s}(p_{z},{\cal B})=\sqrt{m_{e}^{2}+p_{z}^{2}+e{\cal B}\left(2n+1+\frac{g}{2}\sigma s\right)}\,,
+\end{align}
+where $n\in0,1,2,\ldots$ is the Landau orbital quantum number.
+
+\begin{table}
+    \centering
+    \begin{tabular}{|c||c|c|} 
+        \hline
+        $\sigma/s$ & aligned: $+1$ & anti-aligned: $-1$ \\ 
+        \hline\hline
+        electron: $+1$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ \\ 
+        \hline
+        positron: $-1$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ \\
+        \hline
+    \end{tabular}
+    \caption{Organization of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the sign of the magnetic dipole energy.}
+    \label{tab:1}
+\end{table}
+
+\req{kgp} differentiates between electrons and positrons which is to ensure the correct non-relativistic limit is reached; see \rt{tab:1}. The parameter $g$ is the gyro-magnetic ($g$-factor) of the particle. Following the conventions found in \cite{Tiesinga:2021myr}, we set $g\equiv g_{e^{+}}=-g_{e^{-}}>0$ such that electrons and positrons have opposite $g$-factors and opposite magnetic moments.
+
+From \req{tscale} and \req{bscale} emerges a natural ratio of interest here which is conserved over cosmic expansion 
+\begin{gather}
+ \label{tbscale}
+ b \equiv\frac{e{\cal B}(t)}{T^{2}(t)}=\frac{e{\cal B}_{0}}{T_{0}^{2}}\equiv b_0={\rm\ const.}\\
+ 10^{-3}>b_{0}>10^{-11}\,,
+\end{gather}
+given in natural units ($c=\hbar=k_{B}=1$). We computed the bounds for this cosmic magnetic scale ratio by using the present day IGMF observations given by \req{igmf} and the present CMB temperature $T_{0}=2.7{\rm\ K}\simeq2.3\times10^{-4}\eV$~\citep{Planck:2018vyg}.
+
+As statistical properties depend on the characteristic Boltzmann factor $E/T$, another interpretation of \req{tbscale} in the context of energy eigenvalues (such as those given in \req{kgp}) is the preservation of magnetic moment energy relative to momentum under adiabatic cosmic expansion.
+
+We rearrange \req{kgp} by pulling the spin dependency and the ground state Landau orbital into the mass writing
+\begin{gather}
+ \label{effmass:1}
+ E^{n}_{\sigma,s}={\tilde m}_{\sigma,s}\sqrt{1+\frac{p_{z}^{2}}{{\tilde m}_{\sigma,s}^{2}}+\frac{2e{\cal B}n}{{\tilde m}_{\sigma,s}^{2}}}\,,\\
+ \label{effmass:2}
+ \varepsilon_{\sigma,s}^{n}(p_{z},{\cal B})=\frac{E_{\sigma,s}^{n}}{{\tilde m}_{\sigma,s}}\,,\qquad{\tilde m}_{\sigma,s}^{2}=m_{e}^{2}+e{\cal B}\left(1+\frac{g}{2}\sigma s\right)\,,
+\end{gather}
+where we introduced the dimensionless energy $\varepsilon^{n}_{\sigma,s}$ and effective polarized mass ${\tilde m}_{\sigma,s}$ which is distinct for each spin alignment and is a function of magnetic field strength ${\cal B}$. The effective polarized mass ${\tilde m}_{\sigma,s}$ allows us to describe the $e^{+}e^{-}$ plasma with the spin effects almost wholly separated from the Landau characteristics of the gas when considering the plasma's thermodynamic properties.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Magnetized fermion partition function}

@@ -428,25 +428,21 @@ We can consider the expansion to be an adiabatic process~\citep{Abdalla:2022yfr}
  \label{tscale}
  T(t)=T_{0}\frac{a(t_{0})}{a(t)}\rightarrow T(z)=T_{0}(1+z)\,,
 \end{gather}
-where $z$ is the redshift. The comoving temperature $T_{0}$ is given by the present day temperature of the CMB, with contemporary scale factor $a_{0}=1$.
+where $z$ is the redshift. The comoving temperature $T_{0}$ is given by the the present CMB temperature $T_{0}=2.7{\rm\ K}\simeq2.3\times10^{-4}\eV$~\citep{Planck:2018vyg}, with contemporary scale factor $a_{0}=1$.
 
-Within a homogeneous magnetic domain defined along the $z$-axis
+We consider a homogeneous magnetic field domain defined along the $z$-axis as
 \begin{gather}
     \label{homoB:1}
     \bb{B}=(0,\,0,\,B)\,,
 \end{gather}
-the magnetic field magnitude varies~\citep{Durrer:2013pga} over cosmic expansion as
+with magnetic field magnitude $|\bb{B}|=B$. From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion~\citep{Durrer:2013pga} starting at some initial time $t_{0}$ is given by
 \begin{gather}
  \label{bscale}
- B(t)=B_{0}\frac{a_{0}^{2}}{a^{2}(t)}\rightarrow B(z)=B_{0}\left(1+z\right)^{2}\,,
+ B(t)=B_{0}\frac{a^{2}(t_{0})}{a^{2}(t)}\rightarrow B(z)=B_{0}\left(1+z\right)^{2}\,,
 \end{gather}
-where $B_{0}$ is the comoving value of the magnetic field obtained from the contemporary value of the magnetic field today given in \req{igmf}. Non-primordial magnetic fields (which are generated through other mechanisms such as dynamo or astrophysical sources) do not follow this scaling~\citep{Pomakov:2022cem}. The presence of matter and late universe structure formation also contaminates the primordial field evolution in \req{bscale}. It is only in deep intergalactic space where primordial fields remain preserved and comoving over cosmic time.
+where $B_{0}$ is the comoving value of the magnetic field obtained from the contemporary value of the magnetic field today. Magnetic fields in the cosmos generated through mechanisms such as dynamo or astrophysical sources) do not follow this scaling~\citep{Pomakov:2022cem}. It is only in deep intergalactic space where matter density is low are magnetic fields preserved over cosmic time.
 
-From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion starting at some initial time $t_{0}$ is given by
-\begin{alignat}{1}
-    \label{BScale} B(t) = B(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
-\end{alignat}
-As the universe expands, the temperature also cools as the cosmological redshift reduces the momenta of particles in the universe lowering their contribution to the energy content of the universe. This cosmological redshift is written as
+As the universe expands, redshift reduces the momenta of particles lowering their contribution to the energy content of the universe. This cosmological redshift is written as
 \begin{alignat}{1}
   \label{Redshift} p_{i}(t) = p_{i}(t_{0})\frac{a(t_{0})}{a(t)}\,,\qquad T(t) = T(t_{0})\frac{a(t_{0})}{a(t)}\,.
 \end{alignat}
@@ -456,7 +452,7 @@ The momenta scale with the same factor as temperature as it is the origin of cos
 \end{alignat}
 This occurs because of the functional dependence of energy on momentum in the relativistic versus non-relativistic cases.
 
-The argument in the Boltzmann statistical factor is given by
+The dependancy on particle energy during expansion in \req{EScale} will be useful when we describe the statistical physics in $\Lambda{\rm CDM}$ in \rchap{chap:cosmo}. The Boltzmann statistical factor is given by
 \begin{alignat}{1}
     \label{Boltz} X_{n}^{s}\equiv\frac{E_{n}^{s}}{T}\,.
 \end{alignat}
