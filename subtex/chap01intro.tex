@@ -395,7 +395,7 @@ where $\mathbf{S}_{NR}$ is the non-relativistic spin operator. The first term is
 As spin dynamics in quantum mechanics exhibits more complicated behavior at higher orders, due to special relativity, we expect similar corrections to appear in the classical theory of spin precession in the same manner that energy corrections appear.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Feature of FLRW in Lambda-CDM}
+\section{Features of FLRW in Lambda-CDM}
 \label{sec:flrw}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent This section introduces some necessary concepts which will be useful in describing the magnetization of the electron-positron primordial plasma in \rchap{chap:cosmo}. We operate under the $\Lambda{\rm CDM}$ model of cosmology where the contemporary universe is approximately 69\% dark energy, 26\% dark matter, 5\% baryons, and $<1$\% photons and neutrinos in energy density~\citep{Planck:2018vyg}. The spatially flat (with Gaussian curvature $k=0$) Friedmann-Lema{\^i}tre-Robertson-Walker (FLRW) line element and metric~\citep{weinberg1972gravitation} in Cartesian coordinates is
@@ -411,69 +411,34 @@ As spin dynamics in quantum mechanics exhibits more complicated behavior at high
 \end{gather}
 The scale factor $a(t)$ denotes the change of proper distances $L(t)$~\citep{Davis:2003ad} over time as
 \begin{gather}
-    L(t)=L_{0}\frac{a(t_{0})}{a(t)}\rightarrow L(z)=L_{0}(1+z)\,,
+    L(t)=L_{0}\frac{a_{0}}{a(t)}\rightarrow L(z)=L_{0}(1+z)\,,
 \end{gather}
-where $z$ is the redshift and $L_{0}$ the comoving length. In an expanding (or contracting) universe which is both homogeneous and isotropic, this implies volumes change with $\propto1/a^{3}(t)$. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ as follows
+where $z$ is the redshift and $L_{0}$ the comoving length. In an expanding (or contracting) universe which is both homogeneous and isotropic, this implies volumes change with $V(t)\propto1/a^{3}(t)$. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ as follows
 \begin{gather}
-  \label{Friedmann} H(t)^{2}\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_{N}}{3}\rho_{\rm total},\qquad \rho_{\rm total}(t)=\rho_{\Lambda}+\rho_{\rm DM}(t)+\rho_{\rm Baryons}(t)+\ldots\\
+  \label{Friedmann:1} H(t)^{2}\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_{N}}{3}\rho_{\rm total},\qquad \rho_{\rm total}(t)=\rho_{\Lambda}+\rho_{\rm DM}(t)+\rho_{\rm Baryons}(t)+\ldots\\
+  \label{Friedmann:2}
   \frac{\ddot a}{a}=-qH^2,\qquad 
 q\equiv -\frac{a\ddot a}{\dot a^2},\qquad \dot H=-H^2(1+q).
 \end{gather}
-where $G_N$ is the Newtonian constant of gravitation. \req{Friedmann} is also known as the Friedmann equations. The total density $\rho_{\rm total}$ is the sum of all contributions from any form of matter, radiation or field. This includes but is not limited to: dark energy $(\Lambda)$, dark matter (DM), baryons (B), and photons $(\gamma)$. Depending on the age of the universe, the relative importance of each group changes as each dilutes different under expansion with dark energy infamously remaining constant in density and accelerating the universe today.
+where $G_N$ is the Newtonian constant of gravitation. \req{Friedmann:1} and \req{Friedmann:2} are also known as the Friedmann equations. The total density $\rho_{\rm total}$ is the sum of all contributions from any form of matter, radiation or field. This includes but is not limited to: dark energy $(\Lambda)$, dark matter (DM), baryons (B), and photons $(\gamma)$. Depending on the age of the universe, the relative importance of each group changes as each dilutes different under expansion with dark energy infamously remaining constant in density and accelerating the universe today.
 
 The parameter $q$ is the cosmic deceleration parameter where for historical reasons expansion is slowing down for $q>0$. before the discovery of dark energy. The early universe was radiation dominated with $q = 1$, subsequently matter dominated with $q = 1/2$, and the contemporary universe is undergoing a transition from matter to dark energy dominated whereas the deceleration settles on the asymptotic value of $q = -1$; see~\cite{Rafelski:2013yka}.
 
 We can consider the expansion to be an adiabatic process~\citep{Abdalla:2022yfr} which results in a smooth shifting of the relevant dynamical quantities. As the universe undergoes isotropic expansion, the temperature decreases and conserves entropy as 
 \begin{gather}
  \label{tscale}
- T(t)=T_{0}\frac{a(t_{0})}{a(t)}\rightarrow T(z)=T_{0}(1+z)\,,
+ T(t)=T_{0}\frac{a_{0}}{a(t)}\rightarrow T(z)=T_{0}(1+z)\,,
 \end{gather}
 where $z$ is the redshift. The comoving temperature $T_{0}$ is given by the the present CMB temperature $T_{0}=2.7{\rm\ K}\simeq2.3\times10^{-4}\eV$~\citep{Planck:2018vyg}, with contemporary scale factor $a_{0}=1$.
 
-We consider a homogeneous magnetic field domain defined along the $z$-axis as
-\begin{gather}
-    \label{homoB:1}
-    \bb{B}=(0,\,0,\,B)\,,
-\end{gather}
-with magnetic field magnitude $|\bb{B}|=B$. From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion~\citep{Durrer:2013pga} starting at some initial time $t_{0}$ is given by
-\begin{gather}
- \label{bscale}
- B(t)=B_{0}\frac{a^{2}(t_{0})}{a^{2}(t)}\rightarrow B(z)=B_{0}\left(1+z\right)^{2}\,,
-\end{gather}
-where $B_{0}$ is the comoving value of the magnetic field obtained from the contemporary value of the magnetic field today. Magnetic fields in the cosmos generated through mechanisms such as dynamo or astrophysical sources) do not follow this scaling~\citep{Pomakov:2022cem}. It is only in deep intergalactic space where matter density is low are magnetic fields preserved over cosmic time.
-
 As the universe expands, redshift reduces the momenta of particles lowering their contribution to the energy content of the universe. This cosmological redshift is written as
 \begin{alignat}{1}
-  \label{Redshift} p_{i}(t) = p_{i}(t_{0})\frac{a(t_{0})}{a(t)}\,,\qquad T(t) = T(t_{0})\frac{a(t_{0})}{a(t)}\,.
+  \label{Redshift} p_{i}(t) = p_{i,0}\frac{a_{0}}{a(t)}\,.
 \end{alignat}
-The momenta scale with the same factor as temperature as it is the origin of cosmological redshift. The energy of massive free particles in the universe scales differently based on their momentum (and thus temperature). When hot and relativistic, particle energy scales with inverse scale factors like radiation. However as particles transition to non-relativistic momenta, their energies scale with the inverse square of the scale factor like magnetic flux.
-\begin{alignat}{1}
-    \label{EScale} E(t) = E(t_{0})\frac{a(t_{0})}{a(t)}\xrightarrow{\mathrm{NR}}\  E(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
-\end{alignat}
-This occurs because of the functional dependence of energy on momentum in the relativistic versus non-relativistic cases.
+Momentum (and the energy of massless particles $E=pc$) scales with the same factor as temperature. The energy of massive free particles in the universe however scales differently based on their momentum (and thus temperature).
 
-The dependancy on particle energy during expansion in \req{EScale} will be useful when we describe the statistical physics in $\Lambda{\rm CDM}$ in \rchap{chap:cosmo}. The Boltzmann statistical factor is given by
+When hot and relativistic, particle energy scales inversely like radiation. As the particles transition to non-relativistic (NR) momenta, their energies scale with the inverse square of the scale factor
 \begin{alignat}{1}
-    \label{Boltz} X_{n}^{s}\equiv\frac{E_{n}^{s}}{T}\,.
+    \label{EScale} E(t) = E_{0}\frac{a_{0}}{a(t)}\xrightarrow{\mathrm{NR}}\  E_{0}\frac{a_{0}^{2}}{a(t)^{2}}\,.
 \end{alignat}
-We can explore this relationship for the magnetized system explicitly by writing out \req{Boltz} using the KGP eigen-energies as
-\begin{alignat}{1}
-    \label{XExplicit} X_{n}^{s} = \sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{p_{z}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,,
-\end{alignat}
-where we now introduce the expansion scale factor via \req{BScale} - \req{PScale}. The Boltzmann factor can then be written as
-\begin{alignat}{1}
-    \label{XScale} X_{n}^{s}[a(t)] = \sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,.
-\end{alignat}
-This reveals that only the mass contribution is dynamic over cosmological time. For any given eigen-state, the mass term increases driving the state into the non-relativistic limit while the momenta and magnetic contributions are frozen by initial conditions. 
-
-As a point of comparison, the Boltzmann factor for the DP eigen-energies becomes
-\begin{alignat}{1}
-    \label{XDP} X_{n}^{s}\vert_{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-s\right)}-\frac{eB}{2mT}(g-2)s\right)^{2}+\frac{p_{z}^{2}}{T^{2}}}\,,
-\end{alignat}
-which over cosmological time under expansion scales as
-\begin{multline}
-    \label{XScaleDP} X_{n}^{s}[a(t)]\vert_{DP} =\\ \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-s\right)}-\frac{eB(t_{0})}{2mT(t_{0})}\frac{a(t_{0})}{a(t)}(g-2)s\right)^{2}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}}\,.
-\end{multline}
-While the above expression is rather complicated, we note that the KGP~\req{XScale} and DP~\req{XDP} Boltzmann factors both reduce to the Sch{\"o}dinger-Pauli limit as $a(t)\rightarrow\infty$ thereby demonstrating that the total magnetic moment is protected under the adiabatic expansion of the universe.
-
-Higher order non-minimal magnetic contributions which can be introduced to the eigen-energies like $\approx\mu_{B}^{2}B^{2}/T^{2}$ are then suppressed over cosmological time driving the system into minimal electromagnetic couplings with the exception of the anomalous magnetic moment. It is interesting to note that cosmological expansion serves to \lq smooth out\rq\ the characteristics of more complex BSM electrodynamics erasing them from a statistical perspective in favor of the minimal or minimal-like dynamics.
+This occurs because of the functional dependence of energy on momentum in the relativistic $E\sim p$ versus non-relativistic $E\sim p^{2}$ cases. The dependency on particle energy during expansion in \req{EScale} will be useful when we describe the statistical physics in $\Lambda{\rm CDM}$ in \rchap{chap:cosmo}.
