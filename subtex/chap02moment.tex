@@ -44,57 +44,55 @@ where $\mu$ is the magnitude of the magnetic moment as defined in \req{mag:3}. \
 	\label{homogeneous:4} \left(\frac{1}{2m_{\ell}}\bb{p}^{2}+\frac{e^{2}B^{2}}{8m_{\ell}}(x^{2}+y^{2})-\frac{eB}{2m_{\ell}}L_{3}-\mu B\sigma_{3}\right)\chi_\mathrm{E}=E\chi_\mathrm{E}\,,\\
     \bb{L}=\bb{r}\times\bb{p}\,,\qquad L_{i}=\varepsilon_{ijk}x_{j}p_{k}\,.
 \end{gather}
-The above can be broken into a set of three mutually commuting Hamiltonian operators: the free particle Hamiltonian, the quantum harmonic oscillator (HO), the Zeeman interaction (ZI) given by
+
+The above can be broken into a set of three mutually commuting Hamiltonian operators: (a) the free particle Hamiltonian, (b) the quantum harmonic oscillator (HO), and (c) the Zeeman interaction (ZI) given by
 \begin{align}
-	\label{homogeneous:5}
-    H_\mathrm{total}&=H_\mathrm{Free}+H_\mathrm{HO}+H_\mathrm{Mag.}\,.\\
+	\label{homogeneous:7}
+    &H_\mathrm{total}=H_\mathrm{Free}+H_\mathrm{HO}+H_\mathrm{Mag.}\,,\\
 	\label{homogeneous:7a}
-    H_{\mathrm{Free}}&=\frac{p_{3}^{2}}{2m}\,,\\
+    &H_{\mathrm{Free}}=\frac{p_{3}^{2}}{2m}\,,\\
 	\label{homogeneous:7b}
-    H_\mathrm{HO}&=\frac{1}{2m_{\ell}}\left(p_{1}^{2}+p_{2}^{2}\right) + \frac{1}{2m_{\ell}}\omega^{2}(x^{2}+y^{2})\,,\\
+    &H_\mathrm{HO}\,=\frac{1}{2m_{\ell}}\left(p_{1}^{2}+p_{2}^{2}\right) + \frac{1}{2}m_{\ell}\omega^{2}(x^{2}+y^{2})\,,\\
 	\label{homogeneous:7c}
-    H_{\mathrm{ZI}}&=-\mu_{\ell}BL_{3}-\mu B\sigma_{3}\,.
+    &H_{\mathrm{ZI}}\ \,=-\mu_{\ell}B\frac{L_{3}}{\hbar}-\mu B\sigma_{3}\,.
 \end{align}
-We note that the
-
-The full Hamiltonian \req{homogeneous:5} then is composed of (a) the two-dimensional quantum harmonic oscillator, (b) a free kinetic term for momentum states aligned with the magnetic field and (c) the magnetic or Zeeman interaction. While \req{homogeneous:7c} is usually expressed as
+The cyclotron frequency appears in \req{homogeneous:7b} as $2\omega=\omega_\mathrm{C}=eB/m_{\ell}$. We note that the \req{homogeneous:7c} is usually expressed as
 \begin{alignat}{1}
-	\label{homogeneous:7d} H_{\mathrm{Mag.}}=-\frac{e}{2m}\left(\bb{L}+g\bb{S}\right)\cdot\bb{B}\,,
+	\label{homogeneous:7d}
+    H_{\mathrm{ZI}}=-\frac{e}{2m}\left(\bb{L}+g\bb{S}\right)\cdot\bb{B}\,,
 \end{alignat}
-with an explicit g-factor, we will prefer to keep the charged contribution separate from the moment contribution so that both charged and neutral particles can be described with minimal changes in notation. As all the above Hamiltonian operators are mutually commuting, the energy eigenvalue of the total Hamiltonian is the sum of the individual energy eigenvalues. 
+with $\bb{S}$ defined in \req{qspin:1}. We see more explicitly that the orbital gyromagnetic ratio $g_\mathrm{L}$ which is a coefficient to the angular momentum operator $\bb{L}$ is unity unlike for spin. As all the above Hamiltonian operators are mutually commuting, the energy eigenvalue of the total Hamiltonian is the sum of the individual energy eigenvalues. Our remaining goal will be to convert the KGP eigenvalue equation into the above three non-relativistic Hamiltonian operators. 
 
-
-
-
-
-
-
-
-
-
-
-
-Using the method of ladder operators, the energy eigenvalues of \req{homogeneous:5} are found to be
+We now return to the KGP equation and write expand \req{kgp:1} for the Landau problem with energy eigenstates $\Psi_\mathrm{E}$ yielding
 \begin{alignat}{1}
-	\label{eq:homogeneous:14} E(p_{z},n,s) = \frac{p_{z}^{2}}{2m}+\hbar\omega_{c}\left(\frac{1}{2}+n\right)-\mu Bs\,,\indent n\in0,1,2\ldots\,,\indent s\in\pm1\,,
-\end{alignat}
-where $n$ is the principle quantum number. If the magnetic moment $\mu$ is defined as the magneton of a charged particle with $g\!=\!2$, then last two terms in the above equation simplify into states defined by the Landau quantum number
+    \label{lan09}
+    \left(\frac{E^{2}}{c^{2}}-m^{2}c^{2}-\bb{p}^{2}-\frac{1}{4}e^{2}B^{2}\left(x^{2}+y^{2}\right)+eBL_{3}+2\mu m_{\ell} B\sigma_{3}\right)\Psi_\mathrm{E}=0\;.
+\end{alignat} 
+We introduce the substitutions 
 \begin{alignat}{1}
-	\label{eq:homogeneous:15} E(p_{z},\lambda_\mathrm{L}) = \frac{p_{z}^{2}}{2m}+\hbar\omega_{c}\lambda_\mathrm{L}\,,\indent\lambda_\mathrm{L}\equiv\frac{1-s}{2}+n\,,\indent\lambda_\mathrm{L}\in0,1,2\ldots
-\end{alignat}
-Landau states are double degenerate for all states above the ground state $\lambda_\mathrm{L}=0$. The presence of anomalous magnetic moment then serves to break this degeneracy. This feature is true in both the non-relativistic and relativistic cases.
+    \label{lan10}
+    E\to m^\prime c^{2}\,,\quad \frac{E^{2}-m_{\ell}^{2}c^{4}}{2E}\to E^\prime\;,
+\end{alignat} 
+and arrive at the Schr{\"o}dinger-style Hamiltonian equation
+\begin{gather}
+	\label{lan11} \left(\frac{1}{2m'}\bb{p}^{2}+\frac{e^{2}B^{2}}{8m'}(x^{2}+y^{2})-\frac{eB}{2m'}L_{3}-\mu\left(\frac{m_{\ell}}{m'}\right)B\sigma_{3}\right)\Psi_\mathrm{E}=E'\Psi_\mathrm{E}\,,
+\end{gather}
+which matches the non-relativistic Hamiltonian presented in \req{homogeneous:7}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Dirac-Pauli Case}\label{ajsss:diracpauli}
-\noindent The DP \req{eq:diracpauli:01b} in this system takes on the form
+After a lengthy derivation (see~\cite{Steinmetz:2018ryf}), the energy eigenvalues are given by
 \begin{alignat}{1}
-	\label{eq:diracpauli:05} \left[\gamma_{\alpha}(i\hbar c\partial^{\alpha}-eA^{\alpha})-mc^{2}-a\mu_{B}\bb{\sigma}\cdot\bb{B}\right]\psi=0\,,
+    \label{lan23}
+    E'&=\frac{p_{3}^{2}}{2m^\prime }+\frac{e\hbar B}{m^\prime}\left(n+\frac{1}{2}\right)-\mu\left(\frac{m_{\ell}}{m'}\right)Bs\,,
 \end{alignat}
-Its energy solutions \cite{Johnson:1950zz,OConnell:1968spc,Tsai:1971zma} are then given by
-\begin{alignat}{1}
-	\label{eq:diracpauli:06} E^{2}_{DP}=\left(\sqrt{m^{2}c^{4}+4\mu_{B}mc^{2}B\lambda_\mathrm{L}}-a\mu_{B}Bs\right)^{2}+p_{z}^{2}c^{2}\,,
-\end{alignat}
-where $\lambda_\mathrm{L}\in0,1,2,\ldots$ is the Landau level and $s\in\pm1$ is the spin quantum number defined the same way as in \rsec{ajsss:homogeneous}. Just like the non-relativistic case, the relativistic Landau states maintain a double degeneracy above the ground state for $g\!=\!2$. The anomalous magnetic moment then serves to break this degeneracy, however it does so in a rather complicated manner which results in the natural magnetic moment defined by the magneton and the anomalous moment to affect the levels in physically distinct ways. This breaks the sensibility that a magnetic dipole should physically behave the same regardless of its size. In the weak field limit, the solution connects back to the Dirac Landau energies as expected.
+where $n\in1,2,3\ldots$ is the Landau orbital quantum number and $s\in\pm1$ is the spin quantum number.
+
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{Dirac and KGP Case}\label{ajsss:DKGP}
@@ -185,13 +183,6 @@ except that in this limit we are still considering the total angular moment quan
 \begin{alignat}{1}
 \label{glimit06} &E^{n_{r},j+1}_{-\lambda}=E^{n_{r},j}_{+\lambda}\;,\end{alignat}
 with levels of opposite $\lambda$ sign, same node quantum number and shifted $j$ values by one. In a similar fashion to the Dirac case, here we have no degeneracy for $E^{n_{r},1/2}_{-\lambda}$ states. In section~\ref{nonrel} we will convert from $n_{r}$, $j$ and $\pm\lambda$ to the familiar quantum numbers of $n$, $j$ and $\ell$ allowing for easy comparison with the hydrogen spectrum in standard notation.
-
-\subsubsection{Neutral-Coulomb Problem}\label{ajsss:neutral}
-\noindent An important consequence of the magnetic dipole moment is that it allows otherwise neutral particles to participate electromagnetically with charged systems. While this is most obviously important for the neutron which is easily attracted to matter through dispersion forces, this has also consequences for the neutrino which is an ellusive particle due to the small coupling of the weak interaction which it is sensitve to. The theoretical magnetic dipole for the neutrino also allows for an avenue to more explore the pure electromagnetic behavior of dipoles than neutrons. {\color{red}Add statements on the neutron dipole size.} Neutrons interact with matter through the residual strong force fairly easily which complicates the study of electromagnetism under strong field systems alone. The neutrino on the otherhand only has weak coupling which is less affecting making the neutrino a more ideal candidate to explore electromagnetism in strong field systems.
-
-{\color{red}Add statements discussing the various estimates for the neutrino magnetic moment size.}
-
-The most straight-forward manner to explore the neutral-Coulomb system is to write down the effective potential and check the zeros of the potential for the possibility of bound-states. While general wisdom suggests that neutral particles cannot have bound states with charged particles, there are cases where special unique singular bound states are allowed and additionally magnetic dipole moments can lead to mass resonances as features of scattering due to the disruptive nature of magnetic dipole moments on angular momentum.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Critical field strengths}

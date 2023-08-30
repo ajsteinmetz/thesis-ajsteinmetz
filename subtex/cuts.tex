@@ -73,3 +73,96 @@ The term by term magnetization evaluates as
   -\frac{e(1-gs)}{2m_{s}}\frac{1}{3}\frac{L^{3}}{(2\pi)^{2}}m_{s}^{3}\left(\frac{m_{s}}{T}\right)^{2}
   \int_{-\infty}^{+\infty}dt\left[z_{\sigma}^{-1}e^{a_{s}\cosh(t)}\cosh(t)\sinh^{4}(t)F^{2}\left[X_{s},\sigma\right]\right]\,,
 \end{multline}
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Connecting quantum and classical theory}
+\label{sec:ehrenfest}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The relativistic precession of a spin-1/2 particle can be extracted from the Dirac equation. The Dirac equation with electromagnetic interaction is given by
+\begin{alignat}{1}
+  \label{DIRAC01} i\hbar\frac{\partial}{\partial t}\psi=\left(\boldsymbol{\alpha}\cdot\left(\mathbf{p}c-e\mathbf{A}\right)+eA_{0}+\gamma^{0}mc^{2}\right)\psi=\hat{H}_{D}\psi\,,
+\end{alignat}
+
+In the Heisenberg representation, operators obeys the following equation of motion
+\begin{alignat}{1}
+  \label{m06}		&i\hbar\frac{\mathrm{d}\hat{O}}{\mathrm{d}t}-i\hbar\frac{\partial\hat{O}}{\partial t}=[\hat{O},\hat{H}]
+\end{alignat}
+and the expectation value is of course
+\begin{alignat}{1}
+  \label{m07}		&\langle i\hbar\frac{\mathrm{d}\hat{O}}{\mathrm{d}t}\rangle-\langle i\hbar\frac{\partial\hat{O}}{\partial t}\rangle=\langle[\hat{O},\hat{H}]\rangle
+\end{alignat}
+
+The operator spin precession is
+\begin{alignat}{1}
+  \label{DIRAC04} \frac{\mathrm{d}\mathbf{S}_{R}}{\mathrm{d}t}=\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\hbar}{2}\boldsymbol{\Sigma}\right)=-\boldsymbol{\alpha}\times\left(\mathbf{p}c-e\mathbf{A}\right)\,,
+\end{alignat}
+where $\mathbf{S}_{R}$ is the relativistic spin operator. While this expression is fully relativistic, it is not easily interpreted due to the off-diagonal nature of the $\boldsymbol{\alpha}$ matrices which mix particle and antiparticle components. A similar situation arises for the `velocity operator' which leads to the phenomenon of \emph{Zitterbewegung}. Eq.~\eqref{DIRAC04} reveals that spin is not a constant of motion of the Dirac equation. The orbital angular momentum $\mathbf{L}$ is also not a constant of motion, but the sum of the two or the total angular momentum $\mathbf{J}$ is.
+
+The expression for the Lorentz force derivable from the Schr{\"o}dinger-Pauli equation is given by
+\begin{alignat}{1}
+  \label{m31}		&\frac{\mathrm{d}\pi_{k}}{\mathrm{d}t}=eE_{k}+\frac{e}{2mc}(\vec{\pi}\times\vec{B}-\vec{B}\times\vec{\pi})_{k}+\frac{e\hbar}{2mc}\vec{\sigma}\cdot\nabla_{k}\vec{B}
+\end{alignat}
+which contains the Stern-Gerlach force and correct magnetic moment with $g\!=\!2$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Foldy-Wouthuysen transformation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+To connect the relativistic quantum notion of spin to our non-relativistic classical intuition we need to disentangle the components of the Dirac equation. To do this we make use of the Foldy-Wouthuysen (FW) transformation which diagonalizes odd operators via a unitary transformation
+\begin{alignat}{1}
+  \label{FW01} \psi\rightarrow\psi'=e^{i\mathcal{S}}\psi,\indent\hat{H}\rightarrow\hat{H}'=e^{i\mathcal{S}}\hat{H}e^{-i\mathcal{S}}-ie^{i\mathcal{S}}\frac{\partial e^{-i\mathcal{S}}}{\partial t}\,,
+\end{alignat}
+where $\mathcal{S}$ is Hermitian. The resulting Hamiltonian $\hat{H}'$ then produces two uncoupled equations of two-component spinors. For free particles the transformed Hamiltonian has an exact closed form, but for charged particles in weak fields the Hamiltonian will be an infinite series in powers of inverse mass $1/m$. Our interest lies in determining the first nonlinear terms in the spin precession of order $|\mathbf{s}|^{2}$ as these are the first terms to be sensitive to field in-homogeneity. Because of the intimate relationship between spin and magnetic moment, the expressions we seek will be up to order $\mu^{2}\sim e^{2}/m^{2}$ and thus we only require the FW transformed Hamiltonian up to $1/m^{2}$.
+
+The generated Hamiltonian is therefore
+\begin{alignat}{1}
+  \notag\hat{H}'&=\gamma^{0}\left\{mc^{2}+\frac{1}{2m}\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)^{2}-eA_{0}-\frac{e\hbar}{2mc}\boldsymbol{\sigma}\cdot\mathbf{B}\right.\\
+  \notag&+\frac{e\hbar}{8m^{2}c^{2}}\boldsymbol{\sigma}\cdot\left(\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)\times\mathbf{E}-\mathbf{E}\times\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)\right)\\
+  \label{FW02}&-\left.\frac{e\hbar^{2}}{8m^{2}c^{2}}\boldsymbol{\nabla}\cdot\mathbf{E}+\ldots\right\}\,.
+\end{alignat}
+The $\boldsymbol{\sigma}$ operators are simply the Pauli matrices. The first four terms represent the rest mass-energy of the particle and the Schr\"{o}dinger-Pauli (SP) Hamiltonian, the fifth term is the spin-orbit coupling, and the last is the Darwin term. In determining the precession, it is the spin Hamiltonian
+\begin{alignat}{1}
+  \notag\hat{H}'_{spin}=&-\frac{e\hbar}{2mc}\boldsymbol{\sigma}\cdot\bigg(\mathbf{B}\\
+  \label{FW03}&-\frac{1}{4mc}\left(\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)\times\mathbf{E}-\mathbf{E}\times\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)\right)\bigg),
+\end{alignat}
+which will be relevant.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Second order spin effects in the Stern-Garlach force}
+\label{sec:spinspin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+By substituting eq.~\eqref{FW03} into eq.~\eqref{DIRAC03}, the non-relativistic spin precession (up to order $1/m^{2}$) is found to be
+\begin{alignat}{1}
+  \notag\frac{\mathrm{d}\mathbf{S}_{NR}}{\mathrm{d}t}=\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\hbar}{2}\boldsymbol{\sigma}\right)&=\frac{e\hbar}{2mc}\boldsymbol{\sigma}\times\mathbf{B}\\
+  \notag&-\frac{e\hbar}{4m^{2}c^{2}}\boldsymbol{\sigma}\times\left(\mathbf{E}\times\left(\mathbf{p}-\frac{e}{c}\mathbf{A}\right)\right)\\
+  \label{SPIN01}&-\frac{e\hbar^{2}}{16m^{2}c^{2}}\left[\boldsymbol{\sigma},\boldsymbol{\sigma}\cdot\left(\boldsymbol{\nabla}\times\mathbf{E}\right)\right]\,,
+\end{alignat}
+where $\mathbf{S}_{NR}$ is the non-relativistic spin operator. The first term is the expected Larmor precession, and the second is precession generated by spin-orbit coupling. The last term is second order in spin and sensitive to the curl of electric fields. This term cannot be easily categorized as a simple `quantum correction' as both orders of $\hbar$ are consumed by the definition of the spin operator and survive the $\hbar\rightarrow 0$ limit. This term in fact is more analogous to the $p^{4}$ correction to a particle's energy due to relativity.
+
+As spin dynamics in quantum mechanics exhibits more complicated behavior at higher orders, due to special relativity, we expect similar corrections to appear in the classical theory of spin precession in the same manner that energy corrections appear.
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Neutral-Coulomb Problem}\label{ajsss:neutral}
+\noindent An important consequence of the magnetic dipole moment is that it allows otherwise neutral particles to participate electromagnetically with charged systems. While this is most obviously important for the neutron which is easily attracted to matter through dispersion forces, this has also consequences for the neutrino which is an ellusive particle due to the small coupling of the weak interaction which it is sensitve to. The theoretical magnetic dipole for the neutrino also allows for an avenue to more explore the pure electromagnetic behavior of dipoles than neutrons. {\color{red}Add statements on the neutron dipole size.} Neutrons interact with matter through the residual strong force fairly easily which complicates the study of electromagnetism under strong field systems alone. The neutrino on the otherhand only has weak coupling which is less affecting making the neutrino a more ideal candidate to explore electromagnetism in strong field systems.
+
+{\color{red}Add statements discussing the various estimates for the neutrino magnetic moment size.}
+
+The most straight-forward manner to explore the neutral-Coulomb system is to write down the effective potential and check the zeros of the potential for the possibility of bound-states. While general wisdom suggests that neutral particles cannot have bound states with charged particles, there are cases where special unique singular bound states are allowed and additionally magnetic dipole moments can lead to mass resonances as features of scattering due to the disruptive nature of magnetic dipole moments on angular momentum.
