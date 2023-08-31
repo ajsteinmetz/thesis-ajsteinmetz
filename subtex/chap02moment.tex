@@ -21,7 +21,7 @@ Relativistic classical spin dynamics is discussed in \rsec{sec:cspin} and is bas
 \section{Homogeneous magnetic fields}
 \label{sec:homogeneous}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent The case of the homogeneous magnetic field, sometimes referred to as the Landau problem, provides a stepping stone in which to examine all other consequences of quantum spin dynamics. A full treatment of this solution in terms of Ladder operators can be found in~\cite{Steinmetz:2018ryf} while alternative approaches are shown in texts such as~\cite{Itzykson:1980rh}. We take a constant magnetic field in the $z$-direction to be
+\noindent The case of the homogeneous magnetic field, sometimes referred to as the Landau problem, provides a stepping stone in which to examine the consequences of quantum spin dynamics in a concrete analytical fashion. We present here an abbreviated analysis and the full treatment of this solution in terms of Ladder operators can be found in~\cite{Steinmetz:2018ryf} while alternative approaches are shown in texts such as~\cite{Itzykson:1980rh}. We take a constant magnetic field in the $z$-direction to be
 \begin{alignat}{1}
 	\label{homogeneous:1} \bb{B}=(0,0,B)\,.
 \end{alignat}
@@ -31,13 +31,13 @@ For our choice of gauge, there are two common options: (a) the Landau $\bb{A}_\m
 \end{alignat}
 As the system has a manifest rotational symmetry perpendicular to the direction of the homogeneous field, we will choose the symmetric gauge $\bb{A}_\mathrm{S}$ which preserves this symmetry explicitly.
 
-Before we examine relativistic wave equations, it will be helpful to first consider the non-relativistic Schr{\"o}dinger-Pauli case as the KGP-Landau problem can be written as equivalent to the Schro{\"o}dinger-Pauli Hamiltonian. We consider energy eigenstates of \req{sp:1} under \req{homogeneous:1} as
+Before we examine relativistic wave equations, it will be helpful to first consider the non-relativistic Schr{\"o}dinger-Pauli case as the KGP-Landau problem can be written as equivalent to the Schro{\"o}dinger-Pauli Hamiltonian. We consider energy eigenstates of and electron with $m_{e}$ described by \req{sp:1} under \req{homogeneous:1} as
 \begin{alignat}{1}
-	\label{homogeneous:3} \chi\rightarrow\chi_\mathrm{E}\exp\left(-\frac{iEt}{\hbar}\right)\,,\qquad\left(\frac{1}{2m_{\ell}}\bb{\pi}^{2}-\bb{\mu}\cdot\bb{B}\right)\chi_\mathrm{E}=E\chi_\mathrm{E}\,,
+	\label{homogeneous:3} \chi\rightarrow\chi_\mathrm{E}\exp\left(-\frac{iEt}{\hbar}\right)\,,\qquad\left(\frac{1}{2m_{e}}\bb{\pi}^{2}-\bb{\mu}\cdot\bb{B}\right)\chi_\mathrm{E}=E\chi_\mathrm{E}\,,
 \end{alignat}
 where $\mu$ is the magnitude of the magnetic moment as defined in \req{mag:3}. \req{homogeneous:3} can be further rewritten using angular momentum $\bb{L}$ and the symmetric gauge \req{homogeneous:2} as
 \begin{gather}
-	\label{homogeneous:4} \left(\frac{1}{2m_{\ell}}\bb{p}^{2}+\frac{e^{2}B^{2}}{8m_{\ell}}(x^{2}+y^{2})-\frac{eB}{2m_{\ell}}L_{3}-\mu B\sigma_{3}\right)\chi_\mathrm{E}=E\chi_\mathrm{E}\,,\\
+	\label{homogeneous:4} \left(\frac{1}{2m_{e}}\bb{p}^{2}+\frac{e^{2}B^{2}}{8m_{e}}(x^{2}+y^{2})-\frac{eB}{2m_{e}}L_{3}-\mu B\sigma_{3}\right)\chi_\mathrm{E}=E\chi_\mathrm{E}\,,\\
     \bb{L}=\bb{r}\times\bb{p}\,,\qquad L_{i}=\varepsilon_{ijk}x_{j}p_{k}\,.
 \end{gather}
 
@@ -46,13 +46,13 @@ The above can be broken into a set of three mutually commuting Hamiltonian opera
 	\label{homogeneous:7}
     &H_\mathrm{total}=H_\mathrm{Free}+H_\mathrm{HO}+H_\mathrm{Mag.}\,,\\
 	\label{homogeneous:7a}
-    &H_{\mathrm{Free}}=\frac{p_{3}^{2}}{2m}\,,\\
+    &H_{\mathrm{Free}}=\frac{p_{z}^{2}}{2m}\,,\\
 	\label{homogeneous:7b}
-    &H_\mathrm{HO}\,=\frac{1}{2m_{\ell}}\left(p_{1}^{2}+p_{2}^{2}\right) + \frac{1}{2}m_{\ell}\omega^{2}(x^{2}+y^{2})\,,\\
+    &H_\mathrm{HO}\,=\frac{1}{2m_{e}}\left(p_{1}^{2}+p_{2}^{2}\right) + \frac{1}{2}m_{e}\omega^{2}(x^{2}+y^{2})\,,\\
 	\label{homogeneous:7c}
-    &H_{\mathrm{ZI}}\ \,=-\mu_{\ell}B\frac{L_{3}}{\hbar}-\mu B\sigma_{3}\,.
+    &H_{\mathrm{ZI}}\ \,=-\mu_{B}B\frac{L_{3}}{\hbar}-\mu B\sigma_{3}\,.
 \end{align}
-The cyclotron frequency appears in \req{homogeneous:7b} as $2\omega=\omega_\mathrm{C}=eB/m_{\ell}$. We note that the \req{homogeneous:7c} is usually expressed as
+The cyclotron frequency appears in \req{homogeneous:7b} as $2\omega=\omega_\mathrm{C}=eB/m_{e}$. We note that the \req{homogeneous:7c} is usually expressed as
 \begin{alignat}{1}
 	\label{homogeneous:7d}
     H_{\mathrm{ZI}}=-\frac{e}{2m}\left(\bb{L}+g\bb{S}\right)\cdot\bb{B}\,,
@@ -62,54 +62,92 @@ with $\bb{S}$ defined in \req{qspin:1}. We see more explicitly that the orbital 
 We now return to the KGP equation and write expand \req{kgp:1} for the Landau problem with energy eigenstates $\Psi_\mathrm{E}$ yielding
 \begin{alignat}{1}
     \label{lan09}
-    \left(\frac{E^{2}}{c^{2}}-m^{2}c^{2}-\bb{p}^{2}-\frac{1}{4}e^{2}B^{2}\left(x^{2}+y^{2}\right)+eBL_{3}+2\mu m_{\ell} B\sigma_{3}\right)\Psi_\mathrm{E}=0\;.
+    \left(\frac{E^{2}}{c^{2}}-m_{e}^{2}c^{2}-\bb{p}^{2}-\frac{1}{4}e^{2}B^{2}\left(x^{2}+y^{2}\right)+eBL_{3}+2\mu m_{e} B\sigma_{3}\right)\Psi_\mathrm{E}=0\;.
 \end{alignat} 
 We introduce the substitutions 
 \begin{alignat}{1}
     \label{lan10}
-    E\to m^\prime c^{2}\,,\quad \frac{E^{2}-m_{\ell}^{2}c^{4}}{2E}\to E^\prime\;,
+    E\to m^\prime c^{2}\,,\quad \frac{E^{2}-m_{e}^{2}c^{4}}{2E}\to E^\prime\;,
 \end{alignat} 
-and arrive at the Schr{\"o}dinger-style Hamiltonian equation
+and recast KGP \req{lan09} into a Schr{\"o}dinger-style Hamiltonian equation
 \begin{gather}
-	\label{lan11} \left(\frac{1}{2m'}\bb{p}^{2}+\frac{e^{2}B^{2}}{8m'}(x^{2}+y^{2})-\frac{eB}{2m'}L_{3}-\mu\left(\frac{m_{\ell}}{m'}\right)B\sigma_{3}\right)\Psi_\mathrm{E}=E'\Psi_\mathrm{E}\,,
+	\label{lan11} \left(\frac{1}{2m'}\bb{p}^{2}+\frac{e^{2}B^{2}}{8m'}(x^{2}+y^{2})-\frac{eB}{2m'}L_{3}-\mu\left(\frac{m_{e}}{m'}\right)B\sigma_{3}\right)\Psi_\mathrm{E}=E'\Psi_\mathrm{E}\,,
 \end{gather}
 which matches the non-relativistic Hamiltonian presented in \req{homogeneous:7}.
 
-After a lengthy derivation (see~\cite{Steinmetz:2018ryf}), the energy eigenvalues are given by
+The energy eigenvalues of \req{homogeneous:7} are given by
 \begin{alignat}{1}
     \label{lan23}
-    E'&=\frac{p_{3}^{2}}{2m^\prime }+\frac{e\hbar B}{m^\prime}\left(n+\frac{1}{2}\right)-\mu\left(\frac{m_{\ell}}{m'}\right)Bs\,,
+    E^\prime_{n,s}(p_{z},B)&=\frac{p_{z}^{2}}{2m^\prime }+\frac{e\hbar B}{m^\prime}\left(n+\frac{1}{2}\right)-\mu B\left(\frac{m_{e}}{m'}\right)s\,,
 \end{alignat}
 where $n\in1,2,3\ldots$ is the Landau orbital quantum number and $s\in\pm1$ is the spin quantum number. The physical relativistic energies can be obtained by undoing the substitutions in \req{lan10} yielding from \req{lan23}
 \begin{gather}
 \label{lan24}
-E^{2}=m_{\ell}^{2}c^{4}+p_{3}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu m_{\ell}c^{2}Bs\,,\\
+E^{2}_{n,s}(p_{z},B)=m_{e}^{2}c^{4}+p_{z}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu B m_{e}c^{2}s\,,\\
 \label{lan24b}
-E=\pm\sqrt{m_{\ell}^{2}c^{4}+p_{3}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu m_{\ell}c^{2}Bs}\;.
+E_{n,s}=\pm\sqrt{m_{e}^{2}c^{4}+p_{z}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu B m_{e}c^{2}s}\;.
 \end{gather}
 This expression for the relativistic Landau levels is the same as found by ~\cite{Weisskopf:1936hya} for the Dirac equation setting $g=2$ in \req{lan24b}. The Landau orbital part and spin portions can be combined when the magnetic moment is expressed in terms of $e/m$, but the form in \req{lan24b} keeps it generalized for the case of neutral particles.
 
-Restricting ourselves to the positive energy spectrum, the non-relativistic reduction of \req{lan24b} can be carried out in the large mass limit yielding
+The KGP-Landau levels above the ground state lose their (accidental) degeneracy for $g\neq 2$. This is shown schematically in \rf{f04}. The anomaly also causes the ground state to be pushed downward, such that $E^{2}<m^{2}$; if the anomaly and the magnetic field are large enough, states above the ground state are also pushed below the rest mass energy of the particle.
+
+%%%%%%%%%%%%%
+\begin{figure}
+ \centering
+ \includegraphics[clip, trim=0.0cm 0.0cm 9.0cm 7.0cm,width=0.6\linewidth]{plots/chap02moment/lanplot04.pdf}
+ \caption[]{Diagram organizing the KGP-Landau levels for particles with zero z-component momentum. The Landau levels $n$ and spin $s$ serve to split levels while the anomaly $a$ controls the degeneracy among levels.}
+ \label{f04}
+\end{figure}
+%%%%%%%%%%%%%
+
+However, we recognize a periodicity considering the energy as a function of $g$. We recall that in Eq.~\eqref{lan24b} $n=0, 1, 2\ldots$. As $g$ varies, each time $gs/2$ crosses an integer value, for a different value of $n$ the energy eigenvalue $E$ repeat as a function of changing $g$. All possible values of energy $E$ are reached (at fixed $m$ and $p^2_3$) for $-2\le g\le 2$. Moreover, while for almost all $g\ne 2$ the degeneracy is completely broken, this periodicity implies that energy degeneracy is restored for values~\cite{Evans:2022fsu} 
 \begin{alignat}{1}
-\label{lan27} E&=m_{\ell}c^{2}+\frac{p_{3}^{2}}{2m_{\ell}}+\mu_{\ell}B\left(2n+1-\frac{g}{2}s\right)-\frac{p_{3}^{4}}{8m_{\ell}^{3}c^{2}}\\ \notag &\!-\!\frac{p_{3}^{2}}{2m_{\ell}}\frac{\mu_{\ell}B}{m_{\ell}c^{2}}\left(2n+1-\frac{g}{2}s\right)\!-\!\frac{\mu_{\ell}^{2}B^{2}}{2m_{\ell}c^{2}}\left(2n+1-\frac{g}{2}s\right)^{2}\!+\!\mathcal{O}(1/m_{\ell}^{5})\;,\end{alignat}
+\label{lan26}
+g_{k}/2=1+k\,,\qquad
+\lambda_\mathrm{L}'=\lambda_\mathrm{L}-ks\;,\qquad
+\lambda_\mathrm{L}=n+\frac{1}{2}-s\;,
+\end{alignat}
+where $k=0,\pm1,\pm2,\ldots$ The Landau levels Eq.\,\eqref{lan24} contain an infinite number of degenerate levels bounded from below. Certain states change the sign of the magnetic energy and their total energies become unphysical in the limit that $g_{k}B$ becomes large; for even $k$ there are $k/2$ such states and for odd $k$ there are $(k+1)/2$.
+
+It is useful to compare the KGP solution to the the Landau levels for the DP equation which we obtained by~\cite{Tsai:1971zma}. The DP-Landua energy eigenstates are given by
+\begin{subequations}
+\begin{alignat}{1}
+\label{lan25} 
+E^{2}_{n,s}(p_{z},B)|_\mathrm{DP} =&\left(\!\!\sqrt{\displaystyle m_{e}^{2}c^{4}\!+\!2e\hbar c^{2}B\left(n+\frac{1}{2}-s\right)}-\frac{eB\hbar}{2m_{e}}(g-2)s\!\right)^{2}\!\!\!+p_{z}^{\!\!2}c^{2},\\[0.4cm]
+\label{lan25b}
+E_{n,s}|_\mathrm{DP} =\pm &\sqrt{\!\left(\!\!\sqrt{\displaystyle m_{e}^{2}c^{4}+2e\hbar c^{2}B\left(n+\frac{1}{2}-s\right)}\!-\!\frac{eB\hbar}{2m_{e}}(g-2)s\!\right)^{\!\!2}\!\!\!+p_{z}^{2}c^{2}}\;,
+\end{alignat}
+\end{subequations}
+which in our opinion fails Dirac\rq s principle of mathematical beauty when compared to the KGP result Eq.~\eqref{lan24b}. Both Eqs.~\eqref{lan24b} and \eqref{lan25b} have the correct non-relativistic reduction at the lowest order though, the latter obscures the physical interpretation.
+
+The most egregious issue with the DP-Landau levels is that, in a perturbative expansion, it includes cross terms between the $g=2$ magnetic moment and anomalous terms in $a=(g-2)/2$; thus the result does not depend on the particle magnetic moment alone; there is a functional dependence on the magnetic anomaly $a$. The presence of these cross terms implies that above first order the results cannot be given in terms of the full magnetic moment alone. In contrast, for the KGP-Landau levels, Eq.\,\eqref{lan25b}, the entire effect of magnetic moment is contained in a single term. Thus Dirac\rq s beauty principle favors heavily the KGP.
+
+Restricting ourselves to the positive energy spectrum, the non-relativistic reduction of \req{lan24b} can be carried out in powers of $1/m$ in the large mass limit yielding
+\begin{alignat}{1}
+\label{lan27} E_{n,s}|_\mathrm{NR}&=m_{e}c^{2}+\frac{p_{z}^{2}}{2m_{e}}+\mu_{B}B\left(2n+1-\frac{g}{2}s\right)-\frac{p_{z}^{4}}{8m_{e}^{3}c^{2}}\\ \notag &\!-\!\frac{p_{z}^{2}}{2m_{e}}\frac{\mu_{B}B}{m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)\!-\!\frac{\mu_{B}^{2}B^{2}}{2m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)^{2}\!+\!\mathcal{O}(1/m_{e}^{5})\;,\end{alignat}
 which contains the expected terms such as the non-relativistic kinetic energy in the z-direction, the first relativistic correction to kinetic energy, the Landau energies, and cross terms that behave like modifications to the mass of the particle.
 
-
-
-
-
-
-
+The `Landau' problem for neutral particles, for example the neutron with mass $m_\mathrm{N}$ simplifies to
+\begin{gather}
+\label{neutral:1}
+E_{n,s}|_{e=0}\rightarrow E_{s}(\bb{p},B)=\sqrt{m_\mathrm{N}^{2}c^{4}+\bb{p}^{2}c^{2}-2\mu B m_\mathrm{N}c^{2}s}\;,
+\end{gather}
+which is just the free particle motion without Landau orbitals. We can define an `effective' polarization mass given by
+\begin{gather}
+\label{neutral:2}
+\widetilde{m}^{2}_{s}=m_\mathrm{N}^{2}c^{4}-2\mu B m_\mathrm{N}c^{2}s\;.
+\end{gather}
+This effective polarization mass (which also is easily defined for charged particles) will find use when we consider cosmic thermodynamics and plasmas in \rchap{chap:cosmo}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Hydrogen-like atoms}
 \label{sec:coulomb}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The Coulomb problem, or sometimes referred to as the Kepler problem, provides us with a standard application of any quantum theory to explore. As the hydrogen-like atom is the most well understood atomic system in physics, any non-minimal behavior especially for high-$Z$ systems can lead to dramatic consequences for the resulting spectra. We take the Coulomb potential to be
+The Coulomb problem, or sometimes referred to as the Kepler problem, provides us an important application of any quantum theory to explore. As the hydrogen-like atoms are the the most well understood atomic system in physics, any non-minimal behavior especially for high-$Z$ systems can lead to consequences for the resulting spectral lines. We take the Coulomb potential to be
 \begin{equation}
-	\label{eq:coulomb:01} V_\mathrm{C}\equiv e A^{0}=\frac{Z \alpha\hbar c}{r}\;,\qquad \bb{A}=0\;.
+	\label{eq:coulomb:01} eV_\mathrm{C}\equiv e A^{0}=\frac{Z \alpha\hbar c}{r}\;,\qquad \bb{A}=0\;.
 \end{equation}
-The KGP-Coulomb problem can be solved analytically~\citep{Steinmetz:2018ryf} and we will briefly sketch out the solution and its consequences.
+The KGP-Coulomb problem with arbitrary magnetic moment can be solved analytically and we will briefly sketch out the solution and its consequences.
 
 For energy states $\Psi=e^{-iEt/\hbar}\Psi_\mathrm{E}$ the KGP equation yields the following differential equation
 \begin{alignat}{1}
@@ -123,7 +161,7 @@ The operator $\mathcal{K}$ commutes with $\bb{\alpha}\cdot\bb{\hat{r}}$ and its 
 
 The difficulty of this equation is that the effective angular momentum operator is non-diagonal in spinor space due to the presence of $\bb{\alpha}\cdot\bb{\hat{r}}$ which mixes upper and lower components. The effective radial potential within \req{cou02} is then
 \begin{alignat}{1}
-	\label{temp} V_\mathrm{eff}=-\frac{2E}{\hbar c}\frac{Z\alpha}{r}
+	\label{temp} \boxed{V_\mathrm{eff}=-\frac{2E}{\hbar c}\frac{Z\alpha}{r}-\frac{Z^{2}\alpha^{2}}{r^{2}}+\frac{g}{2}Z\alpha\frac{i\bb{\alpha}\cdot\bb{\hat{r}}}{r{2}}}\,.
 \end{alignat}
 Following the procedure of~\cite{Martin:1958zz}, we introduce the operator
 \begin{alignat}{1}
@@ -136,16 +174,14 @@ where the absolute values are denoted as $\lambda=|\Lambda|$. The angular moment
 \begin{alignat}{1}
 \label{cou09} &\mathcal{K}(\mathcal{K}-\gamma^{0})-Z^{2}\alpha^{2}-\frac{g}{2}Z\alpha(i\bb{\alpha}\cdot\bb{\hat{r}})=\mathfrak{L}(\mathfrak{L}+1)+\left(\frac{g^{2}}{4}-1\right)Z^{2}\alpha^{2}.
 \end{alignat}
-If the $g$-factor is taken to be $g\!=\!2$, then the differential \ar reverts to the one discussed in Martin and Glauber\rq s work~\cite{Martin:1958zz}. The coefficient $g^{2}/4-1$ will be commonly seen to precede new more complicated terms, which conveniently vanish for $|g|=2$ demonstrating that as function of $g$ there is a \lq\lq cusp\rq\rq~\cite{Rafelski:2022bsv} for $|g|=2$. This will become especially evident when we discuss strongly bound systems which behave very differently for $|g|<2$ versus $|g|>2$. 
+If the $g$-factor is taken to be $g\!=\!2$, then the differential \req{cou02} reverts to the one discussed in~\cite{Martin:1958zz}. The coefficient $g^{2}/4-1$ will be commonly seen to precede new more complicated terms, which conveniently vanish for $|g|=2$ demonstrating that as function of $g$ there is a \lq\lq cusp\rq\rq~\citep{Rafelski:2022bsv} for $|g|=2$. This will become especially evident when we discuss strongly bound systems which behave very differently for $|g|<2$ versus $|g|>2$. 
 
-The energy levels of the KGP-Coulomb equation are then
-\begin{subequations}
-\begin{alignat}{1}
-\label{cou17} E_{\pm\lambda}^{n_{r},j}&=\frac{mc^{2}}{\sqrt{1+\displaystyle\frac{Z^{2}\alpha^{2}}{\left(n_{r}+1/2+\nu\right)^{2}}}},\\[0.2cm]
-\label{cou17b} \nu&=\sqrt{(\lambda\pm1/2)^{2}+\left(\frac{g^{2}}{4}-1\right)Z^{2}\alpha^{2}},\\[0.2cm]
-\label{cou17c} \lambda&=\sqrt{\displaystyle(j+1/2)^{2}-\frac{\displaystyle g^{2}}{4}Z^{2}\alpha^{2}}\;.
-\end{alignat}
-\end{subequations}
+We omit further derivation which can be found in~\cite{Steinmetz:2018ryf}. We find the resulting energy levels of the KGP-Coulomb equation to be 
+\begin{gather}
+\label{cou17} E_{\pm\lambda}^{n_{r},j}=mc^{2}\left[1+\displaystyle\frac{Z^{2}\alpha^{2}}{\left(n_{r}+1/2+\nu\right)^{2}}\right]^{-1/2}\,,\\
+\label{cou17b} \nu=\sqrt{(\lambda\pm1/2)^{2}+\left(\frac{g^{2}}{4}-1\right)Z^{2}\alpha^{2}}\,,\qquad
+\lambda=\sqrt{\displaystyle(j+1/2)^{2}-\frac{\displaystyle g^{2}}{4}Z^{2}\alpha^{2}}\;.
+\end{gather}
 where $n_{r}$ is the node quantum number which takes on the values $n_{r}=0,1,2,\ldots$. \req{cou17} is the same \lq\lq Sommerfeld-style\rq\rq\ expression for energy that we can obtain from the Dirac or KG equations. The difference between them arises from the expression of the relativistic angular momentum which depends on $g$-factor for the KGP equation. The KGP eigenvalues \req{cou17} for arbitrary spin were obtained by~\cite{Niederle:2004bx} using a tensor approach.
 
 In the limit that $g\rightarrow2$ for the Dirac case the expressions for $\lambda$ and $\nu$ reduce to
@@ -157,7 +193,8 @@ In the limit that $g\rightarrow2$ for the Dirac case the expressions for $\lambd
 \end{subequations}
 This procedure requires taking the root of perfect squares; therefore, the sign information is lost in \req{glimit01}. As long as $Z^{2}\alpha^{2}<3/4$ we can drop the absolute value notation as $\nu$ is always positive. The energy is then given by
 \begin{alignat}{1}
-\label{glimit02} &E_{\pm\lambda}^{n_{r},j}=\frac{mc^{2}}{\sqrt{1+\displaystyle\frac{Z^{2}\alpha^{2}}{\left(n_{r}\begin{smallmatrix} +1 \\ +0 \end{smallmatrix}+\sqrt{\displaystyle(j+1/2)^{2}-Z^{2}\alpha^{2}}\right)^{2}}}}\;.
+\label{glimit02}
+E_{\pm\lambda}^{n_{r},j}=mc^{2}\left[1+\displaystyle\frac{Z^{2}\alpha^{2}}{\left(n_{r}\begin{smallmatrix} +1 \\ +0 \end{smallmatrix}+\sqrt{\displaystyle(j+1/2)^{2}-Z^{2}\alpha^{2}}\right)^{2}}\right]^{-1/2}\;.
 \end{alignat}
 The $\begin{smallmatrix} +1 \\ +0 \end{smallmatrix}$ notation is read as the upper value corresponding to the $+\lambda$ states and the lower value corresponding to the $-\lambda$ states. 
 
@@ -178,32 +215,29 @@ In the limit that $g\rightarrow 0$, which is the KG case, the expressions are gi
 \end{subequations}
 which reproduces the correct expressions for the energy levels for the Klein-Gordon case 
 \begin{alignat}{1}
-\label{glimit05} &E_{\pm\lambda}^{n_{r},j}=\frac{mc^{2}}{\sqrt{1+\displaystyle\frac{Z^{2}\alpha^{2}}{\left(n_{r}+1/2+\displaystyle\sqrt{\left(j\begin{smallmatrix} +1 \\ +0 \end{smallmatrix}\right)^{2}-Z^{2}\alpha^{2}}\right)^{2}}}}\;,\end{alignat}
+\label{glimit05} E_{\pm\lambda}^{n_{r},j}=mc^{2}\left[1+\displaystyle\frac{Z^{2}\alpha^{2}}{\left(n_{r}+1/2+\displaystyle\sqrt{\left(j\begin{smallmatrix} +1 \\ +0 \end{smallmatrix}\right)^{2}-Z^{2}\alpha^{2}}\right)^{2}}\right]^{-1/2}\;,
+\end{alignat}
 except that in this limit we are still considering the total angular moment quantum number $j$ rather than orbital momentum quantum number $\ell$. It is interesting to note that the KG-Coulomb problem\rq s energy formula contains $\ell+1/2$, which matches identically to our half-integer $j$ values; therefore, this artifact of spin, untethered and invisible by the lack of magnetic moment, does not alter the energies of the states. The degeneracy in energy levels are given by 
 \begin{alignat}{1}
 \label{glimit06} &E^{n_{r},j+1}_{-\lambda}=E^{n_{r},j}_{+\lambda}\;,\end{alignat}
 with levels of opposite $\lambda$ sign, same node quantum number and shifted $j$ values by one. In a similar fashion to the Dirac case, here we have no degeneracy for $E^{n_{r},1/2}_{-\lambda}$ states.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Non-relativistic limit for energies} \label{nonrel}
+\subsection{Non-relativistic Coulomb problem energies} \label{nonrel}
 The first regime of interest to understand the effect of variable $g$ in the KGP-Coulomb problem is the non-relativistic limit characterized by the weak binding of low-Z atoms. We now will convert from $n_{r}$, $j$ and $\pm\lambda$ to the familiar quantum numbers of $n$, $j$ and $\ell$ allowing for easy comparison with the hydrogen spectrum in standard notation. We start by expanding \req{cou17} in powers of $Z\alpha$ to compare to the known hydrogen spectrum. 
 
 To order $\mathcal{O}(Z^{4}\alpha^{4})$ the energy levels are given by
 \begin{alignat}{1}
-\label{nonrel01} \frac{E^{n_{r},j}_{\pm\lambda}}{mc^{2}}=1&-\frac{1}{2}\frac{Z^{2}\alpha^{2}}{(n_{r}+1/2+(\nu_{\pm\lambda})|_{Z=0})^{2}}\\ 
-\notag &+\frac{(\nu_{\pm\lambda})|_{Z=0}'Z^{3}\alpha^{3}}{(n_{r}+1/2+(\nu_{\pm\lambda})|_{Z=0})^{3}}\\ 
-\notag&+\frac{1}{2}\frac{(3/4-3(\nu_{\pm\lambda})|_{Z=0}'^{2})Z^{4}\alpha^{4}}{(n_{r}+1/2+(\nu_{\pm\lambda})|_{Z=0})^{4}}\\ 
-\notag &+\frac{1}{2}\frac{(\nu_{\pm\lambda})|_{Z=0}^{\prime\prime} Z^{4}\alpha^{4}}{(n_{r}+1/2+(\nu_{\pm\lambda})|_{Z=0})^{3}}+\mathcal{O}(Z^{6}\alpha^{6})\;,\end{alignat}
+\label{nonrel01} \frac{E^{n_{r},j}_{\pm\lambda}}{mc^{2}}=1&-\frac{1}{2}\frac{Z^{2}\alpha^{2}}{(n_{r}+1/2+(\nu_{\pm\lambda})|_{Z=0})^{2}}+\frac{(\nu_{\pm\lambda})|_{Z=0}'Z^{3}\alpha^{3}}{(n_{r}+1/2+(\nu_{\pm\lambda})|_{Z=0})^{3}}\\ 
+\notag&+\frac{1}{2}\frac{(3/4-3(\nu_{\pm\lambda})|_{Z=0}'^{2})Z^{4}\alpha^{4}}{(n_{r}+1/2+(\nu_{\pm\lambda})|_{Z=0})^{4}}+\frac{1}{2}\frac{(\nu_{\pm\lambda})|_{Z=0}^{\prime\prime} Z^{4}\alpha^{4}}{(n_{r}+1/2+(\nu_{\pm\lambda})|_{Z=0})^{3}}+\mathcal{O}(Z^{6}\alpha^{6})\;,\end{alignat}
 where primed $\nu_{\pm\lambda}$ indicate derivatives with respect to $Z\alpha$. These derivatives evaluate to
 \begin{alignat}{1}
 \label{nonrel02} &(\nu_{\pm\lambda})|_{Z=0}=j+1/2\pm1/2,\\ \notag &(\nu_{\pm\lambda})|_{Z=0}'=0,\\ \notag &(\nu_{\pm\lambda})|_{Z=0}^{\prime\prime}=\frac{(g^{2}/4-1)}{j+1/2\pm1/2}-\frac{g^{2}/4}{j+1/2}\;.
 \end{alignat}
 \req{nonrel01} then simplifies to
 \begin{alignat}{1}
-\label{nonrel03} \frac{E^{n_{r},j}_{\pm\lambda}}{mc^{2}}=1&-\frac{1}{2}\frac{Z^{2}\alpha^{2}}{\left(n_{r}+j\begin{smallmatrix}+3/2 \\ +1/2\end{smallmatrix}\right)^{2}}\\
-\notag &+\frac{3}{8}\frac{Z^{4}\alpha^{4}}{\left(n_{r}+j\begin{smallmatrix}+3/2 \\ +1/2\end{smallmatrix}\right)^{4}}\\ 
-\notag &+\frac{1}{2}\left(\frac{(g^{2}/4-1)}{j\begin{smallmatrix}+1 \\ +0\end{smallmatrix}}-\frac{g^{2}/4}{j+1/2}\right)\frac{Z^{4}\alpha^{4}}{\left(n_{r}+j\begin{smallmatrix}+3/2 \\ +1/2\end{smallmatrix}\right)^{3}}\\
-\notag &+\mathcal{O}(Z^{6}\alpha^{6})\;.
+\label{nonrel03} \frac{E^{n_{r},j}_{\pm\lambda}}{mc^{2}}=1&-\frac{1}{2}\frac{Z^{2}\alpha^{2}}{\left(n_{r}+j\begin{smallmatrix}+3/2 \\ +1/2\end{smallmatrix}\right)^{2}}+\frac{3}{8}\frac{Z^{4}\alpha^{4}}{\left(n_{r}+j\begin{smallmatrix}+3/2 \\ +1/2\end{smallmatrix}\right)^{4}}\\ 
+\notag &+\frac{1}{2}\left(\frac{(g^{2}/4-1)}{j\begin{smallmatrix}+1 \\ +0\end{smallmatrix}}-\frac{g^{2}/4}{j+1/2}\right)\frac{Z^{4}\alpha^{4}}{\left(n_{r}+j\begin{smallmatrix}+3/2 \\ +1/2\end{smallmatrix}\right)^{3}}+\mathcal{O}(Z^{6}\alpha^{6})\;.
 \end{alignat}
 In the non relativistic limit, the node quantum number corresponds to the principle quantum number via $n_{r}=n'-j-1/2$ with $n'=1,2,3\ldots$ Using \req{nonrel03} and \req{cou07} we see that in the non relativistic limit $+\lambda$ corresponds to $\kappa>0$ or anti-aligned spin-angular momentum with $j=\ell-1/2$ and $\ell\geq1$. Conversely $-\lambda$ corresponds to $\kappa<0$ or aligned spin-angular momentum with $j=\ell+1/2$. 
 
@@ -221,31 +255,29 @@ With all this input we arrive at
 +1 \\ +0
 \end{smallmatrix}}\frac{Z^{4}\alpha^{4}}{\left(n'\begin{smallmatrix}
 +1 \\ +0
-\end{smallmatrix}\right)^{3}}\\
-\notag &-\frac{1}{2}\frac{g^{2}/4}{j+1/2}\frac{Z^{4}\alpha^{4}}{\left(n'\begin{smallmatrix}
+\end{smallmatrix}\right)^{3}}-\frac{1}{2}\frac{g^{2}/4}{j+1/2}\frac{Z^{4}\alpha^{4}}{\left(n'\begin{smallmatrix}
 +1 \\ +0
 \end{smallmatrix}\right)^{3}}+\mathcal{O}(Z^{6}\alpha^{6})\;.
 \end{alignat}
 Lastly we recast, for the $\kappa>0$ states, the principle quantum number as $n'+1\rightarrow n$ with $n\geq2$ and we simply relabel $n'\rightarrow n$ for $\kappa<0$ states. This allows \req{nonrel04} to be completely written in terms of $n$, $j$, and $\ell$ as
 \begin{alignat}{1}
 \label{nonrel09} \frac{E^{n,j}_{\ell}}{mc^{2}}=1&-\frac{1}{2}\frac{Z^{2}\alpha^{2}}{n^{2}}+\frac{3}{8}\frac{Z^{4}\alpha^{4}}{n^{4}}\\
-\notag &+\frac{1}{2}\frac{(g^{2}/4-1)}{\ell+1/2}\frac{Z^{4}\alpha^{4}}{n^{3}}\\
-\notag &-\frac{1}{2}\frac{g^{2}/4}{j+1/2}\frac{Z^{4}\alpha^{4}}{n^{3}}+\mathcal{O}(Z^{6}\alpha^{6})\;,\end{alignat}
+\notag &+\frac{1}{2}\frac{(g^{2}/4-1)}{\ell+1/2}\frac{Z^{4}\alpha^{4}}{n^{3}}-\frac{1}{2}\frac{g^{2}/4}{j+1/2}\frac{Z^{4}\alpha^{4}}{n^{3}}+\mathcal{O}(Z^{6}\alpha^{6})\;,\end{alignat}
 where it is understood that $n-\ell\geq1$, this condition allows us to write what was previously described in \req{nonrel04} as two distinct spectra now as a single energy spectra. In the limit $g\rightarrow2$ or $g\rightarrow0$ the correct expansion to order $Z^{4}\alpha^4$ of the Dirac or KG energies are obtained. In the following we explore some consequences of our principal non-relativistic result, \req{nonrel09}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Lamb Shift} \label{lamb}
 The breaking of degeneracy in \req{nonrel09} between states of differing $\ell$ orbital quantum number, but the same total angular momentum $j$ and principle quantum number $n$ is responsible for the Lamb shift due to anomalous magnetic moment. The only term in \req{nonrel09} (up to order $Z^{4}\alpha^{4}$) that breaks the degeneracy between the $E^{n,j}_{\ell=j+1/2}$ and $E^{n,j}_{\ell=j-1/2}$ states for $n\geq2$ is the fourth term. This is unsurprising as it depends exclusively on quantum number $\ell$ and $n$. The lowest order Lamb shift due to anomalous magnetic moment is then
 \begin{alignat}{1}
-\label{lamb01} \frac{\Delta E_{\mathrm{gLamb}}^{n,j}}{mc^{2}}&=E^{n,j}_{\ell=j-1/2}-E^{n,j}_{\ell=j+1/2}\\ \notag &=\left(g^{2}/8-1/2\right)\left(\frac{1}{j}-\frac{1}{j+1}\right)\frac{Z^{4}\alpha^{4}}{n^{3}}\;.
+\label{lamb01} \frac{\Delta E_{\mathrm{gLamb}}^{n,j}}{mc^{2}}&=E^{n,j}_{\ell=j-1/2}-E^{n,j}_{\ell=j+1/2}=\left(g^{2}/8-1/2\right)\left(\frac{1}{j}-\frac{1}{j+1}\right)\frac{Z^{4}\alpha^{4}}{n^{3}}\;.
 \end{alignat}
 For the $2S_{1/2}$ and $2P_{1/2}$ states \req{lamb01} reduces to
 \begin{alignat}{1}
-\label{lamb02} \frac{\Delta E_{\mathrm{gLamb}}^{2S_{1/2}-2P_{1/2}}}{mc^{2}}&=\left(g^{2}/8-1/2\right)\frac{Z^{4}\alpha^{4}}{6}\\ \notag &=\left(a+a^{2}/2\right)\frac{Z^{4}\alpha^{4}}{6}\;.
+\label{lamb02} \frac{\Delta E_{\mathrm{gLamb}}^{2S_{1/2}-2P_{1/2}}}{mc^{2}}&=\left(g^{2}/8-1/2\right)\frac{Z^{4}\alpha^{4}}{6}=\left(a+a^{2}/2\right)\frac{Z^{4}\alpha^{4}}{6}\;.
 \end{alignat}
 Our result in \req{lamb01} and \req{lamb02} is sensitive to $g^{2}/8-1/2=a+a^{2}/2$. Traditionally the Lamb shift due to an anomalous lepton magnetic moment is obtained perturbatively~\citep{Itzykson:1980rh} by considering the DP equation which is sensitive to $g/2-1=a$ the shift takes on the expression at lowest order
 \begin{alignat}{1}
-\label{lamb03} \frac{\Delta E_{\mathrm{gLamb,DP}}^{2S_{1/2}-2P_{1/2}}}{mc^{2}}&=\left(\frac{g-2}{2}\right)\frac{Z^{4}\alpha^{4}}{6}\\ \notag &=a\frac{Z^{4}\alpha^{4}}{6}\;.
+\label{lamb03} \frac{\Delta E_{\mathrm{gLamb,DP}}^{2S_{1/2}-2P_{1/2}}}{mc^{2}}&=\left(\frac{g-2}{2}\right)\frac{Z^{4}\alpha^{4}}{6}=a\frac{Z^{4}\alpha^{4}}{6}\;.
 \end{alignat}
 It is of experimental interest to resolve this discrepancy between the first order DP equation and the second order fermion formulation KGP. We recall the present day values
 \begin{subequations}
@@ -276,15 +308,15 @@ The discrepancy for the proton-antiproton system is
 \subsubsection{Fine structure} \label{fs}
 The fifth term in \req{nonrel09}, which depends on $j$ and $n$, will shift the levels due to an anomalous moment, but does not contribute to the Lamb shift. Rather this expression, which contains the spin-orbit $\vec{L}\cdot\vec{S}$ coupling, is responsible for the fine structure splittings. From \req{nonrel09} the fine structure splitting is given by
 \begin{alignat}{1}
-\label{fs00} \frac{\Delta E_{\mathrm{gFS}}^{n,\ell}}{mc^{2}}&=E^{n,j=\ell+1/2}_{\ell}-E^{n,j=\ell-1/2}_{\ell}\\ \notag &=\left(g^{2}/8\right)\left(\frac{1}{\ell}-\frac{1}{\ell+1}\right)\frac{Z^{4}\alpha^{4}}{n^{3}}\;.
+\label{fs00} \frac{\Delta E_{\mathrm{gFS}}^{n,\ell}}{mc^{2}}&=E^{n,j=\ell+1/2}_{\ell}-E^{n,j=\ell-1/2}_{\ell}=\left(g^{2}/8\right)\left(\frac{1}{\ell}-\frac{1}{\ell+1}\right)\frac{Z^{4}\alpha^{4}}{n^{3}}\;.
 \end{alignat}
 The splitting between the $2P_{3/2}$ and $2P_{1/2}$ states is therefore
 \begin{alignat}{1}
-\label{fs01} \frac{\Delta E_{\mathrm{gFS}}^{2P_{3/2}-2P_{1/2}}}{mc^{2}}&=\left(g^{2}/8\right)\frac{Z^{4}\alpha^{4}}{16}\\ \notag\ &=\left(1/2+a+a^{2}/2\right)\frac{Z^{4}\alpha^{4}}{16}\;.
+\label{fs01} \frac{\Delta E_{\mathrm{gFS}}^{2P_{3/2}-2P_{1/2}}}{mc^{2}}&=\left(g^{2}/8\right)\frac{Z^{4}\alpha^{4}}{16}=\left(1/2+a+a^{2}/2\right)\frac{Z^{4}\alpha^{4}}{16}\;.
 \end{alignat}
 In comparison the fine structure dependence on $g$-factor in the DP equation is given as
 \begin{alignat}{1}
-\label{fs02} \frac{\Delta E_{\mathrm{gFS,DP}}^{2P_{3/2}-2P_{1/2}}}{mc^{2}}&=\left(\frac{g-1}{2}\right)\frac{Z^{4}\alpha^{4}}{16}\\ \notag\ &=\left(1/2+a\right)\frac{Z^{4}\alpha^{4}}{16}\;.
+\label{fs02} \frac{\Delta E_{\mathrm{gFS,DP}}^{2P_{3/2}-2P_{1/2}}}{mc^{2}}&=\left(\frac{g-1}{2}\right)\frac{Z^{4}\alpha^{4}}{16}=\left(1/2+a\right)\frac{Z^{4}\alpha^{4}}{16}\;.
 \end{alignat}
 Just as in the case of the Lamb shift, we find that the KGP and DP equations disagree for fine structure splitting. For the hydrogen atom this discrepancy is 
 \begin{alignat}{1}
@@ -325,10 +357,10 @@ E_{0}\approx mc^{2}+\frac{\alpha}{4\pi}mc^{2}\ \mathrm{ln}^{2}\left(\frac{2e\hba
 \end{alignat}
 which even for enormous magnetic fields does not deviate significantly from the rest mass-energy of the electron. Further the AMM radiative corrections approach zero for higher Landau levels~\citep{Ferrer:2015wca}. Therefore the AMM in the case of electrons does not have a significant effect in highly magnetized environments such as those found in astrophysics (magnetars).
 
-The situation is different for composite particles such as the proton, neutron and light nuclei whose anomalous magnetic moments are dominated by their internal structure and not by vacuum fluctuations. In this situation we expect that the AMM interaction in high magnetic fields remains significant. Therefore, asking whether the DP or KGP equations better describes the dynamics of composite hadrons and atomic nuclei in presence of magnetar strength fields is a relevant question despite the standard choice in literature being the DP equation~\cite{Broderick:2000pe}. The same question can be asked for certain exotic hydrogen-like atoms where the constituent particles have anomalous moments which can be characterized as an external parameter. 
+The situation is different for composite particles such as the proton, neutron and light nuclei whose anomalous magnetic moments are dominated by their internal structure and not by vacuum fluctuations. In this situation we expect that the AMM interaction in high magnetic fields remains significant. Therefore, asking whether the DP or KGP equations better describes the dynamics of composite hadrons and atomic nuclei in presence of magnetar strength fields is a relevant question despite the standard choice in literature being the DP equation~\citep{Broderick:2000pe}. The same question can be asked for certain exotic hydrogen-like atoms where the constituent particles have anomalous moments which can be characterized as an external parameter. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Homogeneous magnetic fields}
+\subsection{Strong homogeneous magnetic fields}
 \label{sec:sbl}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent The magnetic moment anomaly can flip the sign of the magnetic energy for the least excited states causing the gap between particle and antiparticle states to decrease with magnetic field strength. Setting $p_z=0$ in \req{lan24}, we show in figure~\ref{f01} that the energy of the lowest KGP Landau eigenstate $n=0, s=1/2$ reaches zero where the gap between particle and antiparticle states vanishes for the field
@@ -338,14 +370,14 @@ The situation is different for composite particles such as the proton, neutron a
 &B_\mathrm{crit}^{p}=\frac{\mathcal{B}_{S}^{p}}{a_{p}}=\frac{1}{1.79}\mathcal{B}_{S}^{p}=8.3138\times10^{19}\;\mathrm{G}\;,
 \end{alignat} 
 \end{subequations}
-where $\mathcal{B}_{S}$ is the so-called Schwinger critical field~\cite{Schwinger:1951nm}.
+where $\mathcal{B}_{S}$ is the so-called Schwinger critical field~\citep{Schwinger:1951nm}.
 \begin{subequations}
 \begin{alignat}{1}\label{Bsch}
-\mathcal{B}_{S}^{e}\equiv\frac{{m_{e}^2}c^3}{e\hbar}=\frac{m_{e}c^2}{2\mu_B}=4.4141\times 10^{13}\;\mathrm{G}\;,\\
-\mathcal{B}_{S}^{p}\equiv\frac{{m_{p}^2}c^3}{e\hbar}=\frac{m_{p}c^2}{2\mu_N}=1.4882\times 10^{20}\;\mathrm{G}\;.
+\mathcal{B}_{S}^{e}\equiv\frac{{m_{e}^2}c^2}{e\hbar}=\frac{m_{e}c^2}{2\mu_B}=4.4141\times 10^{13}\;\mathrm{G}\;,\\
+\mathcal{B}_{S}^{p}\equiv\frac{{m_{p}^2}c^2}{e\hbar}=\frac{m_{p}c^2}{2\mu_N}=1.4882\times 10^{20}\;\mathrm{G}\;.
 \end{alignat}
 \end{subequations}
-The numerical results are evaluated for the anomalous moment of the electron and proton, given by \req{aeFULL} and \req{gpaFULL}. At the critical field strength $B_\mathrm{crit}$ the Hamiltonian loses self-adjointness and the KGP loses its predictive properties. The Schwinger critical field \req{Bsch} denotes the boundary when electrodynamics is expected to behave in an intrinsically nonlinear fashion, and the equivalent electric field configurations become unstable~\cite{Labun:2008re}. However, it is also possible that the vacuum is stabilized by such strong magnetic fields~\cite{Evans:2018kor}.
+The numerical results are evaluated for the anomalous moment of the electron and proton, given by \req{aeFULL} and \req{gpaFULL}. At the critical field strength $B_\mathrm{crit}$ the Hamiltonian loses self-adjointness and the KGP loses its predictive properties. The Schwinger critical field \req{Bsch} denotes the boundary when electrodynamics is expected to behave in an intrinsically nonlinear fashion, and the equivalent electric field configurations become unstable~\citep{Labun:2008re}. However, it is also possible that the vacuum is stabilized by such strong magnetic fields~\citep{Evans:2018kor}.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
@@ -356,7 +388,7 @@ The numerical results are evaluated for the anomalous moment of the electron and
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The critical magnetic fields as shown in \req{Bcrit} appear in discussion of magnetars~\cite{Kaspi:2017fwg}. The magnetar field is expected to be more than 100-fold that of the Schwinger critical magnetic field which is on the same order of magnitude as $B_\textrm{crit}$ for an electron. While the critical field for a proton exceeds that of a magnetar, the dynamics of protons (and neutrons) in such fields is nevertheless significantly modified. A correct description of magnetic moment therefore has relevant consequences to astrophysics. 
+The critical magnetic fields as shown in \req{Bcrit} appear in discussion of magnetars~\citep{Kaspi:2017fwg}. The magnetar field is expected to be more than 100-fold that of the Schwinger critical magnetic field which is on the same order of magnitude as $B_\textrm{crit}$ for an electron. While the critical field for a proton exceeds that of a magnetar, the dynamics of protons (and neutrons) in such fields is nevertheless significantly modified. A correct description of magnetic moment therefore has relevant consequences to astrophysics. 
 
 Figure~\ref{f02} shows analogous reduction in particle/anti\-particle energy gap for the DP equation. In this case the vanishing point happens at a larger magnetic field strength. This time the solutions continue past this point, but require allowing the states to cross into the opposite continua which we consider unphysical. We are not satisfied with either model\rq s behavior though the KGP description is preferable. However, it is undesirable that both KGP and DP solutions loose physical meaning and vacuum stability in strong magnetic fields.
 
@@ -370,7 +402,7 @@ Figure~\ref{f02} shows analogous reduction in particle/anti\-particle energy gap
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Coulomb problem}
+\subsection{High-Z hydrogen-like atoms}
 \label{sec:sbc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent For the case of $g=2$ hydrogen-like systems with large $Z$ nuclei, there is extensive background related to the long study of the solutions of the Dirac equation~\citep{Rafelski:1976ts,Greiner:1985ce,Rafelski:2016ixr}. For $g\ne 2$ and $1/r$ singular potential we refer back to the exact expression for the energy levels in \req{cou17}. In the situation of critical electric fields, states lose self-adjointness for large $Z$. For $|g|<2$, just as in the Dirac energy levels for $1/r$ singular potential, but if $|g|>2$ there is merging of particle to particle states (and antiparticle to antiparticle) for states of the same total angular momentum quantum number $j$, but opposite spin orientations.
@@ -386,11 +418,11 @@ This behavior can be seen in figure~\ref{f03}, which shows the meeting of the $1
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The Dirac $g=2$ case acts as unique \lq\lq cusp\rq\rq\ point because even for very small anomalies, as emphasized in figure~\ref{f04}, the behavior of the states is strongly modified for the situation of high intensity Coulomb fields which are present in large $Z$ hydrogen-like nuclei.
+The Dirac $g=2$ case acts as unique \lq\lq cusp\rq\rq\ point because even for very small anomalies, as emphasized in figure~\ref{f03}, the behavior of the states is strongly modified for the situation of high intensity Coulomb fields which are present in large $Z$ hydrogen-like nuclei.
 
 \cite{Thaller:1992ji} presented numerically computed DP equation energy levels for large $Z$ hydrogen like atoms. These numerical solutions involve crossings in energy levels between states with the same total angular quantum number $j$, but differing spin orientations such as $1S_{1/2}$ and $2P_{1/2}$; these states also have the behavior of diving into the antiparticle lower continuum even for $1/r$-potential. These features are not present for the KGP-Coulomb solution. However, there is a similarity between the numerical solutions of the DP equation and our analytical KGP solutions, because for $|g|>2$ the merging states as described above correspond to the crossing states in the DP solution.
 
-The DP equation also allows for the so-called super-positronium states as described by Barut and Kraus~\cite{Barut:1975hz,Barut:1976hs}. Such states represent resonances due to the magnetic interaction that reside incredibly close to the center of the atom i.e $\sqrt{\langle r^{2}\rangle}\approx a\alpha\hbar/mc$, but this feature is absent from the KGP formation of the Coulomb problem as all KGP-Coulomb wave functions which can be normalized can be successfully matched to their Dirac ($g=2$) companions.
+The DP equation also allows for the so-called super-positronium states as described~\cite{Barut:1975hz,Barut:1976hs}. Such states represent resonances due to the magnetic interaction that reside incredibly close to the center of the atom i.e $\sqrt{\langle r^{2}\rangle}\approx a\alpha\hbar/mc$, but this feature is absent from the KGP formation of the Coulomb problem as all KGP-Coulomb wave functions which can be normalized can be successfully matched to their Dirac ($g=2$) companions.
 
 Because analytical solutions of DP equation, unlike our results for KGP, are not available it is hard to pinpoint precisely the origin of the diverse unpalatable behavior. However, we can hypothesize that the problems arise due to the pathological structure of DP equation where the magnetic anomaly rather than full magnetic moment appears. In any case we see that the Thaller solutions present pathologies quite akin to those we already described in our study of Landau energies. On the other hand KGP framework for large $Z$ shows some exciting and nice analytical behavior.
 
@@ -458,7 +490,31 @@ which mirrors the electromagnetic case except for the extension to the magnetic 
 \section{Classical relativistic spin dynamics}
 \label{sec:cspin}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent In classical theory, we consider the covariant dipole force which acts upon a particle due to its intrinsic magnetic moment. The generalized covariant Lorentz and dipole force is given by
+\noindent We turn away from quantum mechanical approaches to briefly inspect the classical analogue of spin dynamics. Considering the Poincar{\'e} group of space-time symmetry
+transformations~\citep{Weinberg:1995mt,greiner2012quantum}, it was established by Wigner that elementary particles are representations of the group and can be characterized by eigenvalues of two the Poincar{\'e} group's two Casimir operators:
+\begin{gather}
+    C_{1}\equiv p_{\mu}p^{\mu} = p^{2} = m^{2}c^{2}\,,\\
+    C_{2}\equiv w_{\mu}w^{\mu} = w^{2}\,,\qquad w_{\alpha}=\frac{1}{2}\varepsilon_{\alpha\beta\mu\nu}M^{\beta\mu}p^{\nu}\,,
+\end{gather}
+where $w^{\alpha}$ is the Pauli-Lubanski pseudovector. Here $M^{\alpha\beta}$ is the relativistic tensor expression for the angular momentum defined via
+\begin{gather}
+    M^{\alpha\beta} = x^{\alpha}p^{\beta}-x^{\beta}p^{\alpha} + S^{\alpha\beta}
+\end{gather}
+where $S^{\alpha\beta}$ is the spin angular momentum tensor. While $S^{\alpha\beta}$ can be understood via the classical four-spin defined in the rest frame as
+\begin{gather}
+    s^{\alpha} = (0,\bb{s})\,,\qquad s_{\alpha}^{\alpha} = -\bb{s}^{2}\,,
+\end{gather}
+where $\bb{s}$ is the classical Euclidean three-spin (not to be confused with the quantum operator).
+
+Quantum mechanically~\citep{ohlsson2011relativistic} $S^{\alpha\beta}$ appears as $\sigma^{\alpha\beta}$ which we've already defined as the spin tensor.
+
+In view of the above it is appropriate to study classical dynamics of particles that have both, an elementary electric charge e, and an elementary magnetic dipole charge d. The
+covariant dynamics beyond the Lorentz force needs to incorporate the Stern–Gerlach force. Thus the extension has to
+contain the elementary magnetic moment of a particle contributing to this force. To achieve a suitable generalization
+we introduce the magnetic potential
+
+
+In classical theory, we consider the covariant dipole force which acts upon a particle due to its intrinsic magnetic moment. The generalized covariant Lorentz and dipole force is given by
 \begin{alignat}{1}
   \label{LSG01} m\frac{\mathrm{d}u^{\alpha}}{\mathrm{d}\tau}&=eF^{\alpha\beta}u_{\beta}+dG^{\alpha\beta}u_{\beta}\,,\\
   \label{LSG02} G^{\alpha\beta}&=\partial^{\alpha}F^{*\beta\gamma}s_{\gamma}-\partial^{\beta}F^{*\alpha\gamma}s_{\gamma}\,,

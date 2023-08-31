@@ -123,12 +123,11 @@ where the subscript $\nu$ refers to neutrino states while $\ell$ refers to charg
 
 \section{Hamiltonian for neutrino magnetic dynamics}\label{sec:effective}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent Following the concept that interactions (of any variety) can modify the mass matrices to cause a shift in both flavor mixing and CP violation, such as in matter, we need to ask in what manner electromagnetic dipoles can be inserted. The simplest reasoning would be to examine the Lagrangian of the theory and add the dipole moments as Pauli terms \ar which would combine with the mass terms seen in \req{mass:1} and \req{mass:2}, but this would end up modifying the mass matrices with only the \emph{anomalous} dipole moments of the particles. While for neutral particles, such as neutrinos, the anomalous moment is the entire moment, this procedure would be incomplete for charged particles such as the quarks where strong field modification of the J-invariant is worth exploring.
+\noindent Following the concept that interactions (of any variety) can modify the mass matrices to cause a shift in both flavor mixing and CP violation, such as in matter, we need to ask in what manner electromagnetic dipoles can be inserted. The simplest reasoning would be to examine the Lagrangian of the theory and add the dipole moments as Pauli terms \ar which would combine with the mass terms seen in \req{mass:1}, but this would end up modifying the mass matrices with only the \emph{anomalous} dipole moments of the particles. While for neutral particles, such as neutrinos, the anomalous moment is the entire moment, this procedure would be incomplete for charged particles such as the quarks where strong field modification of the J-invariant is worth exploring.
 
-One reasonable justification for the modification of the mass matrices would be to consider defining the J-invariant in terms of the neutrino Hamiltonian as is done in beam experiments. In this, we look at the second-order single generation neutrino wave equation given by 
+One reasonable justification for the modification of the mass matrices would be to consider defining the J-invariant in terms of the neutrino Hamiltonian as is done in beam experiments. In this, we look at the second-order single generation neutrino wave equation (following conventions provided in \rchap{chap:intro}) given by 
 \begin{alignat}{1}
-	\label{nkgp:1} \left(\mathcal{D}^{2}-m^{2}c^{4}-\mu mc^{2}\frac{\sigma\cdot F}{2}\right)\Psi=0\,,\\
-	\label{nkgp:2} \mu\equiv\frac{g}{2}\frac{e\hbar}{2m}=\frac{g}{2}\mu_{B}\,,\indent \mathcal{D}_{\mu}=i\hbar c\partial_{\mu}-eA_{\mu}\,,
+	\label{nkgp:1} \left(-\hbar^{2}\widetilde\nabla^{2}-m^{2}c^{4}-\mu mc^{2}\frac{\sigma_{\alpha\beta}F^{\alpha\beta}}{2}\right)\Psi=0\,,
 \end{alignat}
 where $\mu_{B}$ is the Bohr magneton. \req{nkgp:1} is also referred to as the Klein-Gordon-Pauli (KGP) equation. \ar From this, we'd like to derive a first order Hamiltonian by considering energy eigenstates
 \begin{alignat}{1}
@@ -220,7 +219,7 @@ While generally CPV comes exclusively from the presence of three flavor generati
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent While the specific change to neutrino mixing and CPV depends on the model of the neutrino dipole moment, a demonstrative model would be to assume that the $\bb{\kappa_{\nu}}$ matrix was simply proportional to the natural mass matrix of the neutrino at low order. If the same mechanism which produced neutrino masses also produced their dipoles through some BSM physics, this would not be an unreasonable assumption. Therefore we substitute
 \begin{alignat}{1}
-	\label{simplek:1} \bb{M_{\nu}}\rightarrow\bb{M_{\nu}}'=\bb{M_{\nu}}(1+\kappa\sigma\cdot F)\,,
+	\label{simplek:1} \bb{M_{\nu}}\rightarrow\bb{M_{\nu}}'=\bb{M_{\nu}}(1+\kappa\sigma_{\alpha\beta}F^{\alpha\beta})\,,
 \end{alignat}
 which reduces to \req{heff:1} when $\mu B$ is small. As the modified mass matrix commutes entirely with the original mass matrix, as well as the original Hamiltonian with only mass, the mathematical structure of the commutator in \req{comm:1} is unchanged. In other words
 \begin{alignat}{1}
@@ -237,9 +236,9 @@ where we've added primes to denote new values due to remixing. The ratio of modi
 \end{alignat}
 In our simple proportionality model, this simplifies to
 \begin{alignat}{1}
-	\label{amp:2} \mathcal{R} = \frac{1}{\left(1+\kappa\sigma\cdot F\right)^{6}}\,.
+	\label{amp:2} \mathcal{R} = \frac{1}{\left(1+\kappa\sigma_{\alpha\beta}F^{\alpha\beta}\right)^{6}}\,.
 \end{alignat}
-The amplification ratio $\mathcal{R}$ is useful in that it can be applied to a wide range of CPV processes where the J-invariant is involved in calculating the process amplitudes allowing for substition. To first order, and evaluating $\sigma\cdot F$ for homogeneous magnetic fields, \req{amp:2} can be expressed as
+The amplification ratio $\mathcal{R}$ is useful in that it can be applied to a wide range of CPV processes where the J-invariant is involved in calculating the process amplitudes allowing for substition. To first order, and evaluating $\sigma_{\alpha\beta}F^{\alpha\beta}$ for homogeneous magnetic fields, \req{amp:2} can be expressed as
 \begin{alignat}{1}
 	\label{amp:3} \mathcal{R} = 1\pm12\kappa B+\mathcal{O}(B^{2})\,.
 \end{alignat}
