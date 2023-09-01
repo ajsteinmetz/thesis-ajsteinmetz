@@ -133,9 +133,9 @@ where $\alpha$ is the fine structure constant with an approximate value of $1/13
     \label{dirac:1a}
     \left(\gamma_{\alpha}\left(i\hbar\partial^{\alpha} - eA^{\alpha}\right)-m_{\ell}c\right)\psi=0\,,\\
     \label{dirac:1b}
-    i\hbar{\widetilde\nabla}^{\alpha}=i\hbar\partial^{\alpha}-eA^{\alpha}\,.
+    \pi^{\alpha}=i\hbar{\widetilde\nabla}^{\alpha}=i\hbar\partial^{\alpha}-eA^{\alpha}\,.
 \end{gather}
-The wave function $\psi$ in \req{dirac:1a} is understood to be a four-component spinor and $\widetilde\nabla^{\alpha}$ in \req{dirac:1b} is the covariant derivative. Four-vectors and tensors in this work will be denoted by Greek indices. Inner products of four-vectors will be noted by $a\cdot b=a^{\alpha}\eta_{\alpha\beta}b^{\beta}=a^{\alpha}b_{\alpha}$ again following Einstein notation. The four-derivative $\partial^{\alpha}$ and four-potential $A^{\alpha}$ are defined as
+The wave function $\psi$ in \req{dirac:1a} is understood to be a four-component spinor and $\widetilde\nabla^{\alpha}$ in \req{dirac:1b} is the covariant derivative. $\pi^{\alpha}$ is the four-vector version of the kinetic momentum versus the four-momentum $p^{\alpha}=i\hbar\partial^{\alpha}$. Four-vectors and tensors in this work will be denoted by Greek indices. Inner products of four-vectors will be noted by $a\cdot b=a^{\alpha}\eta_{\alpha\beta}b^{\beta}=a^{\alpha}b_{\alpha}$ again following Einstein notation. The four-derivative $\partial^{\alpha}$ and four-potential $A^{\alpha}$ are defined as
 \begin{gather}
     \label{dirac:2}
     \partial^{\alpha}=\left(\frac{1}{c}\frac{\partial}{\partial t},\,-\bb{\nabla}\right)\,,\qquad A^{\alpha}=\left(\frac{V}{c},\,\bb{A}\right)\,.
@@ -232,18 +232,36 @@ which is of interest because of the inclusion of $\gamma^{5}$. Taking advantage 
     \gamma^{5}\sigma_{\mu\nu}=\frac{i}{2}\varepsilon_{\mu\nu\alpha\beta}\sigma^{\alpha\beta}\,\rightarrow
     \mathcal{L}_\mathrm{EDM} = +{\bar\psi}\left(\epsilon\frac{1}{2}\sigma^{\alpha\beta}F_{\alpha\beta}^{*}\right)\psi\,.
 \end{gather}
-which is more closely analogous to the structure of the AMM in \req{lamm:1} making use of the dual form of the electromagnetic field tensor shown in \req{em:2}. Following a procedure similar to the one found in \rsec{sec:mom}, \req{ledm:3} reduces in the non-relativistic limit to the Hamiltonian EDM interaction
+which is more closely analogous to the structure of the AMM in \req{lamm:1} making use of the dual form of the electromagnetic field tensor shown in \req{em:2}.
+
+Following a procedure similar to the one found in \rsec{sec:mom}, \req{ledm:3} reduces in the non-relativistic limit to the Hamiltonian EDM interaction
 \begin{gather}
     \label{ledm:4}
     \mathcal{H}_\mathrm{EDM} \approx \epsilon\chi^{\dag}\bb{\sigma}\cdot\bb{E}\chi\,.
 \end{gather}
+The electric dipole is important because the presence of one would signify CP violation in the theory. This is demonstrated in brief because of the parity (P) and time (T) symmetries of the relevant vectors and their inner products. Even and odd symmetries for each are printed in \rt{fig:cp}. Notably, the magnetic dipole is even under both P and T symmetry while the electric dipole is odd under both.
 
-The electric dipole is important because the presence of one would signify CP violation in the theory. This is quickly noted because of the following parity (P) and time (T) symmetries:
-\begin{itemize}[nosep]
-    \item $\bb{E}$ : T-even, P-odd
-    \item $\bb{B}$ : T-odd, \,P-even
-    \item $\bb{S}$ \,: T-odd, \,P-even
-\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[h]
+ \centering
+ \begin{tabular}{ r|c|c|c|c|c| }
+ \multicolumn{1}{r}{}
+ & \multicolumn{1}{c}{$\bb{E}$}
+ & \multicolumn{1}{c}{$\bb{B}$}
+ & \multicolumn{1}{c}{$\bb{s}$}
+ & \multicolumn{1}{c}{$\bb{s}\!\cdot\!\bb{E}$}
+ & \multicolumn{1}{c}{$\bb{s}\!\cdot\!\bb{B}$} \\
+ \cline{2-6}
+ \begin{tabular}[x]{@{}c@{}}T symmetry\\ $(t\rightarrow-t)$\end{tabular} & even & odd & odd & odd & even \TBstrut\\
+ \cline{2-6}
+ \begin{tabular}[x]{@{}c@{}}P symmetry\\ $(\bb{x}\rightarrow-\bb{x})$\end{tabular} & odd & even & even & odd & even \TBstrut\\
+ \cline{2-6}
+ \end{tabular}\\ \,\Bstrut\\
+ \caption{Time (T) and parity (P) symmetries of electric $\bb{E}$, magnetic $\bb{B}$, spin $\bb{s}$ three-vectors and the inner products which describe the dipole Hamiltonian terms.}
+ \label{fig:cp}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 The EDM term \req{ledm:4} is overall T-odd and P-odd while the magnetic dipole is overall even for both. While such dipoles are common in composite or molecular systems, no electric dipole has ever been measured for an elementary particle. As a point of comparison, the EDM of the electron is excluded~\citep{ACME:2018yjb,Roussy:2022cmp} by a bound of $|\epsilon_{e}/c|<4.1\times10^{-30}\, e\,\mathrm{cm}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -295,11 +313,18 @@ While the first term present in \req{lamm:2} is indeed the correct $\mathcal{L}_
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent Before continuing to specific physical problems, we consider how current conversation functions in the KGP formulation of fermions and how it might differ from the Dirac current. The KGP equation can be obtained from a Lagrangian not dissimilar to the Klein-Gordon Lagrangian~\citep{Delgado-Acosta:2010ita} and has the expression
 \begin{gather}
-\label{lagrangian:1} \mathcal{L}/c^{2}=\left(i\hbar{\widetilde\nabla}^{\mu}\right)^{\dag}\bar{\Psi}h_{\mu\nu}\left(i\hbar{\widetilde\nabla}^{\mu}\right)\Psi-m^{2}c^{2}\bar{\Psi}\Psi\,,\qquad h_{\mu\nu}=\eta_{\mu\nu}-i\frac{g}{2}\sigma_{\mu\nu}\,.
+\label{lagrangian:1} \mathcal{L}_\mathrm{KGP}/c^{2}=\left(i\hbar{\widetilde\nabla}^{\mu}\right)^{\dag}\bar{\Psi}h_{\mu\nu}\left(i\hbar{\widetilde\nabla}^{\mu}\right)\Psi-m^{2}c^{2}\bar{\Psi}\Psi\,,\qquad h_{\mu\nu}=\eta_{\mu\nu}-i\frac{g}{2}\sigma_{\mu\nu}\,.
 \end{gather}
 The matrix $h_{\mu\nu}$ acts an `effective' metric which has been modified to account for the presence of an AMM. We note that the field $\Psi$ must have units $[\mathrm{length}]^{-1}$ such that the Lagrangian density itself has natural units of $[\mathrm{length}]^{-4}$.
 
-The conserved current can then be expressed as
+In comparison to the DP AMM Lagrangian \req{lamm:1}, the KGP magnetic moment Lagrangian obtained from \req{lagrangian:1} is
+\begin{align}
+    \label{lagrangian:2}
+    \mathcal{L}_\mathrm{KGP,MM}/c^{2} = -{\bar\Psi}\left(\frac{g}{2}\mu_{\ell} m_{\ell}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi\,.
+\end{align}
+While they are mathematically similar both being `Pauli' terms, there are some important differences. Here the combination of fields $\Psi$ and $F^{\alpha\beta}$ have natural units $[\mathrm{length}]^{-4}$ and the coupling coefficient $\mu m_{\ell}\!\propto\!~g$ is manifestly dimensionless. This means the KGP Lagrangian is at first inspection renormalizable which is an improvement over the DP Lagrangian~\citep{Rafelski:2022bsv}. Literature however suggests that the KGP Lagrangian requires additional fermion self-interactions $\mathcal{L}_\mathrm{int}\sim\mathcal{O}(\bar\Psi\Psi)^{2}$ to be fully renormalizable (unless $g\!=\!0,\pm2$) which are not forbidden at tree-level~\citep{Angeles-Martinez:2011wpn,Vaquera-Araujo:2012jlk}.
+
+The conserved current obtained from \req{lagrangian:1} can be expressed as
 \begin{gather}
 \label{norm:2}
 \mathcal{J}^{\mu}=-\frac{1}{c^{2}}\frac{\partial\mathcal{L}}{\partial eA_{\mu}}\equiv 
@@ -315,13 +340,6 @@ The conserved current \req{norm:2} can be interpreted as the sum of a convection
  This is nearly identical to the Gordon Decomposition of the Dirac current, with the exception that the magnetization current is proportional to the $g$-factor of the particle.
  
 The covariant derivative happens to simplify as $\widetilde\nabla\rightarrow\partial$ in \req{norm:3b} such that the current is a divergence of the spin density $\bar\Psi\sigma_{\mu\nu}\Psi$. Because of the antisymmetry of $\sigma_{\mu\nu}$ the spin tensor, the magnetization current is conserved independently of the the charge current. That both are independently conserved indicates conservation in both charge $(e)$ and magnetic moment $(\mu)$.
-
-In comparison, the KGP Lagrangian term for magnetic moment obtained from \req{lagrangian:1} is
-\begin{align}
-    \label{lagrangian:2}
-    \mathcal{L}_\mathrm{KGP,MM} = -{\bar\Psi}\left(\mu m_{\ell}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi\,.
-\end{align}
-Here the combination of fields has natural units $[\mathrm{length}]^{-4}$ and the coupling coefficient $\mu m_{\ell}\!\propto\!~g$ is manifestly dimensionless. This means the KGP Lagrangian is at first inspection renormalizable which is an improvement over the DP Lagrangian~\citep{Rafelski:2022bsv}, however literature suggests that the KGP Lagrangian requires additional fermion self-interactions to be fully renormalizable which are not forbidden at tree-level~\citep{Angeles-Martinez:2011wpn,Vaquera-Araujo:2012jlk}.
 
 %{\color{red} Thought: What about ``strong field case'' where $A^{\alpha}$ is very large, even compared to the momentum states, would the expansion yield a nicer result? In otherwords, can strong fields restore unitarity?}
 
@@ -352,9 +370,9 @@ The natural gyromagnetic ratio then appears to arise from the $SU(2)$ Lie algebr
 
 An almost identical argument that $g$-factor arises from spin-structure and electromagnetic coupling can be made for the relativistic case as well. First we consider the quantum analog to the energy-momentum relation
 \begin{alignat}{1}
-	\label{analog:1} \eta_{\alpha\beta}p^{\alpha}p^{\beta}\Psi=m^{2}c^{2}\Psi\,.
+	\label{analog:1} \eta_{\alpha\beta}p^{\alpha}p^{\beta}\Phi=m^{2}c^{2}\Phi\,.
 \end{alignat}
-\req{analog:1} as written evaluates to the Klein-Gordon equation when the four-momentum is written in the position basis $p^{\alpha}\rightarrow i\hbar\partial^{\alpha}$. Much like the non-relativistic example, we can introduce spin by replacing the momentum inner product with one sensitive to a Clifford algebra~\citep{Weinberg:1995mt}. Rather than the Pauli matrices, the relativistic replacement utilizes the gamma matrices $\eta_{\alpha\beta}\rightarrow\gamma_{\alpha}\gamma_{\beta}$ yielding
+\req{analog:1} as written evaluates to the Klein-Gordon equation on field $\Phi$ when the four-momentum is written in the position basis $p^{\alpha}\rightarrow i\hbar\partial^{\alpha}$. Much like the non-relativistic example, we can introduce spin by replacing the momentum inner product with one sensitive to a Clifford algebra~\citep{Weinberg:1995mt}. Rather than the Pauli matrices, the relativistic replacement utilizes the gamma matrices $\eta_{\alpha\beta}\rightarrow\gamma_{\alpha}\gamma_{\beta}$ yielding
 \begin{alignat}{1}
 	\label{eq:spin:03} \gamma_{\alpha}\gamma_{\beta}p^{\alpha}p^{\beta}\Psi&=m^{2}c^{2}\Psi\,.
 \end{alignat}
@@ -362,7 +380,8 @@ Here $\Psi$ is understood to be a four-component spinor unlike in \req{analog:1}
 \begin{alignat}{1}
 	\label{eq:spin:04} \gamma_{\alpha}\gamma_{\beta}a^{\alpha}b^{\beta}=\eta_{\alpha\beta}a^{\alpha}b^{\beta}-i\sigma_{\alpha\beta}a^{\alpha}b^{\beta}\,,\indent \sigma_{\alpha\beta}\equiv\frac{i}{2}\left[\gamma_{\alpha},\gamma_{\beta}\right]\,.
 \end{alignat}
-The antisymmetric spin tensor $\sigma_{\alpha\beta}$ is defined by the commutator of the gamma matrices. In both the relativistic and non-relativistic cases, the distinction between spin-1/2 and spinless particles is only made kinematically apparent in the presence of electromagnetic fields. For minimal coupling
+
+In both the relativistic and non-relativistic cases, the distinction between spin-1/2 and spinless particles is only made kinematically apparent in the presence of electromagnetic fields. For minimal coupling
 \begin{alignat}{1}
   \label{eq:spin:05} \pi^{\alpha}=p^{\alpha}-eA^{\alpha}\,,
 \end{alignat}
@@ -398,7 +417,7 @@ We then outline the two main approaches to anomalous moments: The first is to co
 \section{A few words on cosmology}
 \label{sec:flrw}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent This section introduces some necessary concepts which will be useful in describing the magnetization of the electron-positron primordial plasma in \rchap{chap:cosmo}. We operate under the $\Lambda$-Cold Dark Matter $(\Lambda\mathrm{CDM})$ model of cosmology where the contemporary universe is approximately 69\% dark energy, 26\% dark matter, 5\% baryons, and $<1$\% photons and neutrinos in energy density~\citep{Davis:2003ad,Planck:2018vyg}. The Friedmann-Lema{\^i}tre-Robertson-Walker (FLRW) line element and metric~\citep{weinberg1972gravitation} in spherical coordinates is
+\noindent This section introduces some necessary concepts which will be useful in describing the magnetization of the electron-positron primordial plasma in \rchap{chap:cosmo}. We operate under the $\Lambda$ Cold Dark Matter $(\Lambda\mathrm{CDM})$ model of cosmology where the contemporary universe is approximately 69\% dark energy, 26\% dark matter, 5\% baryons, and $<1$\% photons and neutrinos in energy density~\citep{Davis:2003ad,Planck:2018vyg}. The Friedmann-Lema{\^i}tre-Robertson-Walker (FLRW) line element and metric~\citep{weinberg1972gravitation} in spherical coordinates is
 \begin{gather}
     \label{FLRW} ds^2=dt^2-a^2(t)\left[\frac{dr^2}{1-kr^{2}}+r^{2}d\theta^2+r^{2}\sin\theta^{2}d\phi^2\right]\,,\\
     g_{\alpha\beta}=
