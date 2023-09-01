@@ -2,9 +2,11 @@
 \chapter{Matter-antimatter origin of cosmic magnetism: A first look}
 \label{chap:cosmo}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent This chapter serves primarily as a review of our work in~\cite{Steinmetz:2023} and portions of~\cite{Rafelski:2023emw} where we propose that the early universe electron-positron plasma was a highly magnetized environment.
+\noindent We investigate the hypothesis that the observed intergalactic magnetic fields (IGMF) are primordial in nature, predating the recombination epoch. Specifically, we explore the role of the extremely large electron-positron $(e^{+}e^{-})$ pair abundance in the temperature range of $2000\keV>T>20\keV$ which only disappeared after Big Bang nucleosynthesis (BBN). We review the status of cosmic magnetism in \rsec{sec:universe} which motivates our study. \rsec{sec:magnetization} describes the relativistic paramagnetism of the electron-positron gas. We then propose in \rsec{sec:self} a model of self-magnetization caused by spin polarization within the individual species in the gas.
 
-We investigate the hypothesis that the observed intergalactic magnetic fields (IGMF) are primordial in nature, predating the recombination epoch. Specifically, we explore the role of the extremely large electron-positron $(e^{+}e^{-})$ pair abundance in the temperature range of $2000\keV>T>20\keV$ which only disappeared after Big Bang nucleosynthesis (BBN). We review the status of cosmic magnetism in \rsec{sec:universe} which motivates our study. \rsec{sec:magnetization} describes the relativistic paramagnetism of the electron-positron gas. We then propose in \rsec{sec:self} a model of self-magnetization caused by spin polarization within the individual species in the gas. This chapter will use natural units $(c=\hbar=k_{B}=1)$ unless otherwise noted.
+This chapter serves primarily as a review of our work in~\cite{Steinmetz:2023} and portions of~\cite{Rafelski:2023emw} where we propose that the early universe electron-positron plasma was a highly magnetized environment. We will use natural units $(c=\hbar=k_{B}=1)$ unless otherwise noted.
+
+\textbf{NOTE:} The letter $\mu$ will refer exclusively to charged chemical potential and \emph{not} magnetic moment as before.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Short survey of magnetism in the universe}
@@ -22,7 +24,7 @@ We note that generating PMFs with such large coherent length scales is nontrivia
 Magnetized baryon inhomogeneities which in turn would produce anisotropies in the cosmic microwave background (CMB)~\citep{Jedamzik:2013gua,Abdalla:2022yfr}. \cite{Jedamzik:2020krr} propose further that the presence of a magnetic field of $B_\mathrm{PMF}\simeq0.1{\rm\ nG}$ could be sufficient to explain the Hubble tension.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.95\textwidth]{plots/chap04cosmo/pmf.png}
     \caption{Qualitative plot of the primordial magnetic field strength over cosmic time. All figures are printed in temporal sequence in the expanding universe beginning with high temperatures (and early times) on the left and lower temperatures (and later times) on the right.}
@@ -44,9 +46,9 @@ where electrodynamics is expected to display nonlinear characteristics and (b) t
 \noindent As the universe cooled below temperature $T=m_{e}$ (the electron mass), the thermal electron and positron comoving density depleted by over eight orders of magnitude. At $T_\mathrm{split}=20.3\keV$, the charged lepton asymmetry (mirrored by baryon asymmetry and enforced by charge neutrality) became evident as the surviving excess electrons persisted while positrons vanished entirely from the particle inventory of the universe due to annihilation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}[h]
  \centering
-\includegraphics[width=0.8\textwidth]{plots/chap04cosmo/EEPlasmaDensityRatio_new01.jpg}
+\includegraphics[width=0.95\textwidth]{plots/chap04cosmo/EEPlasmaDensityRatio_new01.jpg}
  \caption{Number density of electron $e^{-}$ and positron $e^{+}$ to baryon ratio $n_{e^{\pm}}/n_{B}$ as a function of photon temperature in the universe. See text for further details. In this work we measure temperature in units of energy (keV) thus we set the Boltzmann constant to $k_{B}=1$. Figure courtesy of Cheng Tao Yang.}
  \label{fig:densityratio} 
 \end{figure}
@@ -69,7 +71,7 @@ We consider a homogeneous magnetic field domain defined along the $z$-axis as
     \label{homoB:1}
     \bb{B}=(0,\,0,\,B)\,,
 \end{gather}
-with magnetic field magnitude $|\bb{B}|=B$. Following \rchap{chap:moment}, we reprint the microscopic energy of the charged relativistic fermion within a homogeneous magnetic field given by
+with magnetic field magnitude $|\bb{B}|=B$. Following \rchap{chap:moment}, we reprint the microscopic energy (\req{lan24b} in different notation) of the charged relativistic fermion within a homogeneous magnetic field given by
 \begin{align}
  \label{cosmokgp}
  E^{n}_{\sigma,s}(p_{z},{B})=\sqrt{m_{e}^{2}+p_{z}^{2}+e{B}\left(2n+1+\frac{g}{2}\sigma s\right)}\,,
@@ -77,21 +79,21 @@ with magnetic field magnitude $|\bb{B}|=B$. Following \rchap{chap:moment}, we re
 where $n\in0,1,2,\ldots$ is the Landau orbital quantum number, $p_{z}$ is the momentum parallel to the field axis and the electric charge is $e\equiv q_{e^{+}}=-q_{e^{-}}$. The index $\sigma$ in \req{cosmokgp} differentiates electron $(e^{-};\ \sigma=+1)$ and positron $(e^{+};\ \sigma=-1)$ states. The index $s$ refers to the spin along the field axis: parallel $(\uparrow;\ s=+1)$ or anti-parallel $(\downarrow;\ s=-1)$ for both particle and antiparticle species.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.8\textwidth]{plots/chap04cosmo/schematic.png}\Bstrut\\
-    \begin{tabular}{ r|c|c| }
-    \multicolumn{1}{r}{}
-     &  \multicolumn{1}{c}{aligned: $s=+1$}
-     & \multicolumn{1}{c}{anti-aligned: $s=-1$} \\
-    \cline{2-3}
-    electron: $\sigma=+1$ & $+|\vec{\mu}\cdot\vec{B}|$ & $-|\vec{\mu}\cdot\vec{B}|$ \TBstrut\\
-    \cline{2-3}
-    positron: $\sigma=-1$ & $-|\vec{\mu}\cdot\vec{B}|$ & $+|\vec{\mu}\cdot\vec{B}|$ \TBstrut\\
-    \cline{2-3}
-    \end{tabular}
-        \caption{Organizational schematic of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the sign of the magnetic dipole energy.}
-    \label{fig:schematic}
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.8\textwidth]{plots/chap04cosmo/schematic.png}\Bstrut\\
+ \begin{tabular}{ r|c|c| }
+ \multicolumn{1}{r}{}
+ & \multicolumn{1}{c}{aligned: $s=+1$}
+ & \multicolumn{1}{c}{anti-aligned: $s=-1$} \\
+ \cline{2-3}
+ electron: $\sigma=+1$ & $U_{\rm Mag}>0$ & $U_{\rm Mag}<0$ \TBstrut\\
+ \cline{2-3}
+ positron: $\sigma=-1$ & $U_{\rm Mag}<0$ & $U_{\rm Mag}>0$ \TBstrut\\
+ \cline{2-3}
+ \end{tabular}\\
+ \caption{Organizational schematic of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the sign of the non-relativistic magnetic dipole energy $U_{\rm Mag}$ obtainable from~\req{cosmokgp}.}
+ \label{fig:schematic}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -255,6 +257,24 @@ As we will see in the proceeding section, this separation of the \lq free-like\r
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent Since we address the temperature interval $200\keV>T>20\keV$ where the effects of quantum Fermi statistics on the $e^{+}e^{-}$ pair plasma are relatively small, but the gas is still considered relativistic, we will employ the Boltzmann approximation to the partition function in \req{partition:1}. However, we extrapolate our results for presentation completeness up to $T\simeq 4m_{e}$.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[h]
+ \centering
+ \begin{tabular}{ r|c|c| }
+ \multicolumn{1}{r}{}
+ & \multicolumn{1}{c}{aligned: $s=+1$}
+ & \multicolumn{1}{c}{anti-aligned: $s=-1$} \\
+ \cline{2-3}
+ electron: $\sigma=+1$ & $+\mu+\eta$ & $+\mu-\eta$ \TBstrut\\
+ \cline{2-3}
+ positron: $\sigma=-1$ & $-\mu-\eta$ & $-\mu+\eta$ \TBstrut\\
+ \cline{2-3}
+ \end{tabular}\\\,\Bstrut\\
+ \caption{Organizational schematic of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the chemical $\mu$ and polarization $\eta$ potentials as seen in~\req{partitionpower:2}. Companion to \rt{fig:org}.}
+ \label{fig:org}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 The partition function shown in equation \req{partition:1} can be rewritten removing the logarithm as
 \begin{gather}
 \label{partitionpower:1}
@@ -330,9 +350,9 @@ where the spin (S) and spin-orbit (SO) partition functions can be considered ind
 Writing the partition function as \req{boltzmann} instead of \req{partitionpower:1} has the additional benefit that the partition function remains finite in the free gas $({B}\rightarrow0)$ limit. This is because the free Fermi gas and \req{spin} are mathematically analogous to one another. As the Bessel $K_{\nu}$ functions are evaluated as functions of $x_{\pm}$ in \req{xfunc}, the \lq free\rq\ part of the partition $K_{2}$ is still subject to spin magnetization effects. In the limit where ${B}\rightarrow0$, the free Fermi gas is recovered in both the Boltzmann approximation $k=1$ and the general case $\sum_{k=1}^{\infty}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}[h]
  \centering
- \includegraphics[width=0.6\textwidth]{plots/chap04cosmo/ChemicalPotential_06.png}
+ \includegraphics[width=0.5\textwidth]{plots/chap04cosmo/ChemicalPotential_06.png}
  \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\eta$ and magnetic scale $b_{0}$.}
  \label{fig:chemicalpotential}
 \end{figure}
@@ -424,7 +444,7 @@ As the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$
 \noindent In \rf{fig:magnet}, we plot the magnetization as given by \req{g2magplus} and \req{g2magminus} with the spin potential set to unity $\xi=1$. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic field strength ${B}/{B}_{C}$ is also plotted for lower (dotted red) and upper (dotted blue) bounds. Since the derivative of the partition function governing magnetization may manifest differences between Fermi-Dirac and the here used Boltzmann limit more acutely, out of abundance of caution, we indicate extrapolation outside the domain of validity of the Boltzmann limit with dashes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}[h]
  \centering
  \includegraphics[width=0.5\textwidth]{plots/chap04cosmo/Magnetization_Hc_new004.png}
  \caption{The magnetization ${\mathfrak M}$, with $g\!=\!2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. Figure made in collaboration with Cheng Tao Yang.}
@@ -450,7 +470,7 @@ Early universe conditions may also apply to some extreme stellar objects with ra
 \noindent As discussed at the end of \rsec{sec:magnetization}, the AMM of $e^{+}e^{-}$ is not relevant in the present model. However out of academic interest, it is valuable to consider how magnetization is effected by changing the $g$-factor significantly.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}[h]
  \centering
  \includegraphics[width=0.5\textwidth]{plots/chap04cosmo/GFactor_05.png}
  \caption{The magnetization $\mathfrak M$ as a function of $g$-factor plotted for several temperatures with magnetic scale $b_{0}=10^{-3}$ and polarization fugacity $\xi=1$.}
@@ -498,10 +518,10 @@ where $\mu_{B}$ is the Bohr magneton and $N=nV$ is the total particle number in 
 Statistically, we expect the transverse expectation values to be zero. We emphasize here that despite $|\vec{m}|_{z}$ being nonzero, this doesn't indicate a nonzero spin angular momentum as our plasma is nearly matter-antimatter symmetric. The quantity defined in \req{momentperlepton} gives us an insight into the microscopic response of the plasma.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}[h]
  \centering
  \includegraphics[width=0.5\textwidth]{plots/chap04cosmo/NewMagnetizationDensity004_Boltz.png}
- \caption{The magnetic moment per lepton $\vert\vec{m}\vert_{z}$ along the field axis as a function of temperature. Figure courtesy of Cheng Tao Yang.}
+ \caption{The magnetic moment per lepton $\vert\vec{m}\vert_{z}$ along the field axis as a function of temperature. Figure made in collaboration with Cheng Tao Yang.}
  \label{fig:momentperlepton}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -545,7 +565,7 @@ The natural scale of the $e^{+}e^{-}$ magnetization with only a small spin fugac
 \noindent One exploratory model we propose is to fix the spin polarization asymmetry, described in \req{spotential}, to generate a homogeneous magnetic field which dissipates as the universe cools down. In this model, there is no external primordial magnetic field $({B}_\mathrm{PMF}=0)$ generated by some unrelated physics, but rather the $e^{+}e^{-}$ plasma itself is responsible for the field by virtue of spin polarization.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}[h]
  \centering
  \includegraphics[width=0.5\textwidth]{plots/chap04cosmo/Spinchemical_03.png}
  \caption{The spin potential $\eta$ and chemical potential $\mu$ are plotted under the assumption of self-magnetization through a nonzero spin polarization in bulk of the plasma. Figure made in collaboration with Cheng Tao Yang.}
@@ -567,9 +587,9 @@ The dotted lines are the curves for the chemical potential $\mu/T$. At high temp
 This is seen explicitly in~\rf{fig:polarswap} where we plot the numerical density of particles as a function of temperature for aligned $(+\eta)$ and anti-aligned $(-\eta)$ species for both positrons $(-\mu)$ and electrons $(+\mu)$. Various self-magnetization strengths are also plotted to match those seen in~\rf{fig:self}. The nature of $T_\mathrm{split}$ changes under this model where polarization states are extinguished rather than antimatter states.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}[h]
  \centering
- \includegraphics[width=0.45\textwidth]{plots/chap04cosmo/NumeberDensitySpin.png}
+ \includegraphics[width=0.5\textwidth]{plots/chap04cosmo/NumeberDensitySpin.png}
  \caption{The number density $n_{e^{\pm}}$ of polarized electrons (top) and positrons (bottom) under the self-magnetization model for differing values of $b_{0}$. Figure courtesy of Cheng Tao Yang.}
  \label{fig:polarswap} 
 \end{figure}

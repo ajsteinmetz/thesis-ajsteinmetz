@@ -166,3 +166,66 @@ As spin dynamics in quantum mechanics exhibits more complicated behavior at high
 {\color{red}Add statements discussing the various estimates for the neutrino magnetic moment size.}
 
 The most straight-forward manner to explore the neutral-Coulomb system is to write down the effective potential and check the zeros of the potential for the possibility of bound-states. While general wisdom suggests that neutral particles cannot have bound states with charged particles, there are cases where special unique singular bound states are allowed and additionally magnetic dipole moments can lead to mass resonances as features of scattering due to the disruptive nature of magnetic dipole moments on angular momentum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Flavor, mass and magnetic eigenstates}\label{sec:mix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent As neutrinos have masses, there is no guarantee that their $SU(2)_{L}$ flavor eigenstates will be simultaneously their propagating mass eigenstates. This misalignment between the two representations can then written as rotation of the neutrino flavor 3-vector where $N=3$ is the number of generations. The unitary mixing matrix $\bb{V}$ allows for the change of basis between mass and flavor eigenstates via
+\begin{alignat}{1}
+	\label{basis:1} \bb{\nu_{f}}=\bb{V}\bb{\nu_{m}}\,\rightarrow\indent
+	\begin{pmatrix}
+		\nu_{e}\\
+		\nu_{\mu}\\
+		\nu_{\tau}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		V_{e1} & V_{e2} & V_{e3}\\
+		V_{\mu1} & V_{\mu2} & V_{\mu3}\\
+		V_{\tau1} & V_{\tau2} & V_{\tau3}
+	\end{pmatrix}
+	\begin{pmatrix}
+		\nu_{1}\\
+		\nu_{2}\\
+		\nu_{3}
+	\end{pmatrix}\,,
+\end{alignat}
+where $\bb{\nu_{f}}$ is the neutrino state vector written in the flavor basis while $\bb{\nu_{m}}$ is written in the mass basis. Boldface type will be used for matrices and vectors. Bars atop vectors represent the Dirac adjoint in the usual manner. The mixing matrix's form then depends on the Dirac-like or Majorana-like nature of the neutrinos
+\begin{align}
+	\label{phases:1} \bb{V} = \bb{U}\bb{P}\,,\\
+	\label{phases:2} \bb{P}_\mathrm{Dirac} = \mathbbm{1}\,,\\
+	\label{phases:3} \bb{P}_\mathrm{Maj.} = \mathrm{diag}(e^{i\rho},e^{i\sigma},1)\,.
+\end{align}
+Majorana neutrinos allow up to two additional complex phases $\rho$ and $\sigma$ which participate in CPV. In the standard parameterization~\citep{Schwartz:2014sze}, the rotation matrix $\bb{U}$ can be expressed as
+\begin{alignat}{1}
+	\label{rotation:1} \bb{U} =
+	  \begin{pmatrix}
+		  c_{12}c_{13} & s_{12}c_{13} & s_{13}e^{-i\delta}\\
+		  -s_{12}c_{23} - c_{12}s_{13}s_{23}e^{i\delta} & c_{12}c_{23} - s_{12}s_{13}s_{23}e^{i\delta} & c_{13}s_{23}\\
+		  s_{12}s_{23} - c_{12}s_{13}c_{23}e^{i\delta}& -c_{12}s_{23} - s_{12}s_{13}c_{23}e^{i\delta} & c_{13}c_{23}
+	  \end{pmatrix}\,,
+\end{alignat}
+where $c_{ij} = \rm{cos}(\theta_{ij})$ and $s_{ij} = \rm{sin}(\theta_{ij})$. In this convention, the three mixing angles $(\theta_{12}, \theta_{13}, \theta_{23})$, are understood to be the Euler angles for generalized rotations. There are many possible parametrizations for the mixing matrix and without a working model of the underlying physics, they represent generic observables which are otherwise not predicted. Another relevant choice is the Wolfenstein parameterization~\citep{wolfenstein1983parametrization}, but as neutrinos mixing angles are rather large unlike the parameters for the CKM matrix in the quark sector, we will not use it here. The Majorana mass Lagrangian in the flavor basis can then be written as
+\begin{alignat}{1}
+	\label{mass:1} -\mathcal{L}_{\rm{mass}}^{\rm{Maj.}}&=\frac{1}{2}\bb{\bar{\nu}_{f}^{L}}\bb{M}_{\nu}\left(\bb{\nu_{f}^{L}}\right)^{c}+\rm{h.c}\,,
+\end{alignat}
+where $\bb{\nu^{L}}$ refers to left-handed chiral states which can be obtained using projection operators and $\gamma^{5}$. The superscript $\bb{\nu}^{c}$ refers to the charge conjugated state where $\bb{\nu}^{c} = \hat{C}(\bb{\bar{\nu}})^\mathrm{T}$ is the charge conjugate of the neutrino field. The operator $\hat{C} = i\gamma^{2}\gamma^{0}$ is the charge conjugation operator which can be written as a $4\times4$ matrix for a given representation as each flavor is in this formulation a four-component spinor.
+
+The source of CPV in the neutrino sector is ultimately attributable to the fundamental mismatch between the mass-matrices of the charged leptonic flavors $(e,\mu,\tau)$ and the neutrino flavors $(\nu_{e},\nu_{\mu},\nu_{\tau})$. The situation is analogous to the quark sector, where instead the relation is between the upper $(u,c,t)$ and lower quark $(d,s,b)$ flavors. This means that the mass matrix for charged leptons does not commute with the mass matrix of the neutral leptons and cannot be simultaneously diagonalized except for special cases or degeneracy among the mass eigenstates. We can characterize CPV by introducing the mixing matrices $\bb{V}$ which diagonalize the individual mass-matrices $\bb{M}$ as follows
+\begin{alignat}{1}
+	\label{diag:1} \bb{V}\bb{M}_{\nu}\bb{M}_{\nu}^{\dagger}\bb{V}^{\dagger} = \bb{D}_{\nu}^{2} = \rm{diag}(m_{1}^{2},m_{2}^{2},m_{3}^{2})\,,\\
+    \label{diag:2} \bb{M}_{\ell} \equiv \bb{D}_{\ell} = \rm{diag}(m_{e},m_{\mu},m_{\tau})\,,
+\end{alignat}
+where the subscript $\nu$ refers to neutrino states while $\ell$ refers to charged lepton states. We have specifically defined the charged leptons flavor states as being simultaneously mass eigenstates without a loss of generality. We will not consider oscillation among the charged leptons, though that may be an avenue of further study~\citep{akhmedov2007charged}. We note that being unitary, the matrix $\bb{V}$ can diagonalize the Hermitian square of the mass matrices as well as the mass matrices themselves.

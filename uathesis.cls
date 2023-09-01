@@ -575,7 +575,7 @@ THE UNIVERSITY OF ARIZONA
 
 \chapter*{THE UNIVERSITY OF ARIZONA\\GRADUATE COLLEGE}
 
-As members of the Dissertation Committee, we certify that we have read the \MakeLowercase{\ThesisType} prepared by \FullName, titled \CompleteTitle~and recommend that it be accepted as fulfilling the \MakeLowercase{\ThesisType} requirement for the Degree of \DegreeName. % NICK EDITED THIS LINE
+As members of the Dissertation Committee, we certify that we have read the \MakeLowercase{\ThesisType} prepared by \FullName, titled \emph{\CompleteTitle}~and recommend that it be accepted as fulfilling the \MakeLowercase{\ThesisType} requirement for the Degree of \DegreeName. % NICK EDITED THIS LINE
 
 % Before the final oral defense you must obtain the Approval Pages
 % from the Degree Certification Office. Original signatures are
