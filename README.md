@@ -2,7 +2,7 @@
 Modern topics in relativistic spin dynamics dynamics. A Ph.D. dissertation by Andrew James Steinmetz (2023)
 
 ## abstract
-Magnetism is a rich subject touching all aspects of physics. My goal with this dissertation is to explore spin and magnetic dipole moments in relativistic mechanics from both a quantum and classical perspective. We explore physical problems of interest from quantum to cosmic scales and emphasize the special case of gyromagnetic ratio $g\!=\!2$ and its relationship to the algebraic spin structure of the wave equations of motion.
+Magnetism is a rich subject touching all aspects of physics. My goal with this dissertation is to explore spin and magnetic dipole moments in relativistic mechanics from both a quantum and classical perspective. We explore physical problems of interest from quantum to cosmic scales and emphasize the special case of gyromagnetic ratio $g=2$ and its relationship to the algebraic spin structure of the wave equations of motion.
 
 In relativistic quantum mechanics, we investigate generalizations of the Dirac equation for arbitrary magnetic dipole moments for fermions. We analyze the homogeneous magnetic field case and the Coulomb problem for hydrogen-like atoms with emphasis on the role of the anomalous magnetic moment (AMM). We further propose extensions to the KGP equation which couple mass and the magnetic moment. Classically, we propose a relativistic covariant model of the Stern-Gerlach force via the introduction of a magnetic four-potential. This model unites the Amp{\`e}rian and Gilbertian models for magnetic dipole moments.
 
