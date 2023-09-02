@@ -125,7 +125,7 @@ Before moving on, we will verify that the SP contains within it an expression of
     i\hbar\frac{d\bb{O}}{dt}=[\bb{O},H]+
     i\hbar\frac{\partial\bb{O}}{\partial t}\,,
 \end{align}
-To obtain a `force' we need to find the time derivative of the kinematic momentum operator $\bb{\pi}$ which is given by
+To obtain a `force' in quantum mechanics we need to find the time derivative of the kinematic momentum operator $\bb{\pi}$ which is given by
 \begin{gather}
     \label{h:2}
     \frac{d\bb{\pi}}{dt}=-\frac{i}{\hbar}[\bb{\pi},H_\mathrm{SP}]+\frac{\partial\bb{\pi}}{\partial t}=-\frac{i}{\hbar}\left[\bb{\pi},\frac{(\bb{\sigma}\cdot\bb{\pi})^{2}}{2m}+eV\right]+\frac{\partial\bb{\pi}}{\partial t}\,,\\
@@ -136,9 +136,10 @@ To obtain a `force' we need to find the time derivative of the kinematic momentu
 \end{gather}
 After some derivation and making use of the identities in \req{h:3}, we arrive at the quantum analog of the Lorentz force for particles with spin
 \begin{gather}
+    \label{ehren:1}
     \boxed{\frac{d\bb{\pi}}{dt}=e\bb{E}+\frac{e}{2m}(\bb{\pi}\times\bb{B}-\bb{B}\times\bb{\pi})+\frac{e\hbar}{2m}\sigma_{i}\bb{\nabla}B_{i}}\,.
 \end{gather}
-The last term in the expression is the Stern-Gerlach force which is sensitive to inhomogeneous magnetic fields. We also note this equation is suggestion of the `Amp{\'e}rian' dipole force which is in the direction of the gradient $\bb{\nabla}$ rather than the `Gilbertian' type which is in the direction of the field $\bb{B}$; see \rsec{sec:cspin}.
+The last term in the expression is the Stern-Gerlach force which is sensitive to inhomogeneous magnetic fields. We also note this equation is suggestion of the `Amp{\'e}rian' dipole force which is in the direction of the gradient $\bb{\nabla}$ rather than the `Gilbertian' type which is in the direction of the field $\bb{B}$; see \rsec{sec:cspin}. \req{ehren:1} can be connected to our classical understanding by taking the expectation value and casting it as an Ehrenfest-style theorem.
 
 \subsection{Anomalous magnetic moment}
 In nature there is no particle with exactly $g\!=\!2$. As seen in \rt{tab:gfactor}, composite particles often deviate from $g\!=\!2$ greatly as the $g$-factor of a composite particle is related to its internal composition. In the case of the neutron and proton, the internal quarks themselves are responsible. The comparison between three listed isotopes of hydrogen also displays how magnetic moments can `cancel out' or add together. While deuterium's value of $g$ is suppressed by the extra neutron, the two neutrons in tritium balance one another returning the ratio into one manifestly similar to the proton.
@@ -377,7 +378,7 @@ The expansion in \req{nonlocal:1} is considered non-local because it requires an
     \mathcal{L}_\mathrm{\sqrt{KGP},AMM} = -{\bar\psi}\left(\delta\mu\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\left(1 - \frac{\hbar}{m_{\ell}c}i\gamma_{\alpha}\widetilde\nabla^{\alpha} - \frac{\hbar^{2}}{m_{\ell}^{2}c^{2}}\left(\gamma_{\alpha}\widetilde\nabla^{\alpha}\right)^{2} + \ldots\right)\right)\psi\,.
 \end{gather}
 
-While the first term present in \req{lamm:2} is indeed the correct $\mathcal{L}_\mathrm{DP,AMM}$ term, the resulting non-local behavior ultimately breaks the unitarity of the theory making it unsuitable as a fundamental particle theory~\citep{Veltman:1997am}. While the above is suggestive that there exists no unitary transform between the KGP and DP wave equations, we do not claim it is an absolute proof. If a generalized description of $g\!=\!2$ magnetic moment theories exists and makes a good fundamental quantum field theory, then likely non-minimal electromagnetic terms are required to maintain both renormalization and unitarity.
+While the first term present in \req{lamm:2} is indeed the correct $\mathcal{L}_\mathrm{DP,AMM}$ term, the resulting non-local behavior ultimately breaks the unitarity of the theory making it unsuitable as a fundamental particle theory~\citep{Veltman:1997am}. While the above is suggestive that there exists no unitary transform between the KGP and DP wave equations, we do not claim it as an absolute proof. If a generalized description of $g\!=\!2$ magnetic moment theories exists and makes a good fundamental quantum field theory, then likely non-minimal electromagnetic terms are required to maintain both renormalization and unitarity.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Features of the KGP Lagrangian}

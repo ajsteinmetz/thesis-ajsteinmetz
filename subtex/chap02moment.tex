@@ -368,15 +368,15 @@ The situation is different for composite particles such as the proton, neutron a
 \noindent The magnetic moment anomaly can flip the sign of the magnetic energy for the least excited states causing the gap between particle and antiparticle states to decrease with magnetic field strength. Setting $p_z=0$ in \req{lan24}, we show in figure~\ref{f01} that the energy of the lowest KGP Landau eigenstate $n=0, s=1/2$ reaches zero where the gap between particle and antiparticle states vanishes for the field
 \begin{subequations}
 \begin{alignat}{1}\label{Bcrit}
-&B_\mathrm{crit}^{e}=\frac{\mathcal{B}_{S}^{e}}{a_{e}}=861\mathcal{B}_{S}^{e} =3.8006\times10^{16}\;\mathrm{G}\;,\\
-&B_\mathrm{crit}^{p}=\frac{\mathcal{B}_{S}^{p}}{a_{p}}=\frac{1}{1.79}\mathcal{B}_{S}^{p}=8.3138\times10^{19}\;\mathrm{G}\;,
+&B_\mathrm{crit}^{e}=\frac{{B}_{S}^{e}}{a_{e}}\simeq861{B}_{S}^{e} =3.8006\times10^{16}\;\mathrm{G}\;,\\
+&B_\mathrm{crit}^{p}=\frac{{B}_{S}^{p}}{a_{p}}\simeq\frac{1}{1.79}{B}_{S}^{p}=8.3138\times10^{19}\;\mathrm{G}\;,
 \end{alignat} 
 \end{subequations}
-where $\mathcal{B}_{S}$ is the so-called Schwinger critical field~\citep{Schwinger:1951nm}.
+where ${B}_{S}$ is the so-called Schwinger critical field~\citep{Schwinger:1951nm}.
 \begin{subequations}
 \begin{alignat}{1}\label{Bsch}
-\mathcal{B}_{S}^{e}\equiv\frac{{m_{e}^2}c^2}{e\hbar}=\frac{m_{e}c^2}{2\mu_B}=4.4141\times 10^{13}\;\mathrm{G}\;,\\
-\mathcal{B}_{S}^{p}\equiv\frac{{m_{p}^2}c^2}{e\hbar}=\frac{m_{p}c^2}{2\mu_N}=1.4882\times 10^{20}\;\mathrm{G}\;.
+{B}_{S}^{e}\equiv\frac{{m_{e}^2}c^2}{e\hbar}=\frac{m_{e}c^2}{2\mu_B}=4.4141\times 10^{13}\;\mathrm{G}\;,\\
+{B}_{S}^{p}\equiv\frac{{m_{p}^2}c^2}{e\hbar}=\frac{m_{p}c^2}{2\mu_N}=1.4882\times 10^{20}\;\mathrm{G}\;.
 \end{alignat}
 \end{subequations}
 The numerical results are evaluated for the anomalous moment of the electron and proton, given by \req{aeFULL} and \req{gpaFULL}. At the critical field strength $B_\mathrm{crit}$ the Hamiltonian loses self-adjointness and the KGP loses its predictive properties. The Schwinger critical field \req{Bsch} denotes the boundary when electrodynamics is expected to behave in an intrinsically nonlinear fashion, and the equivalent electric field configurations become unstable~\citep{Labun:2008re}. However, it is also possible that the vacuum is stabilized by such strong magnetic fields~\citep{Evans:2018kor}.
@@ -437,21 +437,81 @@ Because analytical solutions of DP equation, unlike our results for KGP, are not
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While we've thus far focused on the Dirac-Pauli and Klein-Gordon-Pauli models for magnetic dipole moments, the non-uniqueness of spin dynamics allows us to invent further non-linear EM models which all in the non-relativistic limit yield the non-relativistic QM magnetic dipole Hamiltonian. One such extension to quantum spin dynamics is to note the close relationship mass and magnetic moment share in the KGP formalism. We can write a unified dipole-mass as
 \begin{alignat}{1}
-    \label{eq:ext:01} \widetilde{m}c^{2} = mc^{2} + \frac{i}{2}\mu\left(\gamma_{\alpha}\partial^{\alpha}\gamma_{\beta}A^{\beta}\right)\,,
+    \label{eq:ext:01} \boxed{\widetilde{m}(\bb{E},\bb{B}) = m +\mu\frac{\sigma_{\alpha\beta}F^{\alpha\beta}}{2c^{2}}}\,,
 \end{alignat}
 which satisfies the wave equation
+\begin{gather}
+\label{eq:ext:02} \left((i\hbar\partial_{\mu}-eA_{\mu})^{2}-\widetilde{m}^{2}(\bb{E},\bb{B})c^{2}\right)\Psi=0\,,\\
+\label{IKGP01} \left(\left(i\hbar\partial_{\mu}-eA_{\mu}\right)^{2}-\left(mc+\mu\frac{\sigma^{\alpha\beta}F_{\alpha\beta}}{2c}\right)^{2}\right)\Psi=0\;.
+\end{gather}
+This modified KGP formulation then requires spin sensitive mass and an explicit electromagnetic component to the charged lepton mass. As informed by classical mechanics, charged particles should be understood to derive at least some of their mass from the mass-energy of their electromagnetic fields. \req{quad:1} results in higher order vertex diagrams coupling fermions to photons.
+
+The approach in \req{eq:ext:01} is superficially similar to the model proposed by~\cite{Frenkel:1926zz} in classical mechanics by giving the particle a spin dependent mass of the form $m\sim\Sigma_{\mu\nu}F^{\mu\nu}$ where $\Sigma_{\mu\nu}$ is the covariant generalization of the classical magnetic and electric dipole. \req{IKGP01} is however distinct in that the mass is allowed off-diagonal components in spinor space (a subspace which doesn't exist classically). The dipole-mass \req{eq:ext:01} is off-diagonal in spinor space in the Dirac representation and no longer commutes likes a scalar.
+
+\req{eq:ext:01} also differs from the regular KGP equation by the presence of an additional quadratic interaction which we can evaluate using \req{dp:2} in the Dirac basis as
+\begin{gather}
+    \label{quad:1} \delta V=-\frac{\mu^{2}}{4}\left(\gamma_{\alpha}\gamma_{\beta}F^{\alpha\beta}\right)^{2}=\mu^{2}
+    \begin{pmatrix}
+        i\bb{\sigma}\cdot\bb{E}/c & -\bb{\sigma}\cdot\bb{B} \\
+        -\bb{\sigma}\cdot\bb{B} & i\bb{\sigma}\cdot\bb{E}/c
+    \end{pmatrix}
+    \begin{pmatrix}
+        i\bb{\sigma}\cdot\bb{E}/c & -\bb{\sigma}\cdot\bb{B} \\
+        -\bb{\sigma}\cdot\bb{B} & i\bb{\sigma}\cdot\bb{E}/c
+    \end{pmatrix}\,,\\
+    \label{quad:2}
+    \delta V = \mu^{2}
+    \begin{pmatrix}
+        \bb{B}^{2}-\bb{E}/c^{2} & -i\bb{E}\cdot\bb{B} \\
+        -i\bb{E}\cdot\bb{B} & \bb{B}^{2}-\bb{E}/c^{2}
+    \end{pmatrix}=2\mu^{2}
+    \begin{pmatrix}
+        \mathcal{S} & -2i\mathcal{P} \\
+        -2i\mathcal{P} & \mathcal{S}
+    \end{pmatrix}\,.
+\end{gather}
+We define the invariants of the electromagnetic field tensor $F^{\alpha\beta}$ in \req{quad:2}  letting us write the above more compactly as
 \begin{alignat}{1}
-    \label{eq:ext:02} \left((i\hbar c\partial-eA)^{2}-(\widetilde{m}c^{2})^{2}\right)\Psi=0\,.
+    \label{inv:1} \mathcal{S}=\frac{1}{2}(\bb{B}^{2}-\bb{E}^{2}/c^{2})\,,\qquad
+    \mathcal{P}=\bb{E}\cdot\bb{B}/c\,,\qquad
+    \delta V=2\mu^{2}\left(\mathcal{S}-i\gamma^{5}\mathcal{P}\right)\,.
 \end{alignat}
-This modified KGP formulation then requires spin sensitive mass and an explicit electromagnetic component to the charged lepton mass. As informed by classical mechanics, charged particles should be understood to derive at least some of their mass from the mass-energy of their electromagnetic fields. While the classical model fails because it yields an infinite electromagnetic mass, the underlying argument should still be true though some mechanism must ensure that the mass-energy of the electric field is finite. A classical example is the electromagnetic mass of the charged black hole which is finite. This still remains an open problem in physics. This approach in \req{eq:ext:01} is superficially similar to the of the Frenkel model in classical mechanics by giving the particle a spin dependent mass, but this formulation is distinct in that the mass here is allowed off-diagonal components in spinor space. The dipole-mass is off-diagonal in spinor space in the Dirac representation and no longer commutes likes a scalar. \req{eq:ext:02} differs from the regular KGP equation by the presence of an additional interaction term
+We note that $\sigma_{\alpha\beta}F^{\alpha\beta}/2$ can also be written in terms of its eigenvalues $\lambda_{\pm}=\mathcal{S}\pm i\mathcal{P}$. This represents simply only one possible non-linear extension to electromagnetism in relativistic quantum mechanics of which there are a family of extensions~\citep{Foldy:1952a}.
+
+For the homogeneous magnetic field \req{IKGP01} can be solved in much the same way as the KGP equation in \rsec{sec:homogeneous}. One obtains energy eigenvalues by noting the simple shift that occurs in the mass of $m^2\rightarrow m^{2}+\mu^{2}{B}^{2}$ quadratic in the magnetic field. The resulting energy levels are
 \begin{alignat}{1}
-    \label{eq:ext:03} \delta V=-\frac{\mu^{2}}{4}\left(\gamma_{\alpha}\partial^{\alpha}\gamma_{\beta}A^{\beta}\right)^{2}\,.
+\label{IKGP05} E_{n,s}(\bb{B})=\sqrt{m_{e}^{2}c^{4}+\mu^{2}{B}^{2}+p_{z}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu B m_{e}c^{2}s}
 \end{alignat}
-\req{eq:ext:03} results in higher order vertex diagrams coupling fermions to photons. Taking advantage of the invariants of the electromagnetic field tensor $F^{\mu\nu}$ we can rewrite \req{eq:ext:03} as
+An interesting feature is that in ultra-high magnetic fields ($B>>{B}_{s}$), Eq.~\eqref{IKGP05} approximates
 \begin{alignat}{1}
-    \label{eq:ext:04a} \delta V=-2\mu^{2}\left(\mathcal{S}+i\gamma^{5}\mathcal{P}\right)\,,\indent\mathcal{S}=\frac{1}{2}(\bb{B}^{2}-\bb{E}^{2})\,,\indent \mathcal{P}=\bb{E}\cdot\bb{B}\,.
+\label{IKGP07} E\approx\mu B\;.
 \end{alignat}
-This represents simply only one possible non-linear extension to electromagnetism in relativistic quantum mechanics of which there are a family of extensions~\citep{Foldy:1952a}.
+This is not dissimilar to the non-relativistic case where the magnetic energy is simply proportional to the magnetic field.
+
+%%%%%%%%%%%%%%
+\begin{figure}[h]
+ \centering
+ \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.5cm,width=\linewidth]{plots/chap02moment/lanplot09.pdf}
+ \caption{The $n=0$, $s=1/2$ ground state for a IKGP proton given by Eq.~\eqref{IKGP05} with $g=5.58$ in a homogeneous magnetic field. The magnetic minimum is well visible for particles with larger anomalous moment such as proton. We consider the particle with no $z$-direction momentum. The particle state (solid red) and antiparticle (dashed red) are presented. The magnetic field scale is ${B}'_{S}=(m^2_p/m^2_e){B}_S$.}
+\label{f05}
+\end{figure}
+%%%%%%%%%%%%%%
+
+The most striking feature is that the ground state remains physical for all values of magnetic field when an anomalous moment is included. The self-adjointness of the system is not lost for some critical magnetic field strength. It can be then thought that the magnetic field provides a stabilizing influence on the system. Rather, there exists a \lq\lq magnetic minimum\rq\rq\ located for $n=0, s=1/2$ at
+\begin{alignat}{1}
+\label{IKGP06} B_{\mathrm{min}}&=\frac{4mc^{2}}{g^{2}\mu_{B}}a\;,
+\end{alignat}
+which for the electron is
+\begin{alignat}{1}
+B_{\mathrm{min}}^{e}&=\frac{8a_e}{g_e^2}{B}_S
+=1.02126\times10^{11}\;\mathrm{G}\;.
+\end{alignat}
+The minimum for a proton is in comparison
+\begin{alignat}{1}
+B_{\mathrm{min}}^{p}&=\frac{8a_p}{g_p^2} \frac{m_p^2}{m_e^2}{B}_s
+=6.841\times10^{19}\;\mathrm{G}\;,
+\end{alignat}
+which can be seen in~\rf{f05}. Here it is understood that for the calculation of the proton's magnetic minimum, the nuclear mass and magneton was used rather than the electron Bohr magneton. For large enough g-factor, excited states may also contain a minimum, but for any nonzero anomalous moment the ground state always does.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Extensions to non-Albelian fields}

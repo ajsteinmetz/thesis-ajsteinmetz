@@ -2,7 +2,7 @@
 \chapter{Neutrino magnetism frontiers}
 \label{chap:neutrino}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent Neutrino mixing is an important avenue for studying beyond standard model (BSM) physics as flavor mixing only occurs in the presence of massive neutrinos. However, as neutrinos are naturally massless in the standard model this presents a problem as there's no unique mechanism to introduce mass for neutrinos and it is yet unknown if neutrinos are Dirac-type or Majorana-type fermions.
+\noindent Neutrino mixing is an important topic for studying beyond standard model (BSM) physics as flavor mixing only occurs in the presence of massive neutrinos. However, as neutrinos are naturally massless in the standard model this presents a problem as there's no unique mechanism to introduce mass for neutrinos and it is yet unknown if neutrinos are Dirac-type or Majorana-type fermions.
 
 We establish that neutrino flavor mixing is not uniquely a property of mass, but also occurs from the possible magnetic dipole moment of the particles. We introduce a unified expressive for mass and magnetic moment and analyze how the PMNS rotation matrix may be sensitive to strong electromagnetic fields.
 
@@ -21,7 +21,16 @@ We then explore the possibility that electromagnetic effects may play a role in 
     10^{-19}\mu_{B}<\mu_{\nu}^\mathrm{eff}<10^{-10}\mu_{B}\,,\qquad\mu_{B}=\frac{e\hbar}{2m}
 \end{align}
 
-where $\mu_{B}$ is the Bohr magneton and $\mu_{\nu}^\mathrm{eff}$ is the effective and characteristic size of the neutrino magnetic moment. In the standard model, neutrinos do not interact electromagnetically at tree level as they are only coupled to the weak interaction via the $SU(2)_{L}$ doublet~\citep{Schwartz:2014sze}. However, through higher order loop interactions it is expected that the neutrino should manifestation some non-minimal EM interactions~\citep{shrock1980new,abi2021prospects} via an electromagnetic dipole moment. This leaves open the possibility for Beyond Standard Model (BSM) physics to produce an abnormally large electromagnetic dipole~\citep{giunti2015neutrino,lindner2017revisiting,brdar2021neutrino} between the bounds of~\req{momentbound:1} which may manifest in strong field or matter dense environments.
+where $\mu_{B}$ is the Bohr magneton and $\mu_{\nu}^\mathrm{eff}$ is the effective and characteristic size of the neutrino magnetic moment. In the standard model, neutrinos do not interact electromagnetically at tree level as they are only coupled to the weak interaction via the $SU(2)_{L}$ doublet~\citep{Schwartz:2014sze}. However, through higher order loop interactions it is expected that the neutrino should manifestation some non-minimal EM interactions~\citep{shrock1980new,abi2021prospects} of the form
+\begin{gather}
+    \bb{\mu_{\nu}}=
+	\begin{pmatrix}
+		\mu_{ee} & \mu_{e\mu} & \mu_{e\tau} \\
+		\mu_{e\mu}^{*} & \mu_{\mu\mu} & \mu_{\mu\tau} \\
+		\mu_{e\tau}^{*} & \mu_{\mu\tau}^{*} & \mu_{\tau\tau}
+	\end{pmatrix}
+\end{gather}
+This leaves open the possibility for Beyond Standard Model (BSM) physics to produce an abnormally large electromagnetic dipole~\citep{giunti2015neutrino,lindner2017revisiting,brdar2021neutrino} between the bounds of~\req{momentbound:1} which may manifest in strong field or matter dense environments.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Status of neutrino flavor mixing}
@@ -74,13 +83,7 @@ where $\bb{\nu^{L}}$ refers to left-handed chiral states which can be obtained u
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent As neutrinos are electrically neutral, they have no intrinsic magnetic moment due to their spin, therefore any magnetic moment present is considered anomalous. A small anomalous magnetic moment (AMM) can be introduced into the Lagrangian~\citep{Itzykson:1980rh,Steinmetz:2018ryf} for the neutrino via a Pauli term. As our focus is on effective field theories, we will not worry with the fact that the Pauli Lagrangian is 5-Dimensional and thus fails to be renormalizable. The Pauli Lagrangian for the AMM for Majorana-like neutrinos in the flavor basis is given by
 \begin{align}
-	\label{moment:1} -\mathcal{L}_{\rm{AMM}}^\mathrm{Maj.}=\frac{1}{2}\bb{\bar{\nu}_{f}^{L}}\bb{\mu}\frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\left(\bb{\nu_{f}^{L}}\right)^{c}+\rm{h.c.}\qquad
-    \bb{\mu_{\nu}}=
-	\begin{pmatrix}
-		\mu_{ee} & \mu_{e\mu} & \mu_{e\tau} \\
-		\mu_{e\mu}^{*} & \mu_{\mu\mu} & \mu_{\mu\tau} \\
-		\mu_{e\tau}^{*} & \mu_{\mu\tau}^{*} & \mu_{\tau\tau}
-	\end{pmatrix}
+	\label{moment:1} -\mathcal{L}_{\rm{AMM}}^\mathrm{Maj.}=\frac{1}{2}\bb{\bar{\nu}_{f}^{L}}\bb{\mu}\frac{i}{2}\gamma_{\alpha}F^{\alpha\beta}\gamma_{\beta}\left(\bb{\nu_{f}^{L}}\right)^{c}+\rm{h.c.}
 \end{align}
 The matrix $\bb{\mu}$ are the AMM couplings while $F^{\alpha\beta}$ is our standard electromagnetic field tensor. For Majorana neutrinos, the trace of $\bb{\mu}$ is zero thus all the diagonal elements are identically zero.
 
@@ -129,8 +132,9 @@ which for weak fields $F\rightarrow0$ reduces to the prior form \req{invert:2}. 
 
 To avoid direct magnetic moments, we will consider for now only Majorana neutrinos. Majorana nuetrinos have the following properties
 \begin{alignat}{1}
-	\label{mix:eq:00a}	\bb{M}^{\mathrm{T}}=\bb{M}\,,\\
-	\label{mix:eq:00b}	\bb{\mu}^{\dagger}=\bb{\mu}\,,\indent\bb{\mu}^{\mathrm{T}}=-\bb{\mu}\,,
+	\label{mix:eq:00a}	\bb{M}^{\mathrm{T}}=\bb{M}\,,\qquad
+    \bb{\mu}^{\dagger}=\bb{\mu}\,,\qquad
+    \bb{\mu}^{\mathrm{T}}=-\bb{\mu}\,,
 \end{alignat}
 such that the mass matrix $\bb{M}$ is fully symmetric while the moment matrix $\bb{\mu}$ is Hermitian and fully anti-symmetric. This then requires that the transitional magnetic moment elements are purely imaginary. Following the notation established in \req{massmom:2} we write down the two-generation mass and dipole matrices as
 \begin{alignat}{1}
@@ -242,7 +246,7 @@ where $G$ is the Fermi constant and $N_{e}$ is the electron density in matter. T
 
 Another consequence of \req{heff:1} is the spin-dependant nature of the effective Hamiltonian. This would suggest that (a) the mixing angles and (b) the CPV of neutrinos are sensitive to spin orientation as well as matter/antimatter composition. Generally speaking, since pure spin state beams would be difficult to achieve for neutrinos, then for small perturbations and unpolarized beams, this wouldn't serve to change average of the mass eigenstates, but increase the standard deviation or spread of measured mass differences reducing precision in oscillation experiments.
 
-The mass-dipole potential may have cosmological applications however in Early Universe conditions (or Early Universe-like conditions such as QGP) where the local magnetic fields can become truly gargantuan reaching many times the Schwinger critical field strength. \ar Another line of inquiry would be in highly magnetized neutron stars or magnetars \ar where magnetic field strengths may be strong enough to make the tiny magnetic moment of the neutrino relevant.
+The mass-dipole potential may have cosmological applications however in early universe conditions (or early universe-like conditions such as QGP) where the local magnetic fields can become truly gargantuan reaching many times the Schwinger critical field strength. \ar Another line of inquiry would be in highly magnetized neutron stars or magnetars \ar where magnetic field strengths may be strong enough to make the tiny magnetic moment of the neutrino relevant.
 
 The other regime where an effective Hamiltonian can be defined is the non-relativistic case of $p<<mc$. The KGP energy eigenstate \req{eigen:2} can be written as, up to order $\mathcal{O}(m^{-2})$,
 \begin{alignat}{1}
@@ -312,4 +316,4 @@ The amplification ratio $\mathcal{R}$ is useful in that it can be applied to a w
 \end{alignat}
 Under this model, the amplification of CPV is equally compensated by suppression at lowest order for polarized particles in spin states.
 
-Modification of the CP violation in the neutrino sector may be relevant in early universe cosmic environments where such a CP violation is lacking. Implications for larger than expected transition dipole moments which are especially relevant for Majorana neutrinos are also considered. An overall unpolarized neutrino beam in strong fields would only manifest a true shift at second order in magnetic fields. As the neutrino magnetic moment is expected to be relatively small, this is unlikely to be observable in most contexts. The situation is more promising for free quarks within quark-gluon-plasmas (QGP), whether produced in heavy-ion collisions or existing in the Early Universe. Terrestrially produced QGP in beam collisions are generally subjected to extremely powerful magnetic fields which may serve to polarize QGP. A topic of future interest is whether the amplification factor $\mathcal{R}$ may be relevant for hadronization of QGP where CPV processes could be amplified or suppressed.
+Modification of the CP violation in the neutrino sector may be relevant in early universe cosmic environments where such a CP violation is lacking. Implications for larger than expected transition dipole moments which are especially relevant for Majorana neutrinos are also considered. An overall unpolarized neutrino beam in strong fields would only manifest a true shift at second order in magnetic fields. As the neutrino magnetic moment is expected to be relatively small, this is unlikely to be observable in most contexts. The situation is more promising for free quarks within quark-gluon-plasmas (QGP), whether produced in heavy-ion collisions or existing in the early universe. Terrestrially produced QGP in beam collisions are generally subjected to extremely powerful magnetic fields which may serve to polarize QGP. A topic of future interest is whether the amplification factor $\mathcal{R}$ may be relevant for hadronization of QGP where CPV processes could be amplified or suppressed.
