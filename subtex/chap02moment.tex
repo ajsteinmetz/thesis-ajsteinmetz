@@ -89,6 +89,23 @@ E_{n,s}=\pm\sqrt{m_{e}^{2}c^{4}+p_{z}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}
 \end{gather}
 This expression for the relativistic Landau levels is the same as found by ~\cite{Weisskopf:1936hya} for the Dirac equation setting $g\!=\!2$ in \req{lan24b}. The Landau orbital part and spin portions can be combined when the magnetic moment is expressed in terms of $e/m$, but the form in \req{lan24b} keeps it generalized for the case of neutral particles.
 
+The `Landau' problem for neutral particles, for example the neutron with mass $m_\mathrm{N}$ simplifies to
+\begin{gather}
+\label{neutral:1}
+E_{n,s}|_{e=0}\rightarrow E_{s}(\bb{p},B)=\sqrt{m_\mathrm{N}^{2}c^{4}+\bb{p}^{2}c^{2}-2\mu B m_\mathrm{N}c^{2}s}\;,
+\end{gather}
+which is just the free particle motion without Landau orbitals. We can define an `effective' polarization mass given by
+\begin{gather}
+\label{neutral:2}
+\widetilde{m}^{2}_{s}(B)=m_\mathrm{N}^{2}c^{4}-2\mu B m_\mathrm{N}c^{2}s\;.
+\end{gather}
+This effective polarization mass (which also is easily defined for charged particles) will find use when we consider cosmic thermodynamics and plasmas in \rchap{chap:cosmo}.
+
+Restricting ourselves to the positive energy spectrum, the non-relativistic reduction of \req{lan24b} can be carried out in powers of $1/m$ in the large mass limit yielding
+\begin{alignat}{1}
+\label{lan27} E_{n,s}|_\mathrm{NR}&=m_{e}c^{2}+\frac{p_{z}^{2}}{2m_{e}}+\mu_{B}B\left(2n+1-\frac{g}{2}s\right)-\frac{p_{z}^{4}}{8m_{e}^{3}c^{2}}\\ \notag &\!-\!\frac{p_{z}^{2}}{2m_{e}}\frac{\mu_{B}B}{m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)\!-\!\frac{\mu_{B}^{2}B^{2}}{2m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)^{2}\!+\!\mathcal{O}(1/m_{e}^{5})\;,\end{alignat}
+which contains the expected terms such as the non-relativistic kinetic energy in the z-direction, the first relativistic correction to kinetic energy, the Landau energies, and cross terms that behave like modifications to the mass of the particle.
+
 The KGP-Landau levels above the ground state lose their (accidental) degeneracy for $g\neq 2$. This is shown schematically in \rf{f04}. The anomaly also causes the ground state to be pushed downward, such that $E^{2}<m^{2}$; if the anomaly and the magnetic field are large enough, states above the ground state are also pushed below the rest mass energy of the particle.
 
 %%%%%%%%%%%%%
@@ -120,24 +137,7 @@ E_{n,s}|_\mathrm{DP} =\pm &\sqrt{\!\left(\!\!\sqrt{\displaystyle m_{e}^{2}c^{4}+
 \end{subequations}
 which in our opinion fails Dirac\rq s principle of mathematical beauty when compared to the KGP result Eq.~\eqref{lan24b}. Both Eqs.~\eqref{lan24b} and \eqref{lan25b} have the correct non-relativistic reduction at the lowest order though, the latter obscures the physical interpretation.
 
-The most egregious issue with the DP-Landau levels is that, in a perturbative expansion, it includes cross terms between the $g\!=\!2$ magnetic moment and anomalous terms in $a=(g-2)/2$; thus the result does not depend on the particle magnetic moment alone; there is a functional dependence on the magnetic anomaly $a$. The presence of these cross terms implies that above first order the results cannot be given in terms of the full magnetic moment alone. In contrast, for the KGP-Landau levels, Eq.\,\eqref{lan25b}, the entire effect of magnetic moment is contained in a single term. Thus Dirac\rq s beauty principle favors heavily the KGP.
-
-Restricting ourselves to the positive energy spectrum, the non-relativistic reduction of \req{lan24b} can be carried out in powers of $1/m$ in the large mass limit yielding
-\begin{alignat}{1}
-\label{lan27} E_{n,s}|_\mathrm{NR}&=m_{e}c^{2}+\frac{p_{z}^{2}}{2m_{e}}+\mu_{B}B\left(2n+1-\frac{g}{2}s\right)-\frac{p_{z}^{4}}{8m_{e}^{3}c^{2}}\\ \notag &\!-\!\frac{p_{z}^{2}}{2m_{e}}\frac{\mu_{B}B}{m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)\!-\!\frac{\mu_{B}^{2}B^{2}}{2m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)^{2}\!+\!\mathcal{O}(1/m_{e}^{5})\;,\end{alignat}
-which contains the expected terms such as the non-relativistic kinetic energy in the z-direction, the first relativistic correction to kinetic energy, the Landau energies, and cross terms that behave like modifications to the mass of the particle.
-
-The `Landau' problem for neutral particles, for example the neutron with mass $m_\mathrm{N}$ simplifies to
-\begin{gather}
-\label{neutral:1}
-E_{n,s}|_{e=0}\rightarrow E_{s}(\bb{p},B)=\sqrt{m_\mathrm{N}^{2}c^{4}+\bb{p}^{2}c^{2}-2\mu B m_\mathrm{N}c^{2}s}\;,
-\end{gather}
-which is just the free particle motion without Landau orbitals. We can define an `effective' polarization mass given by
-\begin{gather}
-\label{neutral:2}
-\widetilde{m}^{2}_{s}=m_\mathrm{N}^{2}c^{4}-2\mu B m_\mathrm{N}c^{2}s\;.
-\end{gather}
-This effective polarization mass (which also is easily defined for charged particles) will find use when we consider cosmic thermodynamics and plasmas in \rchap{chap:cosmo}.
+The most egregious issue with the DP-Landau levels is that, in a perturbative expansion, it includes cross terms between the $g\!=\!2$ magnetic moment and anomalous terms in $a=(g-2)/2$; thus the result does not depend on the particle magnetic moment alone; there is a functional dependence on the magnetic anomaly $a$. The presence of these cross terms implies that above first order the results cannot be given in terms of the full magnetic moment alone. In comparison, for the KGP-Landau levels Eq.\,\eqref{lan25b}, the entire effect of magnetic moment is contained in a single term.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Hydrogen-like atoms}
@@ -161,8 +161,10 @@ The operator $\mathcal{K}$ commutes with $\bb{\alpha}\cdot\bb{\hat{r}}$ and its 
 
 The difficulty of this equation is that the effective angular momentum operator is non-diagonal in spinor space due to the presence of $\bb{\alpha}\cdot\bb{\hat{r}}$ which mixes upper and lower components. The effective radial potential within \req{cou02} is then
 \begin{alignat}{1}
-	\label{temp} \boxed{V_\mathrm{eff}=-\frac{2E}{\hbar c}\frac{Z\alpha}{r}-\frac{Z^{2}\alpha^{2}}{r^{2}}+\frac{g}{2}Z\alpha\frac{i\bb{\alpha}\cdot\bb{\hat{r}}}{r{2}}}\,.
+	\label{temp} \boxed{V_\mathrm{eff}=-\frac{2E}{\hbar c}\frac{Z\alpha}{r}-\frac{Z^{2}\alpha^{2}}{r^{2}}+\frac{g}{2}Z\alpha\frac{i\bb{\alpha}\cdot\bb{\hat{r}}}{r^{2}}}\,.
 \end{alignat}
+We emphasize that the distinguishing characteristic which separates the KGP solutions (and Dirac for $g\!=\!2$) from the Klein-Gordon solutions is the last term in the effective potential \req{temp}. This is the dipole-charge interaction term which exists only because of the relativistic expression for the magnetic dipole and is entirely absent non-relativistically. 
+
 Following the procedure of~\cite{Martin:1958zz}, we introduce the operator
 \begin{alignat}{1}
 \label{cou07} &\mathfrak{L}=-\gamma^{0}\mathcal{K}-\frac{g}{2}Z\alpha(i\bb{\alpha}\cdot\bb{\hat{r}})\;,
@@ -266,7 +268,7 @@ Lastly we recast, for the $\kappa>0$ states, the principle quantum number as $n'
 where it is understood that $n-\ell\geq1$, this condition allows us to write what was previously described in \req{nonrel04} as two distinct spectra now as a single energy spectra. In the limit $g\rightarrow2$ or $g\rightarrow0$ the correct expansion to order $Z^{4}\alpha^4$ of the Dirac or KG energies are obtained. In the following we explore some consequences of our principal non-relativistic result, \req{nonrel09}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Lamb Shift} \label{lamb}
+\subsection{g-Lamb Shift between 2S and 2P orbitals} \label{lamb}
 The breaking of degeneracy in \req{nonrel09} between states of differing $\ell$ orbital quantum number, but the same total angular momentum $j$ and principle quantum number $n$ is responsible for the Lamb shift due to anomalous magnetic moment. The only term in \req{nonrel09} (up to order $Z^{4}\alpha^{4}$) that breaks the degeneracy between the $E^{n,j}_{\ell=j+1/2}$ and $E^{n,j}_{\ell=j-1/2}$ states for $n\geq2$ is the fourth term. This is unsurprising as it depends exclusively on quantum number $\ell$ and $n$. The lowest order Lamb shift due to anomalous magnetic moment is then
 \begin{alignat}{1}
 \label{lamb01} \frac{\Delta E_{\mathrm{gLamb}}^{n,j}}{mc^{2}}&=E^{n,j}_{\ell=j-1/2}-E^{n,j}_{\ell=j+1/2}=\left(g^{2}/8-1/2\right)\left(\frac{1}{j}-\frac{1}{j+1}\right)\frac{Z^{4}\alpha^{4}}{n^{3}}\;.
@@ -305,7 +307,7 @@ The discrepancy for the proton-antiproton system is
 \end{alignat} 
 
 %%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Fine structure} \label{fs}
+\subsection{g-Fine structure effects within P orbitals} \label{fs}
 The fifth term in \req{nonrel09}, which depends on $j$ and $n$, will shift the levels due to an anomalous moment, but does not contribute to the Lamb shift. Rather this expression, which contains the spin-orbit $\vec{L}\cdot\vec{S}$ coupling, is responsible for the fine structure splittings. From \req{nonrel09} the fine structure splitting is given by
 \begin{alignat}{1}
 \label{fs00} \frac{\Delta E_{\mathrm{gFS}}^{n,\ell}}{mc^{2}}&=E^{n,j=\ell+1/2}_{\ell}-E^{n,j=\ell-1/2}_{\ell}=\left(g^{2}/8\right)\left(\frac{1}{\ell}-\frac{1}{\ell+1}\right)\frac{Z^{4}\alpha^{4}}{n^{3}}\;.
