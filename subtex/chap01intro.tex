@@ -239,7 +239,7 @@ Following a procedure similar to the one found in \rsec{sec:mom}, \req{ledm:3} r
     \label{ledm:4}
     \mathcal{H}_\mathrm{EDM} \approx \epsilon\chi^{\dag}\bb{\sigma}\cdot\bb{E}\chi\,.
 \end{gather}
-The electric dipole is important because the presence of one would signify CP violation in the theory. This is demonstrated in brief because of the parity (P) and time (T) symmetries of the relevant vectors and their inner products. Even and odd symmetries for each are printed in \rt{fig:cp}. Notably, the magnetic dipole is even under both P and T symmetry while the electric dipole is odd under both.
+The electric dipole is important because the presence of one would signify charge-parity (CP) violation in the theory which provides a method to distinguish between matter and antimatter. We discuss this in brief using the parity (P) and time (T) symmetries of the relevant spin $\bb{s}$ and field vectors $(\bb{E},\bb{B})$ and their inner products. The even and odd symmetries of each are printed in \rt{fig:cp}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[h]
@@ -262,7 +262,24 @@ The electric dipole is important because the presence of one would signify CP vi
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The EDM term \req{ledm:4} is overall T-odd and P-odd while the magnetic dipole is overall even for both. While such dipoles are common in composite or molecular systems, no electric dipole has ever been measured for an elementary particle. As a point of comparison, the EDM of the electron is excluded~\citep{ACME:2018yjb,Roussy:2022cmp} by a bound of $|\epsilon_{e}/c|<4.1\times10^{-30}\, e\,\mathrm{cm}$.
+The EDM term \req{ledm:4} is overall T-odd and P-odd while the magnetic dipole is T-even and P-even. While EDM dipoles are common in molecular systems, no electric dipole has ever been measured for an elementary particle nor composite particles like the proton or neutron despite extensive searching. As a point of comparison, the EDM of the electron is excluded~\citep{ACME:2018yjb,Roussy:2022cmp} by a bound of $|\epsilon_{e}/c|<4.1\times10^{-30}\, e\,\mathrm{cm}$.
+
+For CPT symmetry to hold, \rt{fig:cp} implies that both the electric and magnetic dipoles must be C-even. C-symmetry is a more complicated concept to discuss as it is only well-defined relativistically where particle and antiparticle states are simultaneously described by the theory. The Dirac spinor charge conjugates as
+\begin{align}
+    \label{c:1}
+    C:\psi\rightarrow\psi_{c}=\eta_{c}C(\bar\psi)^{T}= \eta_{c}C\gamma_{0}^{T}\psi^{*}\,,
+\end{align}
+where $C$ is the charge conjugation matrix satisfying the conjugation relation
+\begin{align}
+    \label{c:2}
+    -C\gamma_{\alpha}C^{-1}=\gamma_{\alpha}\,,
+\end{align}
+and $\eta_{c}$ is an arbitrary complex phase. The exact matrix expression of $C$ depends on the representational basis used (Dirac, Weyl, Majorana, etc...). The following quantities are invariant and thus even under this transform
+\begin{align}
+    \label{c:3}
+    \bar\psi\psi\,,\qquad \bar\psi\gamma_{5}\psi\,,\qquad \bar\psi\gamma_{\alpha}\partial^{\alpha}\psi
+\end{align}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Klein-Gordon-Pauli equation}
