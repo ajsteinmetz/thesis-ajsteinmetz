@@ -46,18 +46,18 @@ The above can be broken into a set of three mutually commuting Hamiltonian opera
 	\label{homogeneous:7}
     &H_\mathrm{total}=H_\mathrm{Free}+H_\mathrm{HO}+H_\mathrm{Mag.}\,,\\
 	\label{homogeneous:7a}
-    &H_{\mathrm{Free}}=\frac{p_{z}^{2}}{2m}\,,\\
+    &H_{\mathrm{Free}}=\frac{p_{3}^{2}}{2m}\,,\\
 	\label{homogeneous:7b}
     &H_\mathrm{HO}\,=\frac{1}{2m_{e}}\left(p_{1}^{2}+p_{2}^{2}\right) + \frac{1}{2}m_{e}\omega^{2}(x^{2}+y^{2})\,,\\
 	\label{homogeneous:7c}
     &H_{\mathrm{ZI}}\ \,=-\mu_{B}B\frac{L_{3}}{\hbar}-\mu B\sigma_{3}\,.
 \end{align}
-The cyclotron frequency appears in \req{homogeneous:7b} as $2\omega=\omega_\mathrm{C}=eB/m_{e}$. We note that the \req{homogeneous:7c} is usually expressed as
+The cyclotron frequency appears in \req{homogeneous:7b} as $2\omega=\omega_\mathrm{C}=eB/m_{e}$. We note that the Zeeman \req{homogeneous:7c} is usually expressed as
 \begin{alignat}{1}
 	\label{homogeneous:7d}
-    H_{\mathrm{ZI}}=-\frac{e}{2m}\left(\bb{L}+g\bb{S}\right)\cdot\bb{B}\,,
+    H_{\mathrm{ZI}}=-\frac{e}{2m}\left(g_\mathrm{L}\bb{L}+g\bb{S}\right)\cdot\bb{B}\,,\qquad g_\mathrm{L}=1\,,
 \end{alignat}
-with $\bb{S}$ defined in \req{qspin:1}. We see more explicitly that the orbital gyromagnetic ratio $g_\mathrm{L}$ which is a coefficient to the angular momentum operator $\bb{L}$ is unity unlike for spin. As all the above Hamiltonian operators are mutually commuting, the energy eigenvalue of the total Hamiltonian is the sum of the individual energy eigenvalues. Our remaining goal will be to convert the KGP eigenvalue equation into the above three non-relativistic Hamiltonian operators. 
+with $\bb{S}$ defined in \req{qspin:1}. We see more explicitly that the orbital gyromagnetic ratio $g_\mathrm{L}$ which is a coefficient to the angular momentum operator $\bb{L}$ is unity unlike for spin. We refer back to our comment about black hole spin in \rsec{sec:unique}. As all the above Hamiltonian operators are mutually commuting, the energy eigenvalue of the total Hamiltonian is the sum of the individual energy eigenvalues. Our remaining goal will be to convert the KGP eigenvalue equation into the above three non-relativistic Hamiltonian operators. 
 
 We now return to the KGP equation and write expand \req{kgp:1} for the Landau problem with energy eigenstates $\Psi_\mathrm{E}$ yielding
 \begin{alignat}{1}
@@ -78,32 +78,32 @@ which matches the non-relativistic Hamiltonian presented in \req{homogeneous:7}.
 The energy eigenvalues of \req{homogeneous:7} are given by
 \begin{alignat}{1}
     \label{lan23}
-    E^\prime_{n,s}(p_{z},B)&=\frac{p_{z}^{2}}{2m^\prime }+\frac{e\hbar B}{m^\prime}\left(n+\frac{1}{2}\right)-\mu B\left(\frac{m_{e}}{m'}\right)s\,,
+    E^\prime_{n,s}(p_{3},B)&=\frac{p_{3}^{2}}{2m^\prime }+\frac{e\hbar B}{m^\prime}\left(n+\frac{1}{2}\right)-\mu B\left(\frac{m_{e}}{m'}\right)s\,,
 \end{alignat}
 where $n\in1,2,3\ldots$ is the Landau orbital quantum number and $s\in\pm1$ is the spin quantum number. The physical relativistic energies can be obtained by undoing the substitutions in \req{lan10} yielding from \req{lan23}
 \begin{gather}
 \label{lan24}
-E^{2}_{n,s}(p_{z},B)=m_{e}^{2}c^{4}+p_{z}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu B m_{e}c^{2}s\,,\\
+E^{2}_{n,s}(p_{3},B)=m_{e}^{2}c^{4}+p_{3}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu B m_{e}c^{2}s\,,\\
 \label{lan24b}
-E_{n,s}=\pm\sqrt{m_{e}^{2}c^{4}+p_{z}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu B m_{e}c^{2}s}\;.
+E_{n,s}=\pm\sqrt{m_{e}^{2}c^{4}+p_{3}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu B m_{e}c^{2}s}\;.
 \end{gather}
 This expression for the relativistic Landau levels is the same as found by ~\cite{Weisskopf:1936hya} for the Dirac equation setting $g\!=\!2$ in \req{lan24b}. The Landau orbital part and spin portions can be combined when the magnetic moment is expressed in terms of $e/m$, but the form in \req{lan24b} keeps it generalized for the case of neutral particles.
 
-The `Landau' problem for neutral particles, for example the neutron with mass $m_\mathrm{N}$ simplifies to
+The `Landau' problem for neutral particles (for example the neutron with mass $m_\mathrm{N}$) simplifies to
 \begin{gather}
 \label{neutral:1}
 E_{n,s}|_{e=0}\rightarrow E_{s}(\bb{p},B)=\sqrt{m_\mathrm{N}^{2}c^{4}+\bb{p}^{2}c^{2}-2\mu B m_\mathrm{N}c^{2}s}\;,
 \end{gather}
-which is just the free particle motion without Landau orbitals. We can define an `effective' polarization mass given by
+which is just the free particle motion with a magnetic dipole energy. We note the correspondence between the quantized Landau orbitals and continuous transverse momentum $\bb{p}^{2}=p_{3}^{2}+p_\mathrm{T}^{2}$. We can define an `effective' polarization mass given by
 \begin{gather}
 \label{neutral:2}
-\widetilde{m}^{2}_{s}(B)=m_\mathrm{N}^{2}c^{4}-2\mu B m_\mathrm{N}c^{2}s\;.
+\boxed{\tilde{m}^{2}_{s}(B)=m^{2}c^{4}-2\mu B mc^{2}s}\,.
 \end{gather}
 This effective polarization mass (which also is easily defined for charged particles) will find use when we consider cosmic thermodynamics and plasmas in \rchap{chap:cosmo}.
 
 Restricting ourselves to the positive energy spectrum, the non-relativistic reduction of \req{lan24b} can be carried out in powers of $1/m$ in the large mass limit yielding
 \begin{alignat}{1}
-\label{lan27} E_{n,s}|_\mathrm{NR}&=m_{e}c^{2}+\frac{p_{z}^{2}}{2m_{e}}+\mu_{B}B\left(2n+1-\frac{g}{2}s\right)-\frac{p_{z}^{4}}{8m_{e}^{3}c^{2}}\\ \notag &\!-\!\frac{p_{z}^{2}}{2m_{e}}\frac{\mu_{B}B}{m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)\!-\!\frac{\mu_{B}^{2}B^{2}}{2m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)^{2}\!+\!\mathcal{O}(1/m_{e}^{5})\;,\end{alignat}
+\label{lan27} E_{n,s}|_\mathrm{NR}&=m_{e}c^{2}+\frac{p_{3}^{2}}{2m_{e}}+\mu_{B}B\left(2n+1-\frac{g}{2}s\right)-\frac{p_{3}^{4}}{8m_{e}^{3}c^{2}}\\ \notag &\!-\!\frac{p_{3}^{2}}{2m_{e}}\frac{\mu_{B}B}{m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)\!-\!\frac{\mu_{B}^{2}B^{2}}{2m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)^{2}\!+\!\mathcal{O}(1/m_{e}^{5})\;,\end{alignat}
 which contains the expected terms such as the non-relativistic kinetic energy in the z-direction, the first relativistic correction to kinetic energy, the Landau energies, and cross terms that behave like modifications to the mass of the particle.
 
 The KGP-Landau levels above the ground state lose their (accidental) degeneracy for $g\neq 2$. This is shown schematically in \rf{f04}. The anomaly also causes the ground state to be pushed downward, such that $E^{2}<m^{2}$; if the anomaly and the magnetic field are large enough, states above the ground state are also pushed below the rest mass energy of the particle.
@@ -130,9 +130,9 @@ It is useful to compare the KGP solution to the the Landau levels for the DP equ
 \begin{subequations}
 \begin{alignat}{1}
 \label{lan25} 
-E^{2}_{n,s}(p_{z},B)|_\mathrm{DP} =&\left(\!\!\sqrt{\displaystyle m_{e}^{2}c^{4}\!+\!2e\hbar c^{2}B\left(n+\frac{1}{2}-s\right)}-\frac{eB\hbar}{2m_{e}}(g-2)s\!\right)^{2}\!\!\!+p_{z}^{\!\!2}c^{2},\\[0.4cm]
+E^{2}_{n,s}(p_{3},B)|_\mathrm{DP} =&\left(\!\!\sqrt{\displaystyle m_{e}^{2}c^{4}\!+\!2e\hbar c^{2}B\left(n+\frac{1}{2}-s\right)}-\frac{eB\hbar}{2m_{e}}(g-2)s\!\right)^{2}\!\!\!+p_{3}^{\!\!2}c^{2},\\[0.4cm]
 \label{lan25b}
-E_{n,s}|_\mathrm{DP} =\pm &\sqrt{\!\left(\!\!\sqrt{\displaystyle m_{e}^{2}c^{4}+2e\hbar c^{2}B\left(n+\frac{1}{2}-s\right)}\!-\!\frac{eB\hbar}{2m_{e}}(g-2)s\!\right)^{\!\!2}\!\!\!+p_{z}^{2}c^{2}}\;,
+E_{n,s}|_\mathrm{DP} =\pm &\sqrt{\!\left(\!\!\sqrt{\displaystyle m_{e}^{2}c^{4}+2e\hbar c^{2}B\left(n+\frac{1}{2}-s\right)}\!-\!\frac{eB\hbar}{2m_{e}}(g-2)s\!\right)^{\!\!2}\!\!\!+p_{3}^{2}c^{2}}\;,
 \end{alignat}
 \end{subequations}
 which in our opinion fails Dirac\rq s principle of mathematical beauty when compared to the KGP result Eq.~\eqref{lan24b}. Both Eqs.~\eqref{lan24b} and \eqref{lan25b} have the correct non-relativistic reduction at the lowest order though, the latter obscures the physical interpretation.
@@ -357,7 +357,7 @@ Care must be taken when interpreting the results presented in sections. For phys
 \begin{alignat}{1} \label{vacfl01}
 E_{0}\approx mc^{2}+\frac{\alpha}{4\pi}mc^{2}\ \mathrm{ln}^{2}\left(\frac{2e\hbar B}{m^{2}c^{3}}\right)
 \end{alignat}
-which even for enormous magnetic fields does not deviate significantly from the rest mass-energy of the electron. Further the AMM radiative corrections approach zero for higher Landau levels~\citep{Ferrer:2015wca}. Therefore the AMM in the case of electrons does not have a significant effect in highly magnetized environments such as those found in astrophysics (magnetars).
+which even for enormous magnetic fields does not deviate significantly from the rest mass-energy of the electron. Further the AMM radiative corrections approach zero for higher Landau levels~\citep{Ferrer:2015wca,Hackebill:2022uxv}. Therefore the AMM in the case of electrons does not have a significant effect in highly magnetized environments such as those found in astrophysics (magnetars).
 
 The situation is different for composite particles such as the proton, neutron and light nuclei whose anomalous magnetic moments are dominated by their internal structure and not by vacuum fluctuations. In this situation we expect that the AMM interaction in high magnetic fields remains significant. Therefore, asking whether the DP or KGP equations better describes the dynamics of composite hadrons and atomic nuclei in presence of magnetar strength fields is a relevant question despite the standard choice in literature being the DP equation~\citep{Broderick:2000pe}. The same question can be asked for certain exotic hydrogen-like atoms where the constituent particles have anomalous moments which can be characterized as an external parameter. 
 
@@ -480,7 +480,7 @@ We note that $\sigma_{\alpha\beta}F^{\alpha\beta}/2$ can also be written in term
 
 For the homogeneous magnetic field \req{IKGP01} can be solved in much the same way as the KGP equation in \rsec{sec:homogeneous}. One obtains energy eigenvalues by noting the simple shift that occurs in the mass of $m^2\rightarrow m^{2}+\mu^{2}{B}^{2}$ quadratic in the magnetic field. The resulting energy levels are
 \begin{alignat}{1}
-\label{IKGP05} E_{n,s}(\bb{B})=\sqrt{m_{e}^{2}c^{4}+\mu^{2}{B}^{2}+p_{z}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu B m_{e}c^{2}s}
+\label{IKGP05} E_{n,s}(\bb{B})=\sqrt{m_{e}^{2}c^{4}+\mu^{2}{B}^{2}+p_{3}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu B m_{e}c^{2}s}
 \end{alignat}
 An interesting feature is that in ultra-high magnetic fields ($B>>{B}_{s}$), Eq.~\eqref{IKGP05} approximates
 \begin{alignat}{1}

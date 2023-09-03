@@ -119,7 +119,7 @@ In non-relativistic quantum mechanics, the time-dependant Schr{\"o}dinger-Pauli 
 \end{gather}
 where $\chi$ is again a two-component spinor. It is well known that \req{sp:1} is obtainable from the Dirac equation (see \rsec{sec:dp}) in the non-relativistic limit.
 
-Before moving on, we will verify that the SP contains within it an expression of the Stern-Gerlach force. To accomplish this, we will work in the Heisenberg representation where operators obey the following equation of motion
+Before moving on, we will verify that the SP \req{sp:1} contains within it an expression of the Stern-Gerlach force which was used to first provide evidence of the quantization of angular momentum~\citep{Gerlach:1922zz}. To accomplish this, we will work in the Heisenberg representation where operators obey the following equation of motion
 \begin{align}
     \label{h:1}
     i\hbar\frac{d\bb{O}}{dt}=[\bb{O},H]+
@@ -139,7 +139,7 @@ After some derivation and making use of the identities in \req{h:3}, we arrive a
     \label{ehren:1}
     \boxed{\frac{d\bb{\pi}}{dt}=e\bb{E}+\frac{e}{2m}(\bb{\pi}\times\bb{B}-\bb{B}\times\bb{\pi})+\frac{e\hbar}{2m}\sigma_{i}\bb{\nabla}B_{i}}\,.
 \end{gather}
-The last term in the expression is the Stern-Gerlach force which is sensitive to inhomogeneous magnetic fields. We also note this equation is suggestion of the `Amp{\'e}rian' dipole force which is in the direction of the gradient $\bb{\nabla}$ rather than the `Gilbertian' type which is in the direction of the field $\bb{B}$; see \rsec{sec:cspin}. \req{ehren:1} can be connected to our classical understanding by taking the expectation value and casting it as an Ehrenfest-style theorem.
+The last term in the expression is the Stern-Gerlach force which is sensitive to inhomogeneous magnetic fields. We also note this equation is suggestion of the `Amp{\'e}rian' dipole force which is in the direction of the gradient $\bb{\nabla}$ rather than the `Gilbertian' type which is in the direction of the field $\bb{B}$; see \rsec{sec:cspin}. \req{ehren:1} can be connected to our classical understanding by taking the expectation value and casting it as an Ehrenfest-style theorem~\citep{Ehrenfest:1927swx}.
 
 \subsection{Anomalous magnetic moment}
 In nature there is no particle with exactly $g\!=\!2$. As seen in \rt{tab:gfactor}, composite particles often deviate from $g\!=\!2$ greatly as the $g$-factor of a composite particle is related to its internal composition. In the case of the neutron and proton, the internal quarks themselves are responsible. The comparison between three listed isotopes of hydrogen also displays how magnetic moments can `cancel out' or add together. While deuterium's value of $g$ is suppressed by the extra neutron, the two neutrons in tritium balance one another returning the ratio into one manifestly similar to the proton.
@@ -227,7 +227,9 @@ Exact solutions to the DP equation are relatively scarce due to the complicating
 \end{gather}
 The electromagnetic field tensor can also be defined in terms of the commutators of the covariant derivative \req{dirac:1b} as
 \begin{align}
-    \left[\widetilde\nabla^{\alpha},\widetilde\nabla^{\beta}\right]=\frac{ie}{\hbar}F^{\alpha\beta}\,.
+    \label{curve:1}
+    \left[\widetilde\nabla^{\alpha},\widetilde\nabla^{\beta}\right]=
+    \frac{ie}{\hbar}F^{\alpha\beta}\,.
 \end{align}
 It is also useful to define the Hodge dual of the electromagnetic field tensor
 \begin{gather}
@@ -286,7 +288,7 @@ which is of interest because of the inclusion of $\gamma^{5}$. Taking advantage 
 \end{gather}
 which is more closely analogous to the structure of the AMM in \req{lamm:1} making use of the dual form of the electromagnetic field tensor shown in \req{em:2}.
 
-Following a procedure similar to the one found in \rsec{sec:mom}, \req{ledm:3} reduces in the non-relativistic limit to the Hamiltonian EDM interaction
+Following a procedure similar to the one found in \rsec{sec:mom}, \req{ledm:3} reduces in the non-relativistic limit to the Hamiltonian density EDM interaction
 \begin{gather}
     \label{ledm:4}
     \mathcal{H}_\mathrm{EDM} \approx \epsilon\chi^{\dag}\bb{\sigma}\cdot\bb{E}\chi\,.
@@ -304,11 +306,11 @@ The electric dipole is important because the presence of one would signify charg
  & \multicolumn{1}{c}{$\bb{s}\!\cdot\!\bb{E}$}
  & \multicolumn{1}{c}{$\bb{s}\!\cdot\!\bb{B}$} \\
  \cline{2-6}
- \begin{tabular}[x]{@{}c@{}}T symmetry\\ $(t\rightarrow-t)$\end{tabular} & even & odd & odd & odd & even \TBstrut\\
+ \begin{tabular}[x]{@{}c@{}}T symmetry\\ $(t\rightarrow-t)$\end{tabular} & \textbf{even} & odd & odd & odd & \textbf{even} \TBstrut\\
  \cline{2-6}
- \begin{tabular}[x]{@{}c@{}}P symmetry\\ $(\bb{x}\rightarrow-\bb{x})$\end{tabular} & odd & even & even & odd & even \TBstrut\\
+ \begin{tabular}[x]{@{}c@{}}P symmetry\\ $(\bb{x}\rightarrow-\bb{x})$\end{tabular} & odd & \textbf{even} & \textbf{even} & odd & \textbf{even} \TBstrut\\
  \cline{2-6}
- \begin{tabular}[x]{@{}c@{}}PT symmetry\\ $(x^{\alpha}\rightarrow-x^{\alpha})$\end{tabular} & odd & odd & odd & even & even \TBstrut\\
+ \begin{tabular}[x]{@{}c@{}}PT symmetry\\ $(x^{\alpha}\rightarrow-x^{\alpha})$\end{tabular} & odd & odd & odd & \textbf{even} & \textbf{even} \TBstrut\\
  \cline{2-6}
  \end{tabular}\\ \,\Bstrut\\
  \caption{Time (T), parity (P) and PT symmetries of electric $\bb{E}$, magnetic $\bb{B}$, spin $\bb{s}$ three-vectors and the inner products which describe the dipole Hamiltonian terms.}
@@ -351,7 +353,7 @@ In the above we printed both the AMM and EDM for theoretical interest, but will 
 
 \req{kgp:1} is mathematically similar to the Klein-Gordon equation which describes charged scalar particles. In the same manner as scalar-QED, the squared covariant derivative contains a $e^{2}A^{2}$ term which in QFT results in the presence of a 4-vertex seagull interaction~\citep{Schwartz:2014sze} at tree-level.
 
-It is important to emphasize that the KGP \req{kgp:1} and DP \req{dp:1} are distinct wave equations which do not share solutions except when $g\!=\!2$ whereas both reduce to the Dirac \req{dirac:1a}. We will elaborate on the relationship between the KGP and Dirac equations here by rewriting the Dirac equation in \req{dirac:1a} as
+It is important to emphasize that the KGP \req{kgp:1} and DP \req{dp:1} are distinct wave equations which do not share solutions except when $g\!=\!2$ whereas both reduce to the Dirac \req{dirac:1a}; a detail that has occasionally gone missed in the literature. We will clarify on the relationship between the KGP and Dirac equations here by rewriting the Dirac equation in \req{dirac:1a} as
 \begin{alignat}{1}
 	\label{do:1} \mathcal{D}_{\pm}=i\hbar\gamma_{\alpha}\widetilde\nabla^{\alpha}\pm m_{\ell}c\,,\qquad
     \mathcal{D}_{-}\psi=0\,,
@@ -362,29 +364,34 @@ with a `Dirac operator' $\mathcal{D}_{\pm}$ defined in terms of positive and neg
     \mathcal{D}_{-}=-\gamma^{5}\mathcal{D}_{+}\gamma^{5}\,,\qquad
     [\mathcal{D}_{+},\mathcal{D}_{-}]=0\,.
 \end{gather}
-Ignoring the proportionality factor of $\sqrt{\hbar/m_{\ell}c}$, we can complete the square of the Dirac equation via the substitution $\psi\rightarrow\mathcal{D}_{+}\Psi$
+Ignoring the proportionality factor of $\sqrt{\hbar/m_{\ell}c}$ which accommodate the units of $\psi$ versus $\Psi$, we can complete the square of the Dirac equation via the substitution $\psi\rightarrow\mathcal{D}_{+}\Psi$
 \begin{alignat}{1}
 	\label{do:3} \mathcal{D}_{-}\psi\rightarrow\mathcal{D}_{-}\mathcal{D}_{+}\Psi\,,\indent\mathcal{D}_{+}\mathcal{D}_{-}\Psi=\left(-\hbar^{2}\widetilde\nabla^{2}-m_{\ell}^{2}c^{2}-e\hbar\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=0\,.
 \end{alignat}
-This procedure yields the KGP equation for $g\!=\!2$ the algebraic `square root' will be elaborated on further in \rsec{sec:unique}.
+This procedure yields the KGP equation for $g\!=\!2$. This algebraic `square root' will be elaborated on further in \rsec{sec:unique}.
 
-For $g\!\neq\!2$ the relationship between the DP and KGP equation becomes more complicated. Instead of a simpler root, the substitution between $\psi$ and $\Psi$ requires an infinite series expansion resulting from the non-local inverse substitution 
+For $g\!\neq\!2$ the relationship between the DP and KGP equation becomes more complicated. Instead of a clean algebraic separation, the substitution between $\psi$ and $\Psi$ requires an infinite series expansion resulting from the non-local inverse substitution 
 \begin{alignat}{1}
 	\label{nonlocal:1} \Psi\rightarrow\frac{1}{\mathcal{D}_{+}}\psi = \frac{1}{m_{\ell}c}\left(1 - \frac{\hbar}{m_{\ell}c}i\gamma_{\alpha}\widetilde\nabla^{\alpha} - \frac{\hbar^{2}}{m_{\ell}^{2}c^{2}}\left(\gamma_{\alpha}\widetilde\nabla^{\alpha}\right)^{2} + \ldots\right)\psi\,.
 \end{alignat}
-The expansion in \req{nonlocal:1} is considered non-local because it requires an infinite number of initial conditions to determine. We note each term is preceded by powers of the reduced Compton wavelength $\lambda_\mathrm{C}=\hbar/m_{\ell}c$. While this procedure `square roots' the KGP equation $(\mathrm{\sqrt{KGP}})$, the resulting AMM Pauli Lagrangian \req{lamm:1} picks up an infinite number of derivative and field terms which makes the theory rather unpalatable.
+The expansion in \req{nonlocal:1} is considered non-local because it requires an infinite number of initial conditions to determine.
+
+While this procedure `square roots' the KGP equation $(\mathrm{\sqrt{KGP}})$, the resulting AMM Pauli Lagrangian \req{lamm:1} picks up an infinite number of derivative and field terms which makes the theory rather unpalatable.
 \begin{gather}
     \label{lamm:2}
+    \mathcal{L}_{\sqrt{\mathrm{KGP}}} = \mathcal{L}_\mathrm{D}+\mathcal{L}_\mathrm{\sqrt{KGP},AMM}\,,\\
+    \label{lamm:3}
     \mathcal{L}_\mathrm{\sqrt{KGP},AMM} = -{\bar\psi}\left(\delta\mu\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\left(1 - \frac{\hbar}{m_{\ell}c}i\gamma_{\alpha}\widetilde\nabla^{\alpha} - \frac{\hbar^{2}}{m_{\ell}^{2}c^{2}}\left(\gamma_{\alpha}\widetilde\nabla^{\alpha}\right)^{2} + \ldots\right)\right)\psi\,.
 \end{gather}
+We note each term in \req{lamm:3} is preceded by powers of the reduced Compton wavelength $\lambda_\mathrm{C}\!\equiv\!\hbar/m_{\ell}c$ therefore the $\sqrt{\mathrm{KGP}}$ model still might be of interest to study assuming the physical system that admits a reasonable cutoff.
 
-While the first term present in \req{lamm:2} is indeed the correct $\mathcal{L}_\mathrm{DP,AMM}$ term, the resulting non-local behavior ultimately breaks the unitarity of the theory making it unsuitable as a fundamental particle theory~\citep{Veltman:1997am}. While the above is suggestive that there exists no unitary transform between the KGP and DP wave equations, we do not claim it as an absolute proof. If a generalized description of $g\!=\!2$ magnetic moment theories exists and makes a good fundamental quantum field theory, then likely non-minimal electromagnetic terms are required to maintain both renormalization and unitarity.
+While the first term present in \req{lamm:3} is indeed the correct $\mathcal{L}_\mathrm{DP,AMM}$ term, the resulting non-local behavior ultimately breaks the unitarity of the theory making it unsuitable as a fundamental particle theory~\citep{Veltman:1997am}. While the above is suggestive that there exists no unitary transform between the KGP and DP wave equations, we do not claim it as an absolute proof. If a generalized description of $g\!=\!2$ magnetic moment theories exists and makes a good fundamental quantum field theory, then likely non-minimal electromagnetic terms are required to maintain both renormalization and unitarity.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Features of the KGP Lagrangian}
 \label{sec:lagrangian}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent Before continuing to specific physical problems, we consider how current conversation functions in the KGP formulation of fermions and how it might differ from the Dirac current. The KGP equation can be obtained from a Lagrangian not dissimilar to the Klein-Gordon Lagrangian~\citep{Delgado-Acosta:2010ita} and has the expression
+\noindent Before continuing to specific physical problems, we consider how current conversation functions in the KGP formulation of fermions and how it might differ from the Dirac current $\mathcal{J}_\mathrm{D}^{\mu}\propto-i\bar\psi\gamma^{\mu}\psi$. The KGP equation can be obtained from a Lagrangian not dissimilar to the Klein-Gordon Lagrangian~\citep{Delgado-Acosta:2010ita} and has the expression
 \begin{gather}
 \label{lagrangian:1} \mathcal{L}_\mathrm{KGP}/c^{2}=\left(i\hbar{\widetilde\nabla}^{\mu}\right)^{\dag}\bar{\Psi}h_{\mu\nu}\left(i\hbar{\widetilde\nabla}^{\mu}\right)\Psi-m^{2}c^{2}\bar{\Psi}\Psi\,,\qquad h_{\mu\nu}=\eta_{\mu\nu}-i\frac{g}{2}\sigma_{\mu\nu}\,.
 \end{gather}
@@ -395,7 +402,7 @@ In comparison to the DP AMM Lagrangian \req{lamm:1}, the KGP magnetic moment Lag
     \label{lagrangian:2}
     \mathcal{L}_\mathrm{KGP,MM}/c^{2} = -{\bar\Psi}\left(\frac{g}{2}\mu_{\ell} m_{\ell}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi\,.
 \end{align}
-While they are mathematically similar both being `Pauli' terms, there are some important differences. Here the combination of fields $\Psi$ and $F^{\alpha\beta}$ have natural units $[\mathrm{length}]^{-4}$ and the coupling coefficient $\mu m_{\ell}\!\propto\!~g$ is manifestly dimensionless. This means the KGP Lagrangian is at first inspection renormalizable which is an improvement over the DP Lagrangian~\citep{Rafelski:2022bsv}. Literature however suggests that the KGP Lagrangian requires additional fermion self-interactions $\mathcal{L}_\mathrm{int}\sim\mathcal{O}(\bar\Psi\Psi)^{2}$ to be fully renormalizable (unless $g\!=\!0,\pm2$) which are not forbidden at tree-level~\citep{Angeles-Martinez:2011wpn,Vaquera-Araujo:2012jlk}.
+While they are mathematically similar both being `Pauli terms', there are some important differences. Here the combination of fields $\Psi$ and $F^{\alpha\beta}$ have natural units $[\mathrm{length}]^{-4}$ and the coupling coefficient $\mu m_{\ell}\!\propto\!g$ is manifestly dimensionless. This means the KGP Lagrangian is at first inspection renormalizable which is an improvement over the DP Lagrangian~\citep{Rafelski:2022bsv}. Literature however suggests that the KGP Lagrangian requires additional fermion self-interactions $\mathcal{L}_\mathrm{int}\sim\mathcal{O}(\bar\Psi\Psi)^{2}$ to be fully renormalizable (unless $g\!=\!0,\pm2$) which are not forbidden at tree-level~\citep{Angeles-Martinez:2011wpn,Vaquera-Araujo:2012jlk}.
 
 The conserved current obtained from \req{lagrangian:1} can be expressed as
 \begin{gather}
@@ -410,7 +417,7 @@ The conserved current \req{norm:2} can be interpreted as the sum of a convection
 \label{norm:3b} 
 \mathcal{J}^{\mu}_{\mathrm{Mag}}&=\frac{g}{2}\hbar{\partial}_{\nu}\left(\bar{\Psi}\sigma^{\nu\mu}\Psi\right)\;.
 \end{align}
- This is nearly identical to the Gordon Decomposition of the Dirac current, with the exception that the magnetization current is proportional to the $g$-factor of the particle.
+ This is nearly identical to the Gordon Decomposition of the Dirac current $\mathcal{J}_\mathrm{D}^{\mu}$, with the exception that the magnetization current is proportional to the $g$-factor of the particle.
  
 The covariant derivative happens to simplify as $\widetilde\nabla\rightarrow\partial$ in \req{norm:3b} such that the current is a divergence of the spin density $\bar\Psi\sigma_{\mu\nu}\Psi$. Because of the antisymmetry of $\sigma_{\mu\nu}$ the spin tensor, the magnetization current is conserved independently of the the charge current. That both are independently conserved indicates conservation in both charge $(e)$ and magnetic moment $(\mu)$.
 
@@ -437,7 +444,7 @@ The non-relativistic kinetic energy (KE) Hamiltonian from \req{sp:1} then reads 
 	\label{nat:2}
     {H}_{\mathrm{SP,KE}}=\frac{1}{2m}\left(\bb{\sigma}\cdot\bb{\pi}\right)^{2}=\frac{1}{2m}\bb{\pi}^{2}+i\bb{\sigma}\cdot(\bb{\pi}\times\bb{\pi})=\frac{1}{2m}\bb{\pi}^{2}-\frac{e\hbar}{2m}\bb{\sigma}\cdot\bb{B}\,.
 \end{align}
-As the kinetic momentum operator $\bb{\pi}$ does not self-commute, its cross product is non-zero resulting in a magnetic moment term with magneton size $\mu_{\ell}=e\hbar/2m_{\ell}$ and $g\!=\!2$. Therefore, we see there is conceptual value in replacing the inner dot product with a more complex algebraic structure; in this case: $\delta_{ij}\rightarrow\sigma_{i}\sigma_{j}$.
+As the kinetic momentum operator $\bb{\pi}$ does not self-commute, its cross product is non-zero resulting in a magnetic moment term with magneton size $\mu_{\ell}=e\hbar/2m_{\ell}$ and $g\!=\!2$. Therefore, we see there is conceptual value in replacing the inner dot product with a more intricate algebraic structure; in this case: $\delta_{ij}\rightarrow\sigma_{i}\sigma_{j}$.
 
 The natural gyromagnetic ratio then appears to arise from the $SU(2)$ Lie algebra representation that the Pauli matrices describe and electromagnetic minimal coupling. The natural scale of the magnetic moment can be interpreted as originating from group symmetry requirements on charged particles.
 
@@ -456,25 +463,31 @@ Here $\Psi$ is understood to be a four-component spinor unlike in \req{analog:1}
 	\label{eq:spin:04} \gamma_{\alpha}\gamma_{\beta}a^{\alpha}b^{\beta}=\eta_{\alpha\beta}a^{\alpha}b^{\beta}-i\sigma_{\alpha\beta}a^{\alpha}b^{\beta}\,.
 \end{alignat}
 
-In both the relativistic and non-relativistic cases, the distinction between spin-1/2 and spinless particles is only made apparent in the kinematics in the presence of electromagnetic fields. For minimal coupling $\pi^{\alpha}=p^{\alpha}-eA^{\alpha}$ we take advantage of the fact that any product can be written as a sum of commuting and anticommuting parts
+In both the relativistic and non-relativistic cases, the distinction between spin-1/2 and spinless particles is only made apparent in the kinematics in the presence of electromagnetic fields. For minimal coupling $\pi^{\alpha}=p^{\alpha}-eA^{\alpha}$ we take advantage of the fact that any tensor product of vectors can be decomposed as a sum of commuting (symmetric) and anticommuting (antisymmetric) parts
 \begin{align}
-	\label{eq:spin:06} \pi^{\alpha}\pi^{\beta}=\frac{1}{2}\left(\left\{\pi^{\alpha},\pi^{\beta}\right\}+\left[\pi^{\alpha},\pi^{\beta}\right]\right)\,.
+	\label{eq:spin:06} \pi^{\alpha}\pi^{\beta}=\frac{1}{2}\left\{\pi^{\alpha},\pi^{\beta}\right\}+
+    \frac{1}{2}\left[\pi^{\alpha},\pi^{\beta}\right]\,,\qquad
+    \gamma^{\alpha}\gamma^{\beta}=\frac{1}{2}\left\{\gamma^{\alpha},\gamma^{\beta}\right\}+
+    \frac{1}{2}\left[\gamma^{\alpha},\gamma^{\beta}\right]\,.
 \end{align}
-yielding from \req{eq:spin:03}
+From the above and \req{eq:spin:03} and \req{curve:1} we obtain
 \begin{align}
-	\label{eq:spin:07b} \left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta}-\frac{i}{2}\sigma_{\alpha\beta}\left[\pi^{\alpha},\pi^{\beta}\right]\right)\Psi=
+	\label{eq:spin:07b} \gamma_{\alpha}\gamma_{\beta}\pi^{\alpha}\pi^{\beta}\Psi=
     \left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta}-\frac{e\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=m^{2}c^{2}\Psi\,.
 \end{align}
-\req{eq:spin:07b} is the square of the Dirac equation with precisely $g\!=\!2$ but in a different sense than the one established in \req{do:3}. How $g\!\neq\!2$ AMM `breaks' the inner product substitution is seen more explicitly when we write the effective metric tensor $h_{\mu\nu}$ from \req{lagrangian:1} as
+\req{eq:spin:07b} is the square of the Dirac equation with precisely $g\!=\!2$ but in a different sense than the argument established in \req{do:3}. Rather than squaring the Dirac equation, from this perspective, we're enlarging the structure of the energy-momentum relation. The spin-1 Proca equations and spin-3/2 Rarita-Schwinger equations can also be justified via this line of reasoning with different replacements for the field and inner-product definition.
+
+How $g\!\neq\!2$ AMM `breaks' the inner product substitution is seen more explicitly when we write the effective metric tensor $h_{\mu\nu}$ from \req{lagrangian:1} as
 \begin{gather}
     \label{spinstruc}
     h_{\mu\nu}=\frac{1}{2}\{\gamma_{\mu},\gamma_{\nu}\}+\frac{1}{2}(1+a)[\gamma_{\mu},\gamma_{\nu}]=\gamma_{\mu}\gamma_{\nu}+\frac{a}{2}[\gamma_{\mu},\gamma_{\nu}]\,.
 \end{gather}
+The anomalous part in \req{spinstruc} is inconveniently unable to be packaged as the elementary tensor product of two four-vectors like in \req{eq:spin:03}. The same issue occurs with any anomalous EDM introduction as well. We suggest that more elaborate algebraic structures might accommodate such terms more naturally though we leave that to future work.
 
 Furthermore, compelling arguments can be made that all elementary particles of any spin must have a natural gyromagnetic factor of $g\!=\!2$, though a competing idea is Belinfante's conjecture of $g\!=\!1/s$. To paraphrase the arguments by~\citet*{Ferrara:1992yc}, $g\!=\!2$ is likely the natural scale for particles of any spin because:
 \begin{enumerate}[nosep]
 	\item The W boson, as the only known higher spin charged elementary particle, has at tree level $g\!=\!2$ via a Proca-like equation.
-	\item The relativistic TBMT torque equation is the same simplified form for any classical spin value.
+	\item The relativistic TBMT torque equation is the same for any classical spin value and is most simple when the anomalous moment is zero.
 	\item For arbitrary spin, $g\!=\!2$ facilitates finite Compton scattering cross sections without additional physical requirements.
 	\item For charged interacting particles with arbitrary spin, open bosonic and super-symmetric string theory predicts $g\!=\!2$.
 \end{enumerate}
@@ -507,7 +520,7 @@ The Gaussian curvature $k$ informs the spatial shape of the universe with the fo
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.95\linewidth]{plots/chap01intro/thesis_universe.png}
- \caption{A schematic of the universe's evolution since the Big Bang. The region of interest to use in this work is emphasized to contain a dense nearly charge neutral matter-antimatter plasma.}
+ \caption{A schematic of the universe's evolution since the Big Bang. The region of interest studied in this dissertation is emphasized (in the highlighted box) to contain a dense nearly charge neutral matter-antimatter plasma.}
  \label{fig:cosmo} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
