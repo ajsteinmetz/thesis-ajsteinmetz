@@ -117,7 +117,7 @@ The KGP-Landau levels above the ground state lose their (accidental) degeneracy 
 \end{figure}
 %%%%%%%%%%%%%
 
-However, we recognize a periodicity considering the energy as a function of $g$. We recall that in Eq.~\eqref{lan24b} $n=0, 1, 2\ldots$. As $g$ varies, each time $gs/2$ crosses an integer value, for a different value of $n$ the energy eigenvalue $E$ repeat as a function of changing $g$. All possible values of energy $E$ are reached (at fixed $m$ and $p^2_3$) for $-2\le g\le 2$. Moreover, while for almost all $g\ne 2$ the degeneracy is completely broken, this periodicity implies that energy degeneracy is restored for values~\cite{Evans:2022fsu} 
+However, we recognize a periodicity considering the energy as a function of $g$. We recall that in Eq.~\eqref{lan24b} $n=0, 1, 2\ldots$. As $g$ varies, each time $gs/2$ crosses an integer value, for a different value of $n$ the energy eigenvalue $E$ repeat as a function of changing $g$. All possible values of energy $E$ are reached (at fixed $m$ and $p^2_3$) for $-2\le g\le 2$. Moreover, while for almost all $g\ne 2$ the degeneracy is completely broken, this periodicity implies that energy degeneracy is restored for values~\cite{Evans:2022ygl,Evans:2022fsu} 
 \begin{alignat}{1}
 \label{lan26}
 g_{k}/2=1+k\,,\qquad
@@ -424,7 +424,16 @@ The Dirac $g\!=\!2$ case acts as unique \lq\lq cusp\rq\rq\ point because even fo
 
 \cite{Thaller:1992ji} presented numerically computed DP equation energy levels for large $Z$ hydrogen like atoms. These numerical solutions involve crossings in energy levels between states with the same total angular quantum number $j$, but differing spin orientations such as $1S_{1/2}$ and $2P_{1/2}$; these states also have the behavior of diving into the antiparticle lower continuum even for $1/r$-potential. These features are not present for the KGP-Coulomb solution. However, there is a similarity between the numerical solutions of the DP equation and our analytical KGP solutions, because for $|g|>2$ the merging states as described above correspond to the crossing states in the DP solution.
 
-The DP equation also allows for the so-called super-positronium states as described~\cite{Barut:1975hz,Barut:1976hs}. Such states represent resonances due to the magnetic interaction that reside incredibly close to the center of the atom i.e $\sqrt{\langle r^{2}\rangle}\approx a\alpha\hbar/mc$, but this feature is absent from the KGP formation of the Coulomb problem as all KGP-Coulomb wave functions which can be normalized can be successfully matched to their Dirac ($g\!=\!2$) companions.
+The DP equation also allows for the so-called `super-positronium' states as described~\cite{Barut:1975hz,Barut:1976hs}. Such states represent resonances due to the magnetic interaction that reside incredibly close to the center of the atom i.e $\sqrt{\langle r^{2}\rangle}\approx a\alpha\hbar/mc$, but this feature is absent from the KGP formation of the Coulomb problem as all KGP-Coulomb wave functions which can be normalized can be successfully matched to their Dirac ($g\!=\!2$) companions.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+    \centering
+    \includegraphics[clip, trim=0.0cm 0.0cm 8.0cm 0.0cm,width=0.95\linewidth]{plots/chap02moment/lanplot05.pdf}
+     \caption{Add this bit in!}
+    \label{fig:gspec}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Because analytical solutions of DP equation, unlike our results for KGP, are not available it is hard to pinpoint precisely the origin of the diverse unpalatable behavior. However, we can hypothesize that the problems arise due to the pathological structure of DP equation where the magnetic anomaly rather than full magnetic moment appears. In any case we see that the Thaller solutions present pathologies quite akin to those we already described in our study of Landau energies. On the other hand KGP framework for large $Z$ shows some exciting and nice analytical behavior.
 
@@ -609,4 +618,4 @@ The spin torque equations can be obtained~\citep{Bargmann:1959gz} by inserting t
 \end{alignat}
 The constants $\tilde{a}$ and $\tilde{b}$ are arbitrary allowing for extra terms not forbidden by special relativity. With $d=0$, \req{LSG03} are known as the Thomas-Bargmann-Michel-Telegdi (TMBT) equations. In the standard derivation of relativistic spin precession, in the TBMT equation, the $\tilde{a}$ constant is associated with the anomalous magnetic moment.
 
-In allowing for spin precession sourced by a Stern-Gerlach dipole force, an additional constant $\tilde{b}$ must be introduced. The terms in \req{LSG02} involving the $G$ tensor are spin precession directly originating from dipole forces. In homogeneous electromagnetic fields, \req{LSG02} reduces to the standard TBMT equation. These dynamical torque equations have found use in describing neutral and charged systems classically~\citep{Formanek:2021mcp,Formanek:2019cga}.
+In allowing for spin precession sourced by a Stern-Gerlach dipole force, an additional constant $\tilde{b}$ must be introduced. The terms in \req{LSG02} involving the $G$ tensor are spin precession directly originating from dipole forces. In homogeneous electromagnetic fields, \req{LSG02} reduces to the standard TBMT equation. These dynamical torque equations have found use in describing neutral and charged systems classically~\citep{Formanek:2021mcp,Formanek:2019cga} and inspired further efforts to improve covariant dynamics~\citep{Formanek:2020ojr}.
