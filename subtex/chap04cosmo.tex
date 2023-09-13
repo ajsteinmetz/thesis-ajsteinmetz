@@ -6,7 +6,9 @@
 
 This chapter serves primarily as a review of our work in~\cite{Steinmetz:2023nsc} and portions of~\cite{Rafelski:2023emw} where we propose that the early universe electron-positron plasma was a highly magnetized environment. We will use natural units $(c=\hbar=k_{B}=1)$ unless otherwise noted.
 
-\textbf{NOTE: The letter $\mu$ within this chapter will refer exclusively to charged chemical potential and \emph{not} magnetic moment as before.}
+\begin{center}
+    \textbf{NOTE: The letter $\mu$ within this chapter will refer exclusively to charged chemical potential and \emph{not} magnetic moment as before.}
+\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Short survey of magnetism in the universe}
@@ -115,7 +117,7 @@ From \req{tscale} and \req{bscale} there emerges a natural ratio of interest whi
 given in natural units ($c=\hbar=k_{B}=1$). We computed the bounds for this cosmic magnetic scale ratio by using the present day IGMF observations given by \req{igmf} and the present CMB temperature $T_{0}=2.7{\rm\ K}\simeq2.3\times10^{-4}\eV$~\citep{Planck:2018vyg}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Protection of magnetic moment in cosmology}
+\subsection{Eigenstatess of magnetic moment in cosmology}
 \label{sec:protection}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -132,7 +134,7 @@ Introducing the expansion scale factor $a(t)$ via \req{tscale}, \req{bscale} and
 \begin{alignat}{1}
     \label{xscale:1} x_{\sigma,s}^{n}(a(t)) = \sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a_{0}^{2}}+\frac{p_{z,0}^{2}}{T_{0}^{2}}+\frac{eB_{0}}{T_{0}^{2}}\left(2n+1+\frac{g}{2}\sigma s\right)}\,.
 \end{alignat}
-This reveals that only the mass contribution is dynamic over cosmological time. For any given eigenstate, the mass term drives the state into the non-relativistic limit while the momenta and magnetic contributions are frozen by initial conditions. 
+This reveals that only the mass contribution is dynamic over cosmological time. The constant of motion $b_{0}$ defined in \req{tbscale} is seen as the coefficient to the Landau and spin portion of the energy. For any given eigenstate, the mass term drives the state into the non-relativistic limit while the momenta and magnetic contributions are frozen by initial conditions. 
 
 As a point of comparison, the Boltzmann factor for the DP energy eigenvalues are given by
 \begin{alignat}{1}
@@ -328,9 +330,9 @@ The function $W_{\nu}$ serves as an auxiliary function of the form $W_{\nu}(x)=x
 
 We take advantage again of Euler-Maclaurin integration \req{eulermaclaurin} and integrate the partition function. After truncation of the series and error remainder, the partition function \req{partitionpower:1} can then be written in terms of modified Bessel $K_{\nu}$ functions of the second kind and cosmic magnetic scale $b_{0}$, yielding
 \begin{gather}
-        \label{boltzmann}
-        \ln\mathcal{Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]
-        \left(x_{s'}^{2}K_{2}(x_{s'})+\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)\,,\\
+    \label{boltzmann}
+    \boxed{\ln\mathcal{Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]
+    \left(x_{s'}^{2}K_{2}(x_{s'})+\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)}\,,\\
     \label{xfunc}
     x_{s'}=\frac{{\tilde m}_{s'}}{T}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1-\frac{g}{2}s'\right)}\,.
 \end{gather}
@@ -423,15 +425,15 @@ The total magnetization ${\mathfrak M}$ can be broken into the sum of magnetic m
 {\mathfrak M}={\mathfrak M}_{+}+{\mathfrak M}_{-}\,.
 \end{align}
 We note that the expression for the magnetization simplifies significantly for $g\!=\!2$ which is the \lq natural\rq\ gyro-magnetic factor~\citep{Evans:2022fsu,Rafelski:2022bsv} for Dirac particles. For illustration, the $g\!=\!2$ magnetization from \req{defmagetization} is then
-\begin{gather}
+\begin{align}
  \label{g2magplus}
- {\mathfrak M}_{+}=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\\
+ {\mathfrak M}_{+}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\\
  \label{g2magminus}
- -{\mathfrak M}_{-}=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}
+ -{\mathfrak M}_{-}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}
  \left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\\
- x_{+}=\frac{m_{e}}{T}\,,\qquad
+ x_{+}&=\frac{m_{e}}{T}\,,\qquad
  x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
-\end{gather}
+\end{align}
 As the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$~\citep{Tiesinga:2021myr}, the above two expressions for ${\mathfrak M}_{+}$ and ${\mathfrak M}_{-}$ are only modified by a small amount because of anomalous magnetic moment (AMM) and would be otherwise invisible on our figures.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
