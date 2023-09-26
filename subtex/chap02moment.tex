@@ -382,7 +382,7 @@ where ${B}_{S}$ is the so-called Schwinger critical field~\citep{Schwinger:1951n
 The numerical results are evaluated for the anomalous moment of the electron and proton, given by \req{aeFULL} and \req{gpaFULL}. At the critical field strength $B_\mathrm{crit}$ the Hamiltonian loses self-adjointness and the KGP loses its predictive properties. The Schwinger critical field \req{Bsch} denotes the boundary when electrodynamics is expected to behave in an intrinsically nonlinear fashion, and the equivalent electric field configurations become unstable~\citep{Labun:2008re}. However, it is also possible that the vacuum is stabilized by such strong magnetic fields~\citep{Evans:2018kor}.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
      \centering
      \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.5cm,width=0.95\textwidth]{plots/chap02moment/lanplot01.pdf}
      \caption{The $n=0$, $s=1/2$ ground state for a KGP electron given by \req{lan24b} with $g/2-1=\alpha/2\pi$ in a homogeneous magnetic field. We consider the particle with no $z$-direction momentum. The particle state (solid red) and antiparticle (dashed red) are presented.}
@@ -395,7 +395,7 @@ The critical magnetic fields as shown in \req{Bcrit} appear in discussion of mag
 Figure~\ref{f02} shows analogous reduction in particle/anti\-particle energy gap for the DP equation. In this case the vanishing point happens at a larger magnetic field strength. This time the solutions continue past this point, but require allowing the states to cross into the opposite continua which we consider unphysical. We are not satisfied with either model\rq s behavior though the KGP description is preferable. However, it is undesirable that both KGP and DP solutions loose physical meaning and vacuum stability in strong magnetic fields.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
      \centering
      \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.5cm,width=0.95\textwidth]{plots/chap02moment/lanplot02.pdf}
      \caption{The $n=0$, $s=1/2$ ground state for a DP electron given by \req{lan25b} with $g/2-1=\alpha/2\pi$ in a homogeneous magnetic field. We consider the particle with no $z$-direction momentum. The particle state (solid red) and antiparticle (dashed red) are presented.}
@@ -412,7 +412,7 @@ Figure~\ref{f02} shows analogous reduction in particle/anti\-particle energy gap
 This behavior can be seen in figure~\ref{f03}, which shows the meeting of the $1S_{1/2}$ and $2P_{1/2}$ states. For $|g|<2$ there is no state merging, but for small anomalies the solution is discontinuous in the sense that even for 1S$_1/2$ we see in figure~\ref{f03} a maximum allowed value of $Z$ at a finite energy. This behavior is reminiscent of the behavior we are familiar with for $1/r$ potential for the 2P$_1/2$ (seen in figure~\ref{f03}) and many other $g\!=\!2$ eigenstates. We know from study of numerical solutions of the Dirac equation that the regularization of the Coulomb potential by a finite nuclear size removes this singular behavior. It remains to be seen how this exactly works in the context of the KGP equation allowing for the magnetic anomaly.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{plots/chap02moment/lanplot08.pdf}
      \caption{The KGP $1S_{1/2}$ (lower red curves) and $2P_{1/2}$ (upper green curves) energy levels for $g$-factor values $g\!=\!\{1.8,\ 1.9977,\ 2.0023,\ 2.2\}$ are shown for large $Z$ hydrogen-like atoms. The curves for the Dirac $g\!=\!2$ case for (lower dashed blue) $1S_{1/2}$ and (upper dashed blue) $2P_{1/2}$ are also presented.}
@@ -427,7 +427,7 @@ The Dirac $g\!=\!2$ case acts as unique \lq\lq cusp\rq\rq\ point because even fo
 The DP equation also allows for the so-called `super-positronium' states as described~\cite{Barut:1975hz,Barut:1976hs}. Such states represent resonances due to the magnetic interaction that reside incredibly close to the center of the atom i.e $\sqrt{\langle r^{2}\rangle}\approx a\alpha\hbar/mc$, but this feature is absent from the KGP formation of the Coulomb problem as all KGP-Coulomb wave functions which can be normalized can be successfully matched to their Dirac ($g\!=\!2$) companions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[clip, trim=0.0cm 0.0cm 8.0cm 0.0cm,width=0.95\linewidth]{plots/chap02moment/lanplot05.pdf}
      \caption{Add this bit in!}
@@ -457,7 +457,7 @@ This modified KGP formulation then requires spin sensitive mass and an explicit 
 
 The approach in \req{eq:ext:01} is superficially similar to the model proposed by~\cite{Frenkel:1926zz} in classical mechanics by giving the particle a spin dependent mass of the form $m\sim\Sigma_{\mu\nu}F^{\mu\nu}$ where $\Sigma_{\mu\nu}$ is the covariant generalization of the classical magnetic and electric dipole. \req{IKGP01} is however distinct in that the mass is allowed off-diagonal components in spinor space (a subspace which doesn't exist classically). The dipole-mass \req{eq:ext:01} is off-diagonal in spinor space in the Dirac representation and no longer commutes likes a scalar.
 
-\req{eq:ext:01} also differs from the regular KGP equation by the presence of an additional quadratic interaction which we can evaluate using \req{dp:2} in the Dirac basis as
+\req{eq:ext:01} also differs from the regular KGP equation by the presence of an additional quadratic interaction which we can evaluate using \req{dp:2} in the Dirac representation as
 \begin{gather}
     \label{quad:1} \delta V=-\frac{\mu^{2}}{4}\left(\gamma_{\alpha}\gamma_{\beta}F^{\alpha\beta}\right)^{2}=\mu^{2}
     \begin{pmatrix}
@@ -506,7 +506,7 @@ An interesting feature is that in ultra-high magnetic fields ($B>>{B}_{s}$), Eq.
 This is not dissimilar to the non-relativistic case where the magnetic energy is simply proportional to the magnetic field.
 
 %%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
  \centering
  \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.5cm,width=\linewidth]{plots/chap02moment/lanplot09.pdf}
  \caption{The $n=0$, $s=1/2$ ground state for a IKGP proton given by Eq.~\eqref{IKGP05} with $g=5.58$ in a homogeneous magnetic field. The magnetic minimum is well visible for particles with larger anomalous moment such as proton. We consider the particle with no $z$-direction momentum. The particle state (solid red) and antiparticle (dashed red) are presented. The magnetic field scale is ${B}'_{S}=(m^2_p/m^2_e){B}_S$.}
