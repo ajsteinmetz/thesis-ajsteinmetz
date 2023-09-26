@@ -6,6 +6,8 @@ We propose that neutrino flavors are remixed when exposed to strong EM fields tr
 
 An anomalous magnetic moment (AMM) can be introduced into the neutrino effective Lagrangian via a Pauli term; see \rchap{chap:intro}. We narrow our analysis for Majorana neutrinos which are allowed only transition magnetic moments which couple different flavors electromagnetically, but do not violate CPT symmetry. Transition moments however break lepton number conservation.
 
+%We discuss the standard flavor mixing program in \rsec{sec:nuflavor} and the effective Lagrangian density containing both Majorana mass and transition dipole moments. In \rsec{sec:numoment} we discuss the properties of the relativistic Pauli dipole. The two-flavor neutrino model is evaluated explicitly in \rsec{sec:nutoy} and the remixed electromagnetic-mass eigenstates are obtained. While we focus our analysis on Majorana neutrinos, we note that the techniques in this work can be extended to apply to Dirac fermions and may be of interest in the quark sector.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electromagnetic characteristics of neutrinos}
 \label{sec:numoment}
@@ -189,7 +191,7 @@ where we recognize the stress-energy tensor $T_\mathrm{ext}^{\alpha\beta}$ compo
 T_\mathrm{ext}^{00}=\frac{1}{2}\left(B^{2}+E^{2}/c^{2}\right)\,,\qquad
 T_\mathrm{ext}^{0i}=\frac{1}{c}\varepsilon_{ijk}E_{j}B_{k}\,.
 \end{align}
-As we will see in \rsec{sec:toy}, \req{cross:1} will appear in the EM-mass eigenvalues of our effective Lagrangian \req{massmom:1}. Using the identity in \req{chiral:1} and \req{cross:1} we also find the interesting relationship
+As we will see in \rsec{sec:nutoy}, \req{cross:1} will appear in the EM-mass eigenvalues of our effective Lagrangian \req{massmom:1}. Using the identity in \req{chiral:1} and \req{cross:1} we also find the interesting relationship
 \begin{align}
 \label{cross:2}
 \frac{1}{2}\left(\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}_\mathrm{ext}\right)\left(\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}_\mathrm{ext}\right)^{\dag}=
@@ -199,7 +201,7 @@ Now that we have elaborated on the relevant EM field identities, we turn back to
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electromagnetic-flavor mixing for two generations}
-\label{sec:toy}
+\label{sec:nutoy}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Considering experimental data on neutrino oscillations, it is understood that either the two lighter (normal hierarchy) or the two heavier (inverted hierarchy) neutrino states are close together in mass. If the electromagnetic properties of the neutrino do indeed lead to flavor mixing effects, then it is likely the closer pair of neutrino mass states that are most sensitive to the phenomenon we explore. In the spirit of~\cite{Bethe:1986ej}, we therefore explore the $N=2$ two generation $(\nu_{e},\nu_{\mu})$ toy model.
 
@@ -279,9 +281,9 @@ Guided by \req{basis:1} we write
 \label{zrot:1}
 \nu_{j} = W^{\dag}_{\ell j}\nu_{\ell} = Z_{kj}^{\mathrm{ext}\dag}V_{\ell k}^{\dag}\nu_{\ell}\,.
 \end{align}
-In the limit that the EM fields go to zero, the electromagnetic rotation becomes unity $Z_{kj}^\mathrm{ext}\rightarrow\delta_{kj}$ thereby ensuring the EM-mass basis and free-particle mass basis become equivalent. The rotation $Z_{kj}^\mathrm{ext}$ can then be interpreted as the external field forced rotation.
+In the limit that the EM fields go to zero, the electromagnetic rotation becomes unity $Z_{kj}^\mathrm{ext}\rightarrow\delta_{kj}$ thereby ensuring the EM-mass basis and free-particle mass basis become equivalent. The rotation $Z_{kj}^\mathrm{ext}$ can then be interpreted as the external field forced rotation. While our argument above is done explicitly for the two generation case, it can be generalized to accommodate three generations of neutrinos as well.
 
-While our argument above is done explicitly for the two generation case, it can be generalized to accommodate three generations of neutrinos as well. According to \req{diag:1}, the mass matrix in \req{mix:1} can be diagonalized in the two generation case by a one parameter unitary mixing matrix $V_{\ell k}$ given by
+According to \req{diag:1}, the mass matrix in \req{mix:1} can be diagonalized in the two generation case by a one parameter unitary mixing matrix $V_{\ell k}$ given by
 \begin{align}
 \label{rot:1}
 V_{\ell k}(\theta)=
@@ -403,11 +405,11 @@ and for the diagonal elements
 \label{poly:2}
 \widetilde m_{1,2}(\bb{E},\bb{B})\! =\! \frac{1}{2}\left(m_{1}\!+\!m_{2}\!\mp\!\sqrt{|\Delta m|^{2}\!+\!8\delta\mu^{2}\gamma_{0}\left(T_\mathrm{ext}^{00}\gamma_{0}+T_\mathrm{ext}^{0i}\gamma_{i}\right)}\right)\!,\\
 \label{poly:3}
-\boxed{\widetilde m_{1,2}(\bb{E},\bb{B})\! =\! \frac{1}{2}\left(m_{1}\!+\!m_{2}\!\mp\!\sqrt{|\Delta m|^{2}\!+\!8\delta\mu^{2}\gamma_{0}\left(\gamma_{0}\frac{1}{2}\left(B^{2}\!+\!\frac{E^{2}}{c^{2}}\right)\!+\!\bb{\gamma}\!\cdot\!(\frac{\bb{E}}{c}\times\bb{B})\right)}\right)}
+\boxed{\widetilde m_{1,2}(\bb{E},\bb{B})\! =\! \frac{m_{1}\!+\!m_{2}}{2}\!\mp\!\frac{1}{2}\sqrt{|\Delta m|^{2}\!+\!8\delta\mu^{2}\gamma_{0}\left(\gamma_{0}\frac{1}{2}\left(B^{2}\!+\!\frac{E^{2}}{c^{2}}\right)\!+\!\bb{\gamma}\!\cdot\!(\frac{\bb{E}}{c}\times\bb{B})\right)}}
 \end{align}
 The EM-mass eigenstates $\widetilde m(\bb{E},\bb{B})$ depends on the energy density $T_\mathrm{ext}^{00}$ of the EM field and the spin projection along the EM momentum density $T_\mathrm{ext}^{0i}$. However the coefficient $\delta\mu^{2}$ is presumed to be very small, therefore the EM contribution only manifests in strong EM fields or where the free-particle case has very nearly or exactly degenerate masses, $\Delta m\to 0$. When the the electromagnetic fields go to zero, the EM-masses in \req{poly:3} reduce as expected to the free-particle result.
 
-The complex phase in \req{zrot:2} has the value $\phi=\pi(n-1/2)$ with $n\in0,\pm1,\pm2...$ making the complex exponential in \req{zrot:2} pure imaginary. Complex phases in mixing matrices are generally associated with CP violation such as the Dirac phase $\delta$ in \req{rotation:1} which suggests that CP violation in the neutrino sector can be induced in the presence of external EM fields. We would need to analyze the full three generation case to show this explicitly but we postulate that constant valued the complex phases would then be replaced with field dependant quantities $\delta\to\delta(\bb{E},\bb{B})$.
+The complex phase in \req{zrot:2} has the value $\phi=\pi(n-1/2)$ with $n\in0,\pm1,\pm2...$ making the complex exponential in \req{zrot:2} pure imaginary. Curiously, the phase is not field dependant, but tied to the fact that the Majorana moments are pure imaginary quantities. Complex phases in mixing matrices are generally associated with CP violation such as the Dirac phase $\delta$ in \req{rotation:1} which suggests that CP violation in the neutrino sector can be induced in the presence of external EM fields. We would need to analyze the full three generation case to show this explicitly but we postulate that constant valued the complex phases would then be replaced with field dependant quantities $\delta\to\delta(\bb{E},\bb{B})$.
 
 We note that the solution in \req{poly:3} actually contain four distinct EM-mass eigenstates $\widetilde m_{j}^{s}(\bb{E},\bb{B})$ with the lower $(j=1)$ and upper $(j=2)$ masses and the additional spin splitting from the alignment $(s=+1)$ or anti-alignment $(s=-1)$ of the neutrino spin with the momentum density of the external EM field. Spin splitting vanishes for the pure electric or magnetic field cases. For good spin eigenstates $s\in\pm1$, we can rewrite \req{poly:1a} with EM fields explicitly as
 \begin{align}
@@ -450,7 +452,7 @@ For fully degenerate free-particle masses $m_{1}=m_{2}$, this reduces to
 \end{align}
 \req{series:2a} indicates that for degenerate free-particle masses, the effective splitting $|\Delta m_\mathrm{EM}|\equiv\mathcal{C}_{s}$ between masses arises purely from the electromagnetic interaction of the neutrinos. We return to this interesting insight in our final comments.
 
-Because of the bounds in \req{bound:1} on the effective neutrino magnetic moment, we can estimate the field strength required for an external magnetic field to generate an electromagnetic mass splitting of $|\Delta m_\mathrm{EM}|=10^{-3}$~eV which is a reasonable guess of intrinsic splitting based on the experimental limits on neutrino masses. Using the upper limit for the neutrino effective moment of $\mu_{\nu}^\mathrm{eff}\sim10^{-10}\mu_{B}$ we obtain
+Because of the bounds in \req{bound:1} on the effective neutrino magnetic moment, we can estimate the field strength required for an external magnetic field to generate an electromagnetic mass splitting of $|\Delta m_\mathrm{EM}|=10^{-3}$~eV which is a reasonable comparison to intrinsic splitting based on the experimental limits on neutrino masses. Using the upper limit for the neutrino effective moment of $\mu_{\nu}^\mathrm{eff}\sim10^{-10}\mu_{B}$ we obtain
 \begin{align}
 \label{estimate:1}
 \left.\frac{\mathcal{C}_{s}}{\mu_{\nu}^\mathrm{eff}}\right\rvert_{\vec{E}=0}=\frac{10^{-3}\,\mathrm{eV}}{10^{-10}\mu_{B}}\approx1.7\times10^{11}\,\mathrm{T}\,.
