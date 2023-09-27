@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Neutrino magnetism frontiers}
+\chapter{Dynamic neutrino flavor mixing through transition moments}
 \label{chap:neutrino}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We propose that neutrino flavors are remixed when exposed to strong EM fields travelling as a superposition distinct from the vacuum propagation of free neutrinos. Neutrino mixing is an important topic for studying BSM physics as flavor mixing only occurs in the presence of massive neutrinos allowing for the misalignment between the flavor basis which participates in left-chiral $SU(2)_{L}$ weak interactions and the mass basis which are the propagating neutrino states.
@@ -8,11 +8,14 @@ An anomalous magnetic moment (AMM) can be introduced into the neutrino effective
 
 %We discuss the standard flavor mixing program in \rsec{sec:nuflavor} and the effective Lagrangian density containing both Majorana mass and transition dipole moments. In \rsec{sec:numoment} we discuss the properties of the relativistic Pauli dipole. The two-flavor neutrino model is evaluated explicitly in \rsec{sec:nutoy} and the remixed electromagnetic-mass eigenstates are obtained. While we focus our analysis on Majorana neutrinos, we note that the techniques in this work can be extended to apply to Dirac fermions and may be of interest in the quark sector.
 
+%For the case of two nearly degenerate neutrinos with transition moments, we determine and their eigenstates in the presence of EM fields. We obtain an EM-mass basis, distinct from flavor and free-particle mass basis, which mixes flavors as a function of EM fields. Moreover we show solutions relating to full EM field tensor which result in covariant expressions allowing for both magnetic and electrical fields we have not seen considered before. As neutrinos are electrically neutral, they have no intrinsic magnetic moment due to their spin, therefore any nonzero dipole moment is anomalous.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electromagnetic characteristics of neutrinos}
 \label{sec:numoment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-We study the connection between Majorana neutrino transition magnetic dipole moments~\citep{Fujikawa:1980yx,Shrock:1980vy,Shrock:1982sc} and neutrino flavor mixing. Neutrino electromagnetic properties have been considered before~\citep{Schechter:1981hw,Giunti:2014ixa,Chukhnova:2019oum,Popov:2019nkr} including the effect of oscillation~\citep{Pal:1991pm,Elizalde:2004mw}. The case of transition moments has the mathematical characteristics of an off-diagonal mass which is distinct from normal direct dipole moment behavior. EM field effects are also distinct from weak interaction remixing within matter, \emph{i.e.} the Mikheyev-Smirnov-Wolfenstein effect~\citep{Wolfenstein:1977ue,Mikheyev:1985zog,Smirnov:2003da}.
+We study the connection between Majorana neutrino transition magnetic dipole moments~\citep{Fujikawa:1980yx,Shrock:1980vy,Shrock:1982sc} and neutrino flavor oscillation. Neutrino electromagnetic (EM) properties have been considered before~\citep{Schechter:1981hw,Giunti:2014ixa,Popov:2019nkr,Chukhnova:2019oum} including the effect of oscillation~\citep{Lim:1987tk,Akhmedov:1988uk,Pal:1991pm,Elizalde:2004mw,Akhmedov:2022txm} in magnetic fields. The case of transition moments has the mathematical characteristics of an off-diagonal mass which is distinct from normal direct dipole moment behavior. EM field effects are also distinct from weak interaction remixing within matter, {\it i.e.\/} the Mikheyev-Smirnov-Wolfenstein effect~\citep{Wolfenstein:1977ue,Mikheyev:1985zog,Smirnov:2003da}.
+
 
 %We then explore the possibility that electromagnetic effects may play a role in CP violation (CPV) in the neutrino sector. We study the effect of strong electromagnetic fields on neutrino CP violation by analysis of the electromagnetic dipole interaction and determining its influence on the Jarlskog invariant $J$ which controls the size of CPV.
 
@@ -23,7 +26,7 @@ The size of the neutrino magnetic dipole moment can be constrained as follows: T
     \label{bound:1}
     \frac{e\hbar G_{F}m_{\nu}c^{2}}{8\pi^{2}\sqrt{2}} \sim 10^{-20}\mu_{B}<\mu_{\nu}^\mathrm{eff}<10^{-10}\mu_{B}\,,\qquad\mu_{B}=\frac{e\hbar}{2m_{e}}
 \end{align}
-where $G_{F}$ is the Fermi constant and $\mu_{\nu}^\mathrm{eff}$ is the effective and characteristic size of the neutrino magnetic moment. In \req{bound:1}, the lower bound was estimated using a characteristic mass of $m_{\nu}\sim0.1~\mathrm{eV}$. From cosmological studies, the sum of neutrino masses is estimated~\citep{Planck:2018vyg} to be $\sum_{i}m_{i}<0.12$~eV; the effective electron (anti)neutrino mass is bounded~\citep{KATRIN:2021uub} by $m_{\nu_{e}}<0.8$~eV.
+where $G_{F}$ is the Fermi constant and $\mu_{\nu}^\mathrm{eff}$ is the effective and characteristic size of the neutrino magnetic moment. In \req{bound:1}, the lower bound was estimated using a characteristic mass of $m_{\nu}\sim0.1~\mathrm{eV}$. From cosmological studies, the sum of neutrino masses is estimated~\citep{Planck:2018vyg} to be $\sum_{i}m_{i}<0.12$~eV; the effective electron (anti)neutrino mass is bounded~\citep{KATRIN:2021uub} by $m_{e}^{\nu}<0.8$~eV.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Neutrino flavor mixing and electromagnetic fields}
@@ -82,7 +85,7 @@ The mixing matrix $V_{\ell k}$ defined in \req{phases:1} can then be used to tra
 We note the Majorana mass matrix is symmetric due to the anticommuting nature of the neutrino fields $\bar\nu\nu=-\nu^\mathrm{T}\bar\nu^\mathrm{T}$ and is in general complex~\citep{Adhikary:2013bma,giunti2007fundamentals} though it will be taken to be fully real in this work. There are many interesting models for mass matrices which were pioneered by~\cite{Fritzsch:1995dj,Fritzsch:1998xs,Fritzsch:1999ee,Xing:2000ik} in the leptonic sector. The masses $m_{k}$ are taken to be real and positive labelling the free propagating states of the three neutrinos.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Majorana neutrino effective action}
+\subsection{Effective Majorana neutrino Lagrangian}
 \label{sec:nuaction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Given the mass matrix defined in \req{diag:0}, the Majorana mass term in the Lagrangian can be written in the flavor basis as
@@ -268,7 +271,7 @@ W^{\dag}(\mathcal{M}\mathcal{M}^{\dag})W &= W^{\dag}(\mathcal{M}\gamma_{0})WW^{\
 We associate $\lambda_{j}=\widetilde m_{j}(\bb{E},\bb{B})$ with $j\in1,2$ as the effective EM-mass states which are field dependant in this basis. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Breaking electromagnetic-mass mixing into two rotations}
+\subsection{Separating electromagnetic-mass mixing into two rotations}
 \label{sec:zmixing}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The matrix $W_{\ell j}$ mixes flavor states into a new basis distinct from the free-particle case however this rotation must smoothly connect with the free-particle case in the limit that the electromagnetic fields go to zero. We proceed to evaluate $W_{\ell j}$ breaking the rotation into two separate unitary transformations:
@@ -360,7 +363,7 @@ to \req{herm:1} yields
 \subsection{Effective electromagnetic-mass eigenvalues}
 \label{sec:emmass}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We will now solve for the rotation parameters necessary to define the EM-mass basis which acts as a distinct propagating basis for neutrinos in external fields. If we interpret the the columns vectors $\bb{v}^{(j)}$ of $Z_{kj}^\mathrm{ext}$ as eigenvectors for each eigenvalue $\lambda_{j}$
+We will now solve for the rotation parameters necessary to define the EM-mass basis which acts as a distinct propagating basis for neutrinos in external fields. Considering that the $j$-columns vectors $\bb{v}^{(j)}$ of $Z_{kj}^\mathrm{ext}$ as eigenvectors for each eigenvalue $\lambda_{j}$
 \begin{align}
     \label{herm:5}
     Z_{kj}^\mathrm{ext}=v_{k}^{(j)}=
@@ -368,7 +371,7 @@ We will now solve for the rotation parameters necessary to define the EM-mass ba
         \bb{v}^{1} & \bb{v}^{2}
     \end{pmatrix}\,,
 \end{align}
-then \req{herm:4} can be understood as an eigenvalue equation
+\req{herm:4} has the meaning of an eigenvalue equation
 \begin{align}
     \label{herm:6}
     \begin{pmatrix}
@@ -409,12 +412,12 @@ and for the diagonal elements
 \end{align}
 The EM-mass eigenstates $\widetilde m(\bb{E},\bb{B})$ depends on the energy density $T_\mathrm{ext}^{00}$ of the EM field and the spin projection along the EM momentum density $T_\mathrm{ext}^{0i}$. However the coefficient $\delta\mu^{2}$ is presumed to be very small, therefore the EM contribution only manifests in strong EM fields or where the free-particle case has very nearly or exactly degenerate masses, $\Delta m\to 0$. When the the electromagnetic fields go to zero, the EM-masses in \req{poly:3} reduce as expected to the free-particle result.
 
-The complex phase in \req{zrot:2} has the value $\phi=\pi(n-1/2)$ with $n\in0,\pm1,\pm2...$ making the complex exponential in \req{zrot:2} pure imaginary. Curiously, the phase is not field dependant, but tied to the fact that the Majorana moments are pure imaginary quantities. Complex phases in mixing matrices are generally associated with CP violation such as the Dirac phase $\delta$ in \req{rotation:1} which suggests that CP violation in the neutrino sector can be induced in the presence of external EM fields. We would need to analyze the full three generation case to show this explicitly but we postulate that constant valued the complex phases would then be replaced with field dependant quantities $\delta\to\delta(\bb{E},\bb{B})$.
+The complex phase in \req{zrot:2} has the value $\phi=\pi(n-1/2)$ with $n\in0,\pm1,\pm2...$ making the complex exponential in \req{zrot:2} pure imaginary. Curiously, the phase is not field dependant, but tied to the fact that the Majorana moments are pure imaginary quantities. Complex phases in mixing matrices are generally associated with CP violation such as the Dirac phase $\delta$ in \req{rotation:1} which suggests that CP violation in the neutrino sector can be induced in the presence of external EM fields. Analysis of the three generation case is required to show this explicitly, but we postulate that the constant valued complex phases would be replaced with field dependant quantities $\delta\to\delta(\bb{E},\bb{B})$.
 
 We note that the solution in \req{poly:3} actually contain four distinct EM-mass eigenstates $\widetilde m_{j}^{s}(\bb{E},\bb{B})$ with the lower $(j=1)$ and upper $(j=2)$ masses and the additional spin splitting from the alignment $(s=+1)$ or anti-alignment $(s=-1)$ of the neutrino spin with the momentum density of the external EM field. Spin splitting vanishes for the pure electric or magnetic field cases. For good spin eigenstates $s\in\pm1$, we can rewrite \req{poly:1a} with EM fields explicitly as
 \begin{align}
 \label{spinsplit:1}
-\mathcal{C}^{2}_{s}=2\delta\mu^{2}\left(\frac{1}{2}(B^{2}+E^{2}/c^{2})+s|\bb{E}/c\times\bb{B}|\right)\,.
+\mathcal{C}^{2}_{s}(\bb{E},\bb{B})=2\delta\mu^{2}\left(\frac{1}{2}(B^{2}+E^{2}/c^{2})+s|\bb{E}/c\times\bb{B}|\right)\,.
 \end{align}
 The above expression within the square is positive definite, therefore \req{spinsplit:1} is always real. Spin splitting requires that we consider separate rotations for each spin state as the rotation angle $\omega_{s}$ depends on the spin quantum number
 \begin{align}
