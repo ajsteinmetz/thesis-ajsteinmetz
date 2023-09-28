@@ -41,7 +41,13 @@ where $\mu$ is the magnitude of the magnetic moment as defined in \req{mag:3}. \
     \bb{L}=\bb{r}\times\bb{p}\,,\qquad L_{i}=\varepsilon_{ijk}x_{j}p_{k}\,.
 \end{gather}
 
-The above can be broken into a set of three mutually commuting Hamiltonian operators: (a) the free particle Hamiltonian, (b) the quantum harmonic oscillator (HO), and (c) the Zeeman interaction (ZI) given by
+The above can be broken into a set of three mutually commuting Hamiltonian operators:
+\begin{itemize}[nosep]
+    \item[a.] Free particle Hamiltonian (Free)
+    \item[b.] Quantum harmonic oscillator (HO)
+    \item[c.] Zeeman interaction (ZI)
+\end{itemize}
+given by
 \begin{align}
 	\label{homogeneous:7}
     &H_\mathrm{total}=H_\mathrm{Free}+H_\mathrm{HO}+H_\mathrm{Mag.}\,,\\
@@ -57,7 +63,7 @@ The cyclotron frequency appears in \req{homogeneous:7b} as $2\omega=\omega_\math
 	\label{homogeneous:7d}
     H_{\mathrm{ZI}}=-\frac{e}{2m}\left(g_\mathrm{L}\bb{L}+g\bb{S}\right)\cdot\bb{B}\,,\qquad g_\mathrm{L}=1\,,
 \end{alignat}
-with $\bb{S}$ defined in \req{qspin:1}. We see more explicitly that the orbital gyromagnetic ratio $g_\mathrm{L}$ which is a coefficient to the angular momentum operator $\bb{L}$ is unity unlike for spin. We refer back to our comment about black hole spin in \rsec{sec:unique}. As all the above Hamiltonian operators are mutually commuting, the energy eigenvalue of the total Hamiltonian is the sum of the individual energy eigenvalues. Our remaining goal will be to convert the KGP eigenvalue equation into the above three non-relativistic Hamiltonian operators. 
+with $\bb{S}$ defined in \req{qspin:1}. We see explicitly that the orbital gyromagnetic ratio $g_\mathrm{L}$ which is a coefficient to the angular momentum operator $\bb{L}$ is unity unlike for spin. We refer back to our comment about black hole rotation in \rsec{sec:unique} as spin-like rather than orbital-like in terms of its magnetic behavior. As all the above Hamiltonian operators are mutually commuting, the energy eigenvalue of the total Hamiltonian is the sum of the individual energy eigenvalues. Our remaining goal will be to convert the KGP eigenvalue equation into the above three non-relativistic Hamiltonian operators. 
 
 We now return to the KGP equation and write expand \req{kgp:1} for the Landau problem with energy eigenstates $\Psi_\mathrm{E}$ yielding
 \begin{alignat}{1}
@@ -365,7 +371,7 @@ The situation is different for composite particles such as the proton, neutron a
 \subsection{Strong homogeneous magnetic fields}
 \label{sec:sbl}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent The magnetic moment anomaly can flip the sign of the magnetic energy for the least excited states causing the gap between particle and antiparticle states to decrease with magnetic field strength. Setting $p_z=0$ in \req{lan24}, we show in figure~\ref{f01} that the energy of the lowest KGP Landau eigenstate $n=0, s=1/2$ reaches zero where the gap between particle and antiparticle states vanishes for the field
+\noindent The magnetic moment anomaly can flip the sign of the magnetic energy for the least excited states causing the gap between particle and antiparticle states to decrease with magnetic field strength. Setting $p_z=0$ in \req{lan24}, we show in~\rf{f01} that the energy of the lowest KGP Landau eigenstate $n=0, s=1/2$ reaches zero where the gap between particle and antiparticle states vanishes for the field
 \begin{subequations}
 \begin{alignat}{1}\label{Bcrit}
 &B_\mathrm{crit}^{e}=\frac{{B}_{S}^{e}}{a_{e}}\simeq861{B}_{S}^{e} =3.8006\times10^{16}\;\mathrm{G}\;,\\
@@ -382,7 +388,7 @@ where ${B}_{S}$ is the so-called Schwinger critical field~\citep{Schwinger:1951n
 The numerical results are evaluated for the anomalous moment of the electron and proton, given by \req{aeFULL} and \req{gpaFULL}. At the critical field strength $B_\mathrm{crit}$ the Hamiltonian loses self-adjointness and the KGP loses its predictive properties. The Schwinger critical field \req{Bsch} denotes the boundary when electrodynamics is expected to behave in an intrinsically nonlinear fashion, and the equivalent electric field configurations become unstable~\citep{Labun:2008re}. However, it is also possible that the vacuum is stabilized by such strong magnetic fields~\citep{Evans:2018kor}.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
      \centering
      \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.5cm,width=0.95\textwidth]{plots/chap02moment/lanplot01.pdf}
      \caption{The $n=0$, $s=1/2$ ground state for a KGP electron given by \req{lan24b} with $g/2-1=\alpha/2\pi$ in a homogeneous magnetic field. We consider the particle with no $z$-direction momentum. The particle state (solid red) and antiparticle (dashed red) are presented.}
@@ -392,10 +398,10 @@ The numerical results are evaluated for the anomalous moment of the electron and
 
 The critical magnetic fields as shown in \req{Bcrit} appear in discussion of magnetars~\citep{Kaspi:2017fwg}. The magnetar field is expected to be more than 100-fold that of the Schwinger critical magnetic field which is on the same order of magnitude as $B_\textrm{crit}$ for an electron. While the critical field for a proton exceeds that of a magnetar, the dynamics of protons (and neutrons) in such fields is nevertheless significantly modified. A correct description of magnetic moment therefore has relevant consequences to astrophysics. 
 
-Figure~\ref{f02} shows analogous reduction in particle/anti\-particle energy gap for the DP equation. In this case the vanishing point happens at a larger magnetic field strength. This time the solutions continue past this point, but require allowing the states to cross into the opposite continua which we consider unphysical. We are not satisfied with either model\rq s behavior though the KGP description is preferable. However, it is undesirable that both KGP and DP solutions loose physical meaning and vacuum stability in strong magnetic fields.
+\rf{f02} shows analogous reduction in particle/anti\-particle energy gap for the DP equation. In this case the vanishing point happens at a larger magnetic field strength. This time the solutions continue past this point, but require allowing the states to cross into the opposite continua which we consider nonphysical. We are not satisfied with either model\rq s behavior though the KGP description is preferable. However, it is undesirable that both KGP and DP solutions loose physical meaning and vacuum stability in strong magnetic fields.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
      \centering
      \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.5cm,width=0.95\textwidth]{plots/chap02moment/lanplot02.pdf}
      \caption{The $n=0$, $s=1/2$ ground state for a DP electron given by \req{lan25b} with $g/2-1=\alpha/2\pi$ in a homogeneous magnetic field. We consider the particle with no $z$-direction momentum. The particle state (solid red) and antiparticle (dashed red) are presented.}
@@ -407,12 +413,12 @@ Figure~\ref{f02} shows analogous reduction in particle/anti\-particle energy gap
 \subsection{High-Z hydrogen-like atoms}
 \label{sec:sbc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent For the case of $g\!=\!2$ hydrogen-like systems with large $Z$ nuclei, there is extensive background related to the long study of the solutions of the Dirac equation~\citep{Rafelski:1976ts,Greiner:1985ce,Rafelski:2016ixr}. For $g\ne 2$ and $1/r$ singular potential we refer back to the exact expression for the energy levels in \req{cou17}. In the situation of critical electric fields, states lose self-adjointness for large $Z$. For $|g|<2$, just as in the Dirac energy levels for $1/r$ singular potential~\citep{Gesztesy:1984hd}, but if $|g|>2$ there is merging of particle to particle states (and antiparticle to antiparticle) for states of the same total angular momentum quantum number $j$, but opposite spin orientations.
+\noindent For the case of $g\!=\!2$ hydrogen-like systems with large $Z$ nuclei, there is extensive background related to the long study of the solutions of the Dirac equation~\citep{Rafelski:1976ts,Greiner:1985ce,Rafelski:2016ixr}. For $g\ne 2$ and $1/r$ singular potential we refer back to the exact expression for the KGP energy levels in \req{cou17}. In the situation of critical electric fields, states lose self-adjointness for large $Z$ in both the Dirac $g\!=\!2$ case~\citep{Gesztesy:1984hd} and for KGP $g\!\neq\!2$. \cite{Thaller:1992ji} notes that the DP-Coulomb solutions retain self-adjointness via `diving' states. For KGP $|g|<2$, states vanish similar to Dirac energy levels for the $1/r$ singular potential, but if $|g|\!>\!2$ there is merging of particle to particle states (and antiparticle to antiparticle) for states of the same total angular momentum quantum number $j$, but opposite spin orientations.
 
-This behavior can be seen in figure~\ref{f03}, which shows the meeting of the $1S_{1/2}$ and $2P_{1/2}$ states. For $|g|<2$ there is no state merging, but for small anomalies the solution is discontinuous in the sense that even for 1S$_1/2$ we see in figure~\ref{f03} a maximum allowed value of $Z$ at a finite energy. This behavior is reminiscent of the behavior we are familiar with for $1/r$ potential for the 2P$_1/2$ (seen in figure~\ref{f03}) and many other $g\!=\!2$ eigenstates. We know from study of numerical solutions of the Dirac equation that the regularization of the Coulomb potential by a finite nuclear size removes this singular behavior. It remains to be seen how this exactly works in the context of the KGP equation allowing for the magnetic anomaly.
+This merging state behavior can be seen in~\rf{f03}, which shows the meeting of the $1S_{1/2}$ and $2P_{1/2}$ states when $|g|\!>\!2$. For $|g|\!<\!2$ there is no state merging, but the solution is discontinuous in the sense that even for 1S$_{1/2}$ we see a maximum allowed value of $Z$ at a finite energy. This is reminiscent of the Dirac $g\!=\!2$ behavior we are familiar with for the 2P$_{1/2}$ state (see upper dashed blue line in~\rf{f03}) and many other $g\!=\!2$ eigenstates. We know from study of numerical solutions of the Dirac equation that the regularization of the Coulomb potential by a finite nuclear size removes this singular behavior. It remains to be seen how this exactly works in the context of the KGP equation allowing for the magnetic anomaly.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{plots/chap02moment/lanplot08.pdf}
      \caption{The KGP $1S_{1/2}$ (lower red curves) and $2P_{1/2}$ (upper green curves) energy levels for $g$-factor values $g\!=\!\{1.8,\ 1.9977,\ 2.0023,\ 2.2\}$ are shown for large $Z$ hydrogen-like atoms. The curves for the Dirac $g\!=\!2$ case for (lower dashed blue) $1S_{1/2}$ and (upper dashed blue) $2P_{1/2}$ are also presented.}
@@ -420,22 +426,31 @@ This behavior can be seen in figure~\ref{f03}, which shows the meeting of the $1
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The Dirac $g\!=\!2$ case acts as unique \lq\lq cusp\rq\rq\ point because even for very small anomalies, as emphasized in figure~\ref{f03}, the behavior of the states is strongly modified for the situation of high intensity Coulomb fields which are present in large $Z$ hydrogen-like nuclei.
-
 \cite{Thaller:1992ji} presented numerically computed DP equation energy levels for large $Z$ hydrogen like atoms. These numerical solutions involve crossings in energy levels between states with the same total angular quantum number $j$, but differing spin orientations such as $1S_{1/2}$ and $2P_{1/2}$; these states also have the behavior of diving into the antiparticle lower continuum even for $1/r$-potential. These features are not present for the KGP-Coulomb solution. However, there is a similarity between the numerical solutions of the DP equation and our analytical KGP solutions, because for $|g|>2$ the merging states as described above correspond to the crossing states in the DP solution.
 
-The DP equation also allows for the so-called `super-positronium' states as described~\cite{Barut:1975hz,Barut:1976hs}. Such states represent resonances due to the magnetic interaction that reside incredibly close to the center of the atom i.e $\sqrt{\langle r^{2}\rangle}\approx a\alpha\hbar/mc$, but this feature is absent from the KGP formation of the Coulomb problem as all KGP-Coulomb wave functions which can be normalized can be successfully matched to their Dirac ($g\!=\!2$) companions.
+The DP equation also allows for the so-called `super-positronium' states as described by~\cite{Barut:1975hz,Barut:1976hs}. Such states represent resonances due to the magnetic interaction that reside incredibly close to the center of the atom i.e $\sqrt{\langle r^{2}\rangle}\approx a\alpha\hbar/mc$, but this feature is absent from the KGP formation of the Coulomb problem as all KGP-Coulomb wave functions which can be normalized can be successfully matched to their Dirac ($g\!=\!2$) companions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[clip, trim=0.0cm 0.0cm 8.0cm 0.0cm,width=0.95\linewidth]{plots/chap02moment/lanplot05.pdf}
      \caption{Add this bit in!}
-    \label{fig:gspec}
+    \label{fig:gspec1}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[clip, trim=0.0cm 0.0cm 16.0cm 0.0cm,width=0.95\linewidth]{plots/chap02moment/lanplot06.pdf}
+     \caption{Add this bit in!}
+    \label{fig:gspec2}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Because analytical solutions of DP equation, unlike our results for KGP, are not available it is hard to pinpoint precisely the origin of the diverse unpalatable behavior. However, we can hypothesize that the problems arise due to the pathological structure of DP equation where the magnetic anomaly rather than full magnetic moment appears. In any case we see that the Thaller solutions present pathologies quite akin to those we already described in our study of Landau energies. On the other hand KGP framework for large $Z$ shows some exciting and nice analytical behavior.
+
+The Dirac $g\!=\!2$ case acts as unique \lq\lq cusp\rq\rq\ point because even for very small anomalies, as emphasized in~\rf{f03}, the behavior of the states is strongly modified for the situation of high intensity Coulomb fields which are present in large $Z$ hydrogen-like nuclei.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Special topics related to Klein-Gordon-Pauli}
@@ -457,7 +472,7 @@ This modified KGP formulation then requires spin sensitive mass and an explicit 
 
 The approach in \req{eq:ext:01} is superficially similar to the model proposed by~\cite{Frenkel:1926zz} in classical mechanics by giving the particle a spin dependent mass of the form $m\sim\Sigma_{\mu\nu}F^{\mu\nu}$ where $\Sigma_{\mu\nu}$ is the covariant generalization of the classical magnetic and electric dipole. \req{IKGP01} is however distinct in that the mass is allowed off-diagonal components in spinor space (a subspace which doesn't exist classically). The dipole-mass \req{eq:ext:01} is off-diagonal in spinor space in the Dirac representation and no longer commutes likes a scalar.
 
-\req{eq:ext:01} also differs from the regular KGP equation by the presence of an additional quadratic interaction which we can evaluate using \req{dp:2} in the Dirac basis as
+\req{eq:ext:01} also differs from the regular KGP equation by the presence of an additional quadratic interaction which we can evaluate using \req{dp:2} in the Dirac representation as
 \begin{gather}
     \label{quad:1} \delta V=-\frac{\mu^{2}}{4}\left(\gamma_{\alpha}\gamma_{\beta}F^{\alpha\beta}\right)^{2}=\mu^{2}
     \begin{pmatrix}
@@ -506,7 +521,7 @@ An interesting feature is that in ultra-high magnetic fields ($B>>{B}_{s}$), Eq.
 This is not dissimilar to the non-relativistic case where the magnetic energy is simply proportional to the magnetic field.
 
 %%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
  \centering
  \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.5cm,width=\linewidth]{plots/chap02moment/lanplot09.pdf}
  \caption{The $n=0$, $s=1/2$ ground state for a IKGP proton given by Eq.~\eqref{IKGP05} with $g=5.58$ in a homogeneous magnetic field. The magnetic minimum is well visible for particles with larger anomalous moment such as proton. We consider the particle with no $z$-direction momentum. The particle state (solid red) and antiparticle (dashed red) are presented. The magnetic field scale is ${B}'_{S}=(m^2_p/m^2_e){B}_S$.}
@@ -583,7 +598,7 @@ where $S^{\alpha\beta}$ is the spin angular momentum tensor. The spin tensor $S^
 \begin{gather}
     s^{\alpha} = (0,\bb{s})\,,\qquad s_{\alpha}s^{\alpha} = -\bb{s}_\mathrm{Cl.}^{2}\,,\qquad s_{\alpha} = \frac{1}{2mc}\varepsilon_{\alpha\beta\mu\nu}S^{\beta\mu}p^{\nu}\,,
 \end{gather}
-where $\bb{s}_\mathrm{Cl.}$ is the classical Euclidean three-spin (not to be confused with the quantum operator $\bb{s}$). We also note that to make the units correct, the Pauli-Lubanski pseudo-vector and the four-spin are proportional in the rest frame by a factor of $\sqrt{C_{1}}=mc$. Quantum mechanically~\citep{ohlsson2011relativistic} $S^{\alpha\beta}$ appears as $\sim\sigma^{\alpha\beta}$ which we've already identified as the spin tensor in Dirac theory defined via the $\gamma^{\alpha}$ matrices.
+where $\bb{s}_\mathrm{Cl.}$ is the classical Euclidean three-spin (not to be confused with the quantum operator $\bb{s}$). We also note that to make the units correct, the Pauli-Lubanski pseudo-vector and the four-spin are proportional in the rest frame by a factor of $\sqrt{C_{1}}=mc$. Quantum mechanically~\citep{Ohlsson:2011zz} $S^{\alpha\beta}$ appears as $\sim\sigma^{\alpha\beta}$ which we've already identified as the spin tensor in Dirac theory defined via the $\gamma^{\alpha}$ matrices.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Covariant magnetic potential and modified Lorentz force}
