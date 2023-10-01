@@ -8,18 +8,19 @@ In the course of satisfying the University of Arizona Department of Physics's re
     \item \rapp{appendixA} - ``Magnetic dipole moment in relativistic quantum mechanics'' by~\citet*{Steinmetz:2018ryf} is a study and comparison of DP and KGP wave equations for homogeneous magnetic fields and hydrogen-like atoms. I performed all computation, writing, and figure making in preparation of the first draft and approved the final draft before submission. I acknowledge the help and consultation of Martin Formanek (MF) and Johann Rafelski (JR) in research, writing and editing.
     \item \rapp{appendixB} - ``Strong fields and neutral particle magnetic moment dynamics'' by~\citet*{Formanek:2017mbv} is an overview of our research group's efforts in studying neutral particle dynamics in electromagnetic fields. I wrote Section 2.1 in collaboration with MF. I consulted and helped lead author MF and co-authors Stefan Evans (SE) and Cheng Tao Yang (CTY) in editing and revising the overall manuscript.
     \item \rapp{appendixC} - ``Relativistic dynamics of point magnetic moment'' by~\citet*{Rafelski:2017hce} introduces a new covariant formulation of classical spin dynamics and unifies Gilbertian and Amp{\`e}rian dipoles. I wrote Section 3 in collaboration with JR and MF and aided in the computation in Section 5.1. I otherwise consulted in the research, writing, and editing process of this publication.
-    \item \rapp{appendixD} - ``Dynamic fermion flavor mixing through transition dipole moments'' by \citet*{Rafelski:2023aaa} is a study of Majorana neutrino flavor mixing in electromagnetic fields and proposes a novel effective EM-mass basis for propagating neutrinos. The article was written originally via invitation of JR by Gerhard Buchalla, Dieter L\"ust and Zhi-Zhong Xing as a memorial chapter in a book dedicated to Harald Fritzsch. I performed all computation and writing in preparation of the first draft and approved the final draft before submission. I acknowledge the help and consultation of JR and CTY in research, writing and editing.
+    \item \rapp{appendixD} - ``Dynamic fermion flavor mixing through transition dipole moments'' by \citet*{Rafelski:2023zgp} is a study of Majorana neutrino flavor mixing in electromagnetic fields and proposes a novel dynamical EM-mass basis for propagating neutrinos. The article was written originally via invitation of JR by Gerhard Buchalla, Dieter L\"ust and Zhi-Zhong Xing as a memorial chapter in a book dedicated to Harald Fritzsch. I performed all computation and writing in preparation of the first draft and approved the final draft before submission. I acknowledge the help and consultation of JR and CTY in research, writing and editing.
     \item \rapp{appendixE} - ``A Short Survey of Matter-Antimatter Evolution in the Primordial Universe'' by~\citet*{Rafelski:2023emw} is a 50 page long review with many novel results describing the role of antimatter in the early universe. I supervised (in collaboration with CTY) the document creation, combining the writing contributions of all authors (including myself, Jeremiah Birrell (JB), CTY, and JR) into one coherent presentation. I also coordinated with all authors in formatting and editing the technical figures in this review by JB, CTY, and JR.
     \item \rapp{appendixF} - ``Matter-antimatter origin of cosmic magnetism'' by~\citet*{Steinmetz:2023nsc} proposes a model of para-magnetization driven by the large matter-antimatter (electron-positron) content of the early universe. I carried out all writing in preparation of the first draft and approved the final draft before submission. Computation and figure making was done in collaboration with CTY who contributed key results and five technical figures. I acknowledge the help and consultation of CTY and JR in research, writing and editing.
 \end{itemize}
 
 This is not a total catalogue of my research efforts, but lists the works that form the foundation of \rchap{chap:moment}, \rchap{chap:neutrino} and \rchap{chap:cosmo} of this dissertation. Where noted, these chapters also contain sections of complete yet unpublished work. \rchap{chap:outlook} contains brief discussions of still-in-progress research efforts to be completed after submission of this dissertation.
 
-I was also co-author on the following publications which are not used extensively in this dissertation and are not reprinted as appendices. They are listed in chronological order below. In these three works I consulted with MF and JR in research and editing making content clarifying contributions to these manuscripts:
+I was also co-author on the following publications which are not used extensively in this dissertation and are not reprinted as appendices. They are listed in chronological order below. In these three works I consulted with MF, CTY and JR in research and editing making content clarifying contributions to these manuscripts:
 \begin{itemize}
     \item ``Classical neutral point particle in linearly polarized EM plane wave field'' by~\citet*{Formanek:2019cga} explores the dynamical equations presented in \rapp{appendixC} for neutral particles with magnetic moment.
     \item ``Radiation reaction friction: Resistive material medium'' by~\citet*{Formanek:2020zwc} introduces a novel model of relativistic covariant friction within a medium.
     \item ``Motion of classical charged particles with magnetic moment in external plane-wave electromagnetic fields'' by~\citet*{Formanek:2021mcp} is a followup to the above 2019 work and \rapp{appendixC} for charged particles with magnetic moment.
+    \item ``Decomposition of Fermi gas into zero and finite temperature distributions with examples'' by~\citet*{Yang:2023aaa} is a mathematical methods paper detailing a novel analytic form of the finite temperature behavior of the Fermi-Dirac distribution function. The cold magnetized gas is analyzed as an example.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -295,7 +296,7 @@ Following a procedure similar to the one found in \rsec{sec:mom}, \req{ledm:3} r
     \label{ledm:4}
     \mathcal{H}_\mathrm{EDM} \approx \epsilon\chi^{\dag}\bb{\sigma}\cdot\bb{E}\chi\,.
 \end{gather}
-The electric dipole is important because the presence of one would signify charge-parity (CP) violation in the theory which provides a method to distinguish between matter and antimatter. We discuss this in brief using the parity (P) and time (T) symmetries of the relevant spin $\bb{s}$ and field vectors $(\bb{E},\bb{B})$ and their inner products. The even and odd symmetries of each are printed in \rt{fig:cp}.
+The electric dipole is important because the presence of one would signify charge-parity (CP) violation in the theory which provides a method to distinguish between matter and antimatter. We discuss briefly using the parity (P) and time (T) symmetries of the relevant spin $\bb{s}$ and field vectors $(\bb{E},\bb{B})$ and their inner products. The even and odd symmetries of each are printed in \rt{fig:cp}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[ht]
@@ -339,7 +340,9 @@ and $\eta_{c}$ is an arbitrary complex phase. The exact matrix expression of $C$
     C:\bar\psi\sigma_{\alpha\beta}\psi\rightarrow-\bar\psi\sigma_{\alpha\beta}\psi\,,\qquad
     C:A^{\alpha}\rightarrow-A^{\alpha}\,.
 \end{align}
-As the spin density $\bar\psi\sigma_{\alpha\beta}\psi$ and vector potential $A^{\alpha}$ (and thus $F^{\alpha\beta}$) are both odd under charge conjugation, the combination present in the AMM Lagrangian \req{lamm:1} is C-even under charge conjugation. The same is true of the EDM Lagrangian \req{ledm:3} which is more easily seen when cast in terms of the dual tensor. We note that the fields $\psi$, $\bar\psi$ and $A^{\alpha}$ are considered dynamical \emph{operators} within an interacting quantum field theory. C-symmetry is therefore broken when considering an externally fixed background field such as $A_\mathrm{ext}^{\alpha}(x)$ as $C:A_\mathrm{ext}^{\alpha}(x)\rightarrow A_\mathrm{ext}^{\alpha}(x)$.
+As the spin density $\bar\psi\sigma_{\alpha\beta}\psi$ and vector potential $A^{\alpha}$ (and thus $F^{\alpha\beta}$) are both odd under charge conjugation, the combination present in the AMM Lagrangian \req{lamm:1} is C-even under charge conjugation. The same is true of the EDM Lagrangian \req{ledm:3} which is more easily seen when cast in terms of the dual tensor.
+
+We note that the fields $\psi$, $\bar\psi$ and $A^{\alpha}$ are considered dynamical \emph{operators} within an interacting quantum field theory. C-symmetry is therefore broken when considering an externally fixed background field such as $A_\mathrm{ext}^{\alpha}(x)$ as $C:A_\mathrm{ext}^{\alpha}(x)\rightarrow A_\mathrm{ext}^{\alpha}(x)$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Klein-Gordon-Pauli equation}
@@ -454,7 +457,7 @@ An almost identical argument that $g$-factor arises from spin-structure and elec
 \begin{alignat}{1}
 	\label{analog:1} \eta_{\alpha\beta}p^{\alpha}p^{\beta}\Phi=m^{2}c^{2}\Phi\,.
 \end{alignat}
-\req{analog:1} as written evaluates to the Klein-Gordon equation on scalar field $\Phi$ when the four-momentum is written in the position basis $p^{\alpha}\rightarrow i\hbar\partial^{\alpha}$. Much like the non-relativistic example, we can introduce spin by replacing the momentum inner product with one sensitive to a Clifford algebra~\citep{Weinberg:1995mt}. Rather than the Pauli matrices, the relativistic replacement utilizes the gamma matrices yielding
+\req{analog:1} as written evaluates to the Klein-Gordon equation on scalar field $\Phi$ where the four-momentum is written in the position basis $p^{\alpha}\rightarrow i\hbar\partial^{\alpha}$. Much like the non-relativistic example, we can introduce spin by replacing the momentum inner product with one sensitive to a Clifford algebra~\citep{Weinberg:1995mt}. Rather than the Pauli matrices, the relativistic replacement utilizes the gamma matrices yielding
 \begin{alignat}{1}
 	\label{eq:spin:03}
     \eta_{\alpha\beta}\rightarrow\gamma_{\alpha}\gamma_{\beta}\,,\qquad
@@ -477,7 +480,7 @@ From the above and \req{eq:spin:03} and \req{curve:1} we obtain
 	\label{eq:spin:07b} \gamma_{\alpha}\gamma_{\beta}\pi^{\alpha}\pi^{\beta}\Psi=
     \left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta}-\frac{e\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=m^{2}c^{2}\Psi\,.
 \end{align}
-\req{eq:spin:07b} is the square of the Dirac equation with precisely $g\!=\!2$ but in a different sense than the argument established in \req{do:3}. Rather than squaring the Dirac equation, from this perspective, we're enlarging the structure of the energy-momentum relation. The spin-1 Proca equations and spin-3/2 Rarita-Schwinger equations can also be justified via this line of reasoning with different replacements for the field and inner-product definition.
+\req{eq:spin:07b} is the square of the Dirac equation with precisely $g\!=\!2$ but in a different sense than the argument established in \req{do:3}. Rather than squaring the Dirac equation, from this perspective, we are enlarging the structure of the energy-momentum relation. The spin-1 Proca equations and spin-3/2 Rarita-Schwinger equations can also be justified via this line of reasoning with different replacements for the field and inner-product definition.
 
 How $g\!\neq\!2$ AMM `breaks' the inner product substitution is seen more explicitly when we write the effective metric tensor $h_{\mu\nu}$ from \req{lagrangian:1} as
 \begin{gather}
