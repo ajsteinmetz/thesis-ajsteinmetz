@@ -433,8 +433,8 @@ The DP equation also allows for the so-called `super-positronium' states as desc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[clip, trim=0.0cm 0.0cm 8.0cm 0.0cm,width=0.95\linewidth]{plots/chap02moment/lanplot05.pdf}
-     \caption{The KGP $1S_{1/2}$ and $2P_{1/2}$ states are plotted plotted for hydrogen-like energies for $150>Z>100$. The spread of lines corresponds to a spread of $g$-factor values: $2.052>g>1.948$. The value $Z=137$ is marked with a vertical dashed line.}
+    \includegraphics[clip, trim=0.0cm 0.0cm 16.0cm 0.0cm,width=0.90\linewidth]{plots/chap02moment/lanplot06.pdf}
+     \caption{The KGP $1S_{1/2}$ and $2P_{1/2}$ states are plotted for hydrogen-like energies for $220>Z>0$. The spread of lines corresponds to a spread of $g$-factor values: $4>g>0$. Integer multiples of $Z=137/2$ are marked with vertical dashed lines. The separation between any two adjacent curves is $|g_{i}-g_{i+1}|=0.05$. The unique curve which dives towards and stops at the boundary $E=0$ is the Dirac $g=2$ ground state.}
     \label{fig:gspec1}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -442,17 +442,28 @@ The DP equation also allows for the so-called `super-positronium' states as desc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[clip, trim=0.0cm 0.0cm 16.0cm 0.0cm,width=0.95\linewidth]{plots/chap02moment/lanplot06.pdf}
-     \caption{The KGP $1S_{1/2}$ and $2P_{1/2}$ states are plotted for hydrogen-like energies for $220>Z>0$. The spread of lines corresponds to a spread of $g$-factor values: $4>g>0$. Integer multiples of $Z=137/2$ are marked with vertical dashed lines.}
+    \includegraphics[clip, trim=0.0cm 0.0cm 8.0cm 0.0cm,width=0.90\linewidth]{plots/chap02moment/lanplot05.pdf}
+     \caption{A close up of the KGP $1S_{1/2}$ and $2P_{1/2}$ states between $2.0625>g>1.9375$. The separation between any two adjacent curves is $|g_{i}-g_{i+1}|=0.003125$. The value $Z=137$ is marked with a vertical dashed line.}
     \label{fig:gspec2}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Because analytical solutions of DP equation, unlike our results for KGP, are not available it is hard to pinpoint precisely the origin of the diverse unpalatable behavior. However, we can hypothesize that the problems arise due to the pathological structure of DP equation where the magnetic anomaly rather than full magnetic moment appears. In any case we see that the Thaller solutions present pathologies quite akin to those we already described in our study of Landau energies. On the other hand KGP framework for large $Z$ shows some exciting and nice analytical behavior.
+Because analytical solutions of the DP-Coulomb problem are not available, unlike our results for KGP, it is hard to pinpoint precisely the origin of the diving and crossing state behavior. However, we can hypothesize that the problems arise due to the pathological structure of DP equation where the magnetic anomaly rather than full magnetic moment appears. On the other hand KGP framework for large $Z$ shows interesting and well-behaved analytical behavior.
 
-The Dirac $g\!=\!2$ case acts as unique ``cusp'' point because even for very small anomalies, as emphasized in~\rf{f03}, the behavior of the states is strongly modified for the situation of high intensity Coulomb fields which are present in large $Z$ hydrogen-like nuclei.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[clip, trim=0.0cm 0.0cm 8.0cm 0.0cm,width=0.90\linewidth]{plots/chap02moment/energy_spectrum.pdf}
+     \caption{Energy eigenvalues for $\pm\lambda$. Curves are plotted for $j=1/2,3/2,5/2$ with the relativistic principle quantum number $n_{r}=0$. (dashed vertical) These lines indicate integer multiples of $\frac{137}{2}$.}
+    \label{fig:gspec3}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We further can explore the $g$-dependency on the $1S_{1/2}$ and $2P_{1/2}$ states by plotting a spectrum of $g$-factor values as is done in \rf{fig:gspec1} and \rf{fig:gspec2}. There are two important features of the KGP-Coulomb solution shown in these figures: The first is that $g\!=\!2$ does not smoothly connect with the $g\!\neq\!2$ solutions for large $Z$ hydrogen-like atoms. More specifically, small changes in $g$-factor lead to large deviations in the energies which is represented by the lack of dense lines near $g\!=\!2$. The second feature more clearly seen in \rf{fig:gspec2} is when $g\to0$, the KG-Coulomb energies for a scalar charge problem are smoothly obtained.
+We further can explore the $g$-dependency on the $1S_{1/2}$ and $2P_{1/2}$ states by plotting a spectrum of $g$-factor values as is done in \rf{fig:gspec1}. Purple regions are where $g\rightarrow0$ and the energies resembles the familiar Klein-Gordon case. As $g\to0$, small changes in $g$-factor only lead to modest changes in the energies for large $Z$ systems. The black curves represent where $g\rightarrow4$. A unique feature of $g>2$ fermions is that after a certain point, certain states become \emph{less} bound with increasing $Z$. These rising curves represent spin anti-aligned $-\lambda$ levels which become nonphysical (e.g the slope becomes vertical) and merge with their spin aligned $+\lambda$ counterparts precisely where those states also become nonphysical.
+
+The cyan curves in \rf{fig:gspec1} are where $g\approx2$ and the states resemble the Dirac case. At exactly $g\!=\!2$ there is a unique behavior where the $1S_{1/2}$ state dashes downward and terminates at $Z\!=\!1/\alpha$. This path is unique and does not occur for any $g\neq2$. Additionally, the $g\!=\!2$ state does not smoothly connect with the $g\approx2$ solutions for large $Z$ hydrogen-like atoms. This is more visible in \rf{fig:gspec2} (note the same purple-cyan-black color scheme is used but for different $g$-factor values) which plots a variety of $g$-factor values near $g\approx2$. More specifically, small changes in $g$-factor lead to large deviations in the energies which is represented by the lack of dense lines near $g\!=\!2$ indicating the ``cusp-like'' nature of the Dirac case for very small anomalies.
+
+The pattern of merging states with the same angular momentum first discussed in \rf{f03} repeats itself for higher values of $j$ total angular momentum. We show this explicitly in \rf{fig:gspec3} where
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Special topics related to Klein-Gordon-Pauli}
@@ -590,11 +601,11 @@ Following the same procedure in \rsec{sec:unique}, we can generalize the energy-
 \begin{alignat}{1}
 	\label{eq:spin:11} \left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta} - 
     \frac{q_\mathrm{EM}\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta} - 
-    \frac{q_\mathrm{QCD}\hbar}{2}\sigma_{\alpha\beta}\mathcal{G}^{\alpha\beta}\right)\Psi&=m_{q}^{2}c^{2}\Psi\,,
+    \frac{q_\mathrm{QCD}\hbar}{2}\sigma_{\alpha\beta}\mathcal{G}^{\alpha\beta}\right)\Psi&=m_{q}^{2}c^{2}\Psi_{q}\,,
 \end{alignat}
-which mirrors the electromagnetic case except for the extension of a chromomagnetic Pauli term. We note that $m_{q}$ is the quark mass and that the field $\Psi$ is a color triplet of spinors for: red, green, blue:
+which mirrors the electromagnetic case except for the extension of a chromomagnetic Pauli term. We note that $m_{q}$ is the quark mass and that the field $\Psi_{q}$ is a color triplet of spinors for: red, green, blue:
 \begin{align}
-    \Psi=
+    \Psi_{q}=
     \begin{pmatrix}
         \Psi_{r}\\
         \Psi_{g}\\
@@ -610,9 +621,9 @@ This method (based on the commutator of the kinetic momentum) suggests that the 
 \end{align}
 
 
-While in electromagnetism, DP and KGP approaches only differ in the presence of strong EM fields and are otherwise identical in the weak field limit, this cannot be equally said in QCD. The perturbative limit which justifies the DP approach for leptons is possible due to the small value of the fine structure constant. Only for high momentum interactions (such as those present in QGP or in energetic collisions) is the perturbative approach applicable.
+While in electromagnetism, DP and KGP approaches only differ in the presence of strong EM fields and are otherwise identical in the weak field limit, this cannot be equally said in QCD. The perturbative limit which justifies the DP approach for leptons in QED is possible due to the small value of the fine structure constant which is not true in QCD. Only for high momentum interactions (such as those present in quark-gluon-plasma (QGP) or in energetic collisions) is the perturbative approach applicable.
 
-The chromomagnetism of the top-quark is of particular interest~\citep{Labun:2012fg,Vryonidou:2018eyv} because of top-quark's strong coupling to the Higgs and potential BSM physics, though current studies focus on a DP approach to chromomagnetism~\citep{Zhang:2010dr,Zhang:2012muc,BuarqueFranzosi:2015jrv}. There is also the added complexity of both the chromomagnetic and magnetic $g$-factors differing from the natural value independently of one another $g_\mathrm{EM}\neq g_\mathrm{QCD}\neq2$. Further study of the KGP approach to chromomagnetism should be pursued.
+The dipole characteristics of the top-quark is of particular interest~\citep{Labun:2012fg,Vryonidou:2018eyv} because of top-quark's strong coupling to the Higgs and potential BSM physics, though current studies focus on a DP approach to chromomagnetism~\citep{Zhang:2010dr,Zhang:2012muc,BuarqueFranzosi:2015jrv}. There is also the added complexity of both the chromomagnetic and magnetic $g$-factors differing from the natural value independently of one another $g_\mathrm{EM}\neq g_\mathrm{QCD}\neq2$. Further study of the KGP approach to chromomagnetism should be pursued. To our knowledge, there is no formulation of \req{eq:spin:12} as a field theory as discussed in \rsec{sec:lagrangian} for charged leptons.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Classical relativistic spin dynamics}
