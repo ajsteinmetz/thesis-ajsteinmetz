@@ -13,7 +13,7 @@
 %% Jim Richardson	2005
 %% Terry Hurford	2005
 %% Curtis S. Cooper	2007
-%% David A. Minton 2009
+%% David A. Minton  2009
 %%
 %%
 %% Todo:
