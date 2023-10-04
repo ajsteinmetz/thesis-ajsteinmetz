@@ -31,7 +31,7 @@ I was also co-author on the following publications which are not used extensivel
 
 In the realm of the Poincar{\'e} group of spacetime symmetry (rotations, boosts and translations) transformations, each particle can be uniquely labeled by two distinct Casimir invariants: mass and spin. These two operators commute with all generators of the Poincar{\'e} group and act as labels which represent a particle. Therefore in a relativistic context, particle mass and spin are of fundamental importance on equal footing.
 
-If a particle is electrically charged, then by virtue of its spin it will have a magnetic dipole moment. Most neutral particles with spin, though not all, will also have magnetic dipoles though for more complex reasons. Therefore the magnetic behavior of particle is an important window into probing one of the most fundamental properties in physics. As quantum mechanics is not well described in terms of forces or accelerations (except in the context of Ehrenfest-style equations), there is no simple operator description of torque and spin-forces despite having played a key role in the development of quantum mechanics. For a short historical overview of spin see~\cite{Ohanian:1986wg}.
+If a particle is electrically charged, then by virtue of its spin it will have a magnetic dipole moment. Most neutral particles with spin, though not all, will also have magnetic dipoles though for more complex reasons. Therefore the magnetic behavior of particle is an important window into probing one of the most fundamental properties in physics. As quantum mechanics is not well described in terms of forces or accelerations (except in the context of Ehrenfest-style equations), there is no simple operator description of torque and spin-forces despite having played a key role in the development of quantum mechanics. For a short historical overview of spin and its relationship to angular momentum, see~\cite{Ohanian:1986wg}.
 
 This introduction serves to motivate the fundamental concepts of spin, magnetic moment and electromagnetism which have played a crucial role in the history physics and will be explored in the subsequent research chapters. Magnetic (and electric) dipoles, anomalous magnetic moments (AMM), and the wave equations which describe spin-1/2 fermions are covered in \rsec{sec:mom}. Lastly, \rsec{sec:flrw} covers topics in $\Lambda\mathrm{CDM}$ cosmology which are particular relevance to \rchap{chap:cosmo}. This chapter will also serve to establish notation and mathematical conventions. SI units will be used unless otherwise stated.
 
@@ -144,7 +144,7 @@ After some derivation and making use of the identities in \req{h:3}, we arrive a
 The last term in the expression is the Stern-Gerlach force which is sensitive to inhomogeneous magnetic fields. We also note this equation is suggestive of the `Amp{\'e}rian' dipole force which is in the direction of the gradient $\bb{\nabla}$ rather than the `Gilbertian' type of dipole force which is in the direction of the field $\bb{B}$; see \rsec{sec:cspin}. \req{ehren:1} can be connected to our classical understanding by taking the expectation value and casting it as an Ehrenfest-style theorem~\citep{Ehrenfest:1927swx}.
 
 \subsection{Anomalous magnetic moment}
-In nature there is no particle with exactly $g\!=\!2$. As seen in \rt{tab:gfactor}, composite particles often deviate from $g\!=\!2$ greatly as the $g$-factor of a composite particle is related to its internal composition. In the case of the neutron and proton, the internal quarks themselves are responsible. The comparison between three listed isotopes of hydrogen also displays how magnetic moments can `cancel out' or add together. While deuterium's value of $g$ is suppressed by the extra neutron, the two neutrons in tritium balance one another returning the ratio into one manifestly similar to the proton.
+In nature there is no particle with exactly $g\!=\!2$. As seen in \rt{tab:gfactor}, composite particles often deviate from $g\!=\!2$ greatly as the $g$-factor of a composite particle is related to its internal composition. In the case of the neutron and proton, the internal quarks themselves are responsible in a nontrivial fashion~\citep{Chang:2015qxa}. The comparison between three listed isotopes of hydrogen also displays how magnetic moments can `cancel out' or add together: While the deuterium nucleus value of $g$ is suppressed by the extra neutron, the two neutrons in the tritium nucleus balance one another returning the ratio into one manifestly similar to the proton. This reasoning however only works as a heuristic and non-perturbative Lattice QCD computations~\citep{Detmold:2019ghl} are needed to obtain the magnetic moments of hadrons with great accuracy.
 
 When $g\neq2$ (which is true for all physical particles with magnetic moment; composite of otherwise) the anomalous magnetic moment (AMM) can be defined via 
 \begin{gather}
@@ -164,10 +164,10 @@ where $a$ is the anomaly parameter. We also introduce $\delta\mu$ as the anomalo
 	tau & elementary & -2.036(34)\\
 	neutron & composite & -3.826\ 085\ 45(90)\\
 	proton & composite & \ 5.585\ 694\ 6893(16)\\
-	deuterium & composite & \ 0.857\ 438\ 2338(22)\\
-	tritium & composite & \ 5.957\ 924\ 931(12)\\
+	deuteron & composite & \ 0.857\ 438\ 2338(22)\\
+	triton & composite & \ 5.957\ 924\ 931(12)\\
 \end{tabular}
-	\caption{The $g$-factor of various particles found in~\cite{ParticleDataGroup:2022pth}.}
+	\caption{The $g$-factor of various particles found in~\cite{Tiesinga:2021myr,ParticleDataGroup:2022pth}.}
 	\label{tab:gfactor}
 \end{table}
 
@@ -251,7 +251,7 @@ where we use the four-dimensional fully antisymmetric Levi-Civita pseudo-tensor 
 \end{alignat}
 which captures that relativistic magnetic moments should be sensitive to electric as well as magnetic fields as required by Lorentz transformations of the $\bb{E}$ and $\bb{B}$ fields. We note that \req{dp:2} is the matrix which appears in \req{pauli:2} specifically in the Dirac representation of $\bb{\alpha}$ and $\bb{\Sigma}$. This should be unsurprising if one considers how the non-relativistic dipole form must generalize under Lorentz boosts which mix electric and magnetic fields.
 
-The DP equation can be obtained from perturbative QED as an effective field theory for leptons due to vacuum polarization; see standard texts \cite{Itzykson:1980rh,Schwartz:2014sze}. However, if a particle's anomalous magnetic moment is not sourced by perturbative QFT, then the Pauli term introduced in \req{dp:1} must be added by hand \emph{ad hoc} or obtained via non-perturbative means such as Lattice calculations~\citep{Aoyama:2020ynm}. This is the case for the hadronic contribution to anomalous magnetic moment of leptons as well as any composite particle such as the proton or neutron whose moment is determined by internal structure~\citep{Proceedings:2012ulb}.
+The DP equation can be obtained from perturbative QED as an effective field theory for leptons due to vacuum polarization; see standard texts \cite{Itzykson:1980rh,Schwartz:2014sze}. However, if a particle's anomalous magnetic moment is not sourced by perturbative QFT, then the Pauli term introduced in \req{dp:1} must be added by hand \emph{ad hoc} or obtained via non-perturbative means such as Lattice calculations~\citep{Aoyama:2020ynm}. This is the case for the hadronic contribution to anomalous magnetic moment of leptons as well as any composite particle such as the proton or neutron whose moment is determined by internal structure~\citep{Proceedings:2012ulb,Green:2015wqa}.
 
 Therefore we can describe the AMM as an added Lagrangian interaction term
 \begin{gather}
@@ -266,83 +266,7 @@ where ${\bar\psi}=\psi^{\dagger}\gamma^{0}$ is the Dirac adjoint. While the focu
 
 To demonstrate, we note that the electromagnetic field tensor has natural units of $F^{\alpha\beta}\sim[\mathrm{length}]^{-2}$. Therefore the product $\psi\sigma_{\alpha\beta}F^{\alpha\beta}\psi$ has natural units of $[\mathrm{length}]^{-5}$ and the coefficient of \req{lamm:1} (given by $\delta\mu$) has to compensate with $\delta\mu\sim[\mathrm{length}]^{1}$. This makes the DP Lagrangian unsuitable for renormalization which is an essential feature required for well-behaved QFTs. While this does not stop us using DP as an effective QFT with some natural cutoff scale responsible for the anomalous moment, it does reduce the usefulness of the equation as a general description of quantum dipole moments.
 
-As such, there is no reason to expect non-perturbative sources of magnetic moment to strictly adhere to the DP form. Additionally, the DP equation has the physically inelegant consequence of splitting the spin dynamics of fermions into (a) natural $g\!=\!2$ behavior (see \rsec{sec:unique}) encompassed by the spinor structure of the Dirac equation and (b) the anomalous behavior contained in the Pauli term.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Electric dipole moments and CP symmetry}
-\label{sec:edm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent While this dissertation is primarily concerned with the dynamics of magnetic dipoles, we note that the techniques and methods discussed here may also find application in other important topics such as electric dipoles. I stress that the following section should be treated as an interesting avenue for future, not present, work.
-
-The structure of the Pauli term in \req{lamm:1} informs us how to construct the relativistic electric dipole moment (EDM); see~\cite{Knecht:2003kc,Jegerlehner:2017gek}. The generalization to include the electric dipole is
-\begin{alignat}{1}
-	\label{edm:1} \delta\mu\rightarrow\delta\tilde{\mu}\equiv\delta\mu+i\epsilon\gamma^{5}\,,
-\end{alignat}
-where $\epsilon$ is the EDM of the particle. As the natural electric dipole within the Dirac equation is zero, the presence of $\epsilon$ is always considered anomalous. The EDM Pauli Lagrangian term is
-\begin{gather}
-    \label{ledm:1}
-    \mathcal{L}_\mathrm{EDM} = -{\bar\psi}\left(i\epsilon\gamma^{5}\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\psi\,,
-\end{gather}
-which is of interest because of the inclusion of $\gamma^{5}$. Taking advantage of the properties of $\gamma^{5}$, we can write the EDM in \req{ledm:1} as
-\begin{gather}
-    \label{ledm:3}
-    \gamma^{5}\sigma_{\mu\nu}=\frac{i}{2}\varepsilon_{\mu\nu\alpha\beta}\sigma^{\alpha\beta}\,\rightarrow
-    \mathcal{L}_\mathrm{EDM} = +{\bar\psi}\left(\epsilon\frac{1}{2}\sigma^{\alpha\beta}F_{\alpha\beta}^{*}\right)\psi\,.
-\end{gather}
-which is more closely analogous to the structure of the AMM in \req{lamm:1} making use of the dual form of the electromagnetic field tensor shown in \req{em:2}.
-
-Following a procedure similar to the one found in \rsec{sec:mom}, \req{ledm:3} reduces in the non-relativistic limit to the Hamiltonian density EDM interaction
-\begin{gather}
-    \label{ledm:4}
-    \mathcal{H}_\mathrm{EDM} \approx \epsilon\chi^{\dag}\bb{\sigma}\cdot\bb{E}\chi\,.
-\end{gather}
-The electric dipole is important because the presence of one would signify charge-parity (CP) violation in the theory which provides a method to distinguish between matter and antimatter. We discuss briefly using the parity (P) and time (T) symmetries of the relevant spin $\bb{s}$ and field vectors $(\bb{E},\bb{B})$ and their inner products. The even and odd symmetries of each are printed in \rt{fig:cp}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[ht]
- \centering
- \begin{tabular}{ r|c|c|c|c|c| }
- \multicolumn{1}{r}{}
- & \multicolumn{1}{c}{$\bb{E}$}
- & \multicolumn{1}{c}{$\bb{B}$}
- & \multicolumn{1}{c}{$\bb{s}$}
- & \multicolumn{1}{c}{$\bb{s}\!\cdot\!\bb{E}$}
- & \multicolumn{1}{c}{$\bb{s}\!\cdot\!\bb{B}$} \\
- \cline{2-6}
- \begin{tabular}[x]{@{}c@{}}T symmetry\\ $(t\rightarrow-t)$\end{tabular} & \textbf{even} & odd & odd & odd & \textbf{even} \TBstrut\\
- \cline{2-6}
- \begin{tabular}[x]{@{}c@{}}P symmetry\\ $(\bb{x}\rightarrow-\bb{x})$\end{tabular} & odd & \textbf{even} & \textbf{even} & odd & \textbf{even} \TBstrut\\
- \cline{2-6}
- \begin{tabular}[x]{@{}c@{}}PT symmetry\\ $(x^{\alpha}\rightarrow-x^{\alpha})$\end{tabular} & odd & odd & odd & \textbf{even} & \textbf{even} \TBstrut\\
- \cline{2-6}
- \end{tabular}\\ \,\Bstrut\\
- \caption{Time (T), parity (P) and PT symmetries of electric $\bb{E}$, magnetic $\bb{B}$, spin $\bb{s}$ three-vectors and the inner products which describe the dipole Hamiltonian terms.}
- \label{fig:cp}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The EDM term \req{ledm:4} is overall T-odd and P-odd while the magnetic dipole is T-even and P-even. While EDM dipoles are common in molecular systems, no electric dipole has ever been measured for an elementary particle nor composite particles like the proton or neutron despite extensive searching. As a point of comparison, the EDM of the electron is excluded~\citep{ACME:2018yjb,Roussy:2022cmp} by a bound of $|\epsilon_{e}/c|<4.1\times10^{-30}\, e\,\mathrm{cm}$.
-
-For CPT symmetry to hold, \rt{fig:cp} implies that both the electric and magnetic dipoles must be C-even. C-symmetry is a more complicated concept to discuss as it is only well-defined relativistically where particle and antiparticle states are simultaneously described by the theory. The Dirac spinor charge conjugates as
-\begin{align}
-    \label{c:1}
-    C:\psi\rightarrow\psi_{c}=\eta_{c}C(\bar\psi)^\mathrm{T}= \eta_{c}C\gamma_{0}^\mathrm{T}\psi^{*}\,,
-\end{align}
-where $C$ is the charge conjugation matrix satisfying the conjugation relation
-\begin{align}
-    \label{c:2}
-    -C\gamma_{\alpha}^\mathrm{T}C^{-1}=\gamma_{\alpha}\,,
-\end{align}
-and $\eta_{c}$ is an arbitrary complex phase. The exact matrix expression of $C$ depends on the representational basis used (Dirac, Weyl, Majorana, etc...). We're specifically interesting in the following conjugations
-\begin{align}
-    \label{c:3}
-    C:\bar\psi\gamma_{\alpha}\psi\rightarrow-\bar\psi\gamma_{\alpha}\psi\,,\qquad
-    C:\bar\psi\sigma_{\alpha\beta}\psi\rightarrow-\bar\psi\sigma_{\alpha\beta}\psi\,,\qquad
-    C:A^{\alpha}\rightarrow-A^{\alpha}\,.
-\end{align}
-As the spin density $\bar\psi\sigma_{\alpha\beta}\psi$ and vector potential $A^{\alpha}$ (and thus $F^{\alpha\beta}$) are both odd under charge conjugation, the combination present in the AMM Lagrangian \req{lamm:1} is C-even under charge conjugation. The same is true of the EDM Lagrangian \req{ledm:3} which is more easily seen when cast in terms of the dual tensor.
-
-We note that the fields $\psi$, $\bar\psi$ and $A^{\alpha}$ are considered dynamical \emph{operators} within an interacting quantum field theory. C-symmetry is therefore broken when considering an externally fixed background field such as $A_\mathrm{ext}^{\alpha}(x)$ as $C:A_\mathrm{ext}^{\alpha}(x)\rightarrow A_\mathrm{ext}^{\alpha}(x)$.
+As such, there is no reason to expect non-perturbative sources of magnetic moment to strictly adhere to the DP form. An example of this would be the hadronic contribution to the lepton AMM. Additionally, the DP equation has the physically inelegant consequence of splitting the spin dynamics of fermions into (a) natural $g\!=\!2$ behavior (see \rsec{sec:unique}) encompassed by the spinor structure of the Dirac equation and (b) the anomalous behavior contained in the Pauli term.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Klein-Gordon-Pauli equation}
@@ -352,9 +276,9 @@ We note that the fields $\psi$, $\bar\psi$ and $A^{\alpha}$ are considered dynam
 
 The KGP equation is generally considered to be the `square' of the Dirac equation as unlike the Dirac or DP equations, it is a second order equation wave equation for the four-component spinor $\Psi$
 \begin{alignat}{1}
-	\label{kgp:1} \left((i\hbar\partial^{\alpha}-eA^{\alpha})^{2}-m_{\ell}^{2}c^{2}-\left(g\mu_{\ell}+i\epsilon\gamma^{5}\right)m_{\ell}\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=0\,.
+	\label{kgp:1} \left((i\hbar\partial^{\alpha}-eA^{\alpha})^{2}-m_{\ell}^{2}c^{2}-g\mu_{\ell}m_{\ell}\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=0\,.
 \end{alignat}
-In the above we printed both the AMM and EDM for theoretical interest, but will drop the EDM term for the remainder of this dissertation. The initial benefit of the KGP formulation is that the wave equation fully commutes with $\gamma^{5}$ making eigen-functions explicitly good chiral states. This equation is physically distinct from the DP and Dirac equations and only share solutions when $g\!=\!2$ which is seen if one tries to na{\"i}vely square the DP \req{dp:1}.
+In the above we printed both only the magnetic moment term; some remarks about electric dipole moments (EDM) and CP violation can be found in \rsec{sec:edm}. The initial benefit of the KGP formulation is that the wave equation fully commutes with $\gamma^{5}$ making eigen-functions explicitly good chiral states. This equation is physically distinct from the DP and Dirac equations and only share solutions when $g\!=\!2$ which is seen if one tries to na{\"i}vely square the DP \req{dp:1}.
 
 \req{kgp:1} is mathematically similar to the Klein-Gordon equation which describes charged scalar particles. In the same manner as scalar-QED, the squared covariant derivative contains a $e^{2}A^{2}$ term which in QFT results in the presence of a 4-vertex seagull interaction~\citep{Schwartz:2014sze} at tree-level.
 
@@ -425,8 +349,6 @@ The conserved current \req{norm:2} can be interpreted as the sum of a convection
  This is nearly identical to the Gordon Decomposition of the Dirac current $\mathcal{J}_\mathrm{D}^{\mu}$, with the exception that the magnetization current is proportional to the $g$-factor of the particle.
  
 The covariant derivative happens to simplify as $\widetilde\nabla\rightarrow\partial$ in \req{norm:3b} such that the current is a divergence of the spin density $\bar\Psi\sigma_{\mu\nu}\Psi$. Because of the antisymmetry of $\sigma_{\mu\nu}$ the spin tensor, the magnetization current is conserved independently of the the charge current. That both are independently conserved indicates conservation in both charge $(e)$ and magnetic moment $(\mu)$.
-
-%{\color{red} Thought: What about ``strong field case'' where $A^{\alpha}$ is very large, even compared to the momentum states, would the expansion yield a nicer result? In otherwords, can strong fields restore unitarity?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The special case of g = 2}
@@ -534,7 +456,7 @@ The scale factor $a(t)$ denotes the change of proper distances $L(t)$ over time 
 \begin{gather}
     L(t)=L_{0}\frac{a_{0}}{a(t)}\rightarrow L(z)=L_{0}(1+z)\,,
 \end{gather}
-where $z$ is the redshift and $L_{0}$ the comoving length. In an expanding (or contracting) universe which is both homogeneous and isotropic, this implies volumes change with $V(t)=V_{0}/a^{3}(t)$ where $V_{0}=L_{0}^{3}$ is the comoving Cartesian volume. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ as follows
+where $z$ is the redshift and $L_{0}$ the comoving length. In an expanding (or contracting) universe which is both homogeneous and isotropic, this implies volumes change with $V(t)=V_{0}/a^{3}(t)$ where $V_{0}=L_{0}^{3}$ is the comoving Cartesian volume. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ following the conventions in~\cite{weinberg1972gravitation}
 \begin{gather}
   \label{Friedmann:1} H(t)^{2}\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_{N}}{3}\rho_\mathrm{total},\qquad \rho_\mathrm{total}(t)=\rho_{\Lambda}+\rho_\mathrm{DM}(t)+\rho_\mathrm{Baryons}(t)+\ldots\\
   \label{Friedmann:2}
