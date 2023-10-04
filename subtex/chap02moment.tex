@@ -15,7 +15,7 @@ This chapter reviews our work done in exploring relativistic dynamics with arbit
 
 \rsec{sec:kgptopics} covers special topics related to KGP including a proposal which couples mass and magnetic moment (\rsec{sec:ikgp}) and an extension to particles (such as quarks) which are charged under both Albelian and non-Albelian fields (\rsec{sec:quarks}). The second special topic is yet unpublished outside this dissertation.
 
-Relativistic classical spin dynamics is discussed in \rsec{sec:cspin} and is based on our work in~\cite{Rafelski:2017hce}. We propose in \rsec{sec:magpotential} a covariant form of magnetic dipole potential which modifies the Lorentz force, extends the Thomas-Bargmann-Michel-Telegdi (TMBT) equation, and reproduces the Stern-Gerlach force in the non-relativistic limit. %\rsec{sec:ampgil} discusses our finding that this magnetic potential also serves to unify both the Amp{\`e}rian and Gilbertian pictures of dipole moments.
+Relativistic classical spin dynamics is discussed in \rsec{sec:cspin} and is based on our work in~\cite{Rafelski:2017hce}. We propose in \rsec{sec:magpotential} a covariant form of magnetic dipole potential which modifies the Lorentz force, extends the Thomas-Bargmann-Michel-Telegdi (TMBT) equation, and reproduces the Stern-Gerlach force in the non-relativistic limit. \rsec{sec:ampgil} discusses our finding that this magnetic potential also serves to unify both the Amp{\`e}rian and Gilbertian pictures of dipole moments.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Homogeneous magnetic fields}
@@ -43,20 +43,23 @@ where $\mu$ is the magnitude of the magnetic moment as defined in \req{mag:3}. \
 
 The above can be broken into a set of three mutually commuting Hamiltonian operators:
 \begin{itemize}[nosep]
-    \item[a.] Free particle Hamiltonian (Free)
-    \item[b.] Quantum harmonic oscillator (HO)
-    \item[c.] Zeeman interaction (ZI)
+    \item[(a)] Free particle Hamiltonian (Free)
+    \item[(b)] Quantum harmonic oscillator (HO)
+    \item[(c)] Zeeman interaction (ZI)
 \end{itemize}
 given by
 \begin{align}
-	\label{homogeneous:7}
-    &H_\mathrm{total}=H_\mathrm{Free}+H_\mathrm{HO}+H_\mathrm{Mag.}\,,\\
 	\label{homogeneous:7a}
-    &H_{\mathrm{Free}}=\frac{p_{3}^{2}}{2m}\,,\\
+    \mathrm{(a)}\quad&H_{\mathrm{Free}}=\frac{p_{3}^{2}}{2m}\,,\\
 	\label{homogeneous:7b}
-    &H_\mathrm{HO}\,=\frac{1}{2m_{e}}\left(p_{1}^{2}+p_{2}^{2}\right) + \frac{1}{2}m_{e}\omega^{2}(x^{2}+y^{2})\,,\\
+    \mathrm{(b)}\quad&H_\mathrm{HO}\,=\frac{1}{2m_{e}}\left(p_{1}^{2}+p_{2}^{2}\right) + \frac{1}{2}m_{e}\omega^{2}(x^{2}+y^{2})\,,\\
 	\label{homogeneous:7c}
-    &H_{\mathrm{ZI}}\ \,=-\mu_{B}B\frac{L_{3}}{\hbar}-\mu B\sigma_{3}\,.
+    \mathrm{(c)}\quad&H_{\mathrm{ZI}}\ \,=-\mu_{B}B\frac{L_{3}}{\hbar}-\mu B\sigma_{3}\,,
+\end{align}
+which forms the total Hamiltonian
+\begin{align}
+    \label{homogeneous:7}
+    H_\mathrm{total} = H_\mathrm{Free} + H_\mathrm{HO} + H_\mathrm{Mag.}\,.
 \end{align}
 The cyclotron frequency appears in \req{homogeneous:7b} as $2\omega=\omega_\mathrm{C}=eB/m_{e}$. We note that the Zeeman \req{homogeneous:7c} is usually expressed as
 \begin{alignat}{1}
@@ -93,7 +96,7 @@ E^{2}_{n,s}(p_{3},B)=m_{e}^{2}c^{4}+p_{3}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1
 \label{lan24b}
 E_{n,s}=\pm\sqrt{m_{e}^{2}c^{4}+p_{3}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}\right)-2\mu B m_{e}c^{2}s}\;.
 \end{gather}
-This expression for the relativistic Landau levels is the same as found by ~\cite{Weisskopf:1936hya} for the Dirac equation setting $g\!=\!2$ in \req{lan24b}. The Landau orbital part and spin portions can be combined when the magnetic moment is expressed in terms of $e/m$, but the form in \req{lan24b} keeps it generalized for the case of neutral particles.
+This expression for the relativistic Landau levels is the same as found by~\cite{Weisskopf:1936hya} for the Dirac equation setting $g\!=\!2$ in \req{lan24b}. The Landau orbital part and spin portions can be combined when the magnetic moment is expressed in terms of $e/m$, but the form in \req{lan24b} keeps it generalized for the case of neutral particles.
 
 The `Landau' problem for neutral particles (for example the neutron with mass $m_\mathrm{N}$) simplifies to
 \begin{gather}
@@ -454,7 +457,7 @@ Because analytical solutions of the DP-Coulomb problem are not available, unlike
 \begin{figure}[ht]
     \centering
     \includegraphics[clip, trim=0.0cm 0.0cm 8.0cm 0.0cm,width=0.90\linewidth]{plots/chap02moment/energy_spectrum.pdf}
-     \caption{Energy eigenvalues for $\pm\lambda$. Curves are plotted for $j=1/2,3/2,5/2$ with the relativistic principle quantum number $n_{r}=0$. (dashed vertical) These lines indicate integer multiples of $\frac{137}{2}$.}
+     \caption{Energy level curves are plotted for total angular momentum quantum number $j=1/2,\,3/2$ with the relativistic principle quantum number $n_{r}=0$. The separation between any two adjacent curves is $|g_{i}-g_{i+1}|=0.2$. Dashed vertical lines indicate integer multiples of $Z=137/2$.}
     \label{fig:gspec3}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -463,12 +466,16 @@ We further can explore the $g$-dependency on the $1S_{1/2}$ and $2P_{1/2}$ state
 
 The cyan curves in \rf{fig:gspec1} are where $g\approx2$ and the states resemble the Dirac case. At exactly $g\!=\!2$ there is a unique behavior where the $1S_{1/2}$ state dashes downward and terminates at $Z\!=\!1/\alpha$. This path is unique and does not occur for any $g\neq2$. Additionally, the $g\!=\!2$ state does not smoothly connect with the $g\approx2$ solutions for large $Z$ hydrogen-like atoms. This is more visible in \rf{fig:gspec2} (note the same purple-cyan-black color scheme is used but for different $g$-factor values) which plots a variety of $g$-factor values near $g\approx2$. More specifically, small changes in $g$-factor lead to large deviations in the energies which is represented by the lack of dense lines near $g\!=\!2$ indicating the ``cusp-like'' nature of the Dirac case for very small anomalies.
 
-The pattern of merging states with the same angular momentum first discussed in \rf{f03} repeats itself for higher values of $j$ total angular momentum. We show this explicitly in \rf{fig:gspec3} where
+The pattern of merging states with the same angular momentum first discussed in \rf{f03} repeats itself for higher values of $j$ total angular momentum. We show this explicitly in \rf{fig:gspec3} where mergers between $j=1/2$ states occur in the left lobe while mergers between $j=3/2$ states occur in the right lobe for $g>2$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Special topics related to Klein-Gordon-Pauli}
 \label{sec:kgptopics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The following two sections are applications of the KGP approach to physics outside electromagnetism. \rsec{sec:ikgp} explores extensions to KGP which combine mass and magnetic moment into a dynamical mass which is sensitive to electromagnetic fields. This section is only partially published in \cite{Steinmetz:2018ryf}. The dynamical mass concept introduced here is the driving motivation behind \rchap{chap:neutrino} (and published in \cite{Steinmetz:2023nsc}) in the context of dynamic neutrino flavor mixing.
+
+\rsec{sec:quarks} extends the KGP wave equation to also include chromomagnetic dipole moments necessary for quarks in quantum chromodynamics (QCD). We show explicitly that the dipoles are linear in field tensors and do not mix spin degrees of freedom. This section contains unpublished work and is exploratory; though we hope to pursue this research avenue more fully in the future.
+
 \subsection{Combination of mass and magnetic moment}
 \label{sec:ikgp}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -483,7 +490,7 @@ which satisfies the wave equation
 \end{gather}
 This modified KGP formulation then requires spin sensitive mass and an explicit electromagnetic component to the charged lepton mass. As informed by classical mechanics, charged particles should be understood to derive at least some of their mass from the mass-energy of their electromagnetic fields. \req{quad:1} results in higher order vertex diagrams coupling fermions to photons.
 
-The approach in \req{eq:ext:01} is superficially similar to the model proposed by~\cite{Frenkel:1926zz} in classical mechanics by giving the particle a spin dependent mass of the form $m\sim\Sigma_{\mu\nu}F^{\mu\nu}$ where $\Sigma_{\mu\nu}$ is the covariant generalization of the classical magnetic and electric dipole. \req{IKGP01} is however distinct in that the mass is allowed off-diagonal components in spinor space (a subspace which doesn't exist classically). The dipole-mass \req{eq:ext:01} is off-diagonal in spinor space in the Dirac representation and no longer commutes likes a scalar.
+The approach in \req{eq:ext:01} is superficially similar to the model proposed by~\cite{Frenkel:1926zz} in classical mechanics by giving the particle a spin dependent mass of the form $m\sim\Sigma_{\mu\nu}F^{\mu\nu}$ where $\Sigma_{\mu\nu}$ is the covariant generalization of the classical magnetic and electric dipole; a more detailed exploration can be found in~\cite{Formanek:2020ojr}. \req{IKGP01} is however distinct in that the mass is allowed off-diagonal components in spinor space (a subspace which doesn't exist classically). The dipole-mass \req{eq:ext:01} is off-diagonal in spinor space in the Dirac representation and no longer commutes likes a scalar.
 
 \req{eq:ext:01} also differs from the regular KGP equation by the presence of an additional quadratic interaction which we can evaluate using \req{dp:2} in the Dirac representation as
 \begin{gather}
@@ -574,14 +581,16 @@ which can be seen in~\rf{f05}. Here it is understood that for the calculation of
 %\end{alignat}
 %which if the Lorenz gauge $\partial\cdot B=0$ is taken simplifies to a Klein-Gordon style second-order wave equation. If we gauge the fields giving the spin-1 field an electric charge, we can produce a theory which naturally generates a magnetic moment.
 
-Briefly, we would like to comment on the g-factor of the quarks which unlike the leptons participate in the strong color interaction of quantum chromodynamics (QCD). Since color charges follows a more complex $SU(3)$ group structure unlike the more straight forward $U(1)$ of electromagnetism, the ``color magnetism'' of QCD requires more than just the analogous Pauli term to describe color dipole moments owing due to the fact that QCD has non-Abelian (non-commuting) gluon gauge fields $\mathcal{A}^{\alpha}$.
+The KGP approach to wave equations is robust and is useful not only for electromagnetic interactions: This is a first look at adding the strong interaction into KGP inspired in part by~\cite{Labun:2012ra}. Quarks participate in the strong color interaction of quantum chromodynamics (QCD); therefore they should present a $g$-factor for both their electromagnetic dipole $g_\mathrm{EM}$ as well as their QCD chromomagnetic dipole $g_\mathrm{QCD}$.
 
-The quarks, like the leptons, should obey the quantum mechanical analogue of the energy-momentum relation seen in \req{eq:spin:03} with the only theoretical difference being a modified covariant derivative. The covariant derivative, written in terms of kinetic momentum, should appear as
+Since color charges follows a more complex $SU(3)$ group structure unlike the more straight forward $U(1)$ of electromagnetism, the ``color magnetism'' of QCD requires more than just the analogous Pauli term to describe color dipole moments owing due to the fact that QCD has non-Abelian (non-commuting) gluon gauge fields $\mathcal{A}^{\alpha}$.
+
+The quarks (like all particles) should obey the quantum mechanical analogue of the energy-momentum relation seen in \req{eq:spin:03} with the only theoretical difference being a modified covariant derivative. The covariant derivative, written in terms of kinetic momentum, should appear as
 \begin{alignat}{1}
     \label{eq:spin:08}
     \mathrm{EM+QCD}:\qquad i\hbar\widetilde\nabla=\pi^{\alpha}=p^{\alpha}-q_\mathrm{EM}A^{\alpha}-q_\mathrm{QCD}\mathcal{A}^{\alpha}\,,
 \end{alignat}
-where $q_\mathrm{EM}$ is the electric charge of the quarks $q_\mathrm{EM}/e\in\pm1/3,\pm2/3$ and $q_\mathrm{QCD}$ is the color charge coupling strength. In many texts the symbol $g_{s}$ is used for the color coupling strength, but we circumvent that notation to avoid confusion with $g$-factor.
+where $q_\mathrm{EM}$ is the electric charge of the quarks $q_\mathrm{EM}/e\in\pm1/3,\pm2/3$ and $q_\mathrm{QCD}$ is the color charge coupling strength. In many texts the symbol $g_{s}$ is used for the color coupling strength, but we circumvent that notation using $q_\mathrm{QCD}$ to avoid confusion with $g$-factor.
 
 We follow the conventions in~\cite{greiner2006qcd}. The eight $3\times3$ Gell-Mann matrices $\lambda^{a}$ are embedded into each independent field as
 \begin{alignat}{1}
@@ -598,11 +607,15 @@ where $\mathcal{A}_{a}^{\alpha}$ are the individual fields for each gluon specie
 \end{gather}
 
 Following the same procedure in \rsec{sec:unique}, we can generalize the energy-momentum relation and obtain the EM+QCD variant of the KGP equation for quarks. We find that the resulting quark-KGP equation is
-\begin{alignat}{1}
-	\label{eq:spin:11} \left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta} - 
+\begin{align}
+    \label{eq:spin:11a}
+    \gamma_{\alpha}\gamma_{\beta}\pi^{\alpha}\pi^{\beta} = \eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta} - 
     \frac{q_\mathrm{EM}\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta} - 
-    \frac{q_\mathrm{QCD}\hbar}{2}\sigma_{\alpha\beta}\mathcal{G}^{\alpha\beta}\right)\Psi&=m_{q}^{2}c^{2}\Psi_{q}\,,
-\end{alignat}
+    \frac{q_\mathrm{QCD}\hbar}{2}\sigma_{\alpha\beta}\mathcal{G}^{\alpha\beta}\,,\\
+	\label{eq:spin:11b} \left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta} - 
+    \frac{q_\mathrm{EM}\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta} - 
+    \frac{q_\mathrm{QCD}\hbar}{2}\sigma_{\alpha\beta}\mathcal{G}^{\alpha\beta}\right)\Psi=m_{q}^{2}c^{2}\Psi_{q}\,,
+\end{align}
 which mirrors the electromagnetic case except for the extension of a chromomagnetic Pauli term. We note that $m_{q}$ is the quark mass and that the field $\Psi_{q}$ is a color triplet of spinors for: red, green, blue:
 \begin{align}
     \Psi_{q}=
@@ -612,25 +625,25 @@ which mirrors the electromagnetic case except for the extension of a chromomagne
         \Psi_{b}
     \end{pmatrix}\,.
 \end{align}
-As only the non-commuting portion of \req{eq:spin:11} (written explicitly in \req{eq:spin:10b}) is off-diagonal in color, this means that the additional non-commuting chromomagnetic term acts as a transition matrix between different quark colors.
+As only the non-commuting portion of \req{eq:spin:11b} (written explicitly in \req{eq:spin:10b}) is off-diagonal in color, this means that the additional non-commuting chromomagnetic term acts as a transition matrix between different quark colors.
 
-This method (based on the commutator of the kinetic momentum) suggests that the color and electromagnetic $g$-factors both have a natural value of $g_\mathrm{EM}\!=\!g_\mathrm{QCD}\!=\!2$. We can generalize \req{eq:spin:11} to allow for arbitrary EM and QCD dipole moments $g_\mathrm{EM}$ and $g_\mathrm{QCD}$ respectively as
+This method (based on the commutator of the kinetic momentum) suggests that the color and electromagnetic $g$-factors both have a natural value of $g_\mathrm{EM}\!=\!g_\mathrm{QCD}\!=\!2$. We can generalize \req{eq:spin:11a} to allow for arbitrary EM and QCD dipole moments $g_\mathrm{EM}$ and $g_\mathrm{QCD}$ respectively as
 \begin{align}
 	\label{eq:spin:12}
     \boxed{\left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta}-\frac{g_\mathrm{EM}}{2}\frac{q_\mathrm{EM}\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta}-\frac{g_\mathrm{QCD}}{2}\frac{q_\mathrm{QCD}\hbar}{2}\sigma_{\alpha\beta}\mathcal{G}^{\alpha\beta}\right)\Psi=m_{q}^{2}c^{2}\Psi}\,.
 \end{align}
 
 
-While in electromagnetism, DP and KGP approaches only differ in the presence of strong EM fields and are otherwise identical in the weak field limit, this cannot be equally said in QCD. The perturbative limit which justifies the DP approach for leptons in QED is possible due to the small value of the fine structure constant which is not true in QCD. Only for high momentum interactions (such as those present in quark-gluon-plasma (QGP) or in energetic collisions) is the perturbative approach applicable.
+While in electromagnetism, DP and KGP approaches only differ in the presence of strong EM fields and are otherwise identical in the weak field limit, this cannot be equally said in QCD. The perturbative limit which justifies the DP approach for leptons in QED is possible due to the small value of the fine structure constant which is not true in QCD. Only for high momentum interactions (such as those present in quark-gluon-plasma (QGP) or in energetic collisions) is the perturbative approach applicable~\citep{Choudhury:2014lna}. We emphasize however that the DP approach is only valid where the dipole moment is obtainable via perturbative expansion which may not hold if the $g$-factor results from non-perturbative physics.
 
-The dipole characteristics of the top-quark is of particular interest~\citep{Labun:2012fg,Vryonidou:2018eyv} because of top-quark's strong coupling to the Higgs and potential BSM physics, though current studies focus on a DP approach to chromomagnetism~\citep{Zhang:2010dr,Zhang:2012muc,BuarqueFranzosi:2015jrv}. There is also the added complexity of both the chromomagnetic and magnetic $g$-factors differing from the natural value independently of one another $g_\mathrm{EM}\neq g_\mathrm{QCD}\neq2$. Further study of the KGP approach to chromomagnetism should be pursued. To our knowledge, there is no formulation of \req{eq:spin:12} as a field theory as discussed in \rsec{sec:lagrangian} for charged leptons.
+The dipole characteristics (both electromagnetic and chromomagnetic) of the top-quark is of particular interest~\citep{Labun:2012fg,Vryonidou:2018eyv} because of top-quark's strong coupling to the Higgs and potential BSM physics. We note that current studies focus on a DP approach to chromomagnetism~\citep{Zhang:2010dr,Zhang:2012muc,BuarqueFranzosi:2015jrv}. There is also the added complexity of both the chromomagnetic and magnetic $g$-factors differing from the natural value independently of one another $g_\mathrm{EM}\neq g_\mathrm{QCD}\neq2$. Further study of the KGP approach to chromomagnetism should be pursued. To our knowledge, there is no formulation of \req{eq:spin:12} as a field theory for quarks as was discussed in \rsec{sec:lagrangian} for electromagnetically charged fermions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Classical relativistic spin dynamics}
 \label{sec:cspin}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent We turn away from quantum mechanical approaches to briefly inspect the classical analogue of spin dynamics. Considering the Poincar{\'e} group of space-time symmetry
-transformations~\citep{Weinberg:1995mt,greiner2012quantum}, it was established by Wigner that elementary particles are representations of the group and can be characterized by eigenvalues of two the Poincar{\'e} group's two Casimir operators:
+\noindent We turn away from quantum mechanical approaches to inspect the classical analogue of spin dynamics. Considering the Poincar{\'e} group of space-time symmetry
+transformations~\citep{Weinberg:1995mt,greiner2012quantum}, it was established by Wigner that elementary particles are group representations and can be characterized by eigenvalues of the Poincar{\'e} group's two Casimir operators:
 \begin{gather}
     C_{1}\equiv p_{\mu}p^{\mu} = p^{2} = m^{2}c^{2}\,,\\
     C_{2}\equiv w_{\mu}w^{\mu} = w^{2}\,,\qquad w_{\alpha}=\frac{1}{2}\varepsilon_{\alpha\beta\mu\nu}M^{\beta\mu}p^{\nu}\,,
@@ -639,11 +652,11 @@ where $w^{\alpha}$ is the Pauli-Lubanski pseudo-vector. Here $M^{\alpha\beta}$ i
 \begin{gather}
     M^{\alpha\beta} = x^{\alpha}p^{\beta}-x^{\beta}p^{\alpha} + S^{\alpha\beta}
 \end{gather}
-where $S^{\alpha\beta}$ is the spin angular momentum tensor. The spin tensor $S^{\alpha\beta}$ can be understood via the classical (Cl.) four-spin defined in the rest frame for a massive particle as
+where $S^{\alpha\beta}$ is the spin angular momentum tensor. The spin tensor $S^{\alpha\beta}$ can be understood via the classical (Cl.) four-spin defined in the rest frame (RF) for a massive particle as
 \begin{gather}
-    s^{\alpha} = (0,\bb{s})\,,\qquad s_{\alpha}s^{\alpha} = -\bb{s}_\mathrm{Cl.}^{2}\,,\qquad s_{\alpha} = \frac{1}{2mc}\varepsilon_{\alpha\beta\mu\nu}S^{\beta\mu}p^{\nu}\,,
+    s^{\alpha}\vert_\mathrm{RF} = (0,\bb{s}_\mathrm{Cl.})\,,\qquad s_{\alpha}s^{\alpha} = -\bb{s}_\mathrm{Cl.}^{2}\,,\qquad s_{\alpha} = \frac{1}{2mc}\varepsilon_{\alpha\beta\mu\nu}S^{\beta\mu}p^{\nu}\,,
 \end{gather}
-where $\bb{s}_\mathrm{Cl.}$ is the classical Euclidean three-spin (not to be confused with the quantum operator $\bb{s}$). We also note that to make the units correct, the Pauli-Lubanski pseudo-vector and the four-spin are proportional in the rest frame by a factor of $\sqrt{C_{1}}=mc$. Quantum mechanically~\citep{Ohlsson:2011zz} $S^{\alpha\beta}$ appears as $\sim\sigma^{\alpha\beta}$ which we've already identified as the spin tensor in Dirac theory defined via the $\gamma^{\alpha}$ matrices.
+where $\bb{s}_\mathrm{Cl.}$ is the classical Euclidean three-spin (not to be confused with the quantum operator $\bb{s}$). We also note that to make the units correct, the Pauli-Lubanski pseudo-vector and the four-spin are proportional by a factor of $\sqrt{C_{1}}=mc$. Quantum mechanically~\citep{Ohlsson:2011zz} $S^{\alpha\beta}$ appears as $\sim\sigma^{\alpha\beta}$ which we've already identified as the spin tensor in Dirac theory defined via the $\gamma^{\alpha}$ matrices.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Covariant magnetic potential and modified Lorentz force}
@@ -665,12 +678,12 @@ The zeroth component of the covariant potential in the rest frame \req{bpot:1} r
 \begin{gather}
     U_\mathrm{Mag.}=dB^{0}=dF^{0\beta}s_{\beta}=-\bb{\mu}_\mathrm{Cl.}\cdot\bb{B}\,,\qquad \bb{\mu}_\mathrm{Cl.}=\mu\frac{\bb{s}_\mathrm{Cl.}}{|\bb{s}_\mathrm{Cl.}|}\,.
 \end{gather}
-We can then define a covariant magnetic field tensor from the potential \req{bpot:1} which generalizes the Lorentz force as
+We can then define a covariant magnetic field tensor from the potential \req{bpot:1} which generalizes the covariant Lorentz force $F_\mathrm{L}^{\alpha}$ as
 \begin{gather}
     \label{LSG02}
     G^{\alpha\beta}=\partial^{\alpha}B^{\beta}-\partial^{\beta}B^{\alpha}= G^{\alpha\beta}=\partial^{\alpha}F^{*\beta\gamma}s_{\gamma}-\partial^{\beta}F^{*\alpha\gamma}s_{\gamma}\,,\\
     \label{LSG01}
-    \frac{dp^{\alpha}}{d\tau}=eF^{\alpha\beta}u_{\beta}+dG^{\alpha\beta}u_{\beta}\,,
+    F_\mathrm{L}^{\alpha}\equiv\frac{dp^{\alpha}}{d\tau}=eF^{\alpha\beta}u_{\beta}+dG^{\alpha\beta}u_{\beta}\,,
 \end{gather}
 where $u_{\alpha}$ is the four-velocity and as previously stated, $e$ and $d$ are the electric and dipole charges. While the first term in \req{LSG01} is the standard Lorentz force, the second term is a covariant formulation of the SG force.
 
@@ -687,3 +700,72 @@ The spin torque equations can be obtained~\citep{Bargmann:1959gz} by inserting t
 The constants $\tilde{a}$ and $\tilde{b}$ are arbitrary allowing for extra terms not forbidden by special relativity. With $d=0$, \req{LSG03} are known as the Thomas-Bargmann-Michel-Telegdi (TMBT) equations. In the standard derivation of relativistic spin precession, in the TBMT equation, the $\tilde{a}$ constant is associated with the anomalous magnetic moment.
 
 In allowing for spin precession sourced by a Stern-Gerlach dipole force, an additional constant $\tilde{b}$ must be introduced. The terms in \req{LSG02} involving the $G$ tensor are spin precession directly originating from dipole forces. In homogeneous electromagnetic fields, \req{LSG02} reduces to the standard TBMT equation. These dynamical torque equations have found use in describing neutral and charged systems classically~\citep{Formanek:2021mcp,Formanek:2019cga} and inspired further efforts to improve covariant dynamics~\citep{Formanek:2020ojr}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Equivalency of Gilbertian and Amp{\`e}rian Stern-Gerlach forces}
+\label{sec:ampgil}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We can identify the covariant formulation described in \req{LSG01} with the SG force in two different ways which define different interpretations of the magnetic dipole. Explicitly magnetic forces in the non-relativistic limit manifest in two different variants:
+\begin{alignat}{1}
+\label{gil:0}
+\bb{F}_\mathrm{G} = (\bb{\mu}\cdot\bb{\nabla})\bb{B}\ &:\ \mathrm{Gilbert\ dipole}\,,\\
+\label{amp:0}
+\bb{F}_\mathrm{A} =\bb{\nabla}(\bb{\mu}\cdot\bb{B})\ &:\ \mathrm{Amp{\`e}re\ dipole}\,.
+\end{alignat}
+The Gilbert model describes the dipole moment of two magnetic monopole charges; and the Amp{\`e}re dipole is generated by a loop of electric current. They differ in the directionality of the Euclidean three-force: The Gilbertian dipole force is in the direction of magnetic field while the Amp{\`e}rian force is in the direction of gradient. The two forces are related via
+\begin{alignat}{1}
+\label{grad:1}
+\bb{\nabla}(\bb{\mu}\cdot\bb{B}) = (\bb{\mu}\cdot\bb{\nabla})\bb{B}+\bb{\mu}\times(\bb{\nabla}\times\bb{B})\,,
+\end{alignat}
+with the assumption that the dipole is spatially independent. The second term in the above equation can be rewritten using Amp{\`e}re's law
+\begin{alignat}{1}
+\label{grad:2}
+\bb{\mu}\times(\bb{\nabla}\times\bb{B}) = \bb{\mu}\times\Big(\mu_{0}\bb{J}+\frac{1}{c^{2}}\frac{\partial\bb{E}}{\partial t}\Big)
+\end{alignat}
+where $\mu_{0}$ is understood to be the vacuum permeability. The important takeaway is that the Amp{\`e}rian (gradient direction) and Gilbertian (field direction) forces are related via a term ultimately sensitive to the external current $\bb{J}$ of the system.
+
+Before we show how this manifests in the covariant formulation, we recall the orthogonality of four-velocity and four-spin given in \req{bpot:4}. This property allows us to write the covariant Lorentz force in \req{LSG01} in two equivalent forms which we will call the Amp{\`e}rian $F_\mathrm{L,A}^{\alpha}$ and Gilbertian $F_\mathrm{L,G}^{\alpha}$ covariant expressions for reasons that will become obvious soon
+\begin{align}
+\label{amp}
+F_\mathrm{L,A}^{\alpha} &= eF^{\alpha\beta}u_{\beta} + ds_{\gamma}u_{\beta}(\partial^{\alpha}F^{*\beta\gamma}-\partial^{\beta}F^{*\alpha\gamma})\,,\\
+\label{gil}
+F_\mathrm{L,G}^{\alpha} &= eF^{\alpha\beta}u_{\beta} -d(s_{\gamma}\partial^{\gamma})F^{*\alpha\beta}u_{\beta}+ds_{\gamma}T^{\gamma\alpha\beta}u_{\beta}\,.
+\end{align}
+The tensor $T^{\alpha\mu\nu}$ is the completely antisymmetric
+\begin{align}
+    T^{\alpha\mu\nu} = \partial^{\alpha}F^{*\mu\nu}+\partial^{\mu}F^{*\nu\alpha}+\partial^{\nu}F^{*\alpha\mu}\,,
+\end{align}
+dual tensor to electric four-current.
+
+We will now show that the expression $F_\mathrm{L,A}^{\alpha}$ depends on an Amp{\`e}rian dipole and the proper time derivative of the fields. Recognizing that $d/d\tau=u\cdot\partial$, \req{amp} can be rewritten as
+\begin{align}
+F_\mathrm{L,A}^{\alpha} = eF^{\alpha\beta}u_{\beta} + ds_{\gamma}\left(\partial^{\alpha}F^{*\beta\gamma}u_{\beta}-\frac{d}{d\tau}F^{*\alpha\gamma}\right)\,.
+\end{align}
+We evaluate the four-force in the instantaneous rest frame (RF) of the particle such that $u^{\alpha}=(c,0)$, $d/d\tau=\partial/\partial t$ and $s^{\alpha}=(0,\bb{s}_\mathrm{Cl.})$. Noting that $\bb{\mu}=dc\bb{s}_\mathrm{Cl.}$ this yields
+\begin{alignat}{1}
+\label{amp:1}
+F_\mathrm{L,A}^{0}\vert_\mathrm{RF} &= -\frac{1}{c}\bb{\mu}\cdot\left(\frac{\partial\bb{B}}{\partial t}-\frac{\partial\bb{B}}{\partial t}\right)=0\,,\\
+\label{amp:2}
+\bb{F}_\mathrm{L,A}\vert_\mathrm{RF} &= e\bb{E} + \bb{\nabla}(\bb{\mu}\cdot\bb{B})-\frac{1}{c^{2}}\bb{\mu}\times\frac{\partial\bb{E}}{\partial t}\,.
+\end{alignat}
+As we see in \req{amp:2}, the second term corresponds to the Amp{\`e}rian SG force written in \req{amp:0}.
+
+We can accomplish the same procedure for $F_\mathrm{L,G}^{\alpha}$ which explicitly depends on a covariant Gilbertian dipole and spin coupling to current. The four-force yields
+\begin{alignat}{1}
+\label{gil:1}
+F_\mathrm{L,G}^{0}\vert_\mathrm{RF} &=0\\
+\label{gil:2}
+\bb{F}_\mathrm{L,G}\vert_\mathrm{RF} &= e\bb{E} +(\bb{\mu}\cdot\bb{\nabla})\bb{B}+\left(\bb{\nabla}(\bb{\mu}\cdot\bb{B})-(\bb{\mu}\cdot\bb{\nabla})\bb{B}-\frac{1}{c^{2}}\bb{\mu}\times\frac{\partial\bb{E}}{\partial t}\right)
+\end{alignat}
+If we cancel out the second and forth terms in \req{gil:2}, we re-obtain the Amp{\`e}rian three-force written in \req{amp:2}.
+
+However, making use of the expressions in \req{grad:1} and Amp{\`e}re's circuital law \req{grad:2}, we can rewrite the above terms yielding
+\begin{alignat}{1}
+\bb{F}_\mathrm{L,G}\vert_\mathrm{RF} &= e\bb{E} +(\bb{\mu}\cdot\bb{\nabla})\bb{B}+\bb{\mu}\times\mu_{0}\bb{J}
+\end{alignat}
+which is the Gilbertian expression for the SG force as given in \req{gil:0}. Our covariant formulation then requires that
+\begin{align}
+    \bb{F}_\mathrm{L,A}\vert_\mathrm{RF} \equiv \bb{F}_\mathrm{L,G}\vert_\mathrm{RF}
+\end{align}
+Thus we find an equivalence between the Gilbertian and Amp{\`e}rian dipoles from the covariant introduction of intrinsic magnetic dipole in our covariant dynamics.
+

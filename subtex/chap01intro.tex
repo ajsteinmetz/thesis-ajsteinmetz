@@ -31,7 +31,7 @@ I was also co-author on the following publications which are not used extensivel
 
 In the realm of the Poincar{\'e} group of spacetime symmetry (rotations, boosts and translations) transformations, each particle can be uniquely labeled by two distinct Casimir invariants: mass and spin. These two operators commute with all generators of the Poincar{\'e} group and act as labels which represent a particle. Therefore in a relativistic context, particle mass and spin are of fundamental importance on equal footing.
 
-If a particle is electrically charged, then by virtue of its spin it will have a magnetic dipole moment. Most neutral particles with spin, though not all, will also have magnetic dipoles though for more complex reasons. Therefore the magnetic behavior of particle is an important window into probing one of the most fundamental properties in physics. As quantum mechanics is not well described in terms of forces or accelerations (except in the context of Ehrenfest-style equations), there is no simple operator description of torque and spin-forces despite having played a key role in the development of quantum mechanics. For a short historical overview of spin see~\cite{Ohanian:1986wg}.
+If a particle is electrically charged, then by virtue of its spin it will have a magnetic dipole moment. Most neutral particles with spin, though not all, will also have magnetic dipoles though for more complex reasons. Therefore the magnetic behavior of particle is an important window into probing one of the most fundamental properties in physics. As quantum mechanics is not well described in terms of forces or accelerations (except in the context of Ehrenfest-style equations), there is no simple operator description of torque and spin-forces despite having played a key role in the development of quantum mechanics. For a short historical overview of spin and its relationship to angular momentum, see~\cite{Ohanian:1986wg}.
 
 This introduction serves to motivate the fundamental concepts of spin, magnetic moment and electromagnetism which have played a crucial role in the history physics and will be explored in the subsequent research chapters. Magnetic (and electric) dipoles, anomalous magnetic moments (AMM), and the wave equations which describe spin-1/2 fermions are covered in \rsec{sec:mom}. Lastly, \rsec{sec:flrw} covers topics in $\Lambda\mathrm{CDM}$ cosmology which are particular relevance to \rchap{chap:cosmo}. This chapter will also serve to establish notation and mathematical conventions. SI units will be used unless otherwise stated.
 
@@ -342,7 +342,7 @@ and $\eta_{c}$ is an arbitrary complex phase. The exact matrix expression of $C$
 \end{align}
 As the spin density $\bar\psi\sigma_{\alpha\beta}\psi$ and vector potential $A^{\alpha}$ (and thus $F^{\alpha\beta}$) are both odd under charge conjugation, the combination present in the AMM Lagrangian \req{lamm:1} is C-even under charge conjugation. The same is true of the EDM Lagrangian \req{ledm:3} which is more easily seen when cast in terms of the dual tensor.
 
-We note that the fields $\psi$, $\bar\psi$ and $A^{\alpha}$ are considered dynamical \emph{operators} within an interacting quantum field theory. C-symmetry is therefore broken when considering an externally fixed background field such as $A_\mathrm{ext}^{\alpha}(x)$ as $C:A_\mathrm{ext}^{\alpha}(x)\rightarrow A_\mathrm{ext}^{\alpha}(x)$.
+We note that the fields $\psi$, $\bar\psi$ and $A^{\alpha}$ are considered dynamical \emph{operators} within an interacting quantum field theory. C-symmetry is therefore broken when considering an externally fixed background field such as $A_\mathrm{ext}^{\alpha}(x)$ as $C:A_\mathrm{ext}^{\alpha}(x)\rightarrow A_\mathrm{ext}^{\alpha}(x)$. This distinction bears some importance when discussing the neutrino flavor rotation in \rchap{chap:neutrino}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Klein-Gordon-Pauli equation}
@@ -534,7 +534,7 @@ The scale factor $a(t)$ denotes the change of proper distances $L(t)$ over time 
 \begin{gather}
     L(t)=L_{0}\frac{a_{0}}{a(t)}\rightarrow L(z)=L_{0}(1+z)\,,
 \end{gather}
-where $z$ is the redshift and $L_{0}$ the comoving length. In an expanding (or contracting) universe which is both homogeneous and isotropic, this implies volumes change with $V(t)=V_{0}/a^{3}(t)$ where $V_{0}=L_{0}^{3}$ is the comoving Cartesian volume. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ as follows
+where $z$ is the redshift and $L_{0}$ the comoving length. In an expanding (or contracting) universe which is both homogeneous and isotropic, this implies volumes change with $V(t)=V_{0}/a^{3}(t)$ where $V_{0}=L_{0}^{3}$ is the comoving Cartesian volume. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ following the conventions in~\cite{weinberg1972gravitation}
 \begin{gather}
   \label{Friedmann:1} H(t)^{2}\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_{N}}{3}\rho_\mathrm{total},\qquad \rho_\mathrm{total}(t)=\rho_{\Lambda}+\rho_\mathrm{DM}(t)+\rho_\mathrm{Baryons}(t)+\ldots\\
   \label{Friedmann:2}
