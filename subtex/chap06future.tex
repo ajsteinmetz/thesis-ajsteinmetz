@@ -3,10 +3,12 @@
 \label{sec:future}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\rsec{sec:quarks} extends the KGP wave equation to also include chromomagnetic dipole moments necessary for quarks in quantum chromodynamics (QCD). We show explicitly that the dipoles are linear in field tensors and do not mix spin degrees of freedom. This section contains unpublished work and is exploratory; though we hope to pursue this research avenue more fully in the future.
+This chapter contains unpublished work and is exploratory; though we hope to complete this research in the near future. \rsec{sec:quarks} extends the KGP wave equation to also include chromomagnetic dipole moments necessary for quarks in quantum chromodynamics (QCD). We show explicitly that the dipoles are linear in field tensors and do not mix spin degrees of freedom.
+
+In \rsec{sec:nucp}, we explore CP violation in the neutrino sector in terms of the Jarlskog invariant and modifications to the mass matrix. The CP symmetry of the electric dipole is discussed. This section follows the notational conventions found in \rchap{chap:neutrino}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Extensions to non-Abelian fields}
+\section{Klein-Gordon-Pauli extensions to non-Abelian fields}
 \label{sec:quarks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -78,13 +80,101 @@ While in electromagnetism, DP and KGP approaches only differ in the presence of 
 
 The dipole characteristics (both electromagnetic and chromomagnetic) of the top-quark is of particular interest~\citep{Labun:2012fg,Vryonidou:2018eyv} because of top-quark's strong coupling to the Higgs and potential BSM physics. We note that current studies focus on a DP approach to chromomagnetism~\citep{Zhang:2010dr,Zhang:2012muc,BuarqueFranzosi:2015jrv}. There is also the added complexity of both the chromomagnetic and magnetic $g$-factors differing from the natural value independently of one another $g_\mathrm{EM}\neq g_\mathrm{QCD}\neq2$. Further study of the KGP approach to chromomagnetism should be pursued. To our knowledge, there is no formulation of \req{eq:spin:12} as an effective field theory in the manner of~\cite{Fleming:2000ib,Bauer:2000yr} for quarks or for electromagnetically charged fermions as was discussed in \rsec{sec:lagrangian}.
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Electric dipole moments and CP symmetry}
+\section{Electromagnetic forced neutrino CP-violation}
+\label{sec:nucp}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Electromagnetic processes in the neutrino sector may yield measurable effects in two aspects of neutrino physics: 
+\begin{itemize}
+    \item[(a)] Neutrino oscillation which is evidence of the non-zero mass eigenstates
+    \item[(b)] Charge-parity (CP) violation in the neutrino sector which occurs due to the presence of at least three generations of neutrinos or additional CP violating interactions
+\end{itemize}
+
+Our motivation is to explore the effect of strong electromagnetic fields on neutrino CP violation by analysis of the electromagnetic dipole interaction and determining its influence on the Jarlskog invariant $J$~\citep{Jarlskog:1985ht,Jarlskog:1985cw,Jarlskog:2004be} which controls the size of CP violation.
+
+One important aspect of neutrino physics is the size of the CP violation~\citep{Xing:2000ik,giunti2007fundamentals,Huber:2022lpm} which can yield insights not only in fundamental physics but cosmology as well. One of the goals of modern neutrino experiments such as DUNE~\cite{DUNE:2020jqi} is to better characterize such effects in astrophysical contexts such as supernova~\citep{DUNE:2020zfm,SajjadAthar:2021prg}, solar neutrinos~\citep{Akhmedov:2022txm} and magnetars~\citep{Lichkunov:2020zzx}. Additionally, there may be a connection~\citep{Pehlivan:2014zua,Balaji:2019fxd,Balaji:2020oig} between CP violation in the neutrino sector and the anomalous magnetic moment (AMM) of the neutrino.
+
+Amplified CP violation is already expected in matter~\citep{Harrison:1999df} such as when travelling through the Earth's crust due to the abundance of electrons and the lack of muons and taus which preferentially affect the electron neutrinos via the weak interaction. This effect may also play a role in the primordial universe where neutrinos would propagate through incredibly matter dense gasses such as during the electron-positron epoch~\citep{Rafelski:2023emw}. Matter modifies CP violation because it changes the effective Hamiltonian of the propagating neutrinos, therefore we should look to other possible sources for modification of the Hamiltonian for CP violation amplification or suppression.
+
+The source of direct CP violation in the neutrinos is ultimately attributable to the mismatch between the mass matrices of the charged flavors $(e,\mu,\tau)$ and the neutral flavors $(\nu_{e},\nu_{\mu},\nu_{\tau})$. The situation is analogous to the quark sector, where instead the relation is between the upper $(u,c,t)$ and lower quark $(d,s,b)$ flavors.
+
+Therefore mass matrix for charged leptons does not commute with the mass matrix of the neutral leptons and cannot be simultaneously diagonalized except for special cases or degeneracy among the mass eigenstates. We can characterize CP violation by introducing the mixing matrices $V_{\ell k}$ (following the notation in \rchap{chap:neutrino}) which diagonalize the individual mass-matrices $M_{\ell\ell'}$ as follows
+\begin{alignat}{1}
+	\label{diagj:1}
+    V_{\ell l}^{\dag}(M^{\nu}M^{\nu\dag})_{\ell\ell'}V_{\ell'k'} = D_{\ell\ell'}^{\nu} = \mathrm{diag}(m_{1}^{2},m_{2}^{2},m_{3}^{2})\,,\\
+    \label{diagj:2}
+    D_{\ell\ell'} = \mathrm{diag}(m_{e},m_{\mu},m_{\tau})\,,
+\end{alignat}
+We have specifically defined the charged leptons flavor states as being simultaneously mass eigenstates without a loss of generality. We will not consider oscillation among the charged leptons, though that may be an avenue of further study~\cite{Akhmedov:2007fk}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Jarlskog invariant}
+\label{sec:jscalar}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The intrinsic CP violation inherent to these mass matrices can be described using the Jarlskog invariant $J$. We first define the commutator of the charged and neutral lepton mass matrices as 
+\begin{alignat}{1}
+	\label{comm:1} [M_{\nu}M_{\nu}^{\dagger},D^{2}]_{\ell\ell'} = C_{\ell\ell'}\,.
+\end{alignat}
+As the elements of the neutrino mixing matrix $V_{\ell k}$ can be experimentally determined, the size of the commutator can be expressed using~\req{diagj:1} and~\req{diagj:2} in terms of the mass eigenstates of the neutrino mass matrix
+\begin{alignat}{1}
+	\label{comm:2} [V(D^{\nu})^{2}V^{\dag},D^{2}]_{\ell\ell'} = C_{\ell\ell'}\,.
+\end{alignat}
+The matrix $C_{\ell\ell'}$ can be unwieldy, so following the procedure by~\citep{Jarlskog:1985ht,Jarlskog:1985cw,Jarlskog:2004be}, we take the determinant of $C_{\ell\ell'}$ in~\req{comm:2} which extracts the invariant quantity associated with the size of the CP violation present. Specifically we are interested in the imaginary portion given by
+\begin{alignat}{1}
+	\label{det:1} \mathrm{Im}\left[\mathrm{det}(C_{\ell\ell'})\right]=2\left(\Delta_{12}\Delta_{23}\Delta_{13}\right)\left(\Delta_{e\mu}\Delta_{\mu\tau}\Delta_{e\tau}\right)J\,,
+\end{alignat}
+where $J$ is the invariant quantity of interest. We define $\Delta_{ij}$ via the eigenstates of the mass matrices as
+\begin{alignat}{1}
+	\label{delta:1} \Delta_{ij}\equiv m^{2}_{i}-m^{2}_{j}\,.
+\end{alignat}
+We can also define the real portion of the determinant and define two quantities $R$ and $J$ together. These two scalars are written in terms of the components of the mixing matrix $V_{\ell k}$ as
+\begin{alignat}{1}
+	\label{j:1}
+    {\cal J}_{ikjl} = \mathrm{Im}\left[V_{ij}V_{kl}V^{*}_{il}V^{*}_{kj}\right]=J\sum_{m,n}\epsilon_{ikm}\epsilon_{jln}\,,\\
+    \label{j:2}
+    {\cal R}_{ikjl} = \mathrm{Re}\left[V_{ij}V_{kl}V^{*}_{il}V^{*}_{kj}\right]=R\sum_{m,n}\epsilon_{ikm}\epsilon_{jln}\,.
+\end{alignat}
+The benefit of $J$ is it captures the `size' of CP violation in a single value and is identically zero for systems which preserve charge-parity symmetry. From \req{det:1} we can see that CP violation vanishes if the commutator of the mass matrices is purely real, and thus the mixing matrix is also purely real, or if there is degeneracy among the mass eigenstates which absorbs a degree of freedom. Therefore CP violation also restricts the form of the underlying BSM physics which generates the masses.
+
+While generally CP violation comes exclusively from the presence of three flavor generations in the Standard Model, we would like to expand the usage of the J-invariant to encompass a family of effects via modification of the mass matrix as was done in \rchap{chap:neutrino}. This would encompass CP violation from the number of flavor generations, physical systems (matter, strong fields, etc...) which effectively break CP, or explicitly in CP violating terms in the Lagrangian such as the presence of electric dipoles into a single framework.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Toy model: CP violation amplification}
+\label{sec:amp}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent While the specific change to neutrino mixing and CP violation depends on the model of the neutrino dipole moment, a demonstrative model would be to assume that the magnetic moment matrix was simply proportional to the natural mass matrix of the neutrino at low order. If the same mechanism which produced neutrino masses also produced their dipoles through some BSM physics, this would not be an unreasonable assumption. Therefore we substitute
+\begin{alignat}{1}
+	\label{simplek:1} \bb{M_{\nu}}\rightarrow\bb{M_{\nu}}'=\bb{M_{\nu}}(1+\kappa\sigma\cdot F)\,,
+\end{alignat}
+which reduces to \req{heff:1} when $\mu B$ is small. As the modified mass matrix commutes entirely with the original mass matrix, as well as the original Hamiltonian with only mass, the mathematical structure of the commutator in \req{comm:1} is unchanged. In other words
+\begin{alignat}{1}
+	\label{commutes:1} \left[\bb{M_{\nu}}',\bb{M_{\nu}}\right]=0\, \rightarrow \mathrm{Im}[\mathrm{det}(\bb{C})] = \mathrm{Im}[\mathrm{det}(\bb{C'})]\,.
+\end{alignat}
+The determinant calculation is then identical between the two mass matrices. While the overall determinant is fixed, the individual elements which make up the determinant are motified nonetheless, though in a way that manifestly compensates. This yields
+\begin{alignat}{1}
+	\label{det:0} \mathrm{Im}\left[\mathrm{det}(\bb{C})\right] &= \left(\Delta_{12}\Delta_{23}\Delta_{13}\right)\left(\Delta_{e\mu}\Delta_{\mu\tau}\Delta_{e\tau}\right)J\,,\\
+	\label{det:2} \mathrm{Im}\left[\mathrm{det}(\bb{C'})\right] &= \left(\Delta_{12}'\Delta_{23}'\Delta_{13}'\right)\left(\Delta_{e\mu}\Delta_{\mu\tau}\Delta_{e\tau}\right)J'\,,
+\end{alignat}
+where we've added primes to denote new values due to remixing. The ratio of modified $J'$ to $J$ is the amplification (or supression) of CP violation \ar given by
+\begin{alignat}{1}
+	\label{amp:1} \mathcal{R} = \frac{J'}{J} = \frac{\left(\Delta_{12}\Delta_{23}\Delta_{13}\right)}{\left(\Delta_{12}'\Delta_{23}'\Delta_{13}'\right)}\,.
+\end{alignat}
+In our simple proportionality model, this simplifies to
+\begin{alignat}{1}
+	\label{amp:2} \mathcal{R} = \frac{1}{\left(1+\kappa\sigma\cdot F\right)^{6}}\,.
+\end{alignat}
+The amplification ratio $\mathcal{R}$ is useful in that it can be applied to a wide range of CP violation processes where the J-invariant is involved in calculating the process amplitudes allowing for substition. To first order, and evaluating $\sigma\cdot F$ for homogeneous magnetic fields, \req{amp:2} can be expressed as
+\begin{alignat}{1}
+	\label{amp:3} \mathcal{R} = 1\pm12\kappa B+\mathcal{O}(B^{2})\,.
+\end{alignat}
+Under this model, the amplification of CP violation is equally compensated by suppression at lowest order for polarized particles in spin states.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Electric dipole moments and CP symmetry}
 \label{sec:edm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent While this dissertation is primarily concerned with the dynamics of magnetic dipoles, we note that the techniques and methods discussed here may also find application in other important topics such as electric dipoles. I stress that the following section should be treated as an interesting avenue for future, not present, work.
-
-The structure of the Pauli term in \req{lamm:1} informs us how to construct the relativistic electric dipole moment (EDM); see~\cite{Knecht:2003kc,Jegerlehner:2017gek}. The generalization to include the electric dipole is
+Here we state the standard picture of CP violation through an electric dipole. The structure of the Pauli term in \req{lamm:1} informs us how to construct the relativistic electric dipole moment (EDM); see~\cite{Knecht:2003kc,Jegerlehner:2017gek}. The generalization to include the electric dipole is
 \begin{alignat}{1}
 	\label{edm:1} \delta\mu\rightarrow\delta\tilde{\mu}\equiv\delta\mu+i\epsilon\gamma^{5}\,,
 \end{alignat}
@@ -152,4 +242,4 @@ and $\eta_{c}$ is an arbitrary complex phase. The exact matrix expression of $C$
 \end{align}
 As the spin density $\bar\psi\sigma_{\alpha\beta}\psi$ and vector potential $A^{\alpha}$ (and thus $F^{\alpha\beta}$) are both odd under charge conjugation, the combination present in the AMM Lagrangian \req{lamm:1} is C-even under charge conjugation. The same is true of the EDM Lagrangian \req{ledm:3} which is more easily seen when cast in terms of the dual tensor.
 
-We note that the fields $\psi$, $\bar\psi$ and $A^{\alpha}$ are considered dynamical \emph{operators} within an interacting quantum field theory. C-symmetry is therefore broken when considering an externally fixed background field such as $A_\mathrm{ext}^{\alpha}(x)$ as $C:A_\mathrm{ext}^{\alpha}(x)\rightarrow A_\mathrm{ext}^{\alpha}(x)$. This distinction bears some importance when discussing the neutrino flavor rotation in \rchap{chap:neutrino}.
+We note that the fields $\psi$, $\bar\psi$ and $A^{\alpha}$ are considered dynamical \emph{operators} within a quantum field theory. C-symmetry is therefore broken when considering an externally fixed background field such as $A_\mathrm{ext}^{\alpha}(x)$ as $C:A_\mathrm{ext}^{\alpha}(x)\rightarrow A_\mathrm{ext}^{\alpha}(x)$. This distinction bears some importance when discussing the neutrino flavor rotation in \rchap{chap:neutrino}.
