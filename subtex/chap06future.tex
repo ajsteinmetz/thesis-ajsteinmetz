@@ -1,0 +1,155 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Future research efforts}
+\label{sec:future}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\rsec{sec:quarks} extends the KGP wave equation to also include chromomagnetic dipole moments necessary for quarks in quantum chromodynamics (QCD). We show explicitly that the dipoles are linear in field tensors and do not mix spin degrees of freedom. This section contains unpublished work and is exploratory; though we hope to pursue this research avenue more fully in the future.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Extensions to non-Abelian fields}
+\label{sec:quarks}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%While most attention in particle physics focuses on the dipole moments of fermions, it is well known that bosons with spin can also carry dipole moments. The most pertinent example is that of the W-boson which after electroweak symmetry breaking has a magnetic dipole term which is analogous to the Pauli term in KGP or DP for fermions. While a wide variety of spin-1 formulations exist, such as the Duffin-Kemmer formulation \ar, in the following discussion we will write in the Proca formulation as it is most similar to how electromagnetic fields, which are also spin-1 fields, are written. For a complex spin-1 field, the Proca action is given by
+%\begin{alignat}{1}
+%	\label{eq:proca:01a} \mathcal{L}_{\mathrm{Proca}} = -\frac{1}{2}\mathcal{F}_{\mu\nu}^{*}\mathcal{F}^{\mu\nu}+\frac{m^{2}c^{2}}{\hbar^{2}}B_{\mu}^{*}B^{\mu}\,,\\
+%	\label{eq:proca:01b} \mathcal{F}^{\mu\nu}=\partial^{\mu}B^{\nu}-\partial^{\nu}B^{\mu}\,.
+%\end{alignat}
+%The Euler-Lagrangian equations of motion are then
+%\begin{alignat}{1}
+%	\label{eq:proca:02a} \partial_{\mu}\mathcal{F}^{\mu\nu}+\frac{m^{2}c^{2}}{\hbar^{2}}B^{\nu}=0\,,
+%\end{alignat}
+%which if the Lorenz gauge $\partial\cdot B=0$ is taken simplifies to a Klein-Gordon style second-order wave equation. If we gauge the fields giving the spin-1 field an electric charge, we can produce a theory which naturally generates a magnetic moment.
+
+The KGP approach to wave equations is robust and is useful not only for electromagnetic interactions: This is a first look at adding the strong interaction into KGP inspired in part by~\cite{Labun:2012ra}. Quarks participate in the strong color interaction of quantum chromodynamics (QCD); therefore they should present a $g$-factor for both their electromagnetic dipole $g_\mathrm{EM}$ as well as their QCD chromomagnetic dipole $g_\mathrm{QCD}$.
+
+Since color charges follows a more complex $SU(3)$ group structure unlike the more straight forward $U(1)$ of electromagnetism, the ``color magnetism'' of QCD requires more than just the analogous Pauli term to describe color dipole moments owing due to the fact that QCD has non-Abelian (non-commuting) gluon gauge fields $\mathcal{A}^{\alpha}$.
+
+The quarks (like all particles) should obey the quantum mechanical analogue of the energy-momentum relation seen in \req{eq:spin:03} with the only theoretical difference being a modified covariant derivative. The covariant derivative, written in terms of kinetic momentum, should appear as
+\begin{alignat}{1}
+    \label{eq:spin:08}
+    \mathrm{EM+QCD}:\qquad i\hbar\widetilde\nabla=\pi^{\alpha}=p^{\alpha}-q_\mathrm{EM}A^{\alpha}-q_\mathrm{QCD}\mathcal{A}^{\alpha}\,,
+\end{alignat}
+where $q_\mathrm{EM}$ is the electric charge of the quarks $q_\mathrm{EM}/e\in\pm1/3,\pm2/3$ and $q_\mathrm{QCD}$ is the color charge coupling strength. In many texts the symbol $g_{s}$ is used for the color coupling strength, but we circumvent that notation using $q_\mathrm{QCD}$ to avoid confusion with $g$-factor.
+
+We follow the conventions in~\cite{greiner2006qcd}. The eight $3\times3$ Gell-Mann matrices $\lambda^{a}$ are embedded into each independent field as
+\begin{alignat}{1}
+	\label{eq:spin:09} \mathcal{A}^{\alpha}\equiv\frac{1}{2}\lambda^{a}\mathcal{A}^{\alpha}_{a}\,,\qquad a\in1\ldots8\,,\qquad
+    [\lambda^{a},\lambda^{b}]=\frac{i}{2}f^{abc}\lambda^{c}\,,
+\end{alignat}
+where $\mathcal{A}_{a}^{\alpha}$ are the individual fields for each gluon species in a given representation and $f^{abc}$ is the $SU(3)$ antisymmetric structure function. The non-commuting behavior of the Gell-Mann matrices captures the non-Abelian structure of the gauge fields. The gluon field strength tensor $\mathcal{G}^{\alpha\beta}$ is then
+\begin{gather}
+	\label{eq:spin:10a}
+    \mathcal{G}^{\alpha\beta} = \partial^{\alpha}\mathcal{A}^{\beta} -\partial^{\beta}\mathcal{A}^{\alpha} + \frac{i}{\hbar}q_\mathrm{QCD}\left[\mathcal{A}^{\alpha},\mathcal{A}^{\beta}\right]\,,\\
+	\label{eq:spin:10b} \left[\mathcal{A}^{\alpha},\mathcal{A}^{\beta}\right] =
+    \frac{1}{4}\mathcal{A}^{\alpha}_{a}\mathcal{A}^{\beta}_{b}\left[\lambda^{a},\lambda^{b}\right] =
+    \frac{i}{8}\mathcal{A}^{\alpha}_{a}\mathcal{A}^{\beta}_{b}f^{abc}\lambda_{c}\,.
+\end{gather}
+
+Following the same procedure in \rsec{sec:unique}, we can generalize the energy-momentum relation and obtain the EM+QCD variant of the KGP equation for quarks. We find that the resulting quark-KGP equation is
+\begin{align}
+    \label{eq:spin:11a}
+    \gamma_{\alpha}\gamma_{\beta}\pi^{\alpha}\pi^{\beta} = \eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta} - 
+    \frac{q_\mathrm{EM}\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta} - 
+    \frac{q_\mathrm{QCD}\hbar}{2}\sigma_{\alpha\beta}\mathcal{G}^{\alpha\beta}\,,\\
+	\label{eq:spin:11b} \left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta} - 
+    \frac{q_\mathrm{EM}\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta} - 
+    \frac{q_\mathrm{QCD}\hbar}{2}\sigma_{\alpha\beta}\mathcal{G}^{\alpha\beta}\right)\Psi=m_{q}^{2}c^{2}\Psi_{q}\,,
+\end{align}
+which mirrors the electromagnetic case except for the extension of a chromomagnetic Pauli term. We note that $m_{q}$ is the quark mass and that the field $\Psi_{q}$ is a color triplet of spinors for: red, green, blue:
+\begin{align}
+    \Psi_{q}=
+    \begin{pmatrix}
+        \Psi_{r}\\
+        \Psi_{g}\\
+        \Psi_{b}
+    \end{pmatrix}\,.
+\end{align}
+As only the non-commuting portion of \req{eq:spin:11b} (written explicitly in \req{eq:spin:10b}) is off-diagonal in color, this means that the additional non-commuting chromomagnetic term acts as a transition matrix between different quark colors.
+
+This method (based on the commutator of the kinetic momentum) suggests that the color and electromagnetic $g$-factors both have a natural value of $g_\mathrm{EM}\!=\!g_\mathrm{QCD}\!=\!2$. We can generalize \req{eq:spin:11a} to allow for arbitrary EM and QCD dipole moments $g_\mathrm{EM}$ and $g_\mathrm{QCD}$ respectively as
+\begin{align}
+	\label{eq:spin:12}
+    \boxed{\left(\eta_{\alpha\beta}\pi^{\alpha}\pi^{\beta}-\frac{g_\mathrm{EM}}{2}\frac{q_\mathrm{EM}\hbar}{2}\sigma_{\alpha\beta}F^{\alpha\beta}-\frac{g_\mathrm{QCD}}{2}\frac{q_\mathrm{QCD}\hbar}{2}\sigma_{\alpha\beta}\mathcal{G}^{\alpha\beta}\right)\Psi=m_{q}^{2}c^{2}\Psi}\,.
+\end{align}
+
+
+While in electromagnetism, DP and KGP approaches only differ in the presence of strong EM fields and are otherwise identical in the weak field limit, this cannot be equally said in QCD. The perturbative limit which justifies the DP approach for leptons in QED is possible due to the small value of the fine structure constant which is not true in QCD. Only for high momentum interactions (such as those present in quark-gluon-plasma (QGP) or in energetic collisions) is the perturbative approach applicable~\citep{Choudhury:2014lna}. We emphasize however that the DP approach is only valid where the dipole moment is obtainable via perturbative expansion which may not hold if the $g$-factor results from non-perturbative physics.
+
+The dipole characteristics (both electromagnetic and chromomagnetic) of the top-quark is of particular interest~\citep{Labun:2012fg,Vryonidou:2018eyv} because of top-quark's strong coupling to the Higgs and potential BSM physics. We note that current studies focus on a DP approach to chromomagnetism~\citep{Zhang:2010dr,Zhang:2012muc,BuarqueFranzosi:2015jrv}. There is also the added complexity of both the chromomagnetic and magnetic $g$-factors differing from the natural value independently of one another $g_\mathrm{EM}\neq g_\mathrm{QCD}\neq2$. Further study of the KGP approach to chromomagnetism should be pursued. To our knowledge, there is no formulation of \req{eq:spin:12} as an effective field theory in the manner of~\cite{Fleming:2000ib,Bauer:2000yr} for quarks or for electromagnetically charged fermions as was discussed in \rsec{sec:lagrangian}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Electric dipole moments and CP symmetry}
+\label{sec:edm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent While this dissertation is primarily concerned with the dynamics of magnetic dipoles, we note that the techniques and methods discussed here may also find application in other important topics such as electric dipoles. I stress that the following section should be treated as an interesting avenue for future, not present, work.
+
+The structure of the Pauli term in \req{lamm:1} informs us how to construct the relativistic electric dipole moment (EDM); see~\cite{Knecht:2003kc,Jegerlehner:2017gek}. The generalization to include the electric dipole is
+\begin{alignat}{1}
+	\label{edm:1} \delta\mu\rightarrow\delta\tilde{\mu}\equiv\delta\mu+i\epsilon\gamma^{5}\,,
+\end{alignat}
+where $\epsilon$ is the EDM of the particle. As the natural electric dipole within the Dirac equation is zero, the presence of $\epsilon$ is always considered anomalous. The EDM Pauli Lagrangian term is
+\begin{gather}
+    \label{ledm:1}
+    \mathcal{L}_\mathrm{EDM} = -{\bar\psi}\left(i\epsilon\gamma^{5}\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\psi\,,
+\end{gather}
+which is of interest because of the inclusion of $\gamma^{5}$. Taking advantage of the properties of $\gamma^{5}$, we can write the EDM in \req{ledm:1} as
+\begin{gather}
+    \label{ledm:3}
+    \gamma^{5}\sigma_{\mu\nu}=\frac{i}{2}\varepsilon_{\mu\nu\alpha\beta}\sigma^{\alpha\beta}\,\rightarrow
+    \mathcal{L}_\mathrm{EDM} = +{\bar\psi}\left(\epsilon\frac{1}{2}\sigma^{\alpha\beta}F_{\alpha\beta}^{*}\right)\psi\,.
+\end{gather}
+which is more closely analogous to the structure of the AMM in \req{lamm:1} making use of the dual form of the electromagnetic field tensor shown in \req{em:2}.
+
+Following a procedure similar to the one found in \rsec{sec:mom}, \req{ledm:3} reduces in the non-relativistic limit to the Hamiltonian density EDM interaction
+\begin{gather}
+    \label{ledm:4}
+    \mathcal{H}_\mathrm{EDM} \approx \epsilon\chi^{\dag}\bb{\sigma}\cdot\bb{E}\chi\,.
+\end{gather}
+The electric dipole is important because the presence of one would signify charge-parity (CP) violation in the theory which provides a method to distinguish between matter and antimatter. We discuss briefly using the parity (P) and time (T) symmetries of the relevant spin $\bb{s}$ and field vectors $(\bb{E},\bb{B})$ and their inner products. The even and odd symmetries of each are printed in \rt{fig:cp}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+ \centering
+ \begin{tabular}{ r|c|c|c|c|c| }
+ \multicolumn{1}{r}{}
+ & \multicolumn{1}{c}{$\bb{E}$}
+ & \multicolumn{1}{c}{$\bb{B}$}
+ & \multicolumn{1}{c}{$\bb{s}$}
+ & \multicolumn{1}{c}{$\bb{s}\!\cdot\!\bb{E}$}
+ & \multicolumn{1}{c}{$\bb{s}\!\cdot\!\bb{B}$} \\
+ \cline{2-6}
+ \begin{tabular}[x]{@{}c@{}}T symmetry\\ $(t\rightarrow-t)$\end{tabular} & \textbf{even} & odd & odd & odd & \textbf{even} \TBstrut\\
+ \cline{2-6}
+ \begin{tabular}[x]{@{}c@{}}P symmetry\\ $(\bb{x}\rightarrow-\bb{x})$\end{tabular} & odd & \textbf{even} & \textbf{even} & odd & \textbf{even} \TBstrut\\
+ \cline{2-6}
+ \begin{tabular}[x]{@{}c@{}}PT symmetry\\ $(x^{\alpha}\rightarrow-x^{\alpha})$\end{tabular} & odd & odd & odd & \textbf{even} & \textbf{even} \TBstrut\\
+ \cline{2-6}
+ \end{tabular}\\ \,\Bstrut\\
+ \caption{Time (T), parity (P) and PT symmetries of electric $\bb{E}$, magnetic $\bb{B}$, spin $\bb{s}$ three-vectors and the inner products which describe the dipole Hamiltonian terms.}
+ \label{fig:cp}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The EDM term \req{ledm:4} is overall T-odd and P-odd while the magnetic dipole is T-even and P-even. While EDM dipoles are common in molecular systems, no electric dipole has ever been measured for an elementary particle nor composite particles like the proton or neutron despite extensive searching. As a point of comparison, the EDM of the electron is excluded~\citep{ACME:2018yjb,Roussy:2022cmp} by a bound of $|\epsilon_{e}/c|<4.1\times10^{-30}\, e\,\mathrm{cm}$.
+
+For CPT symmetry to hold, \rt{fig:cp} implies that both the electric and magnetic dipoles must be C-even. C-symmetry is a more complicated concept to discuss as it is only well-defined relativistically where particle and antiparticle states are simultaneously described by the theory. The Dirac spinor charge conjugates as
+\begin{align}
+    \label{c:1}
+    C:\psi\rightarrow\psi_{c}=\eta_{c}C(\bar\psi)^\mathrm{T}= \eta_{c}C\gamma_{0}^\mathrm{T}\psi^{*}\,,
+\end{align}
+where $C$ is the charge conjugation matrix satisfying the conjugation relation
+\begin{align}
+    \label{c:2}
+    -C\gamma_{\alpha}^\mathrm{T}C^{-1}=\gamma_{\alpha}\,,
+\end{align}
+and $\eta_{c}$ is an arbitrary complex phase. The exact matrix expression of $C$ depends on the representational basis used (Dirac, Weyl, Majorana, etc...). We're specifically interesting in the following conjugations
+\begin{align}
+    \label{c:3}
+    C:\bar\psi\gamma_{\alpha}\psi\rightarrow-\bar\psi\gamma_{\alpha}\psi\,,\qquad
+    C:\bar\psi\sigma_{\alpha\beta}\psi\rightarrow-\bar\psi\sigma_{\alpha\beta}\psi\,,\qquad
+    C:A^{\alpha}\rightarrow-A^{\alpha}\,.
+\end{align}
+As the spin density $\bar\psi\sigma_{\alpha\beta}\psi$ and vector potential $A^{\alpha}$ (and thus $F^{\alpha\beta}$) are both odd under charge conjugation, the combination present in the AMM Lagrangian \req{lamm:1} is C-even under charge conjugation. The same is true of the EDM Lagrangian \req{ledm:3} which is more easily seen when cast in terms of the dual tensor.
+
+We note that the fields $\psi$, $\bar\psi$ and $A^{\alpha}$ are considered dynamical \emph{operators} within an interacting quantum field theory. C-symmetry is therefore broken when considering an externally fixed background field such as $A_\mathrm{ext}^{\alpha}(x)$ as $C:A_\mathrm{ext}^{\alpha}(x)\rightarrow A_\mathrm{ext}^{\alpha}(x)$. This distinction bears some importance when discussing the neutrino flavor rotation in \rchap{chap:neutrino}.

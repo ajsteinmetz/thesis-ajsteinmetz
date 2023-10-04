@@ -136,7 +136,7 @@ Introducing the expansion scale factor $a(t)$ via \req{tscale}, \req{bscale} and
 \end{alignat}
 This reveals that only the mass contribution is dynamic over cosmological time. The constant of motion $b_{0}$ defined in \req{tbscale} is seen as the coefficient to the Landau and spin portion of the energy. For any given eigenstate, the mass term drives the state into the non-relativistic limit while the momenta and magnetic contributions are frozen by initial conditions. 
 
-As a point of comparison, the Boltzmann factor for the DP energy eigenvalues are given by
+In comparison, the Boltzmann factor for the DP energy eigenvalues are given by
 \begin{alignat}{1}
     \label{xscaledp:1} x_{\sigma,s}^{n}\vert_\mathrm{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{eB}{T^{2}}\left(2n+1+\sigma s\right)}+\frac{eB}{2m_{e}T}\left(\frac{g}{2}-1\right)\sigma s\right)^{2}+\frac{p_{z}^{2}}{T^{2}}}\,,
 \end{alignat}
@@ -146,7 +146,7 @@ which scales during FLRW expansion as
 \end{multline}
 While the above expression is rather complicated, we note that the KGP~\req{xscale:1} and DP~\req{xscaledp:1} Boltzmann factors both reduce to the Sch{\"o}dinger-Pauli limit as $a(t)\rightarrow\infty$ thereby demonstrating that the total magnetic moment is protected under the adiabatic expansion of the universe.
 
-Higher order non-minimal magnetic contributions which can be introduced to the energies such as $\sim\mu_{B}^{2}B^{2}/T^{2}$ are then suppressed over cosmological time driving the system into minimal electromagnetic coupling with the exception of the anomalous magnetic moment. It is interesting to note that cosmological expansion serves to `smooth out' the characteristics of more complex BSM electrodynamics erasing them from a statistical perspective in favor of the minimal or minimal-like dynamics.
+As noted in in \rsec{sec:ikgp} and \rsec{sec:emmass}, higher order non-minimal magnetic contributions can be introduced to the Boltzmann factor such as $\sim(e/m)^{2}B^{2}/T^{2}$. The reasoning above suggests that these terms are suppressed over cosmological time driving the system into minimal electromagnetic coupling with the exception of the anomalous magnetic moment. It is interesting to note that cosmological expansion then serves to `smooth out' the characteristics of more complex electrodynamics erasing them from a statistical perspective in favor of minimal-like dynamics.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Magnetized fermion partition function}
@@ -248,6 +248,7 @@ With the energies written in this fashion, we recognize the first term in \req{P
 \end{gather}
 which recasts the first term in \req{PartFuncTwo} as
 \begin{align}
+    \label{FreePart}
     \ln\mathcal{Z}_{e^{+}e^{-}} = \frac{V}{(2\pi)^{3}}\sum_{\sigma,s}^{\pm1}\int d\bb{p}^{3}\ln\left(1+\Upsilon_{\sigma,s}\exp{\left(-\frac{m_{\sigma,s}\sqrt{1+p^{2}/m_{\sigma,s}^{2}}}{T}\right)}\right)+\ldots
 \end{align}
 As we will see in the proceeding section, this separation of the `free-like' partition function can be reproduced in the Boltzmann distribution limit as well. This marks the end of the analytic analysis without approximations.
@@ -335,7 +336,7 @@ We take advantage again of Euler-Maclaurin integration \req{eulermaclaurin} and 
     \label{xfunc}
     x_{s'}=\frac{{\tilde m}_{s'}}{T}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1-\frac{g}{2}s'\right)}\,.
 \end{gather}
-The latter two terms in \req{boltzmann} proportional to $b_{0}K_{1}$ and $b_{0}^{2}K_{0}$ are the uniquely magnetic terms present containing both spin and Landau orbital influences in the partition function. The $K_{2}$ term is analogous to the free Fermi gas~\citep{greiner2012thermodynamics} being modified only by spin effects.
+The latter two terms in \req{boltzmann} proportional to $b_{0}K_{1}$ and $b_{0}^{2}K_{0}$ are the uniquely magnetic terms present in powers of magnetic scale \req{tbscale} containing both spin and Landau orbital influences in the partition function. The $K_{2}$ term is analogous to the free Fermi gas~\citep{greiner2012thermodynamics} being modified only by spin effects.
 
 This `separation of concerns' can be rewritten as
 \begin{gather}
@@ -346,18 +347,45 @@ This `separation of concerns' can be rewritten as
     \left(\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)\,,        
 \end{gather}
 
-where the spin (S) and spin-orbit (SO) partition functions can be considered independently. When the magnetic scale $b_{0}$ is small, the spin-orbit term \req{spinorbit} becomes negligible leaving only paramagnetic effects in \req{spin} due to spin. In the non-relativistic limit, \req{spin} reproduces a quantum gas whose Hamiltonian is defined as the free particle (FP) Hamiltonian plus the magnetic dipole (MD) Hamiltonian which span two independent Hilbert spaces $\mathcal{H}_\mathrm{FP}\otimes\mathcal{H}_\mathrm{MD}$.
+where the spin (S) and spin-orbit (SO) partition functions can be considered independently. When the magnetic scale $b_{0}$ is small, the spin-orbit term \req{spinorbit} becomes negligible leaving only paramagnetic effects in \req{spin} due to spin. In the non-relativistic limit, \req{spin} reproduces a quantum gas whose Hamiltonian is defined as the free particle (FP) Hamiltonian plus the magnetic dipole (MD) Hamiltonian which span two independent Hilbert spaces $\mathcal{H}_\mathrm{FP}\otimes\mathcal{H}_\mathrm{MD}$. The non-relativistic limit is further discussed in \rsec{sec:nrboltz}.
 
 Writing the partition function as \req{boltzmann} instead of \req{partitionpower:1} has the additional benefit that the partition function remains finite in the free gas $({B}\rightarrow0)$ limit. This is because the free Fermi gas and \req{spin} are mathematically analogous to one another. As the Bessel $K_{\nu}$ functions are evaluated as functions of $x_{\pm}$ in \req{xfunc}, the `free' part of the partition $K_{2}$ is still subject to spin magnetization effects. In the limit where ${B}\rightarrow0$, the free Fermi gas is recovered in both the Boltzmann approximation $k=1$ and the general case $\sum_{k=1}^{\infty}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
- \centering
- \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.0cm,width=0.95\linewidth]{plots/chap04cosmo/thesis_chempot.pdf}
- \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\eta$ and magnetic scale $b_{0}$.}
- \label{fig:chemicalpotential}
-\end{figure}
+\subsection{Non-relativistic limit of the magnetized partition function}
+\label{sec:nrboltz}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While we label the first term in \req{FreePart} as the `free' partition function, this is not strictly true as the partition function dependant on the magnetic-mass we defined in \req{effmass:2}. When determining the magnetization of the quantum Fermi gas, derivatives of the magnetic field $B$ will not fully vanish on this first term which will resulting in an intrinsic magnetization which is distinct from the Landau levels.
+
+This represents magnetization that arises from the spin magnetic energy rather than orbital contributions. To demonstrate this, we will briefly consider the weak field limit for $g=2$. The effective polarized mass for electrons is then
+\begin{align}
+  \label{MagMassPlus}
+  \tilde{m}_{+}^{2}&=m_{e}^{2}\,,\\
+  \label{MagMassMinus}
+  \tilde{m}_{-}^{2}&=m_{e}^{2}+2eB\,,
+\end{align}
+with energy eigenvalues
+\begin{align}
+  \label{EPlus}
+  E_{n}^{+}&=\sqrt{p_{z}^{2}+m_{e}^{2}+2eBn}\,,\\
+  \label{EMinus}
+  E_{n}^{-}&=\sqrt{\left(E_{n}^{+}\right)^{2}+2eB}\,.
+\end{align}
+The spin anti-aligned states in the non-relativistic (NR) limit reduce to
+\begin{align}
+  \label{EMinusNR} E_{n}^{-}\vert_\mathrm{NR}\approx E_{n}^{+}\vert_\mathrm{NR}+\frac{eB}{m_{e}}\,.
+\end{align}
+This shift in energies is otherwise not influenced by summation over Landau quantum number $n$, therefore we can interpret this energy shift as a shift in the polarization potential from \req{spotential}. The polarization potential is then
+\begin{align}
+  \label{SpinChem} \eta_{e}^{\pm}=\eta_{e}\pm\frac{eB}{2m_{e}}\,,
+\end{align}
+allowing us to rewrite the partition function in \req{partitionpower:1} as
+\begin{gather}
+  \label{PartTotalNR} \ln\mathcal{Z}_{e^{-}}\vert_{NR}=\frac{eBV}{(2\pi)^{2}}\sum_{s'}^{\pm}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}dp_{z}\frac{(-1)^{k+1}}{k}2\cosh(k\beta\eta_{e}^{s'})\lambda^{k}\exp(-k\epsilon_{n}/T)\,,\\
+  \label{NREnergy} \epsilon_{n}=m_{e}+\frac{p_{z}^{2}}{2m_{e}}+\frac{eB}{2m_{e}}\left(n+1\right)\,.
+\end{gather}
+
+\req{PartTotalNR} is then the traditional NR quantum harmonic oscillator partition function with a spin dependant chemical potential shift differentiating the aligned and anti-aligned states. We note that in this formulation, the spin contribution is entirely excised from the orbital contribution. Under Euler-Maclaurin integration, the now spin-independant Boltzmann factor can be further separated into `free' and Landau quantum parts as was done in \req{FreePart} for the relativistic case. We note however that the inclusion of anomalous magnetic moment spoils this clean separation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Electron-positron chemical potential}
@@ -370,6 +398,15 @@ Writing the partition function as \req{boltzmann} instead of \req{partitionpower
  \left[\sum_{s'}^{\pm1}\xi_{s'}\!\left(\!x_{s'}^{2}K_{2}(x_{s'})\!+\!\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})\!+\!\frac{b_{0}^{2}}{12}K_{0}(x_{s'}\!)\!\right)\!\right]^{-1}\!.
 \end{gather}
 \req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\eta=0$ implying no external bias to the number of polarizations except as a consequence of the difference in energy eigenvalues. In practice, the latter two terms in \req{chem} are negligible to chemical potential in the bounds of the primordial $e^{+}e^{-}$ plasma considered and only becomes relevant for extreme (see \rf{fig:chemicalpotential}) magnetic field strengths well outside our scope.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+ \centering
+ \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.0cm,width=0.95\linewidth]{plots/chap04cosmo/thesis_chempot.pdf}
+ \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\eta$ and magnetic scale $b_{0}$.}
+ \label{fig:chemicalpotential}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \req{chem} simplifies if there is no external magnetic field $b_{0}=0$ into
 \begin{align}
