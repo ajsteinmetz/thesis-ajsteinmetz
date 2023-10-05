@@ -1,17 +1,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Future research efforts}
-\label{sec:future}
+\label{chap:future}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 This chapter contains unpublished work and is exploratory; though we hope to complete this research in the near future. \rsec{sec:quarks} extends the KGP wave equation to also include chromomagnetic dipole moments necessary for quarks in quantum chromodynamics (QCD). We show explicitly that the dipoles are linear in field tensors and do not mix spin degrees of freedom.
 
-In \rsec{sec:nucp}, we explore CP violation in the neutrino sector in terms of the Jarlskog invariant and modifications to the mass matrix. The CP symmetry of the electric dipole is discussed. This section follows the notational conventions found in \rchap{chap:neutrino}.
+In \rsec{sec:nucp}, we explore CP violation in the neutrino sector in terms of the Jarlskog invariant and modifications to the mass matrix. The CP symmetry of the electric dipole is discussed. This section follows the conventions found in \rchap{chap:neutrino}.
+
+The final \rsec{sec:kk} is a short description of a personal passion project to integrate spin dynamics into the five dimensional theory of Kaluza-Klein which unifies electromagnetism and gravitation classically. While I have written much on the topic, it remains unfinished and will only occupy a small section of this dissertation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Klein-Gordon-Pauli extensions to non-Abelian fields}
 \label{sec:quarks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%I'm leaving this bit in as an easteregg since I wanted to do g!=2 stuff with spin-1 fields but never got far into it while writing this. When I return to in the future, I'll come back here resurrect this bit.
 %While most attention in particle physics focuses on the dipole moments of fermions, it is well known that bosons with spin can also carry dipole moments. The most pertinent example is that of the W-boson which after electroweak symmetry breaking has a magnetic dipole term which is analogous to the Pauli term in KGP or DP for fermions. While a wide variety of spin-1 formulations exist, such as the Duffin-Kemmer formulation \ar, in the following discussion we will write in the Proca formulation as it is most similar to how electromagnetic fields, which are also spin-1 fields, are written. For a complex spin-1 field, the Proca action is given by
 %\begin{alignat}{1}
 %	\label{eq:proca:01a} \mathcal{L}_{\mathrm{Proca}} = -\frac{1}{2}\mathcal{F}_{\mu\nu}^{*}\mathcal{F}^{\mu\nu}+\frac{m^{2}c^{2}}{\hbar^{2}}B_{\mu}^{*}B^{\mu}\,,\\
@@ -114,7 +117,7 @@ We have specifically defined the charged leptons flavor states as being simultan
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The intrinsic CP violation inherent to these mass matrices can be described using the Jarlskog invariant $J$. We first define the commutator of the charged and neutral lepton mass matrices as 
 \begin{alignat}{1}
-	\label{comm:1} [M_{\nu}M_{\nu}^{\dagger},D^{2}]_{\ell\ell'} = C_{\ell\ell'}\,.
+	\label{comm:1} [M^{\nu}M^{\nu\dag},D^{2}]_{\ell\ell'} = C_{\ell\ell'}\,.
 \end{alignat}
 As the elements of the neutrino mixing matrix $V_{\ell k}$ can be experimentally determined, the size of the commutator can be expressed using~\req{diagj:1} and~\req{diagj:2} in terms of the mass eigenstates of the neutrino mass matrix
 \begin{alignat}{1}
@@ -135,40 +138,44 @@ We can also define the real portion of the determinant and define two quantities
     \label{j:2}
     {\cal R}_{ikjl} = \mathrm{Re}\left[V_{ij}V_{kl}V^{*}_{il}V^{*}_{kj}\right]=R\sum_{m,n}\epsilon_{ikm}\epsilon_{jln}\,.
 \end{alignat}
-The benefit of $J$ is it captures the `size' of CP violation in a single value and is identically zero for systems which preserve charge-parity symmetry. From \req{det:1} we can see that CP violation vanishes if the commutator of the mass matrices is purely real, and thus the mixing matrix is also purely real, or if there is degeneracy among the mass eigenstates which absorbs a degree of freedom. Therefore CP violation also restricts the form of the underlying BSM physics which generates the masses.
+The benefit of $J$ is it captures the `size' of CP violation in a single value and is identically zero for systems which preserve charge-parity symmetry. From \req{det:1} we can see that CP violation vanishes if the commutator of the mass matrices is purely real, and thus the mixing matrix is also purely real, or if there is degeneracy among the mass eigenstates which absorbs a degree of freedom.
 
-While generally CP violation comes exclusively from the presence of three flavor generations in the Standard Model, we would like to expand the usage of the J-invariant to encompass a family of effects via modification of the mass matrix as was done in \rchap{chap:neutrino}. This would encompass CP violation from the number of flavor generations, physical systems (matter, strong fields, etc...) which effectively break CP, or explicitly in CP violating terms in the Lagrangian such as the presence of electric dipoles into a single framework.
+While generally CP violation comes exclusively from the presence of three flavor generations in the Standard Model, we would like to expand the usage of the J-invariant to encompass a family of effects via modification of the mass matrix as was done in \rchap{chap:neutrino}. This would encompass CP violation from the number of flavor generations, physical systems (matter, strong fields, etc...) which effectively break CP, or in CP violating terms in the Lagrangian.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Toy model: CP violation amplification}
 \label{sec:amp}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent While the specific change to neutrino mixing and CP violation depends on the model of the neutrino dipole moment, a demonstrative model would be to assume that the magnetic moment matrix was simply proportional to the natural mass matrix of the neutrino at low order. If the same mechanism which produced neutrino masses also produced their dipoles through some BSM physics, this would not be an unreasonable assumption. Therefore we substitute
+\noindent While the specific change to neutrino mixing and CP violation depends on the model of the neutrino dipole moment, a demonstrative model would be to assume that the magnetic moment matrix was simply proportional to the natural mass matrix of the neutrino at low order. Therefore we substitute
 \begin{alignat}{1}
-	\label{simplek:1} \bb{M_{\nu}}\rightarrow\bb{M_{\nu}}'=\bb{M_{\nu}}(1+\kappa\sigma\cdot F)\,,
+	\label{simplek:1} M_{\ell\ell'}^{\nu}\rightarrow
+    (M_{\ell\ell'}^{\nu})'=M_{\ell\ell'}^{\nu}(1+\kappa\sigma_{\alpha\beta}F^{\alpha\beta})\,.
 \end{alignat}
-which reduces to \req{heff:1} when $\mu B$ is small. As the modified mass matrix commutes entirely with the original mass matrix, as well as the original Hamiltonian with only mass, the mathematical structure of the commutator in \req{comm:1} is unchanged. In other words
+If the same mechanism which produced neutrino masses also produced their dipoles through some BSM physics, this would not be an unreasonable assumption.
+
+As the modified mass matrix commutes entirely with the original mass matrix, the mathematical structure of the commutator in \req{comm:1} is unchanged
 \begin{alignat}{1}
-	\label{commutes:1} \left[\bb{M_{\nu}}',\bb{M_{\nu}}\right]=0\, \rightarrow \mathrm{Im}[\mathrm{det}(\bb{C})] = \mathrm{Im}[\mathrm{det}(\bb{C'})]\,.
+	\label{commutes:1} \left[(M^{\nu})',M^{\nu}\right]=0\,\rightarrow
+    \mathrm{Im}[\mathrm{det}(C_{\ell\ell'})] = \mathrm{Im}[\mathrm{det}(C_{\ell\ell'}')]\,.
 \end{alignat}
-The determinant calculation is then identical between the two mass matrices. While the overall determinant is fixed, the individual elements which make up the determinant are motified nonetheless, though in a way that manifestly compensates. This yields
+The determinant calculation is then identical between the two mass matrices. While the overall determinant is fixed, the individual elements which make up the determinant are modified. This yields
 \begin{alignat}{1}
-	\label{det:0} \mathrm{Im}\left[\mathrm{det}(\bb{C})\right] &= \left(\Delta_{12}\Delta_{23}\Delta_{13}\right)\left(\Delta_{e\mu}\Delta_{\mu\tau}\Delta_{e\tau}\right)J\,,\\
-	\label{det:2} \mathrm{Im}\left[\mathrm{det}(\bb{C'})\right] &= \left(\Delta_{12}'\Delta_{23}'\Delta_{13}'\right)\left(\Delta_{e\mu}\Delta_{\mu\tau}\Delta_{e\tau}\right)J'\,,
+	\label{det:0} \mathrm{Im}\left[\mathrm{det}(C_{\ell\ell'})\right] &= \left(\Delta_{12}\Delta_{23}\Delta_{13}\right)\left(\Delta_{e\mu}\Delta_{\mu\tau}\Delta_{e\tau}\right)J\,,\\
+	\label{det:2} \mathrm{Im}\left[\mathrm{det}(C_{\ell\ell'}')\right] &= \left(\Delta_{12}'\Delta_{23}'\Delta_{13}'\right)\left(\Delta_{e\mu}\Delta_{\mu\tau}\Delta_{e\tau}\right)J'\,,
 \end{alignat}
-where we've added primes to denote new values due to remixing. The ratio of modified $J'$ to $J$ is the amplification (or supression) of CP violation \ar given by
+where we have added primes to denote new values due to remixing. A similar result occurs in matter in~\cite{Harrison:1999df}. The ratio of modified $J'$ to $J$ is the amplification (or suppression) of CP violation given by
 \begin{alignat}{1}
-	\label{amp:1} \mathcal{R} = \frac{J'}{J} = \frac{\left(\Delta_{12}\Delta_{23}\Delta_{13}\right)}{\left(\Delta_{12}'\Delta_{23}'\Delta_{13}'\right)}\,.
+	\label{ampj:1} \mathcal{R} = \frac{J'}{J} = \frac{\left(\Delta_{12}\Delta_{23}\Delta_{13}\right)}{\left(\Delta_{12}'\Delta_{23}'\Delta_{13}'\right)}\,.
 \end{alignat}
 In our simple proportionality model, this simplifies to
 \begin{alignat}{1}
-	\label{amp:2} \mathcal{R} = \frac{1}{\left(1+\kappa\sigma\cdot F\right)^{6}}\,.
+	\label{ampj:2} \mathcal{R} = \frac{1}{\left(1+\kappa\sigma_{\alpha\beta}F^{\alpha\beta}\right)^{6}}\,.
 \end{alignat}
-The amplification ratio $\mathcal{R}$ is useful in that it can be applied to a wide range of CP violation processes where the J-invariant is involved in calculating the process amplitudes allowing for substition. To first order, and evaluating $\sigma\cdot F$ for homogeneous magnetic fields, \req{amp:2} can be expressed as
+To first order, and evaluating $\sigma_{\alpha\beta}F^{\alpha\beta}$ for homogeneous magnetic fields, \req{ampj:2} can be expressed as
 \begin{alignat}{1}
 	\label{amp:3} \mathcal{R} = 1\pm12\kappa B+\mathcal{O}(B^{2})\,.
 \end{alignat}
-Under this model, the amplification of CP violation is equally compensated by suppression at lowest order for polarized particles in spin states.
+where we allow for aligned and anti-aligned spin states.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Electric dipole moments and CP symmetry}
@@ -242,4 +249,37 @@ and $\eta_{c}$ is an arbitrary complex phase. The exact matrix expression of $C$
 \end{align}
 As the spin density $\bar\psi\sigma_{\alpha\beta}\psi$ and vector potential $A^{\alpha}$ (and thus $F^{\alpha\beta}$) are both odd under charge conjugation, the combination present in the AMM Lagrangian \req{lamm:1} is C-even under charge conjugation. The same is true of the EDM Lagrangian \req{ledm:3} which is more easily seen when cast in terms of the dual tensor.
 
-We note that the fields $\psi$, $\bar\psi$ and $A^{\alpha}$ are considered dynamical \emph{operators} within a quantum field theory. C-symmetry is therefore broken when considering an externally fixed background field such as $A_\mathrm{ext}^{\alpha}(x)$ as $C:A_\mathrm{ext}^{\alpha}(x)\rightarrow A_\mathrm{ext}^{\alpha}(x)$. This distinction bears some importance when discussing the neutrino flavor rotation in \rchap{chap:neutrino}.
+We note that the fields $\psi$, $\bar\psi$ and $A^{\alpha}$ are considered dynamical \emph{operators} within a quantum field theory. C-symmetry is therefore broken when considering an externally fixed background field such as $A_\mathrm{ext}^{\alpha}(x)$ as $C:A_\mathrm{ext}^{\alpha}(x)\rightarrow A_\mathrm{ext}^{\alpha}(x)$. This distinction bears some importance when discussing the neutrino flavor rotation in \rchap{chap:neutrino}. There is also interest in EDM behavior in the background of curved spacetime~\citep{Filho:2023lqe}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Spin in 5D Kaluza-Klein theory}
+\label{sec:kk}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The `miracle' of Kaluza-Klein~\citep{theodor1921unitatsproblem,klein1926quantentheorie} is that both 4D gravitation and electromagnetism emerge from a higher dimension 5D gravitational theory. While the specific importance of Kaluza's result to the physical world (if there is one) has yet to be revealed, the ideas of Kaluza-Klein have been extensively used to showcase the emergence of unified physics from higher dimensional geometries~\citep{Ortin:2015hya}.
+
+In the modern context, we understand that Kaluza-Klein in its original form cannot strictly be correct as we are operating purely in the classical regime and we are missing the incorporation of the weak and strong interactions as well. With all that said, there is still value in exploring the implications of Kaluza-Klein in that Kaluza's miracle might very well not be an accident, but a natural result from a fuller more complete implementation of these ideas~\citep{Overduin:1997sri}.
+
+The main goal of this research effort is to obtain the spin dynamics of a test particle in the context of a 5D Kaluza-Klein style theory in the same spirit as was accomplished for the general relativistic torque equations
+\begin{alignat}{1}
+  \label{STRESS06} \frac{Dp^{\mu}}{D\tau}+\frac{1}{2}u^{\nu}s^{\rho\sigma}R^{\mu}_{\ \nu\rho\sigma}=0\,,\qquad
+  \frac{Ds^{\mu\nu}}{D\tau}+2u^{[\mu}p^{\nu]}=0\,,
+\end{alignat}
+which couples spin and precession to a curved spacetime. An additional term is also required to accommodate spin in the kinematic equation. \req{STRESS06} is known as the Mathisson-Papapetrou-Dixon (MPD) equations~\citep{mathisson1937neue,Papapetrou:1951pa,Dixon:1970zza}. The rank-four tensor $R^{\mu}_{\ \nu\rho\sigma}$ is the Rienmann curvature defined by
+\begin{alignat}{1}
+  \label{STRESS08} R^{\mu}_{\ \nu\rho\sigma}V^{\nu}=2\nabla_{[\rho}\nabla_{\sigma]}V^{\mu}\,,
+\end{alignat}
+where $V^{\mu}$ is any arbitrary vector and the notation $[\rho,\sigma]$ indicates a commutator of indices. The significance of \req{STRESS06} is that particle motion will deviate away from traditional geodesic motion due to a coupling of the curvature to the spin.
+
+To promote the above equations into the Kaluza-Klein framework, we consider Lorentz five-vectors $\hat{P}^{A}$ which are dressed with a hat and capital Latin letters indices $A\in(0-3,5)$. The position five-vector is then denoted by $\hat{x}^{A}=(x^{\mu},x_{5})$ where $x_{5}$ is the fifth coordinate position. The 5D Einstein-Hilbert action is
+\begin{alignat}{1}
+	\label{KALUZA01} \mathcal{S}[\hat{g}_{AB}]=\frac{c^{4}}{16\pi\hat{G}}\int\mathrm{d}\hat{x}^{5}\sqrt{-\hat{g}}\hat{R}\,.
+\end{alignat}
+The variable $\hat{G}$ is the 5D gravitational constant and $\hat{R}$ is the Ricci scalar in the 5D space-time. Kaluza-Klein theories are usually expressed as Ricci-flat theories with the scalar curvature $\hat{R}=0$, but in general nothing prevents us from including matter or other fields in the five-dimensional bulk by adding terms to the above action.
+
+In a 5D spacetime, a particle under free-fall motion manifests as accelerated motion analogous to \req{STRESS06} caused by the electromagnetic force and an additional scalar force in the four-dimensional sector. Because particles with spin deviate from geodesics in free-fall, there should ultimately be spin precession generated by electromagnetism, the scalar field, and gravitation.
+
+Therefore we propose a classical spin five-vector
+\begin{alignat}{1}
+	\label{KALUZA01a} \hat{s}^{A}=(s^{\alpha},s_{5})\,,
+\end{alignat}
+which relates the classical four-spin \req{fourspin} discussed in \rsec{sec:cspin} to a new fifth component of spin $s_{5}$. We note that analogously the fifth component of five-momentum is related to the mass of the particle; it is our suggestion that the fifth component of spin is related to the invariant spin magnitude. It is the study of this object that will be left to future publications.

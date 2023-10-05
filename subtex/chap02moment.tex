@@ -96,18 +96,6 @@ E_{n,s}=\pm\sqrt{m_{e}^{2}c^{4}+p_{3}^{2}c^{2}+2e\hbar c^{2}B\left(n+\frac{1}{2}
 \end{gather}
 This expression for the relativistic Landau levels is the same as found by~\cite{Weisskopf:1936hya} for the Dirac equation setting $g\!=\!2$ in \req{lan24b}. The Landau orbital part and spin portions can be combined when the magnetic moment is expressed in terms of $e/m$, but the form in \req{lan24b} keeps it generalized for the case of neutral particles.
 
-The `Landau' problem for neutral particles (for example the neutron with mass $m_\mathrm{N}$) simplifies to
-\begin{gather}
-\label{neutral:1}
-E_{n,s}|_{e=0}\rightarrow E_{s}(\bb{p},B)=\sqrt{m_\mathrm{N}^{2}c^{4}+\bb{p}^{2}c^{2}-2\mu B m_\mathrm{N}c^{2}s}\;,
-\end{gather}
-which is just the free particle motion with a magnetic dipole energy. We note the correspondence between the quantized Landau orbitals and continuous transverse momentum $\bb{p}^{2}=p_{3}^{2}+p_\mathrm{T}^{2}$. We can define an `effective' polarization mass given by
-\begin{gather}
-\label{neutral:2}
-\boxed{\tilde{m}^{2}_{s}(B)=m^{2}c^{4}-2\mu B mc^{2}s}\,.
-\end{gather}
-This effective polarization mass (which also is easily defined for charged particles) will find use when we consider cosmic thermodynamics and plasmas in \rchap{chap:cosmo}.
-
 Restricting ourselves to the positive energy spectrum, the non-relativistic reduction of \req{lan24b} can be carried out in powers of $1/m$ in the large mass limit yielding
 \begin{alignat}{1}
 \label{lan27} E_{n,s}|_\mathrm{NR}&=m_{e}c^{2}+\frac{p_{3}^{2}}{2m_{e}}+\mu_{B}B\left(2n+1-\frac{g}{2}s\right)-\frac{p_{3}^{4}}{8m_{e}^{3}c^{2}}\\ \notag &\!-\!\frac{p_{3}^{2}}{2m_{e}}\frac{\mu_{B}B}{m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)\!-\!\frac{\mu_{B}^{2}B^{2}}{2m_{e}c^{2}}\left(2n+1-\frac{g}{2}s\right)^{2}\!+\!\mathcal{O}(1/m_{e}^{5})\;,\end{alignat}
@@ -340,27 +328,11 @@ For fine structure of the muonic-hydrogen system, the KGP-DP discrepancy is
 \end{alignat} 
 We can make a general observation that non minimal magnetic coupling, such as we have studied in the DP and KGP cases, enlarge energy level splittings. The above shows that these discrepancies will remain when calculating within more realistic finite nuclear size context.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Particles in strong electromagnetic fields}
 \label{sec:sb}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Care must be taken when interpreting the results presented in sections. For physical electrons the AMM interaction is the result of vacuum fluctuations whose strength also depends on the strength of the field. For example in the large magnetic field limit a QED computation shows that the ground state is instead of \req{lan24b} given by~\cite{Jancovici:1969exc}
+Care must be taken when interpreting the results presented in strong electromagnetic fields; see~\cite{Gonoskov:2021hwf,Fedotov:2022ely}. Strong fields are produced in heavy-ion collisions forming quark-gluon-plasma which have electromagnetic properties~\citep{Grayson:2022asf}. For physical electrons the AMM interaction is the result of vacuum fluctuations whose strength also depends on the strength of the field. For example in the large magnetic field limit a QED computation shows that the ground state is instead of \req{lan24b} given by~\cite{Jancovici:1969exc}
 \begin{alignat}{1} \label{vacfl01}
 E_{0}\approx mc^{2}+\frac{\alpha}{4\pi}mc^{2}\ \mathrm{ln}^{2}\left(\frac{2e\hbar B}{m^{2}c^{3}}\right)\,,
 \end{alignat}
@@ -372,7 +344,7 @@ The situation is different for composite particles such as the proton, neutron a
 \subsection{Strong homogeneous magnetic fields}
 \label{sec:sbl}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent The magnetic moment anomaly can flip the sign of the magnetic energy for the least excited states causing the gap between particle and antiparticle states to decrease with magnetic field strength. Setting $p_z=0$ in \req{lan24}, we show in~\rf{f01} that the energy of the lowest KGP Landau eigenstate $n=0, s=1/2$ reaches zero where the gap between particle and antiparticle states vanishes for the field
+The magnetic moment anomaly can flip the sign of the magnetic energy for the least excited states causing the gap between particle and antiparticle states to decrease with magnetic field strength. Setting $p_z=0$ in \req{lan24}, we show in~\rf{f01} that the energy of the lowest KGP Landau eigenstate $n=0, s=1/2$ reaches zero where the gap between particle and antiparticle states vanishes for the field
 \begin{subequations}
 \begin{alignat}{1}\label{Bcrit}
 &B_\mathrm{crit}^{e}=\frac{{B}_{S}^{e}}{a_{e}}\simeq861{B}_{S}^{e} =3.8006\times10^{16}\;\mathrm{G}\;,\\
@@ -470,7 +442,22 @@ The pattern of merging states with the same angular momentum first discussed in 
 \section{Combination of mass and magnetic moment}
 \label{sec:ikgp}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-While we have thus far focused on the Dirac-Pauli and Klein-Gordon-Pauli models for magnetic dipole moments, the non-uniqueness of spin dynamics allows us to invent further non-linear EM models which all in the non-relativistic limit yield the non-relativistic QM magnetic dipole Hamiltonian. One such extension to quantum spin dynamics is to note the close relationship mass and magnetic moment share in the KGP formalism. We can write a unified dipole-mass as
+While we have thus far focused on the DP and KGP models for magnetic dipole moments, the non-uniqueness of spin dynamics allows us to invent further non-linear EM models which all in the non-relativistic limit yield the non-relativistic QM magnetic dipole Hamiltonian. One such extension to quantum spin dynamics is to note the close relationship mass and magnetic moment share in the KGP formalism which we describe below.
+
+Neutral particle electromagnetic interactions are of interest~\cite{Bruce:2020xer,Bruce:2021cva,Bruce:2021fph} allowing for a variety of model-building. The `Landau' energies for neutral particles (\emph{i.e.} neutron with mass $m_\mathrm{N}$) 
+in \req{lan24b} simplifies to
+\begin{gather}
+\label{neutral:1}
+E_{n,s}|_{e=0}\rightarrow E_{s}(\bb{p},B)=\sqrt{m_\mathrm{N}^{2}c^{4}+\bb{p}^{2}c^{2}-2\mu B m_\mathrm{N}c^{2}s}\;,
+\end{gather}
+which is just the free particle motion with a magnetic dipole energy. We note the correspondence between the quantized Landau orbitals and continuous transverse momentum $\bb{p}^{2}=p_{3}^{2}+p_\mathrm{T}^{2}$. We can define an `effective' polarization mass given by
+\begin{gather}
+\label{neutral:2}
+\tilde{m}^{2}_{s}(B)=m^{2}c^{4}-2\mu B mc^{2}s\,.
+\end{gather}
+This effective polarization mass (which also is easily defined for charged particles) will find use when we consider cosmic thermodynamics and plasmas in \rchap{chap:cosmo}.
+
+Inspired by \req{neutral:2}, we can write a unified dipole-mass as
 \begin{alignat}{1}
     \label{eq:ext:01} \boxed{\widetilde{m}(\bb{E},\bb{B}) = m +\mu\frac{\sigma_{\alpha\beta}F^{\alpha\beta}}{2c^{2}}}\,,
 \end{alignat}
@@ -578,6 +565,7 @@ where $w^{\alpha}$ is the Pauli-Lubanski pseudo-vector. Here $M^{\alpha\beta}$ i
 \end{gather}
 where $S^{\alpha\beta}$ is the spin angular momentum tensor. The spin tensor $S^{\alpha\beta}$ can be understood via the classical (Cl.) four-spin in the rest frame (RF) as
 \begin{gather}
+    \label{fourspin}
     s^{\alpha}\vert_\mathrm{RF} = (0,\bb{s}_\mathrm{Cl.})\,,\qquad s_{\alpha}s^{\alpha} = -\bb{s}_\mathrm{Cl.}^{2}\,,\qquad s_{\alpha} = \frac{1}{2mc}\varepsilon_{\alpha\beta\mu\nu}S^{\beta\mu}p^{\nu}\,,
 \end{gather}
 where $\bb{s}_\mathrm{Cl.}$ is the classical Euclidean three-spin (not to be confused with the quantum operator $\bb{s}$). We also note that to make the units correct, the Pauli-Lubanski pseudo-vector and the four-spin are proportional by a factor of $\sqrt{C_{1}}=mc$. Quantum mechanically~\citep{Ohlsson:2011zz} $S^{\alpha\beta}$ appears as $\sim\sigma^{\alpha\beta}$ which we've already identified as the spin tensor in Dirac theory defined via the $\gamma^{\alpha}$ matrices.
