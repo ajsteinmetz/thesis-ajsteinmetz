@@ -1,4 +1,4 @@
-# thesis
+# thesis-ajsteinmetz
 Modern topics in relativistic spin dynamics dynamics and magnetism. A Ph.D. dissertation by Andrew James Steinmetz (2023)
 
 ## abstract
