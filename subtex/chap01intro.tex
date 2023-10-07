@@ -29,7 +29,7 @@ I was also co-author on the following publications which are not used extensivel
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent All fundamental particles known in physics have a non-zero quantized spin angular momentum with the exception of the Higgs boson which is a scalar with spin-0. All other confirmed elementary particles (such as electrons, quarks, photons, etc...) have values of either spin-1/2 or spin-1. Particles with even values of spin are known as bosons while half-integer particles with spin are called fermions. Composite particles (such as atomic nuclei) can exhibit more exotic spin values and fundamental particles with higher spins such as spin-3/2 or spin-2 graviton are commonly predicted in beyond-standard-model (BSM) physics.
 
-In the realm of the Poincar{\'e} group of spacetime symmetry (rotations, boosts and translations) transformations, each particle can be uniquely labeled by two distinct Casimir invariants: mass and spin. These two operators commute with all generators of the Poincar{\'e} group and act as labels which represent a particle. Therefore in a relativistic context, particle mass and spin are of fundamental importance on equal footing.
+In the realm of the Poincar{\'e} group of spacetime symmetry (rotations, boosts and translations) transformations, each particle can be uniquely labeled by two distinct Casimir invariants: mass and spin. These two operators commute with all generators of the Poincar{\'e} group and act as labels which represent a particle. Therefore in a relativistic context, mass and spin are of fundamental importance on equal footing.
 
 If a particle is electrically charged, then by virtue of its spin it will have a magnetic dipole moment. Most neutral particles with spin, though not all, will also have magnetic dipoles though for more complex reasons. Therefore the magnetic behavior of particle is an important window into probing one of the most fundamental properties in physics. As quantum mechanics is not well described in terms of forces or accelerations (except in the context of Ehrenfest-style equations), there is no simple operator description of torque and spin-forces despite having played a key role in the development of quantum mechanics. For a short historical overview of spin and its relationship to angular momentum, see~\cite{Ohanian:1986wg}.
 
@@ -63,7 +63,7 @@ where $\bb{\sigma}$ is the three-vector comprised of the familiar $2\times2$ Pau
 \end{gather}
 where $\varepsilon_{ijk}$ is the totally antisymmetric Levi-Civita symbol and $\delta_{ij}$ is the Kronecker delta.
 
-The relativistic theory of spin-1/2 fermions however necessitates a four-component spinor $\psi=(\psi_{1},\psi_{2},\psi_{3},\psi_{4})^\mathrm{T}$ which as Dirac famously noted accommodates the required degrees of freedom for particles and antiparticles as well as both spin up $(\uparrow)$ and spin down $(\downarrow)$ eigenstates. The Hamiltonian density (in the Dirac representation) for the magnetic dipole moment interaction is given by
+The relativistic theory of spin-1/2 fermions however necessitates a four-component spinor $\psi=(\psi_{1},\psi_{2},\psi_{3},\psi_{4})^\mathrm{T}$ which as Dirac famously noted accommodates the required degrees of freedom for particles and antiparticles of both spin up $(\uparrow)$ and spin down $(\downarrow)$ eigenstates. The Hamiltonian density (in the Dirac representation) for the magnetic dipole moment interaction is given by
 \begin{gather}
 	\label{pauli:2}
     \mathcal{H}_\mathrm{int} = \frac{e\hbar}{2m_{\ell}}\psi^{\dag}
@@ -139,7 +139,7 @@ To obtain a `force' in quantum mechanics we need to find the time derivative of 
 After some derivation and making use of the identities in \req{h:3}, we arrive at the quantum analog of the Lorentz force for particles with spin
 \begin{gather}
     \label{ehren:1}
-    \boxed{\frac{d\bb{\pi}}{dt}=e\bb{E}+\frac{e}{2m}(\bb{\pi}\times\bb{B}-\bb{B}\times\bb{\pi})+\frac{e\hbar}{2m}\sigma_{i}\bb{\nabla}B_{i}}\,.
+    \boxed{\frac{d\bb{\pi}}{dt}=e\bb{E}+\frac{e}{2m_{\ell}}(\bb{\pi}\times\bb{B}-\bb{B}\times\bb{\pi})+\frac{e\hbar}{2m_{\ell}}\sigma_{i}\bb{\nabla}B_{i}}\,.
 \end{gather}
 The last term in the expression is the Stern-Gerlach force which is sensitive to inhomogeneous magnetic fields. We also note this equation is suggestive of the `Amp{\'e}rian' dipole force which is in the direction of the gradient $\bb{\nabla}$ rather than the `Gilbertian' type of dipole force which is in the direction of the field $\bb{B}$; see \rsec{sec:cspin}. \req{ehren:1} can be connected to our classical understanding by taking the expectation value and casting it as an Ehrenfest-style theorem~\citep{Ehrenfest:1927swx}.
 
@@ -176,7 +176,7 @@ The anomalous magnetic moment of a particle can arise from a variety of physical
     a_{e} = \frac{\alpha}{2\pi}\,,\qquad
     \alpha\equiv\frac{1}{4\pi\varepsilon_{0}}\frac{e^{2}}{\hbar c}\,,
 \end{gather}
-where $\alpha$ is the fine structure constant with an approximate value of $1/137$. The measurement of the electron's $g$-factor is among the most precise measurements in all of physics~\citep{Tiesinga:2021myr} and rapid advancements in the measurement of the muon's anomalous magnetic moment are occurring to this day~\citep{Muong-2:2023cdq}. This makes the study of magnetic moment, and spin, an exciting area of physical research as new developments continue today.
+where $\alpha$ is the fine structure constant with an approximate value of $1/137$. The measurement of the electron's $g$-factor is among the most precise measurements in all of physics~\citep{Tiesinga:2021myr}. Precision measurements of the muon's anomalous magnetic moment are rapidly improving~\citep{Muong-2:2023cdq}. This makes the study of magnetic moment, and spin, an exciting area of physical research as new developments continue today.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dirac and Dirac-Pauli equations}
@@ -217,6 +217,8 @@ where the antisymmetric spin tensor $\sigma_{\alpha\beta}$ is defined in terms o
 	\label{sigma:1}
     \sigma_{\alpha\beta}=\frac{i}{2}\left[\gamma_{\alpha},\gamma_{\beta}\right]=\frac{i}{2}\left(\gamma_{\alpha}\gamma_{\beta}-\gamma_{\beta}\gamma_{\alpha}\right)\,.
 \end{alignat}
+In the above we printed only the magnetic moment term; some remarks about electric dipole moments (EDM) and CP violation can be found in \rsec{sec:edm}.
+
 Exact solutions to the DP equation are relatively scarce due to the complicating nature of the anomalous term. The most extensively studied solutions are those with high symmetries or constant external fields \citep{Thaller:1992ji}. When the anomalous part $\delta\mu$ is zero, the Dirac equation is recovered. $F^{\alpha\beta}$ is the standard antisymmetric electromagnetic field tensor defined by
 \begin{gather}
     \label{em:1}
@@ -266,23 +268,23 @@ where ${\bar\psi}=\psi^{\dagger}\gamma^{0}$ is the Dirac adjoint. While the focu
 
 To demonstrate, we note that the electromagnetic field tensor has natural units of $F^{\alpha\beta}\sim[\mathrm{length}]^{-2}$. Therefore the product $\psi\sigma_{\alpha\beta}F^{\alpha\beta}\psi$ has natural units of $[\mathrm{length}]^{-5}$ and the coefficient of \req{lamm:1} (given by $\delta\mu$) has to compensate with $\delta\mu\sim[\mathrm{length}]^{1}$. This makes the DP Lagrangian unsuitable for renormalization which is an essential feature required for well-behaved QFTs. While this does not stop us using DP as an effective QFT with some natural cutoff scale responsible for the anomalous moment, it does reduce the usefulness of the equation as a general description of quantum dipole moments.
 
-As such, there is no reason to expect non-perturbative sources of magnetic moment to strictly adhere to the DP form. An example of this would be the hadronic contribution to the lepton AMM. Additionally, the DP equation has the physically inelegant consequence of splitting the spin dynamics of fermions into (a) natural $g\!=\!2$ behavior (see \rsec{sec:unique}) encompassed by the spinor structure of the Dirac equation and (b) the anomalous behavior contained in the Pauli term.
+As such, there is no reason to expect non-perturbative sources of magnetic moment to strictly adhere to the DP form. Additionally, the DP equation has the physically inelegant consequence of splitting the spin dynamics of fermions into (a) natural $g\!=\!2$ behavior (see \rsec{sec:unique}) encompassed by the spinor structure of the Dirac equation and (b) the anomalous behavior contained in the Pauli term.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Klein-Gordon-Pauli equation}
 \label{sec:kgp}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent While the DP equation is more commonly used, there exists an alternative wave equation which describes the magnetic behavior of fermions called the Klein-Gordon-Pauli (KGP) equation. This equation was first introduced by~\cite{Fock:1937dy} and found usefulness in the quantum electrodynamics~\citep{Feynman:1951gn} and in studying weak interactions~\citep{Feynman:1958ty} due to the ease of describing chiral states.
+\noindent While the DP equation is more commonly studied, there exists an alternative wave equation which describes the magnetic behavior of fermions called the Klein-Gordon-Pauli (KGP) equation. This first introduced by~\cite{Fock:1937dy} and found usefulness in the quantum electrodynamics~\citep{Feynman:1951gn} and in studying weak interactions~\citep{Feynman:1958ty} due to the ease of describing chiral states.
 
 The KGP equation is generally considered to be the `square' of the Dirac equation as unlike the Dirac or DP equations, it is a second order equation wave equation for the four-component spinor $\Psi$
 \begin{alignat}{1}
 	\label{kgp:1} \left((i\hbar\partial^{\alpha}-eA^{\alpha})^{2}-m_{\ell}^{2}c^{2}-g\mu_{\ell}m_{\ell}\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=0\,.
 \end{alignat}
-In the above we printed both only the magnetic moment term; some remarks about electric dipole moments (EDM) and CP violation can be found in \rsec{sec:edm}. The initial benefit of the KGP formulation is that the wave equation fully commutes with $\gamma^{5}$ making eigen-functions explicitly good chiral states. This equation is physically distinct from the DP and Dirac equations and only share solutions when $g\!=\!2$ which is seen if one tries to na{\"i}vely square the DP \req{dp:1}.
+The initial benefit of the KGP formulation is that the wave equation fully commutes with $\gamma^{5}$ making eigen-functions explicitly good chiral states.
 
 \req{kgp:1} is mathematically similar to the Klein-Gordon equation which describes charged scalar particles. In the same manner as scalar-QED, the squared covariant derivative contains a $e^{2}A^{2}$ term which in QFT results in the presence of a 4-vertex seagull interaction~\citep{Schwartz:2014sze} at tree-level.
 
-It is important to emphasize that the KGP \req{kgp:1} and DP \req{dp:1} are distinct wave equations which do not share solutions except when $g\!=\!2$ whereas both reduce to the Dirac \req{dirac:1a}; a detail that has occasionally gone missed in the literature. We will clarify on the relationship between the KGP and Dirac equations here by rewriting the Dirac equation in \req{dirac:1a} as
+It is important to emphasize that the KGP \req{kgp:1} and DP \req{dp:1} are distinct wave equations which do not share solutions except when $g\!=\!2$ whereas both reduce to the Dirac \req{dirac:1a}. We will clarify on the relationship between the KGP and Dirac equations here by rewriting the Dirac equation in \req{dirac:1a} as
 \begin{alignat}{1}
 	\label{do:1} \mathcal{D}_{\pm}=i\hbar\gamma_{\alpha}\widetilde\nabla^{\alpha}\pm m_{\ell}c\,,\qquad
     \mathcal{D}_{-}\psi=0\,,
@@ -293,10 +295,14 @@ with a `Dirac operator' $\mathcal{D}_{\pm}$ defined in terms of positive and neg
     \mathcal{D}_{-}=-\gamma^{5}\mathcal{D}_{+}\gamma^{5}\,,\qquad
     [\mathcal{D}_{+},\mathcal{D}_{-}]=0\,.
 \end{gather}
-Ignoring the proportionality factor of $\sqrt{\hbar/m_{\ell}c}$ which accommodate the units of $\psi$ versus $\Psi$, we can complete the square of the Dirac equation via the substitution $\psi\rightarrow\mathcal{D}_{+}\Psi$
-\begin{alignat}{1}
-	\label{do:3} \mathcal{D}_{-}\psi\rightarrow\mathcal{D}_{-}\mathcal{D}_{+}\Psi\,,\indent\mathcal{D}_{+}\mathcal{D}_{-}\Psi=\left(-\hbar^{2}\widetilde\nabla^{2}-m_{\ell}^{2}c^{2}-e\hbar\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=0\,.
-\end{alignat}
+Ignoring the proportionality factor of $\sqrt{\hbar/m_{\ell}c}$ which accommodate the units of $\psi$ versus $\Psi$, we can complete the square of the Dirac equation via the substitution
+\begin{gather}
+    \label{do:3a}
+    \psi\rightarrow\mathcal{D}_{+}\Psi\,,\qquad
+    \mathcal{D}_{-}\psi \rightarrow \mathcal{D}_{-}\mathcal{D}_{+}\Psi\,,\\
+	\label{do:3}
+    \mathcal{D}_{+}\mathcal{D}_{-}\Psi=\left(-\hbar^{2}\widetilde\nabla^{2}-m_{\ell}^{2}c^{2}-e\hbar\frac{1}{2}\sigma_{\alpha\beta}F^{\alpha\beta}\right)\Psi=0\,.
+\end{gather}
 This procedure yields the KGP equation for $g\!=\!2$. This algebraic `square root' will be elaborated on further in \rsec{sec:unique}.
 
 For $g\!\neq\!2$ the relationship between the DP and KGP equation becomes more complicated. Instead of a clean algebraic separation, the substitution between $\psi$ and $\Psi$ requires an infinite series expansion resulting from the non-local inverse substitution 
@@ -314,7 +320,7 @@ While this procedure `square roots' the KGP equation $(\mathrm{\sqrt{KGP}})$, th
 \end{gather}
 We note each term in \req{lamm:3} is preceded by powers of the reduced Compton wavelength $\lambda_\mathrm{C}\!\equiv\!\hbar/m_{\ell}c$ therefore the $\sqrt{\mathrm{KGP}}$ model still might be of interest to study assuming the physical system that admits a reasonable cutoff.
 
-While the first term present in \req{lamm:3} is indeed the correct $\mathcal{L}_\mathrm{DP,AMM}$ term, the resulting non-local behavior ultimately breaks the unitarity of the theory making it unsuitable as a fundamental particle theory~\citep{Veltman:1997am}. While the above is suggestive that there exists no unitary transform between the KGP and DP wave equations, we do not claim it as an absolute proof. If a generalized description of $g\!=\!2$ magnetic moment theories exists and makes a good fundamental quantum field theory, then likely non-minimal electromagnetic terms are required to maintain both renormalization and unitarity.
+While the first term present in \req{lamm:3} is indeed the correct $\mathcal{L}_\mathrm{DP,AMM}$ term, the resulting non-local behavior ultimately breaks the unitarity of the theory making it unsuitable as a fundamental particle theory~\citep{Veltman:1997am}. While the above is suggestive that there exists no unitary transform between the KGP and DP wave equations, we do not claim it as an absolute proof. If a generalized description of $g\!\neq\!2$ magnetic moment exists as a good quantum field theory, then likely non-minimal electromagnetic terms are required to maintain both renormalization and unitarity.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Features of the KGP Lagrangian}
@@ -356,12 +362,12 @@ The covariant derivative happens to simplify as $\widetilde\nabla\rightarrow\par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 There is a strong predilection in nature towards $g\!=\!2$ which can be explained by the requirements of kinetic operator in quantum mechanics. Rather than taking the non-relativistic limit of the Dirac equation, $g\!=\!2$ can also be derived as a consequence of replacing the definition of the inner product for vectors which accounts for spinor structure via an argument attributed to R. P. Feynman; see footnote in Chap. 3.2 of~\cite{sakurai1967advanced}.
 
-The Schr{\"o}dinger equation can be extended into the Schr{\"o}dinger-Pauli \req{sp:1} via the replacement
+The Schr{\"o}dinger equation can be converted into the SP \req{sp:1} via the following replacement
 \begin{alignat}{1}
 	\label{nat:0}
     \bb{\pi}^{2}\rightarrow(\bb{\sigma}\cdot\bb{\pi})^{2}=\pi_{i}\sigma_{i}\sigma_{j}\pi_{j}\,.
 \end{alignat}
-We note that because the $2\times2$ Pauli matrices $\sigma_{i}$ all anticommute, we can write down the relation
+Because the $2\times2$ Pauli matrices $\sigma_{i}$ all anticommute, we can write down the relation
 \begin{alignat}{1}
 	\label{nat:1}
     (\bb{\sigma}\cdot\bb{a})(\bb{\sigma}\cdot\bb{b})=\bb{a}\cdot\bb{b}+i\bb{\sigma}\cdot(\bb{a}\times\bb{b})\,.
@@ -409,9 +415,9 @@ How $g\!\neq\!2$ AMM `breaks' the inner product substitution is seen more explic
     \label{spinstruc}
     h_{\mu\nu}=\frac{1}{2}\{\gamma_{\mu},\gamma_{\nu}\}+\frac{1}{2}(1+a)[\gamma_{\mu},\gamma_{\nu}]=\gamma_{\mu}\gamma_{\nu}+\frac{a}{2}[\gamma_{\mu},\gamma_{\nu}]\,.
 \end{gather}
-The anomalous part in \req{spinstruc} is inconveniently unable to be packaged as the elementary tensor product of two four-vectors like in \req{eq:spin:03}. The same issue occurs with any anomalous EDM introduction as well. We suggest that more elaborate algebraic structures might accommodate such terms more naturally though we leave that to future work.
+The anomalous part in \req{spinstruc} is inconveniently unable to be packaged as the elementary tensor product of two four-vectors like in \req{eq:spin:03}. The same issue occurs with any anomalous EDM. We suggest that more elaborate algebraic structures might accommodate such terms more naturally though we leave that to future work.
 
-Furthermore, compelling arguments can be made that all elementary particles of any spin must have a natural gyromagnetic factor of $g\!=\!2$, though a competing idea is Belinfante's conjecture of $g\!=\!1/s$. To paraphrase the arguments by~\citet*{Ferrara:1992yc}, $g\!=\!2$ is likely the natural scale for particles of any spin because:
+Furthermore, compelling arguments can be made that all elementary particles of any spin must have a natural gyromagnetic factor of $g\!=\!2$; though we mention a competing idea is Belinfante's conjecture of $g\!=\!1/s$. To paraphrase the arguments by~\citet*{Ferrara:1992yc}, $g\!=\!2$ is likely the natural scale for particles of any spin because:
 \begin{enumerate}[nosep]
 	\item The W boson, as the only known higher spin charged elementary particle, has at tree level $g\!=\!2$ via a Proca-like equation.
 	\item The relativistic TBMT torque equation is the same for any classical spin value and is most simple when the anomalous moment is zero.
@@ -456,7 +462,7 @@ The scale factor $a(t)$ denotes the change of proper distances $L(t)$ over time 
 \begin{gather}
     L(t)=L_{0}\frac{a_{0}}{a(t)}\rightarrow L(z)=L_{0}(1+z)\,,
 \end{gather}
-where $z$ is the redshift and $L_{0}$ the comoving length. In an expanding (or contracting) universe which is both homogeneous and isotropic, this implies volumes change with $V(t)=V_{0}/a^{3}(t)$ where $V_{0}=L_{0}^{3}$ is the comoving Cartesian volume. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ following the conventions in~\cite{weinberg1972gravitation}
+where $z$ is the redshift and $L_{0}$ the comoving length. In an expanding (or contracting) universe which is both homogeneous and isotropic. This implies volumes change with $V(t)=V_{0}/a^{3}(t)$ where $V_{0}=L_{0}^{3}$ is the comoving Cartesian volume. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ following the conventions in~\cite{weinberg1972gravitation}
 \begin{gather}
   \label{Friedmann:1} H(t)^{2}\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_{N}}{3}\rho_\mathrm{total},\qquad \rho_\mathrm{total}(t)=\rho_{\Lambda}+\rho_\mathrm{DM}(t)+\rho_\mathrm{Baryons}(t)+\ldots\\
   \label{Friedmann:2}
@@ -465,7 +471,7 @@ q\equiv -\frac{a\ddot a}{\dot a^2},\qquad \dot H=-H^2(1+q).
 \end{gather}
 where $G_N$ is the Newtonian constant of gravitation. \req{Friedmann:1} and \req{Friedmann:2} are also known as the Friedmann equations. The total density $\rho_\mathrm{total}$ is the sum of all contributions from any form of matter, radiation or field. This includes but is not limited to: dark energy $(\Lambda)$, dark matter (DM), baryons (B), leptons $(\ell,\nu)$ and photons $(\gamma)$. Depending on the age of the universe, the relative importance of each group changes as each dilutes different under expansion with dark energy infamously remaining constant in density and accelerating the universe today.
 
-The parameter $q$ is the cosmic deceleration parameter where for historical reasons expansion is slowing down for $q>0$. before the discovery of dark energy. The early universe was radiation dominated with $q = 1$, subsequently matter dominated with $q = 1/2$, and the contemporary universe is undergoing a transition from matter to dark energy dominated whereas the deceleration settles on the asymptotic value of $q = -1$; see~\cite{Rafelski:2013yka}.
+The parameter $q$ is the cosmic deceleration parameter, which for historical reasons is positive for $q>0$. This sign convention was chosen before the discovery of dark energy under the tacit assumption that the universe would be decelerating. The value of $q$ depends on the energy content of the universe: The early universe was radiation dominated $(q = 1)$, subsequently matter dominated $(q = 1/2)$, and lastly the contemporary universe is undergoing a transition from matter to dark energy dominated approaching the asymptotic value of $q = -1$; see~\cite{Rafelski:2013yka}.
 
 We can consider the expansion to be an adiabatic process~\citep{Abdalla:2022yfr} which results in a smooth shifting of the relevant dynamical quantities. As the universe undergoes isotropic expansion, the temperature decreases as 
 \begin{gather}
@@ -480,7 +486,7 @@ As the universe expands, redshift reduces the momenta of particles lowering thei
 \end{alignat}
 Momentum (and the energy of massless particles $E=pc$) scales with the same factor as temperature. The energy of massive free particles in the universe however scales differently based on their momentum (and thus temperature).
 
-When hot and relativistic, particle energy scales inversely like radiation. As the particles transition to non-relativistic (NR) momenta, their energies scale with the inverse square of the scale factor
+When hot and relativistic, particle energy decreases inversely with scale factor like radiation. As the particles transition to non-relativistic (NR) energies, they decrease with the inverse square of the scale factor
 \begin{alignat}{1}
     \label{EScale} E(t) = E_{0}\frac{a_{0}}{a(t)}\xrightarrow{\mathrm{NR}}\  E_{0}\frac{a_{0}^{2}}{a(t)^{2}}\,.
 \end{alignat}
