@@ -1,5 +1,5 @@
 # thesis-ajsteinmetz
-Modern topics in relativistic spin dynamics dynamics and magnetism. A Ph.D. dissertation by Andrew James Steinmetz (2023)
+Modern topics in relativistic spin dynamics and magnetism. A Ph.D. dissertation by Andrew James Steinmetz (2023)
 
 ## abstract
 Magnetism is a rich subject touching all aspects of physics. My goal with this dissertation is to explore spin and magnetic dipole moments in <i>relativistic</i> mechanics from both a quantum and classical perspective. We emphasize the special case of gyromagnetic ratio $g=2$ and its relationship to the algebraic spin structure of the wave equations of motion.
@@ -23,7 +23,14 @@ style="width: 1em; margin-inline-start: 0.5em"
 alt="ORCID iD icon"/> Andrew Steinmetz</a>
 
 ## cite as
-Steinmetz, A. Modern topics in relativistic spin dynamics dynamics and magnetism. Doctoral dissertation. University of Arizona, 2023.
+Steinmetz, A. Modern topics in relativistic spin dynamics and magnetism. Doctoral dissertation. University of Arizona, 2023.
 
 ## doi/arXiv id
 - Forthcoming.
+
+## license
+Copyright © Andrew James Steinmetz, 2023.
+
+This dissertation has been submitted in partial fulfillment of requirements for an advanced degree at the University of Arizona and is deposited in the University Library to be made available to borrowers under rules of the Library.
+
+Brief quotations from this dissertation are allowable without special permission, provided that accurate acknowledgment of source is made. Requests for permission for extended quotation from or reproduction of this manuscript in whole or in part may be granted by the head of the major department or the Dean of the Graduate College when in his or her judgment the proposed use of the material is in the interests of scholarship. In all other instances, however, permission must be obtained from the author.
