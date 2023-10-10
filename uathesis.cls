@@ -502,7 +502,7 @@ by
 \bigskip
 
 \FullName							% Author
-\vspace{1in}
+\vspace{0.50in}
 
 \rule{2in}{1pt}\\
 \ifthenelse{ \boolean{Copyright} }	% This puts in the Copyright statement
@@ -512,9 +512,15 @@ by
 \ifthenelse{\boolean{CCBYSA}}{\bysa}{}		
 \ifthenelse{\boolean{CCBYND}}{\bynd}{}		
 
-Copyright \copyright\ \FullName\ #2 % NICK COPIED THIS TO HERE TO FULFILL REQUEST FROM FORMATTING POLICE
+Copyright \copyright\ #2 by \FullName\ % NICK COPIED THIS TO HERE TO FULFILL REQUEST FROM FORMATTING POLICE
 
-\vspace{0.75in}
+Licensed under \href{http://creativecommons.org/licenses/by/4.0/}{(CC-BY-4.0)}~\includegraphics[scale=0.012]{cc.xlarge.png}\includegraphics[scale=0.012]{by.xlarge.png}
+
+\vspace{0.25in}
+
+\includegraphics[scale=0.50]{UASciencePhysics.png}
+
+\vspace{0.25in}
 
 A \ThesisType\ Submitted to the Faculty of the
 
@@ -586,8 +592,8 @@ As members of the Dissertation Committee, we certify that we have read the \Make
 % on.
 
 \vfill
-
 \bigskip
+
 \begin{flushleft}
 \begin{tabular*}{\textwidth}{p{4in}@{\extracolsep{\fill}}l}
 	& Date: #1	\\
@@ -610,19 +616,20 @@ As members of the Dissertation Committee, we certify that we have read the \Make
 #6	& 			\\
 	&			\\
 	&			\\
-	& Date: #1	\\
-\cline{1-1}
-#7	& 			\\
+%	& Date: #1	\\
+%\cline{1-1}
+%#7	& 			\\
 %STEPH ADDED A COMMITTEE MEMBER HERE
-	&			\\
-	&			\\
-	& Date: #1	\\
-\cline{1-1}
-#8	& 			\\
+%	&			\\
+%	&			\\
+%	& Date: #1	\\
+%\cline{1-1}
+%#8	& 			\\
 \end{tabular*}
 \end{flushleft}
 
 \vfill
+\bigskip
 
 \noindent Final approval and acceptance of this \MakeLowercase{\ThesisType} is
 contingent upon the candidate's submission of the final copies of the
@@ -633,8 +640,8 @@ under my direction and recommend that it be accepted as fulfilling the
 \MakeLowercase{\ThesisType} requirement.
 
 \vfill
-
 \bigskip
+
 \begin{flushleft}
 \begin{tabular*}{\textwidth}{p{4in}@{\extracolsep{\fill}}l}
 							& Date: #1	\\
@@ -678,42 +685,22 @@ available to borrowers under rules of the Library.
 
 \bigskip
 
-\noindent Brief quotations from this \MakeLowercase{\ThesisType} are allowable
+\noindent Quotations from this \MakeLowercase{\ThesisType} are allowable
 without special permission, provided that accurate acknowledgment
-of source is made.  
-\ifthenelse{ \boolean{Copyright} }
-{Requests for permission for extended quotation
-from or reproduction of this manuscript in whole or in part may be
-granted by the copyright holder.}
-{\ifthenelse{ \boolean{CCBY} }
-{This work is licensed under the Creative Commons Attribution 3.0 
-United States License. To view a copy of this license, visit 
-\href{http://creativecommons.org/licenses/by/3.0/us/}
-{http://creativecommons.org/licenses/by/3.0/us/} or send a letter to 
-Creative Commons, 171 Second Street, Suite 300, San Francisco, 
-California, 94105, USA.} 
-{\ifthenelse{ \boolean{CCBYSA} }
-{This work is licensed under the Creative Commons Attribution-Share 
-Alike 3.0 United States License. To view a copy of this license, visit
-\href{http://creativecommons.org/licenses/by-sa/3.0/us/}
-{http://creativecommons.org/licenses/by-sa/3.0/us/} or send a letter to 
-Creative Commons, 171 Second Street, Suite 300, San Francisco, 
-California, 94105, USA.  }
-{\ifthenelse{ \boolean{CCBYND} }
-{This work is licensed under the Creative Commons Attribution-No 
-Derivative Works 3.0 United States License. To view a copy of this 
-license, visit \href{http://creativecommons.org/licenses/by-nd/3.0/us/}
-{http://creativecommons.org/licenses/by-nd/3.0/us/} or send a letter to 
-Creative Commons, 171 Second Street, Suite 300, San Francisco, 
-California, 94105, USA.  }
-	{Requests for permission for extended quotation from or reproduction 
-   of this manuscript in whole or in part may be granted by the head of 
-   the major department or the Dean of the Graduate
-	College when in his or her judgment the proposed use of the
-	material is in the interests of scholarship.  In all other
-	instances, however, permission must be obtained from the
-	author.}
-}}}
+of the source is made. \emph{\CompleteTitle}~\copyright~2023 by \FullName~is distributed under the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 (CC BY 4.0) License}. Individual copyright notices for reprinted articles are listed in the appendices.
+
+A catalogue of all my research work is kept on \href{https://arxiv.org/a/steinmetz_a_1.html}{arXiv} and \href{https://github.com/ajsteinmetz}{GitHub}.
+
+%\ifthenelse{ \boolean{Copyright} }
+%{Requests for permission for extended quotation from or reproduction of this manuscript in whole or in part may be granted by the copyright holder.}
+%{\ifthenelse{ \boolean{CCBY} }
+%{This work is licensed under the Creative Commons Attribution 3.0 United States License. To view a copy of this license, visit \href{https://creativecommons.org/licenses/by/4.0/}{https://creativecommons.org/licenses/by/4.0/}.} 
+%{\ifthenelse{ \boolean{CCBYSA} }
+%{This work is licensed under the Creative Commons Attribution-Share Alike 3.0 United States License. To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/3.0/us/}{http://creativecommons.org/licenses/by-sa/3.0/us/} or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.  }
+%{\ifthenelse{ \boolean{CCBYND} }
+%{This work is licensed under the Creative Commons Attribution-No Derivative Works 3.0 United States License. To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-nd/3.0/us/}{http://creativecommons.org/licenses/by-nd/3.0/us/} or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.  }
+%{Requests for permission for extended quotation from or reproduction of this manuscript in whole or in part may be granted by the head of the major department or the Dean of the Graduate	College when in his or her judgment the proposed use of the	material is in the interests of scholarship. In all other instances, however, permission must be obtained from the author.}
+%}}}
 
 \vspace{1in}
 
