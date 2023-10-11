@@ -332,13 +332,13 @@ We can make a general observation that non minimal magnetic coupling, such as we
 \section{Particles in strong electromagnetic fields}
 \label{sec:sb}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Care must be taken when interpreting the results presented in strong electromagnetic fields; see~\cite{Gonoskov:2021hwf,Fedotov:2022ely}. Strong fields are produced in heavy-ion collisions forming quark-gluon-plasma which have electromagnetic properties~\citep{Grayson:2022asf}. For physical electrons the AMM interaction is the result of vacuum fluctuations whose strength also depends on the strength of the field. For example in the large magnetic field limit a QED computation shows that the ground state is instead of \req{lan24b} given by~\cite{Jancovici:1969exc}
+Care must be taken when interpreting the results presented in strong electromagnetic fields; see~\cite{Gonoskov:2021hwf,Fedotov:2022ely,Sainte-Marie:2023aqn}. Strong EM fields are produced in heavy-ion collisions forming quark-gluon-plasma~\citep{Grayson:2022asf}. For physical electrons the AMM interaction is the result of vacuum fluctuations whose strength also depends on the strength of the field. For example in the large magnetic field limit a QED computation shows that the ground state is instead of \req{lan24b} given by~\cite{Jancovici:1969exc}
 \begin{alignat}{1} \label{vacfl01}
 E_{0}\approx mc^{2}+\frac{\alpha}{4\pi}mc^{2}\ \mathrm{ln}^{2}\left(\frac{2e\hbar B}{m^{2}c^{3}}\right)\,,
 \end{alignat}
 which even for enormous magnetic fields does not deviate significantly from the rest mass-energy of the electron. Further the AMM radiative corrections approach zero for higher Landau levels~\citep{Ferrer:2015wca,Hackebill:2022uxv}. Therefore the AMM in the case of electrons does not have a significant effect in highly magnetized environments such as those found in astrophysics (magnetars).
 
-The situation is different for composite particles such as the proton, neutron and light nuclei whose anomalous magnetic moments are dominated by their internal structure and not by vacuum fluctuations. In this situation we expect that the AMM interaction in high magnetic fields remains significant. Therefore, asking whether the DP or KGP equations better describes the dynamics of composite hadrons and atomic nuclei in presence of magnetar strength fields is a relevant question despite the standard choice in literature being the DP equation~\citep{Broderick:2000pe}. The same question can be asked for certain exotic hydrogen-like atoms where the constituent particles have anomalous moments which can be characterized as an external parameter. 
+The situation is different for composite particles such as the proton, neutron and light nuclei whose anomalous magnetic moments are dominated by their internal structure and not by vacuum fluctuations. In this situation we expect that the AMM interaction in high magnetic fields remains significant. Therefore, asking whether the DP or KGP equations better describes the dynamics of composite hadrons and atomic nuclei in presence of magnetar strength fields is a relevant question despite the standard choice in literature being the DP equation~\citep{Broderick:2000pe}. The same question can be asked for certain exotic hydrogen-like atoms where the particles have anomalous moments which can be characterized as an external parameter. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Strong homogeneous magnetic fields}
@@ -358,7 +358,7 @@ where ${B}_{S}$ is the so-called Schwinger critical field~\citep{Schwinger:1951n
 {B}_{S}^{p}\equiv\frac{{m_{p}^2}c^2}{e\hbar}=\frac{m_{p}c^2}{2\mu_N}=1.4882\times 10^{20}\;\mathrm{G}\;.
 \end{alignat}
 \end{subequations}
-The numerical results are evaluated for the anomalous moment of the electron and proton, given by \req{aeFULL} and \req{gpaFULL}. At the critical field strength $B_\mathrm{crit}$ the Hamiltonian loses self-adjointness and the KGP loses its predictive properties. The Schwinger critical field \req{Bsch} denotes the boundary when electrodynamics is expected to behave in an intrinsically nonlinear fashion, and the equivalent electric field configurations become unstable~\citep{Labun:2008re}. However, it is also possible that the vacuum is stabilized by such strong magnetic fields~\citep{Evans:2018kor}.
+The numerical results are evaluated for the anomalous moment of the electron and proton, given by \req{aeFULL} and \req{gpaFULL}. At the critical field strength $B_\mathrm{crit}$ the Hamiltonian loses self-adjointness and the KGP loses its predictive properties. The Schwinger critical field \req{Bsch} denotes the boundary when electrodynamics is expected to behave in an intrinsically nonlinear fashion, and the equivalent electric field configurations become unstable~\citep{Labun:2008re}. However, it is possible that the vacuum is stabilized by strong magnetic fields~\citep{Evans:2018kor}.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
@@ -574,7 +574,7 @@ where $\bb{s}_\mathrm{Cl.}$ is the classical Euclidean three-spin (not to be con
 \subsection{Covariant magnetic potential and modified Lorentz force}
 \label{sec:magpotential}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We are interested in elementary particles with electric charge $e$, and elementary magnetic dipole charge $d=\mu/|\bb{s}_\mathrm{Cl.}|$. Therefore the covariant dynamics must be extended beyond the Lorentz force to incorporate the Stern–Gerlach (SG) force. To achieve a suitable generalization we introduce~\citep{Rafelski:2017hce} the covariant magnetic potential
+We are interested in elementary particles with electric charge $e$, and elementary magnetic dipole charge $d=\mu/|\bb{s}_\mathrm{Cl.}|$. Therefore the covariant dynamics must be extended beyond the Lorentz force to incorporate the Stern–Gerlach (SG) force. To achieve a generalization we introduce~\citep{Rafelski:2017hce} the covariant magnetic potential
 \begin{gather}
     \label{bpot:1}
     B_{\alpha}(x,s)\equiv F_{\alpha\beta}^{*}s^{\beta}
@@ -593,7 +593,7 @@ The zeroth component of the covariant potential in the rest frame \req{bpot:1} r
 We can then define a covariant magnetic field tensor from the potential \req{bpot:1} which generalizes the covariant Lorentz force $F_\mathrm{L}^{\alpha}$ as
 \begin{gather}
     \label{LSG02}
-    G^{\alpha\beta}=\partial^{\alpha}B^{\beta}-\partial^{\beta}B^{\alpha}= G^{\alpha\beta}=\partial^{\alpha}F^{*\beta\gamma}s_{\gamma}-\partial^{\beta}F^{*\alpha\gamma}s_{\gamma}\,,\\
+    G^{\alpha\beta}=\partial^{\alpha}B^{\beta}-\partial^{\beta}B^{\alpha}= \partial^{\alpha}F^{*\beta\gamma}s_{\gamma}-\partial^{\beta}F^{*\alpha\gamma}s_{\gamma}\,,\\
     \label{LSG01}
     F_\mathrm{L}^{\alpha}\equiv\frac{dp^{\alpha}}{d\tau}=eF^{\alpha\beta}u_{\beta}+dG^{\alpha\beta}u_{\beta}\,,
 \end{gather}
@@ -604,14 +604,14 @@ Because the spin precession is sensitive to the force on a particle, the presenc
     \label{bpot:4}
     u\cdot\frac{ds}{d\tau}+\frac{du}{d\tau}\cdot s
 \end{gather}
-The spin torque equations can be obtained~\citep{Bargmann:1959gz} by inserting the Lorentz force (in our case the modified Lorentz force) that corresponds to \req{LSG01} yielding
+The spin torque equations can be obtained~\citep{Thomas:1926dy,Bargmann:1959gz} by inserting the Lorentz force (in our case the modified Lorentz force) that corresponds to \req{LSG01} yielding
 \begin{alignat}{1}
   \notag\frac{\mathrm{d}s^{\mu}}{\mathrm{d}\tau}&=(1+\tilde{a})\frac{e}{m}F^{\mu\nu}s_{\nu}-\tilde{a}\frac{e}{m}u^{\mu}\left(u_{\alpha}F^{\alpha\beta}s_{\beta}\right)/c^{2}\\
   \label{LSG03}&+(1+\tilde{b})\frac{d}{m}G^{\mu\nu}s_{\nu}-\tilde{b}\frac{d}{m}u^{\mu}\left(u_{\alpha}G^{\alpha\beta}s_{\beta}\right)/c^{2}\,.
 \end{alignat}
 The constants $\tilde{a}$ and $\tilde{b}$ are arbitrary allowing for extra terms not forbidden by special relativity. With $d=0$, \req{LSG03} are known as the Thomas-Bargmann-Michel-Telegdi (TMBT) equations. In the standard derivation of relativistic spin precession, in the TBMT equation, the $\tilde{a}$ constant is associated with the anomalous magnetic moment.
 
-In allowing for spin precession sourced by a Stern-Gerlach dipole force, an additional constant $\tilde{b}$ must be introduced. The terms in \req{LSG02} involving the $G$ tensor are spin precession directly originating from dipole forces. In homogeneous electromagnetic fields, \req{LSG02} reduces to the standard TBMT equation. These dynamical torque equations have found use in describing neutral and charged systems classically~\citep{Formanek:2019cga,Formanek:2021mcp} and inspired further efforts to improve covariant dynamics~\citep{Formanek:2020ojr}.
+In allowing for spin precession sourced by a Stern-Gerlach dipole force, an additional constant $\tilde{b}$ must be introduced. The terms in \req{LSG02} involving the $G$ tensor are spin precession directly originating from dipole forces. In homogeneous electromagnetic fields, \req{LSG02} reduces to the standard TBMT equation. These dynamical torque equations have found use in describing neutral and charged systems classically~\citep{Formanek:2019cga,Formanek:2021mcp} and inspired further efforts to improve covariant dynamics~\citep{Formanek:2020ojr}. The incorporation of electric dipole moments (EDM)~\citep{Asenjo:2023mon} into the above formalism would be a novel extension of our work here to further generalize the TBMT equations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Equivalency of Gilbertian and Amp{\`e}rian Stern-Gerlach forces}
@@ -643,11 +643,10 @@ F_\mathrm{L,A}^{\alpha} &= eF^{\alpha\beta}u_{\beta} + ds_{\gamma}u_{\beta}(\par
 \label{gil}
 F_\mathrm{L,G}^{\alpha} &= eF^{\alpha\beta}u_{\beta} -d(s_{\gamma}\partial^{\gamma})F^{*\alpha\beta}u_{\beta}+ds_{\gamma}T^{\gamma\alpha\beta}u_{\beta}\,.
 \end{align}
-The tensor $T^{\alpha\mu\nu}$ is the completely antisymmetric
+The tensor $T^{\alpha\mu\nu}$ is the completely antisymmetric dual tensor to electric four-current
 \begin{align}
-    T^{\alpha\mu\nu} = \partial^{\alpha}F^{*\mu\nu}+\partial^{\mu}F^{*\nu\alpha}+\partial^{\nu}F^{*\alpha\mu}\,,
+    T^{\alpha\mu\nu} = \partial^{\alpha}F^{*\mu\nu}+\partial^{\mu}F^{*\nu\alpha}+\partial^{\nu}F^{*\alpha\mu}\,.
 \end{align}
-dual tensor to electric four-current.
 
 We will now show that the expression $F_\mathrm{L,A}^{\alpha}$ depends on an Amp{\`e}rian dipole and the proper time derivative of the fields. Recognizing that $d/d\tau=u\cdot\partial$, \req{amp} can be rewritten as
 \begin{align}
@@ -677,7 +676,7 @@ However, making use of the expressions in \req{grad:1} and Amp{\`e}re's circuita
 \end{alignat}
 which is the Gilbertian expression for the SG force as given in \req{gil:0}. Our covariant formulation then requires that
 \begin{align}
-    \bb{F}_\mathrm{L,A}\vert_\mathrm{RF} \equiv \bb{F}_\mathrm{L,G}\vert_\mathrm{RF}
+    \boxed{\bb{F}_\mathrm{L,A}\vert_\mathrm{RF} \equiv \bb{F}_\mathrm{L,G}\vert_\mathrm{RF}}
 \end{align}
 Thus we find an equivalence between the Gilbertian and Amp{\`e}rian dipoles from the covariant introduction of intrinsic magnetic dipole in our covariant dynamics.
 
