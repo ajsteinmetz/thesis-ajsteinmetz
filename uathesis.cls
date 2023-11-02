@@ -616,12 +616,12 @@ As members of the Dissertation Committee, we certify that we have read the \Make
 #6	& 			\\
 	&			\\
 	&			\\
-%	& Date: #1	\\
-%\cline{1-1}
-%#7	& 			\\
+	& Date: #1	\\
+\cline{1-1}
+#7	& 			\\
 %STEPH ADDED A COMMITTEE MEMBER HERE
-%	&			\\
-%	&			\\
+	&			\\
+	&			\\
 %	& Date: #1	\\
 %\cline{1-1}
 %#8	& 			\\
@@ -629,7 +629,7 @@ As members of the Dissertation Committee, we certify that we have read the \Make
 \end{flushleft}
 
 \vfill
-\bigskip
+%\bigskip
 
 \noindent Final approval and acceptance of this \MakeLowercase{\ThesisType} is
 contingent upon the candidate's submission of the final copies of the
