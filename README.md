@@ -31,7 +31,7 @@ Steinmetz, A. Modern topics in relativistic spin dynamics and magnetism. PhD dis
 - https://arxiv.org/abs/2310.07193
 
 ## license
-Copyright © Andrew James Steinmetz, 2023.
+Copyright © 2023 by Andrew James Steinmetz.
 
 This dissertation has been submitted in partial fulfillment of requirements for an advanced degree at the University of Arizona and is deposited in the University Library to be made available to borrowers under rules of the Library.
 
