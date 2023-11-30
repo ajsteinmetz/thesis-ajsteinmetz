@@ -514,11 +514,11 @@ by
 
 Copyright \copyright\ #2 by \FullName\ % NICK COPIED THIS TO HERE TO FULFILL REQUEST FROM FORMATTING POLICE
 
-Licensed under \href{http://creativecommons.org/licenses/by/4.0/}{(CC-BY-4.0)}~\includegraphics[scale=0.012]{cc.xlarge.png}\includegraphics[scale=0.012]{by.xlarge.png}
+%Licensed under \href{http://creativecommons.org/licenses/by/4.0/}{(CC-BY-4.0)}~\includegraphics[scale=0.012]{cc.xlarge.png}\includegraphics[scale=0.012]{by.xlarge.png}
 
 \vspace{0.25in}
 
-\includegraphics[scale=0.50]{UASciencePhysics.png}
+%\includegraphics[scale=0.50]{UASciencePhysics.png}
 
 \vspace{0.25in}
 
@@ -538,7 +538,7 @@ For the Degree of
 \MakeUppercase{\DegreeName}					% Degree Title
 
 \ifdefined\DegreeMajor						% Degree major, JS added 3/2017
-WITH A MAJOR IN \MakeUppercase{\DegreeMajor}
+%IN \MakeUppercase{\DegreeMajor}
 %\bigskip
 \else
 \fi
