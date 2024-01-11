@@ -28,6 +28,7 @@ alt="ORCID iD icon"/> Andrew Steinmetz</a>
 Steinmetz, A. Modern topics in relativistic spin dynamics and magnetism. PhD dissertation. University of Arizona, 2023.
 
 ## HDL/arXiv id
+- http://hdl.handle.net/10150/670301
 - https://arxiv.org/abs/2310.07193
 
 ## license
